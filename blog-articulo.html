@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="page-title">Artículo | Javier Gámez Martín</title>
+  <meta name="description" id="page-desc" content="Artículo del blog de Javier Gámez Martín." />
+  <meta property="og:title" id="og-title" content="" />
+  <meta property="og:description" id="og-desc" content="" />
+  <meta property="og:image" id="og-image" content="" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="container-fluid">
+    <ul><li><strong><a href="index.html" style="text-decoration:none;color:inherit">Javier Gámez Martín</a></strong></li></ul>
+    <ul>
+      <li><a href="index.html#historia">Historia</a></li>
+      <li><a href="index.html#libros">Libros</a></li>
+      <li><a href="index.html#presentaciones">Presentaciones</a></li>
+      <li><a href="index.html#prensa">Prensa</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contacto" role="button">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="container" style="max-width:740px">
+
+    <div id="articulo-content" class="section-space">
+      <p style="color:var(--muted)">Cargando artículo…</p>
+    </div>
+
+  </main>
+
+  <footer class="container">
+    <div class="footer-social">
+      <a href="https://twitter.com/JavIGamez_ELA" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.857L1.561 2.25H8.09l4.261 5.631 5.893-5.631Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/javiga6912" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/javier.gamez.752/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      </a>
+    </div>
+    <small><a href="index.html">Inicio</a> • <a href="blog.html">Blog</a> • <a href="index.html#contacto">Contacto</a></small>
+    <p style="margin-top:1rem;font-size:.8rem;color:var(--muted)">© Javier Gámez Martín</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (!id) {
+      document.getElementById('articulo-content').innerHTML =
+        '<p>Artículo no encontrado. <a href="blog.html" style="color:var(--gold)">Volver al blog</a>.</p>';
+    } else {
+      fetch('blog-posts.json?v=' + Date.now())
+        .then(r => r.json())
+        .then(posts => {
+          const idx = posts.findIndex(p => p.id === id);
+          const post = posts[idx];
+          if (!post) {
+            document.getElementById('articulo-content').innerHTML =
+              '<p>Artículo no encontrado. <a href="blog.html" style="color:var(--gold)">Volver al blog</a>.</p>';
+            return;
+          }
+
+          document.getElementById('page-title').textContent = post.titulo + ' | Javier Gámez Martín';
+          document.getElementById('page-desc').setAttribute('content', post.extracto);
+          document.getElementById('og-title').setAttribute('content', post.titulo);
+          document.getElementById('og-desc').setAttribute('content', post.extracto);
+          if (post.imagen) document.getElementById('og-image').setAttribute('content', post.imagen);
+
+          const pageUrl = encodeURIComponent(window.location.href);
+          const textoShare = encodeURIComponent(post.titulo + ' — Javier Gámez Martín');
+
+          const anterior = posts[idx + 1];
+          const siguiente = posts[idx - 1];
+
+          const navArticulos = `
+            <div class="articulo-nav">
+              ${anterior
+                ? `<a href="blog-articulo.html?id=${anterior.id}" class="articulo-nav-link articulo-nav-prev">← ${anterior.titulo}</a>`
+                : '<span></span>'}
+              ${siguiente
+                ? `<a href="blog-articulo.html?id=${siguiente.id}" class="articulo-nav-link articulo-nav-next">${siguiente.titulo} →</a>`
+                : '<span></span>'}
+            </div>`;
+
+          document.getElementById('articulo-content').innerHTML = `
+            <a href="blog.html" class="volver-blog">← Volver al blog</a>
+
+            ${post.imagen ? `<img src="${post.imagen}" alt="${post.titulo}" class="blog-post-imagen" style="margin-top:1.5rem" />` : ''}
+
+            <header class="articulo-header">
+              <div class="articulo-meta-row">
+                <span class="blog-date">${post.fecha}</span>
+                <span class="blog-tag" style="margin-left:.8rem">${post.etiqueta}</span>
+                <span class="lector-count" id="lector-count">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span id="lector-num">…</span>
+                </span>
+              </div>
+              <h1 class="articulo-titulo">${post.titulo}</h1>
+              <p class="blog-excerpt">${post.extracto}</p>
+            </header>
+
+            <div class="blog-body">
+              ${post.cuerpo.map(par => `<p>${par}</p>`).join('')}
+            </div>
+
+            <div class="share-bar">
+              <span class="share-label">Compartir</span>
+              <a href="https://wa.me/?text=${textoShare}%20${pageUrl}" target="_blank" rel="noopener" class="share-btn share-wa" aria-label="Compartir por WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://twitter.com/intent/tweet?text=${textoShare}&url=${pageUrl}" target="_blank" rel="noopener" class="share-btn share-tw" aria-label="Compartir en Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.857L1.561 2.25H8.09l4.261 5.631 5.893-5.631Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+              </a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${pageUrl}" target="_blank" rel="noopener" class="share-btn share-fb" aria-label="Compartir en Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                Facebook
+              </a>
+              <button class="share-btn share-copy" onclick="copyLink()" id="copy-btn" aria-label="Copiar enlace">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copiar enlace
+              </button>
+            </div>
+
+            ${navArticulos}
+          `;
+
+          fetch(`https://api.counterapi.dev/v1/jgm-blog/${id}/up`)
+            .then(r => r.json())
+            .then(data => {
+              const el = document.getElementById('lector-num');
+              if (el && data.count != null) {
+                el.textContent = data.count === 1 ? '1 lectura' : data.count + ' lecturas';
+              }
+            })
+            .catch(() => {
+              const el = document.getElementById('lector-count');
+              if (el) el.style.display = 'none';
+            });
+        })
+        .catch(() => {
+          document.getElementById('articulo-content').innerHTML =
+            '<p>Error al cargar el artículo. <a href="blog.html" style="color:var(--gold)">Volver al blog</a>.</p>';
+        });
+    }
+
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = '✓ Copiado';
+        setTimeout(() => { btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar enlace'; }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

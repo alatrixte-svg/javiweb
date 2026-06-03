@@ -1,0 +1,70 @@
+function openModal(id) {
+  const el = document.getElementById(id);
+  if (el) el.showModal();
+}
+function closeModal(id) {
+  const el = document.getElementById(id);
+  if (el) el.close();
+}
+document.addEventListener('click', (e) => {
+  if (e.target.tagName === 'DIALOG') e.target.close();
+});
+
+fetch('blog-posts.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(posts => {
+    const grid = document.getElementById('blog-preview-grid');
+    if (!grid) return;
+    const recientes = posts.slice(0, 3);
+    if (!recientes.length) { grid.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>'; return; }
+    grid.innerHTML = recientes.map(p => `
+      <article class="blog-preview-card${p.imagen ? ' has-imagen' : ''}" onclick="location.href='blog-articulo.html?id=${p.id}'" style="cursor:pointer">
+        ${p.imagen ? `<img src="${p.imagen}" alt="${p.titulo}" class="blog-preview-img" />` : ''}
+        <div class="blog-preview-body">
+          <span class="blog-date">${p.fecha}</span>
+          <h3>${p.titulo}</h3>
+          <p>${p.extracto}</p>
+          <a href="blog-articulo.html?id=${p.id}" class="blog-read-more">Leer →</a>
+        </div>
+      </article>
+    `).join('');
+  })
+  .catch(() => {});
+
+document.addEventListener('DOMContentLoaded', () => {
+  emailjs.init('XsTpXPWBRSuuZA0Pn');
+
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const btn = document.getElementById('submit-btn');
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    if (error) error.hidden = true;
+
+    const params = {
+      from_name: document.getElementById('firstname').value,
+      from_email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+    };
+
+    emailjs.send('service_a1z7tke', '__ejs-test-mail-service__', params)
+      .then(() => {
+        form.reset();
+        btn.hidden = true;
+        success.hidden = false;
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Enviar mensaje';
+        if (error) error.hidden = false;
+      });
+  });
+});
