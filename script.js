@@ -96,9 +96,14 @@ function cargarIndiceBlog() {
         </a>
       `).join('');
     })
-    .catch(() => {
+    .catch(error => {
+      console.error('Error cargando índice del blog:', error);
       indexList.innerHTML = '<p style="color:var(--muted)">No se pudo cargar el índice del blog.</p>';
     });
 }
 
-document.addEventListener('DOMContentLoaded', cargarIndiceBlog);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', cargarIndiceBlog);
+} else {
+  cargarIndiceBlog();
+}
