@@ -32,10 +32,18 @@ fetch('blog-posts.json?v=' + Date.now())
   .catch(() => {});
 
 document.addEventListener('DOMContentLoaded', () => {
-  emailjs.init('XsTpXPWBRSuuZA0Pn');
-
   const form = document.getElementById('contact-form');
-  if (!form) return;
+
+  if (!form) {
+    return;
+  }
+
+  if (typeof emailjs === 'undefined') {
+    console.warn('EmailJS no está cargado en esta página.');
+    return;
+  }
+
+  emailjs.init('XsTpXPWBRSuuZA0Pn');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
