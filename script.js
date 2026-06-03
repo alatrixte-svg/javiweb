@@ -68,3 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+function cargarIndiceBlog() {
+  const indexList = document.getElementById('blog-index-list');
+
+  if (!indexList) {
+    return;
+  }
+
+  fetch('blog-posts.json?v=' + Date.now())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar blog-posts.json');
+      }
+
+      return response.json();
+    })
+    .then(posts => {
+      if (!Array.isArray(posts) || posts.length === 0) {
+        indexList.innerHTML = '<p style="color:var(--muted)">Aún no hay entradas publicadas.</p>';
+        return;
+      }
+
+      indexList.innerHTML = posts.map(post => `
+        <a class="blog-index-link" href="blog-articulo.html?id=${encodeURIComponent(post.id)}">
+          <span>${post.fecha}</span>
+          <strong>${post.titulo}</strong>
+        </a>
+      `).join('');
+    })
+    .catch(() => {
+      indexList.innerHTML = '<p style="color:var(--muted)">No se pudo cargar el índice del blog.</p>';
+    });
+}
+
+document.addEventListener('DOMContentLoaded', cargarIndiceBlog);
