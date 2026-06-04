@@ -43,37 +43,42 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  emailjs.init('XsTpXPWBRSuuZA0Pn');
+  emailjs.init({
+  publicKey: "XsTpXPWBRSuuZA0Pn"
+});
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const submitBtn = document.getElementById("submit-btn");
+  const success = document.getElementById("form-success");
+  const error = document.getElementById("form-error");
 
-    const btn = document.getElementById('submit-btn');
-    const success = document.getElementById('form-success');
-    const error = document.getElementById('form-error');
+  if (!form) return;
 
-    btn.disabled = true;
-    btn.textContent = 'Enviando…';
-    if (error) error.hidden = true;
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    const params = {
-      from_name: document.getElementById('firstname').value,
-      from_email: document.getElementById('email').value,
-      subject: document.getElementById('subject').value,
-      message: document.getElementById('message').value,
-    };
+    success.hidden = true;
+    error.hidden = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Enviando...";
 
-    emailjs.send('service_a1z7tke', '__ejs-test-mail-service__', params)
-      .then(() => {
-        form.reset();
-        btn.hidden = true;
-        success.hidden = false;
-      })
-      .catch(() => {
-        btn.disabled = false;
-        btn.textContent = 'Enviar mensaje';
-        if (error) error.hidden = false;
-      });
+    try {
+      await emailjs.sendForm(
+        "service_9bi0mzr",
+        "template_84dgfno",
+        form
+      );
+
+      success.hidden = false;
+      form.reset();
+    } catch (err) {
+      console.error("Error EmailJS:", err);
+      error.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Enviar mensaje";
+    }
   });
 });
 function cargarIndiceBlog() {
