@@ -65,9 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       await emailjs.sendForm(
-        "service_9bi0mzr",
-        "template_84dgfno",
-        form
+  "service_9bi0mzr",
+  "template_84dgfno",
+  document.getElementById("contact-form")
+)
       );
 
       success.hidden = false;
