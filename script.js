@@ -2,21 +2,31 @@ function openModal(id) {
   const el = document.getElementById(id);
   if (el) el.showModal();
 }
+
 function closeModal(id) {
   const el = document.getElementById(id);
   if (el) el.close();
 }
+
 document.addEventListener('click', (e) => {
   if (e.target.tagName === 'DIALOG') e.target.close();
 });
 
+
+// CARGA DE ENTRADAS EN LA PÁGINA PRINCIPAL
 fetch('blog-posts.json?v=' + Date.now())
   .then(r => r.json())
   .then(posts => {
     const grid = document.getElementById('blog-preview-grid');
     if (!grid) return;
+
     const recientes = posts.slice(0, 3);
-    if (!recientes.length) { grid.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>'; return; }
+
+    if (!recientes.length) {
+      grid.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>';
+      return;
+    }
+
     grid.innerHTML = recientes.map(p => `
       <article class="blog-preview-card${p.imagen ? ' has-imagen' : ''}" onclick="location.href='blog-articulo.html?id=${p.id}'" style="cursor:pointer">
         ${p.imagen ? `<img src="${p.imagen}" alt="${p.titulo}" class="blog-preview-img" />` : ''}
@@ -29,14 +39,16 @@ fetch('blog-posts.json?v=' + Date.now())
       </article>
     `).join('');
   })
-  .catch(() => {});
+  .catch(error => {
+    console.error('Error cargando entradas recientes:', error);
+  });
 
+
+// EMAILJS
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
 
-  if (!form) {
-    return;
-  }
+  if (!form) return;
 
   if (typeof emailjs === 'undefined') {
     console.warn('EmailJS no está cargado en esta página.');
@@ -44,50 +56,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   emailjs.init({
-  publicKey: "XsTpXPWBRSuuZA0Pn"
-});
+    publicKey: 'XsTpXPWBRSuuZA0Pn'
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-  const submitBtn = document.getElementById("submit-btn");
-  const success = document.getElementById("form-success");
-  const error = document.getElementById("form-error");
-
-  if (!form) return;
-
-  form.addEventListener("submit", async (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    success.hidden = true;
-    error.hidden = true;
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Enviando...";
+    const submitBtn = document.getElementById('submit-btn');
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+
+    if (success) success.hidden = true;
+    if (error) error.hidden = true;
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+    }
 
     try {
       await emailjs.sendForm(
-  "service_9bi0mzr",
-  "template_84dgfno",
-  document.getElementById("contact-form")
-)
+        'service_9bi0mzr',
+        'template_84dgfno',
+        form
       );
 
-      success.hidden = false;
+      if (success) success.hidden = false;
       form.reset();
     } catch (err) {
-      console.error("Error EmailJS:", err);
-      error.hidden = false;
+      console.error('Error EmailJS:', err);
+      if (error) error.hidden = false;
     } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Enviar mensaje";
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar mensaje';
+      }
     }
   });
 });
+
+
+// ÍNDICE DEL BLOG
 function cargarIndiceBlog() {
   const indexList = document.getElementById('blog-index-list');
 
-  if (!indexList) {
-    return;
-  }
+  if (!indexList) return;
 
   fetch('blog-posts.json?v=' + Date.now())
     .then(response => {
