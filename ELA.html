@@ -14,263 +14,307 @@
     ajustes futuros.
   -->
   <style>
-    :root {
-      /* Colores base */
-      --bg-color: #0b0e1a;
-      --card-bg: #141a2e;
-      --text-color: #ffffff;
-      --muted-color: #b5b5b5;
-      /* Colores de acento */
-      --accent-green: #34C759; /* tono verde del trébol */
-      --accent-yellow: #D4A437; /* tono amarillo del botón */
+  :root {
+    /* Colores base */
+    --bg-color: #0b0e1a;
+    --card-bg: #141a2e;
+    --text-color: #ffffff;
+    --muted-color: #b5b5b5;
 
-      /* Colores para el encabezado y el pie de página */
-      --nav-bg: #ffffff; /* fondo blanco del encabezado como en la página index */
-      --nav-text-color: #0076c6; /* color azul para los enlaces de navegación */
-      --nav-hover-color: #005fa3; /* tono azul más oscuro al pasar el ratón */
-      --footer-link-color: #0077cc; /* tono azul para los enlaces del pie de página */
-    }
+    /* Colores de acento */
+    --accent-green: #34C759;
+    --accent-yellow: #D4A437;
 
-    body {
-      background: var(--bg-color);
-      color: var(--text-color);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    /* Contenedor centrado para limitar el ancho de las secciones */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    /* Navegación principal */
-    nav {
-      display: flex;
-      align-items: center;
-      padding: 1rem 0;
-      /* Fondo claro para armonizar con el resto del sitio */
-      background-color: var(--nav-bg);
-      /* Ajustamos el tamaño general de la tipografía del menú */
-      font-size: 1.1rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-    }
-
-    /* El primer grupo de enlaces (marca) ocupa todo el espacio disponible para empujar el segundo grupo a la derecha */
-    nav ul:first-child {
-      margin-right: auto;
-    }
-    /* Separación uniforme entre elementos del menú (excepto el primero) */
-    nav li + li {
-      margin-left: 1.5rem;
-    }
-    nav a {
-      /* Color de texto azul en el encabezado */
-      color: var(--nav-text-color);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      /* Tono más oscuro al pasar el ratón por encima */
-      color: var(--nav-hover-color);
-    }
-
-    /* Estilo para el enlace de contacto que funciona como botón */
-    nav a[role="button"] {
-      background-color: var(--nav-text-color);
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 0.3rem;
-    }
-    nav a[role="button"]:hover {
-      background-color: var(--nav-hover-color);
-      color: #ffffff;
-    }
-
-    /* Estilo para el nombre de marca en el encabezado (Javier Gámez Martín) */
-    nav strong {
-      color: #0b304a;
-      font-weight: 700;
-      font-size: 1.3rem;
-    }
-
-    /* Héroe principal */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem 0;
-    }
-    .hero .text {
-      flex: 1 1 60%;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin: 0 0 1rem 0;
-    }
-    .hero h2 span {
-      color: var(--accent-green);
-    }
-    .hero p {
-      margin: 0;
-      color: var(--muted-color);
-    }
-    .icon-container {
-      flex: 1 1 35%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .icon-circle {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background-color: var(--accent-yellow);
-      color: var(--accent-green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* Aumentamos el tamaño del emoji para que el trébol ocupe casi todo el círculo */
-      font-size: 12rem;
-    }
-
-    /* Secciones generales */
-    .section {
-      padding: 2rem 0;
-    }
-    .section h3 {
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-    .section ul {
-      margin: 0;
-      padding-left: 1.5rem;
-    }
-    .section li {
-      margin-bottom: 0.5rem;
-    }
-    .section a {
-      color: var(--accent-yellow);
-      text-decoration: none;
-    }
-    .section a:hover {
-      text-decoration: underline;
-    }
-
-    /* Noticias */
-    .news-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .news-item {
-      background-color: var(--card-bg);
-      border: 1px solid #2c3250;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .news-item h4 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
-      color: var(--text-color);
-    }
-    .news-item p {
-      flex: 1;
-      margin: 0 0 0.5rem 0;
-      color: var(--muted-color);
-    }
-    .news-item a {
-      color: var(--accent-yellow);
-      font-weight: 500;
-      align-self: flex-start;
-    }
-
-    /* Comunicados y opinión */
-    .communications, .opinions {
-      padding: 2rem 0;
-    }
-    .communications h3, .opinions h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Ajustamos el tamaño de letra de los enlaces en Comunicados y Opinión para igualarlo al de la normativa */
-    .communications a, .opinions a {
-      font-size: 1.3rem;
-    }
-
-    /* Normativa y enlaces de interés */
-    .normative-resources {
-      background-color: var(--card-bg);
-      border-left: 4px solid var(--accent-yellow);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-radius: 0.5rem;
-    }
-    .normative-resources h3 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      color: var(--text-color);
-    }
-    .normative-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .normative-flex > div {
-      flex: 1 1 300px;
-    }
-    .normative-resources h4 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.3rem;
-      color: var(--accent-green);
-    }
-    .normative-resources a {
-      color: var(--accent-yellow);
-      text-decoration: none;
-      /* Aumentamos el tamaño de letra de los enlaces de normativa y recursos para mejorar la legibilidad */
-      font-size: 1.3rem;
-    }
-    .normative-resources a:hover {
-      text-decoration: underline;
-    }
+    /* Encabezado como index.html */
+    --nav-bg: #070708;
+    --nav-text-color: #D4A437;
+    --nav-brand-color: #f5f0df;
+    --nav-hover-color: #f0d783;
 
     /* Pie de página */
-    footer {
-      padding: 2rem 0;
-      text-align: center;
-      color: var(--muted-color);
+    --footer-link-color: #0077cc;
+  }
+
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Encabezado igual al de index.html */
+  nav.container-fluid {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem 2rem;
+    background: var(--nav-bg);
+    color: var(--nav-brand-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(212, 164, 55, 0.25);
+  }
+
+  nav.container-fluid ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.container-fluid li {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.container-fluid strong,
+  nav.container-fluid strong a {
+    color: var(--nav-brand-color) !important;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  nav.container-fluid a {
+    color: var(--nav-text-color) !important;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  nav.container-fluid a:hover {
+    color: var(--nav-hover-color) !important;
+    text-decoration: none;
+  }
+
+  nav.container-fluid a[role="button"] {
+    background: var(--accent-yellow) !important;
+    color: #070708 !important;
+    border: 1px solid var(--accent-yellow) !important;
+    border-radius: 0.35rem;
+    padding: 0.55rem 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  nav.container-fluid a[role="button"]:hover {
+    background: var(--nav-hover-color) !important;
+    border-color: var(--nav-hover-color) !important;
+    color: #070708 !important;
+  }
+
+  /* Héroe principal */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .hero .text {
+    flex: 1 1 60%;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .hero h2 span {
+    color: var(--accent-green);
+  }
+
+  .hero p {
+    margin: 0;
+    color: var(--muted-color);
+  }
+
+  .icon-container {
+    flex: 1 1 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: var(--accent-yellow);
+    color: var(--accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .section a {
+    color: var(--accent-yellow);
+    text-decoration: none;
+  }
+
+  .section a:hover {
+    text-decoration: underline;
+  }
+
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .news-item {
+    background-color: var(--card-bg);
+    border: 1px solid #2c3250;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .news-item h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+
+  .news-item p {
+    flex: 1;
+    margin: 0 0 0.5rem 0;
+    color: var(--muted-color);
+  }
+
+  .news-item a {
+    color: var(--accent-yellow);
+    font-weight: 500;
+    align-self: flex-start;
+  }
+
+  .communications,
+  .opinions {
+    padding: 2rem 0;
+  }
+
+  .communications h3,
+  .opinions h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .communications a,
+  .opinions a {
+    font-size: 1.3rem;
+  }
+
+  .normative-resources {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-yellow);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .normative-resources h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+  }
+
+  .normative-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .normative-flex > div {
+    flex: 1 1 300px;
+  }
+
+  .normative-resources h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: var(--accent-green);
+  }
+
+  .normative-resources a {
+    color: var(--accent-yellow);
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .normative-resources a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--muted-color);
+  }
+
+  footer a {
+    color: var(--footer-link-color);
+    margin: 0 0.5rem;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-yellow);
+  }
+
+  @media (max-width: 768px) {
+    nav.container-fluid {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
     }
-    footer a {
-      /* Enlaces en azul para igualar el resto de páginas */
-      color: var(--footer-link-color);
-      margin: 0 0.5rem;
-      text-decoration: none;
+
+    nav.container-fluid ul {
+      flex-wrap: wrap;
+      gap: 0.75rem;
     }
-    footer a:hover {
-      text-decoration: underline;
-      color: var(--accent-yellow);
-    }
-    <nav class="container-fluid">
+  }
+</style>
+</head>
+<body>
+  <!-- Barra de navegación principal -->
+  <nav class="container-fluid">
   <ul>
-    <li>
-      <strong><a href="index.html" style="text-decoration:none;color:inherit">Javier Gámez Martín</a></strong>
-    </li>
+    <li><strong>Javier Gámez Martín</strong></li>
   </ul>
   <ul>
     <li><a href="libros.html">Libros</a></li>
@@ -280,26 +324,6 @@
     <li><a href="index.html#contacto" role="button">Contacto</a></li>
   </ul>
 </nav>
-  </style>
-</head>
-<body>
-  <!-- Barra de navegación principal -->
-  <nav class="container-fluid">
-      <ul>
-        <li>
-          <strong><a href="index.html" style="text-decoration:none;color:inherit">Javier Gámez Martín</a></strong>
-        </li>
-      </ul>
-      <ul>
-        <!-- Eliminamos el enlace a Historia del menú principal -->
-        <li><a href="libros.html">Libros</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="prensa.html">Prensa</a></li>
-        <!-- Añadimos un enlace directo a la guía gratuita antes del botón de contacto -->
-        <li><a href="guia.html">Guía gratuita</a></li>
-        <li><a href="index.html#contacto" role="button">Contacto</a></li>
-      </ul>
-  </nav>
   <main class="container ela-page">
     <section class="hero">
     <div class="text">
