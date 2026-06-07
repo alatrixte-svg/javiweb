@@ -200,15 +200,28 @@
       color: var(--muted);
     }
 
-    footer a {
+    /* Enlaces de navegación del pie: azules */
+    footer small a {
       color: #008ecf !important;
       margin: 0 0.5rem;
       text-decoration: none;
     }
 
-    footer a:hover {
+    footer small a:hover {
       color: #006fa3 !important;
       text-decoration: underline;
+    }
+
+    /* Iconos de redes sociales: no azules */
+    footer .footer-social a {
+      color: var(--gold, #D4A437) !important;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    footer .footer-social a:hover {
+      color: var(--text) !important;
+      text-decoration: none;
     }
 
     /* Separación lateral del bloque inicial de ELA */
@@ -353,17 +366,17 @@
   <script>
     const newsData = [
       {
-      title: "La Asamblea de Murcia convalida el decreto ley de atención de la ELA",
-      description: "La Asamblea Regional de Murcia convalida el decreto ley de atención a personas con ELA, con los votos de PP, Vox y Mixto y la abstención del PSOE.",
-      link: "https://cadenaser.com/murcia/2026/06/04/la-asamblea-convalida-el-decreto-ley-de-atencion-de-la-ela-con-los-votos-de-pp-vox-y-mixto-y-la-abstencion-del-psoe-radio-murcia/",
-      date: "2026-06-04"
-    },
+        title: "La Asamblea de Murcia convalida el decreto ley de atención de la ELA",
+        description: "La Asamblea Regional de Murcia convalida el decreto ley de atención a personas con ELA, con los votos de PP, Vox y Mixto y la abstención del PSOE.",
+        link: "https://cadenaser.com/murcia/2026/06/04/la-asamblea-convalida-el-decreto-ley-de-atencion-de-la-ela-con-los-votos-de-pp-vox-y-mixto-y-la-abstencion-del-psoe-radio-murcia/",
+        date: "2026-06-04"
+      },
       {
-  title: "Conflicto jurídico por la Ley ELA: el choque con la Ley de Dependencia abre la puerta al copago",
-  description: "Confilegal analiza el conflicto jurídico entre la Ley ELA y la Ley de Dependencia, y cómo ese encaje normativo puede abrir la puerta al copago para los enfermos más graves.",
-  link: "https://confilegal.com/20260603-conflicto-juridico-por-la-ley-ela-el-choque-con-la-ley-de-dependencia-abre-la-puerta-al-copago-a-los-enfermos-mas-graves/",
-  date: "2026-06-03"
-},
+        title: "Conflicto jurídico por la Ley ELA: el choque con la Ley de Dependencia abre la puerta al copago",
+        description: "Confilegal analiza el conflicto jurídico entre la Ley ELA y la Ley de Dependencia, y cómo ese encaje normativo puede abrir la puerta al copago para los enfermos más graves.",
+        link: "https://confilegal.com/20260603-conflicto-juridico-por-la-ley-ela-el-choque-con-la-ley-de-dependencia-abre-la-puerta-al-copago-a-los-enfermos-mas-graves/",
+        date: "2026-06-03"
+      },
       {
         title: "Madrid abona íntegramente las ayudas de la Ley ELA",
         description: "La Comunidad de Madrid confirma el pago íntegro de las ayudas a los pacientes diagnosticados con ELA y se compromete a seguir trabajando con las asociaciones de pacientes.",
