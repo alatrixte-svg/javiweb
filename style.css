@@ -653,3 +653,121 @@ body {
     text-align: center;
   }
 }
+/* =========================================================
+   CORRECCIÓN RESPONSIVE HERO INDEX
+   Evita que la foto lateral se monte sobre la portada
+   cuando la pantalla se estrecha o cambia la proporción.
+   ========================================================= */
+
+.hero-grid {
+  align-items: center;
+}
+
+.hero-profesional {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.hero-photo,
+.hero-copy,
+.portrait-card {
+  min-width: 0;
+}
+
+.hero-photo img,
+.portrait-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Pantallas medianas: reduce la foto lateral para que no invada */
+@media (max-width: 1200px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-profesional {
+    width: 100%;
+  }
+
+  .portrait-card {
+    max-width: 720px;
+    margin: 2rem auto 0;
+  }
+
+  .portrait-card img {
+    max-height: 560px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Móviles y pantallas estrechas */
+@media (max-width: 768px) {
+  .hero-grid {
+    display: block;
+  }
+
+  .hero-profesional {
+    display: block;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .portrait-card {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .portrait-card img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* Pantallas muy estrechas */
+@media (max-width: 480px) {
+  .hero-copy h2 {
+    font-size: clamp(2rem, 12vw, 3.2rem);
+  }
+
+  .hero-copy h3,
+  .hero-copy .lead {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
