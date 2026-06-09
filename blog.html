@@ -75,41 +75,131 @@
   </footer>
 
   <script>
-    fetch('blog-posts.json?v=' + Date.now())
-      .then(r => r.json())
-      .then(posts => {
-        const lista = document.getElementById('blog-lista');
-        if (!posts.length) { lista.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>'; return; }
-        lista.innerHTML = posts.map(p => `
-          <article class="blog-post" id="${p.id}">
-            ${p.imagen ? `<img src="${p.imagen}" alt="${p.titulo}" class="blog-post-imagen" />` : ''}
-            <header class="blog-post-header">
-              <span class="blog-date">${p.fecha}</span>
-              <h2 class="blog-title"><a href="blog-articulo.html?id=${p.id}">${p.titulo}</a></h2>
-              <p class="blog-excerpt">${p.extracto}</p>
-            </header>
-            <div class="blog-body">
-              ${p.cuerpo.map(par => `<p>${par}</p>`).join('')}
-            </div>
-            <footer class="blog-post-footer">
-              <span class="blog-tag">${p.etiqueta}</span>
-              <a href="blog-articulo.html?id=${p.id}" class="blog-read-more" style="margin-left:auto">Enlace directo →</a>
-            </footer>
-          </article>
-        `).join('');
+  const MESES_BLOG = {
+    enero: 0,
+    febrero: 1,
+    marzo: 2,
+    abril: 3,
+    mayo: 4,
+    junio: 5,
+    julio: 6,
+    agosto: 7,
+    septiembre: 8,
+    setiembre: 8,
+    octubre: 9,
+    noviembre: 10,
+    diciembre: 11
+  };
 
-        const hash = window.location.hash;
-        if (hash) {
-          setTimeout(() => {
-            const el = document.querySelector(hash);
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
+  function normalizarTextoFecha(texto) {
+    return String(texto || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function fechaPostTimestamp(post) {
+    if (post.date) {
+      const t = new Date(post.date).getTime();
+      if (!Number.isNaN(t)) return t;
+    }
+
+    const fecha = normalizarTextoFecha(post.fecha);
+    const match = fecha.match(/(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})/);
+
+    if (!match) return 0;
+
+    const dia = Number(match[1]);
+    const mes = MESES_BLOG[match[2]];
+    const anio = Number(match[3]);
+
+    if (mes === undefined) return 0;
+
+    return new Date(anio, mes, dia).getTime();
+  }
+
+  function ordenarPosts(posts) {
+    return [...posts].sort((a, b) => fechaPostTimestamp(b) - fechaPostTimestamp(a));
+  }
+
+  function escapeHTML(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  fetch('blog-posts.json?v=' + Date.now())
+    .then(r => r.json())
+    .then(posts => {
+      const postsOrdenados = ordenarPosts(posts);
+
+      const lista = document.getElementById('blog-lista');
+      const indice = document.getElementById('blog-index-list');
+
+      if (!postsOrdenados.length) {
+        lista.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>';
+        if (indice) {
+          indice.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>';
         }
-      })
-      .catch(() => {
-        document.getElementById('blog-lista').innerHTML = '<p style="color:var(--muted)">Error al cargar los artículos.</p>';
-      });
-  </script>
+        return;
+      }
+
+      if (indice) {
+        indice.innerHTML = `
+          <ul>
+            ${postsOrdenados.map(p => `
+              <li>
+                <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}">
+                  ${escapeHTML(p.fecha)} — ${escapeHTML(p.titulo)}
+                </a>
+              </li>
+            `).join('')}
+          </ul>
+        `;
+      }
+
+      lista.innerHTML = postsOrdenados.map(p => `
+        <article class="blog-post" id="${escapeHTML(p.id)}">
+          ${p.imagen ? `<img src="${escapeHTML(p.imagen)}" alt="${escapeHTML(p.titulo)}" class="blog-post-imagen" />` : ''}
+          <header class="blog-post-header">
+            <span class="blog-date">${escapeHTML(p.fecha)}</span>
+            <h2 class="blog-title">
+              <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}">${escapeHTML(p.titulo)}</a>
+            </h2>
+            <p class="blog-excerpt">${escapeHTML(p.extracto)}</p>
+          </header>
+          <div class="blog-body">
+            ${(p.cuerpo || []).map(par => `<p>${escapeHTML(par)}</p>`).join('')}
+          </div>
+          <footer class="blog-post-footer">
+            <span class="blog-tag">${escapeHTML(p.etiqueta)}</span>
+            <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}" class="blog-read-more" style="margin-left:auto">Enlace directo →</a>
+          </footer>
+        </article>
+      `).join('');
+
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const el = document.querySelector(hash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    })
+    .catch(() => {
+      document.getElementById('blog-lista').innerHTML =
+        '<p style="color:var(--muted)">Error al cargar los artículos.</p>';
+
+      const indice = document.getElementById('blog-index-list');
+      if (indice) {
+        indice.innerHTML = '<p style="color:var(--muted)">Error al cargar el índice.</p>';
+      }
+    });
+</script>
 <script src="script.js" defer></script>
 </body>
 </html>
