@@ -126,16 +126,16 @@ def main():
 
     unique_items.sort(key=lambda item: item.get("date", ""), reverse=True)
 
-    selected_items = unique_items[:MAX_TOTAL_RESULTS]
+        selected_items = unique_items[:MAX_TOTAL_RESULTS]
 
-for index, item in enumerate(selected_items, start=1):
-    item["id"] = index
+    for index, item in enumerate(selected_items, start=1):
+        item["id"] = index
 
-output = {
-    "generated_at": datetime.now(timezone.utc).isoformat(),
-    "total": len(selected_items),
-    "news": selected_items
-}
+    output = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total": len(selected_items),
+        "news": selected_items
+    }
 
     OUTPUT_FILE.write_text(
         json.dumps(output, ensure_ascii=False, indent=2),
