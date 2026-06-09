@@ -1,0 +1,34 @@
+name: Publicar artículo del blog
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar-blog-post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Publicar artículo desde draft-blog-post.json
+        run: python scripts/publicar_blog_post.py draft-blog-post.json
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Guardar cambios del blog
+        run: |
+          git add blog-posts.json posts/
+          git diff --cached --quiet && echo "No hay cambios que guardar" || git commit -m "Publica nuevo artículo del blog"
+          git push
