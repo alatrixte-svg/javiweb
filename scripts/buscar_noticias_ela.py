@@ -128,11 +128,14 @@ def main():
 
     selected_items = unique_items[:MAX_TOTAL_RESULTS]
 
-    output = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "total": len(selected_items),
-        "news": selected_items
-    }
+for index, item in enumerate(selected_items, start=1):
+    item["id"] = index
+
+output = {
+    "generated_at": datetime.now(timezone.utc).isoformat(),
+    "total": len(selected_items),
+    "news": selected_items
+}
 
     OUTPUT_FILE.write_text(
         json.dumps(output, ensure_ascii=False, indent=2),
