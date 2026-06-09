@@ -1,5 +1,17 @@
 [
   {
+    "id": "post-articulo-de-prueba",
+    "fecha": "9 de junio de 2026",
+    "titulo": "Artículo de prueba",
+    "extracto": "Este es un artículo de prueba para comprobar la publicación automática.",
+    "cuerpo": [
+      "Este es el primer párrafo del artículo de prueba.",
+      "Este es el segundo párrafo. Sirve para comprobar que el sistema crea correctamente el archivo Markdown.",
+      "Si todo funciona bien, este artículo aparecerá también dentro de blog-posts.json."
+    ],
+    "etiqueta": "Prueba"
+  },
+  {
     "id": "post-bienvenida",
     "fecha": "31 de mayo de 2026",
     "titulo": "Bienvenidos a mi blog",
@@ -12,7 +24,7 @@
     ],
     "etiqueta": "Reflexión"
   },
-    {
+  {
     "id": "post-el-copago-y-las-deducciones-esa-veleta-con-escano",
     "fecha": "7 de junio de 2026",
     "titulo": "El copago y las deducciones, esa veleta con escaño",
@@ -29,7 +41,7 @@
     ],
     "etiqueta": "ELA"
   },
-    {
+  {
     "id": "post-querer-es-poder",
     "fecha": "4 de junio de 2026",
     "titulo": "Querer es poder",
@@ -119,7 +131,6 @@
     ],
     "etiqueta": "ELA"
   },
-  
   {
     "id": "post-el-desprecio-institucional-hecho-oficio",
     "fecha": "14 de mayo de 2026",
@@ -152,7 +163,7 @@
     ],
     "etiqueta": "Familia"
   },
-    {
+  {
     "id": "post-caer-y-levantarse",
     "fecha": "10 de abril de 2026",
     "titulo": "Caer y levantarse",
@@ -198,4 +209,3 @@
     "etiqueta": "ELA"
   }
 ]
-
