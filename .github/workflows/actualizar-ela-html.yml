@@ -1,0 +1,39 @@
+name: Actualizar ELA.html con noticias seleccionadas
+
+on:
+  workflow_dispatch:
+    inputs:
+      selected_indexes:
+        description: "Números de noticias a subir, separados por coma. Ejemplo: 1,3,5"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-ela:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Actualizar ELA.html
+        run: python scripts/actualizar_ela_html.py "${{ github.event.inputs.selected_indexes }}"
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Guardar cambios en ELA.html
+        run: |
+          git add ELA.html
+          git diff --cached --quiet && echo "No hay cambios que guardar" || git commit -m "Añade noticias seleccionadas sobre ELA"
+          git push
