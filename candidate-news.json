@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T08:29:01.528896+00:00",
+  "generated_at": "2026-06-09T10:11:14.159760+00:00",
   "total": 30,
   "news": [
     {
@@ -9,7 +9,8 @@
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzB1Q1dXTzU3Z3ZKYzZ0QTVSQ3FOTlRQblgxSmk5MWo5SE1hMlhzYWg5b1NfWUEwaEpiQzl4UnJRSXpCcHhleWxFZU11Ny1xOEVGUG5FYWVxWF83SzFUbURabDFZcHlLZ0U0NXhqZ191NkpTdUVTc2ViWmlBd21XVVl3bmJmXzdTU09OMFh5V19hOTNTN0NFUVl30gGfAUFVX3lxTE9sekFDRFdienpUVlh5UXdrYjJhR2I1c2I4TWYzeVQ1OTY5YWo2T1ZXdmMyTWZWUnRTbVpfcDVFcnpFd1FiblFDb3BiUlRNdThLUXVFclByb0VOdmhpbWc3RTZfMndqM2s5X3dlWlA4T2Vlenp5MmhZTG51VGZqZlRZUFhiNDNwZ21BWlprazdfTENEbk4zNUhseTFVQTRMdw?oc=5",
       "summary": "Arte por ELA recauda fondos en Fernán Núñez para la investigación de la esclerosis lateral amiotrófica Diario Córdoba",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 1
     },
     {
       "title": "Galicia da ayudas a 200 pacientes con ELA, pero solo 14 optan a la prestación estatal - Faro de Vigo",
@@ -18,7 +19,18 @@
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOY0ZjZGNtNTREYmc5aWkwb0hnUEFJYzRJQzJvZElwZmJ1VW13dW9YaXFzejVYeFg5YTZLaDVGUzRkSnRGbHlUTGQ1dUN4Qlh1aGRJYjJobTI3MS1ZZjNtNFlvRUhRUXVTUW1Pd0NsZlQ0Y21iREdCazF4OGYwZ3NDYmIwY08xS04zM3lOcmxnalJCcEdqdVHSAZsBQVVfeXFMTll6eXZ1V1JIODk2eHlzVF9YNkFncWNILXJQanNwUEN2ZFpUMW5xSkwwTE1ibERHWTZybmdhLWViMnRJREctT3o0QmNzTFRVZUR4VkxMWFBvSkhacEFvZHJ6NmkzQmZMTmtkaHVudFN2LVNGWjAzYTdzNk9QLXBEUm1JUjY2REs2Tk1MUG9nbzBBNlFhTHhHQU42ZWs?oc=5",
       "summary": "Galicia da ayudas a 200 pacientes con ELA, pero solo 14 optan a la prestación estatal Faro de Vigo",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 2
+    },
+    {
+      "title": "¿Quién es el atleta Manu Herrera y por qué corre por la ELA? - Revista Perfiles",
+      "source": "Revista Perfiles",
+      "date": "2026-06-09",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUFhJUkZSVWNraU1vc1JvMWYwcl9wYmNkNmVQNTl3dFNzTDluS0lTcWtxLWRHRjhWc1J4VGh4WF9jQ2dTZGthSmJTLS1zQW1vbElDNFRkY1NNSGhaU1hCRkptbUU3YlNGczFFdzJkVnJlN2tKeU9MUEU4OWtyTENyVjBR?oc=5",
+      "summary": "¿Quién es el atleta Manu Herrera y por qué corre por la ELA? Revista Perfiles",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 3
     },
     {
       "title": "Vino solidario de Luzón para la investigación de la ELA - Las Gastrocrónicas",
@@ -27,16 +39,8 @@
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZk1Db1VzNGY4RWlkdXp3NWFlSDd5ZUFCU2dkaU9HS2xyVjFiczBKTWtiV01ZUkxIVS1wWmFuTXdsTXhWd0pCNmowSUp1X0tnSUNlMVhJM2syaTFjdzRRUUZneDZJbkhKU3pGRW5DMUl6aU5hNnFYd0Fqa0tTRktoQi1ZNkhjMXkzZXh5ZU00VQ?oc=5",
       "summary": "Vino solidario de Luzón para la investigación de la ELA Las Gastrocrónicas",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
-    },
-    {
-      "title": "Menos del 10% de gallegos con ELA cumplen los requisitos estatales para el grado máximo de dependencia - ABC",
-      "source": "ABC",
-      "date": "2026-06-09",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQd00zTmhhbzQ4SE9pSDdBMVJmUVgyTmlmTk10NDlENUJ6MG5fT0kwYUN6UTB3bkF5RXhBRkppYVEtWXJkZG1YRk1hNzB4dkVPUGVBUGdiaUNKdUF6WE1WTlZGNzJCdWJ4aUdCSkI0anhlNGNlWnBZcU4xYWhYeEFEUzZuRzdVR254Z19zUHgyVlAyUWRzMmRMbS0tNzBBZEhDVmkxWWJBUTR3SXdleUx6Nw?oc=5",
-      "summary": "Menos del 10% de gallegos con ELA cumplen los requisitos estatales para el grado máximo de dependencia ABC",
-      "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 4
     },
     {
       "title": "Solo el 7% de los enfermos de ELA en Galicia cumplen el requisito de grado 3 plus para recibir la ayuda del Estado - El Correo Gallego",
@@ -45,7 +49,8 @@
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMEpKSG9FT05veXpLbnRXS01fMTlncGg2MG12a3JudU9ETFdWeU9HVWppRG5tUUhMWVEtOEw2V2VfRzBuVXJUNDBmMG1VUDh3U3pSQ3pMYlZqT25yY1ZTVWhCNVRGRlZERXRYOVE1LXdIdUdwaE9ocjl3blJjdnlqcklBSXVydUNocmZnSXNZWHBOYzRIbU5DajA2MWl1ektEX0FuT01EMkpoUnE0d1HSAbMBQVVfeXFMTlA1cFdNQjRWWE1XcXUtXy1mVXdwMjhsdG1MVDFOUWs2TnBNa041LVM1TThOZklsaWU2S3FpV3c4Vk13WUxhajF6V0JSNXIweEI4T3JOdTdpTk81NTM0V3k3MDZfX0pMWWZYa1ZpOTB2WkZRQ09mUXFfQmFRdS1NUDJ4YzRmclg1VzJXSFNWaWNadEN6QUUzQWNHMXBjNTB0TzZLUE54UmhwWFc4VThDQ1QxakE?oc=5",
       "summary": "Solo el 7% de los enfermos de ELA en Galicia cumplen el requisito de grado 3 plus para recibir la ayuda del Estado El Correo Gallego",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 5
     },
     {
       "title": "Madrid, capital europea del cine sobre esclerosis lateral amiotrófica - Diario Médico",
@@ -54,7 +59,8 @@
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeHUzSDFWYnhmY0xxWHU3UGNiQXVmbXVrTnlQRmtpTWxxUHBOMVpMWUxfS3BxbU8zWWFhLTdGRnFrMlRvaGNXMFJ0dkRIbjFZeDlEV3Z1dVdmOEItMFQza0YtOTdxc3ZJMXBlWHRYeV95YkRlT0x4SmNXRndkekJpbDdud2trQlRrOTBwMG5zSWJSUFQ3NHJqdUV1bFZ6OFpmUXdQRktmQlJxWEZXWGVRbnZ3?oc=5",
       "summary": "Madrid, capital europea del cine sobre esclerosis lateral amiotrófica Diario Médico",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 6
     },
     {
       "title": "Nueva inyección económica en Andalucía para los enfermos de ELA - ESdiario",
@@ -63,17 +69,18 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQazVKdnJaUjZYQ0duUmZWbkZqZTQ0SVlMQ09IUHpLdFVGbFQ2dDA0TjFhMDRoYkNKQ05zOE5seGV4WWQ4MlYtYXh3NnMwbXQ2V1dIYUY3RGdqbE9jaG0ydU5RT0EtZXpsZDFmUGdWUkg2RXI1VGxKYXNWcTRnZ0JDYVFCMlJqeVNoSGR6amtxZVVWMTkwUzBnZFJVX3VmWFpvbnhsMNIBqgFBVV95cUxNWnpJcGZVLWNDblZCT3c4ZGplV1NPNHBNYzJJOG5oeWtKZ3UzLTNZbndjQ2FpdWk4Y1hhamFhaFRqTHUxRWRseTZWVVUwOFM4Z3lWV0NLWlNsamV2MUx2cXNvMUtZTlduSml4NlZrLVdsOS1XaGdWdERILUE5SVFTNi1VOXF3OGllaG1Benl6MmJfV25Oa1NzaVVjN0x2WVc2ZTVpRjByZ0h0QQ?oc=5",
       "summary": "Nueva inyección económica en Andalucía para los enfermos de ELA ESdiario",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 7
     },
-    
     {
-      "title": "Un sprint más para acabar con la ELA - Radio Nervión",
-      "source": "Radio Nervión",
+      "title": "Bustinduy dejó sin ejecutar 54 millones que estaban destinados a la Ley ELA en 2025 - The Objective",
+      "source": "The Objective",
       "date": "2026-06-08",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQR1JSYXFoenZLU3ZlVmdfdFZCNTZ1Y2h4NFhYakRoWWpCTWduaG5vdVE5UU1ybDFaajdCZXVBS0hCRWhxSVYwU1BEa2xfUC1YNl9nT3djVGw5NVZ3ZC13YmdmMjlxYnoxUTZxTlVUV3NzU0JxZnd5SnRKVzJwNlhNNktiNA?oc=5",
-      "summary": "Un sprint más para acabar con la ELA Radio Nervión",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdG8yTFptVzJTQlJvRno1Q3huZU5xbTAwSW93N19ocUwyZHhuQ1FBaUJlLTdKV0JodmJETnVTOTZHdW5TU1BvRUdkc2xvYlRtX0x5al94dWp0YnVKN1VhVDNQemRhb3ZDcEdaaTVQRWZ2Q051dkxwaGdSZS02aDdHbzBMX2dINFRRT0o4a3FNY3NveUhSMWdQWDMxdE1TR1JlSHfSAacBQVVfeXFMUFQzWnBuYW95YmV4bHZBMlQ4dHc3dFFUTzdKdjBMTHJQcm1tdlpLUnlQNWNsb2VxT0stdF9WX196STNDTlZXQVZFeDZQNXRjNWRjRFd5VkcyamVZWlhZODBieFBiakNBbEpyMUxBNTRqNXZYOUF1MUQ2YzZYX0lpMlBDZmp3WWlqa0ktTU01aE9BWHBBNlI4QU8yMHlYVTRhc0VwMVJSOVE?oc=5",
+      "summary": "Bustinduy dejó sin ejecutar 54 millones que estaban destinados a la Ley ELA en 2025 The Objective",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 8
     },
     {
       "title": "Extremadura reduce a dos meses el plazo para tramitar la dependencia extrema por ELA - Hoy",
@@ -82,7 +89,8 @@
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaXVmQnNHOUREOE9lSWpyNjA4WDdiX181MVN6MUJLdFJMYkZUdjAzeUtMZS1aTVF0ZWhZNU5Ib3hMRFVBT18xRmFYczBqajFzLUJYRi1JMG9ZZmNmbUI4M3NHZUtfTTFVS3cyMWo5Zm8zVXJ0S2t6WkIxMXRqNHlHTFFXUmxPRTVVVHB0SXFzajdNTkZVaWRpM3BtVER1ZHVwSmo4cmhRdmJnZ1lMMmfSAbMBQVVfeXFMTXFnS3FDcUlkc3I5YVdRdnF0a0U3LW5TdFQ1bWgxRjFOT2l0SUJoTGRFd1R1OHBDbm8zdTluWkZDRk55bVc4a0MzNXk4djZwcF9nV2VwdWF6dVVkXzNSUkRIa3FZT1dlajdIU1dlYWZwRVNqT0VaZ2FRY0hDZXRVVUhnZHV1TDYzbXBlb3JhWklrR0hMN3R5Vk9md3dValpkWmtkbWxDMzFrakR0elJGZ1QtY28?oc=5",
       "summary": "Extremadura reduce a dos meses el plazo para tramitar la dependencia extrema por ELA Hoy",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 9
     },
     {
       "title": "El Papa recibe por sorpresa a pacientes de ELA y otras enfermedades: «Nos ha dicho que nuestra fe mueve el mundo» - ABC",
@@ -91,7 +99,8 @@
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQb05nR0l1Q3NMeHpoM0tSUU1GRVRncHBpU2xpT25wTnZ2QzE5WWVDNnQtcGVTcnltZnlrekl2NDRxeWF4b0s3Y0ROTWxSckc5dUd5alVRV2cwMFBRRlNCYW5odHViVlRLR09qSmFXbEJjU2xjX1gxajJzdkZLUnEwdUp1Q2Z5d2xwU01yZzQyd2pSZHJUQ1ZNZUxUenhXMk9ybDVxTUpsSdIBrAFBVV95cUxNN0lXWTJJZ1ZPdGItTVd4UFNvdGVyZVI0Mm1LMFc0a3hzQjVPTXhRRjc0Y2Zkcml0WG9OYzJGdGZtblBqMm1QUDZCSHJvcDRXQUlqZEprY2dLRnhkUFRZdUQ2d2ppM3lxYlVXUF9La0NFazhMUDVjRWdiczN4Mjl4bU5HMGFjZkhpem1qTTJlbEMtNWpLN2I5VlVsX0VvLVo5MHg0V1ZLODBpUE8x?oc=5",
       "summary": "El Papa recibe por sorpresa a pacientes de ELA y otras enfermedades: «Nos ha dicho que nuestra fe mueve el mundo» ABC",
       "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 10
     },
     {
       "title": "Un enfermo de ELA recorre España en bicicleta para exigir la aplicación de la ley - ABC",
@@ -100,7 +109,8 @@
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQemFNRXZsaEFhY3hBN3VPcnJkSjFFUHNTLWYydWcyZUZmNk1PNEd2U01WUUtzUDYyZzNEX1hnYXhkMTVUR2JaVFlyYWotamVkUjZDQnZMa2xtOHh3Qnd6ZE1ySzJXMXVlUE9LRjBwODA0NU9EZ25XWktYMGxvWFRkbzlWdzdmeVNzbHFibk9CY19ZNFgzZUpLUzBqelZqMzBaTzFxSHRFR1FmUXdBeDVVYWpXYw?oc=5",
       "summary": "Un enfermo de ELA recorre España en bicicleta para exigir la aplicación de la ley ABC",
       "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 11
     },
     {
       "title": "Madrid acogerá el primer ciclo de cine sobre ELA de España - La Razón",
@@ -109,7 +119,28 @@
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUEh5SkcwS2l5NWRYdE9FRmZIVFFwVUFtZHlkbGxpUnpwUmNDekp1ejRvUWZDV0JxSE9nTzFUb2hBOUFxNldiMmJEUW44LXdUT3VQbFlJbUlFSkFmcHlLSXhyZlZkQWRVWXo0TXFzbVpwVVJ6TUtDbm5JNEs1YVhCWjVlNEdYYVRzVG11eHkyVXBUVkJnM2Jydkp3Znh6ZzNkTGwxQ045aGNWdHRnb2ZMStIBxAFBVV95cUxPaS1LVGRJUmdFMlQtZHJOYzMxemZHVGxYY2YwbWtBSVdWbVdtQmxtN3Jwek9EVk9zeWU5MGF6X21heXA0c0lvdkV5MkFaSUJPeUlxdTkySmduZ25QYmh1ZFlTQXAxZjBBTUhpX0FTVTlOSzZiT1pmVkxlS3RScnRoOGc4T2N5ZldXRDVjNzFxNThQek11bXNhMEFjTGNCTDNBRjBNT2J4bTZmdW1yODNkY05ZVXBDU0huWEtuVXoxdFY0NTFw?oc=5",
       "summary": "Madrid acogerá el primer ciclo de cine sobre ELA de España La Razón",
       "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 12
+    },
+    {
+      "title": "Conflicto jurídico por la Ley ELA: el choque con la Ley de Dependencia abre la puerta al copago a los enfermos más graves - Confilegal",
+      "source": "Confilegal",
+      "date": "2026-06-03",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOG5wX3Vqd2hUYm9NcGVkQkZYWG5TRW1oNjFaRzlDTU1KdW11czNCTExYQ2tpdzAybFNjaWRmb1VRYmFFUXNuUXNDc0EwVE01WktiRjRpN19HWk1LNFhYWlRMQVNpeTlrQi0ycG5aUC1vVDJtSU8yaDdwYlU4cXYyRm5WdjhKODY2bk5YQmNjbFY5eGZhR3FvV1FoY2QzY2t0UmgxdWkwVHdqZjFxWnZMWDFyM1ZXdlNwbVNwVHdmY2xwNDdXUXhFSTZxcnV2Rm1xS0hreW5UOGI0SjNaS18wdi1zMDR5VHdL?oc=5",
+      "summary": "Conflicto jurídico por la Ley ELA: el choque con la Ley de Dependencia abre la puerta al copago a los enfermos más graves Confilegal",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 13
+    },
+    {
+      "title": "Madrid se echa atrás y retira el copago para los pacientes de ELA - EL PAÍS",
+      "source": "EL PAÍS",
+      "date": "2026-06-03",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZTByX2JNdFJVTEdoRkhaMEs3TUxYdHdDS2RvUXRFYTlMaHFSc1dxMjVHTTN3Vi1iM3p1Um52ZUdFblpoUnhLT2xmTGRrQ2JPVVJ6eXZDVV9yc0paNTBwZVpQVml5eExyTDBjdVJHR3FaQmJ3eUVkc19XMGEyZ2VZTzBkaWxwZ1I5emVhTVZKVGdQVnZIejVjUTFzUVJPRFJYaTJLNmJWQ3hYWGhtR1J5Z0dqYkjSAcgBQVVfeXFMTWNIMDVWelpubEhFS045dVJPMFowNEVfRzNtZFJ6RG5JUk9CRkdWR0s5Y3hydEM2dTBpZE1ZVkRFVlhueW81N2ozd0pwOEZVa0RCSGhCWGczNTgwY2EwWlpEQllta1NhMHBLT2EtTmR5R3VSNXJkT3d3TEhKampoR1N3bmxIRmtsNjl4Y3dTUVhnaEJfNDQ3U0ZHak4wNUNfamszTHZrZV9taXJoUVc0ZV9oSS1YMFZuc191WHpETll5d0xjYl9INkU?oc=5",
+      "summary": "Madrid se echa atrás y retira el copago para los pacientes de ELA EL PAÍS",
+      "query": "ELA pacientes cuidados copago",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 14
     },
     {
       "title": "El Gobierno de Ayuso recula y elimina el copago para los enfermos de ELA - Elplural.com",
@@ -118,7 +149,8 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPX0Zpam91c2J3cXFGUGR6UEZYRWprR1c0MnFFVUdDLVE1UmlZX0ZFU1hoUVZKTGRNaWF6TjdrQzlNUW8xcVpNM3ZFamZWcVNYdmxLX2pUaUF6MUp0d3dSZE50Vi03NTFKY0VXYjhRYkRUdFZYdGZyQTVNUEdPa3U5ZUNtMm5kNThPYlNvZ1drcExWdDBNQUVTWGRSVkJ5WUNzaExfMtIBqgFBVV95cUxPb0JoTl9YaVZxa3ZKT2pJbWhtcm5WVVJHNVFsQjdRZUhqUEZOM0JuMnBRT2xYcXNfZDc0S0RCdEt4X21jSENBZHJkTVJFeHdrU0N5T21aVHVZTFQ3Uk5nRlZtNzF3M3Nva2pod0MwOTNwclN6Z1pocUFCZ0ROMmZqZWdVMkZiRGs3Mm5TS0RRYjJmTUwwcHJtbEhTdXZNN3lOQlEweGNkRy1wdw?oc=5",
       "summary": "El Gobierno de Ayuso recula y elimina el copago para los enfermos de ELA Elplural.com",
       "query": "ELA pacientes cuidados copago",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 15
     },
     {
       "title": "Las personas con ELA de Navarra recibirán hasta 13.500 euros de ayuda para los cuidados en domicilio - consalud.es",
@@ -127,7 +159,8 @@
       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWmVRb25wTGRwWkJoRDhYTnI4TjdYZUtPV2RqWlNOVmg4WEl0THp2SEtlNDdTMlFGZkl3TGl2ODYyLThoSkVQdnBrcUJ5YUpPaGlrSDh1YWdYbUFPcHRhUHEwRlJrRjMyUFZmU3lpcVhiN29pMEptRVVscllqeDdMb2U0U1QyM3NnbGhjb3dILVh0WlFKQ21oVHBxUlk0UWZ3OXF5Q3lIeldvRVczaTkwQ0VzbnRYclNZd1RUOTBKYVdiRlJqYWRyMGRFSDZmVDVVVW1kVmFZd0dtenl1d1k1Xw?oc=5",
       "summary": "Las personas con ELA de Navarra recibirán hasta 13.500 euros de ayuda para los cuidados en domicilio consalud.es",
       "query": "ELA pacientes cuidados copago",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 16
     },
     {
       "title": "La Fundación San Juan de Dios y la Asociación Española de ELA ayudarán a los enfermos con impresión 3D - Alfa y Omega",
@@ -136,9 +169,19 @@
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOOWxQRFRKZ0hMcktlOGV1ZlNJWHNuS2JPM2otQk1TWGdtNk1LQ285eDlheGhXVm83aHYyMUNadDVoUm1DUFJfdjZhUEFrZTh6STVzNHI0SjQ2NC1RU2U1Mkl0RkMtaVZ0dm5lOEhsdWM0b3lmZVpPaXVKTTBqRzhQaEw1Q3RNaGo3R0N0U2ZLdGN4a2lKaU5UU3RlVlNiRTM2NGRZVXlBMmNkTkRrdGZNWWZLOUZXUFFsWENXU2lOd29meWs?oc=5",
       "summary": "La Fundación San Juan de Dios y la Asociación Española de ELA ayudarán a los enfermos con impresión 3D Alfa y Omega",
       "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 17
     },
-    
+    {
+      "title": "La dieta sí podrá complementar tratamientos oncológicos, pero faltan investigación básica y ensayos clínicos - Centro Nacional de Investigaciones Oncológicas - CNIO",
+      "source": "Centro Nacional de Investigaciones Oncológicas - CNIO",
+      "date": "2026-06-03",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPU3ZTR3p5RG4tb2xUUlQ3LVZ1eG5RbGpSNG1lVExkMlNSckJPc2FRUmZJb01OanZ1MkYzVHF5Z29oQ2lGMnZxLTNtdFlpck9RNm1xbV9CSmJINTdUUHlsZjZLSm1hbHBCMS1FckxBenZiTEdrWURkU1JHcktHRXd2Q1BlQV8tMTFDR1pqVW9SRjRXWmNRYWs0MHUtTldtRmJiaGhUQkZFbGgzcGw4cHdVSlVwQkxxTzFHZGpZU3ZQTllpOGxPT3RQbVpUZmZHQjQ5X2tr?oc=5",
+      "summary": "La dieta sí podrá complementar tratamientos oncológicos, pero faltan investigación básica y ensayos clínicos Centro Nacional de Investigaciones Oncológicas - CNIO",
+      "query": "ELA investigación tratamiento",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 18
+    },
     {
       "title": "De Bilbao a Sevilla en bicicleta para exigir una Ley ELA que no dependa del código postal - Diario de Burgos",
       "source": "Diario de Burgos",
@@ -146,7 +189,8 @@
       "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMzIzTjdDU2tYVTZoQ2xvb3BtZS1ZUEYxVXNiQ3RCNEFLWnJwaHgyd3FtM2lDMGJnQTZUNWtSbEszcFdESkREc1djX1g3TFU3b01DMGVjVzNBUlBYcDR0NHhZY3N2dUtGMFVVUEJrQkRjZVlReFBpOHBQY1JEVk9wZU1YSUVhSG9hMWFRYURhNFpHaWE0aU1oUnpZaFhjSjFkMl9UZHdBZzVtcDlObkU1WmtYYjczRmtvaWM5LXNZYXU1WDZMMmlrTTBkTGtGNk5Ua3EyOG9LWDdhQQ?oc=5",
       "summary": "De Bilbao a Sevilla en bicicleta para exigir una Ley ELA que no dependa del código postal Diario de Burgos",
       "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 19
     },
     {
       "title": "Ayuso y la reducción de ayuda a los pacientes dependientes - infoLibre",
@@ -155,9 +199,29 @@
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdXUzOEEwMHpvQXlfbkx1eGF4MHhNUTVwLWRMcHVNek1iZmppdjN6eE9HOWE1RVFyWGM0ZFBHTVRhQ3h6Z0NGVFlsOU5ZYkZYOTBOUHdsSXZCQ0xoOEhBVmxQRmE1UGFvdXRMM3dETWF6MmI3cHV4M20tUzdGc09Uam1UXzAtTzI4cWhjWm0zQXd5Y1RPR0pBalBKdERodmg5aWxBRXF6QlYxYmJ1MVUzZTVxNjFudkJH0gG-AUFVX3lxTE1RQkRMLVRPYVBqTkpROTFjb3JER2JJSmlUVDVOTDktNHltUzdUUklPSUliYVNqYWdtNXFfUWF3U2tWNWdtNGtVMXFJak5CeDlDVkFUT0prVko1TS1YRi1vSGMycXBOVncwcDBRMktaSXd4V1JydXJjZFVMQ29kLWljVTZCQU1aZFh6N3BVZGFMaUxvRHhJZ3p0STYzUTIyZHVvVnY4bXFIdFkyU0lTNGllbmF0aDdGZFl3OHdEX2c?oc=5",
       "summary": "Ayuso y la reducción de ayuda a los pacientes dependientes infoLibre",
       "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 20
     },
-    
+    {
+      "title": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio - mediaset.es",
+      "source": "mediaset.es",
+      "date": "2026-05-29",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNX3l2RmxId05hRlBibVh3bHk4WGdyQ2ZuQWVTbXhrODNTM3c4SWJkVG9wYy1VN2dXMVpmTjh2MktuUk9kcDE1Zlc3eERmMjZGQmtUczU0cHlOZGhjM0ZwUEdQZzRWMkZNWGlONVlBeHVMQ3Q3dk9mVkRKaWMwTWJfWWVreXIwZXR3c1o5ZjBuSW0tTkpfOFN2QzFsQno4dTFKZEpXd05EZ1JDd3J6ZERkYVYydVR4ZVNXa2g0S0FNUXphaVl3VVA4SkxXVFdWM3BjUlZ5eEFQNWNNR0FiLVBjc0pqb1Y1UFBFa1lPOVpyM1BVZDQ?oc=5",
+      "summary": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio mediaset.es",
+      "query": "esclerosis lateral amiotrófica España",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 21
+    },
+    {
+      "title": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación - Revista Perfiles",
+      "source": "Revista Perfiles",
+      "date": "2026-05-29",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdUVjUVBwb0J2SldYRHFlQWpkZWRiclRHZzkzUUx1WVJGNzF3NTFjMFVCeWpTOU5weWd5RXlqSUppelp1OEZ6Q2dXd1NVS3dxVUc0ems3emg2RUEtVVhKUWR4MkhXQmMyUTRFY0pndkNHakJfYlhPNG9sN0owSXJBSmR0bzduUUM1VElFMXk2bFlTVnF4MVRkQnhtUQ?oc=5",
+      "summary": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación Revista Perfiles",
+      "query": "ELA investigación tratamiento",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 22
+    },
     {
       "title": "Qué sabemos de las ayudas por ELA y la confrontación entre el Gobierno central y la Comunidad de Madrid - Newtral",
       "source": "Newtral",
@@ -165,7 +229,8 @@
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiZEFMYW41YkVQbXVzajVCVnIzWmh3U1d5NHdoM0xIOWFSc1hvREx5MS10Y0dkTmlnVVJhMkRGTTVWaXd0M09ENkxoaFR5WUdMbFdEM1J4VWdXU0VHS3NUZXVkVTREV2owYW9rUNIBckFVX3lxTE1hcXk2dWRIRmZlVjNrN094T0FoN0R4a3ZuUW9Mam5oWDBDbDNlYlN5WGthTGJvR1FuU1B1WnpObVNHTkE4eERxTWFYMFg3Sndwb2h6YlgwWkFOZGhteUItSFFSZFV3RXdINkRfV3pkeDhUQQ?oc=5",
       "summary": "Qué sabemos de las ayudas por ELA y la confrontación entre el Gobierno central y la Comunidad de Madrid Newtral",
       "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 23
     },
     {
       "title": "Los pacientes con ELA reclaman que ninguna comunidad autónoma aplique copagos a las ayudas: \"Rompe con el espíritu de la ley\" - 20Minutos",
@@ -174,7 +239,8 @@
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQNUtXM0NLQm5Yc3dyWmEzNWRTeEZVOUx0VGp2QTFsbmxWR0J4aHJPb2Q0eTgzWFRhelZDUWxzTHo5SnZUYXdXbWlZZGcyUFJ6NnBPQk9IajV1NjIzN1pZRkVHWEZJYmdaTThCcVF3OFR0bUpyMDB1eWtYR3hQdFQ0RmpsRG8tUHZtWklRa0cyeWtadnpzWFBaaTR0d2tNc0pqcE05Q0VxVm9lY1R6Y290RnJ1VWxneUs5eS1TMXVXbnpaVkxnaGY5Z3E4dU0yTFdjV3VJallWSU5ZNVNrN3dQU1NOUXBxM1RPZFl5eDhxdDM?oc=5",
       "summary": "Los pacientes con ELA reclaman que ninguna comunidad autónoma aplique copagos a las ayudas: \"Rompe con el espíritu de la ley\" 20Minutos",
       "query": "ELA pacientes cuidados copago",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 24
     },
     {
       "title": "La Comunidad de Madrid cuela el copago a enfermos de ELA: «Es un escándalo» - Noticias para Municipios",
@@ -183,9 +249,9 @@
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdDdCc2xpQ0QzR3JEOGxtLWlBMHFRQ1FwRFUxQnk2VDBzcWdyV2VhRVd0bVZvZjBGWDlLY2IzRWJxTzBJSER2eS1LUGFha21BSUl5dG5XREtMTUpUdFUtNU9OSmV5eGZvSkl6eHpLWmM4eDd1QXZnRy1kNVJ5T0oteTIyYTh1QUl2LUtiNlRHN0p2aHctQjF5SWNqc2wxRFh5ODJQeWRGQVZ4Tl9hZV9pY2gySWxmMV81QTFrZVlCSkNkV3c?oc=5",
       "summary": "La Comunidad de Madrid cuela el copago a enfermos de ELA: «Es un escándalo» Noticias para Municipios",
       "query": "ELA pacientes cuidados copago",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 25
     },
-    
     {
       "title": "Gobierno de Ayuso atribuye a Ley de la Dependencia \"minoraciones\" en ayudas a enfermos de ELA y dice que \"no hay copago\" - Europa Press",
       "source": "Europa Press",
@@ -193,16 +259,8 @@
       "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNckVBM2Z6THJsMmZGaF9pMHhFMGFyU2JMb09Sb3FqVHNjS3RHUjlEUzRsX211T3N2VEd0cTRyYmtYVms0Zk9oQWI5NmFPXzlHMTNxREFCdndRQURmUjBWQ29uX01tdWNQcVRoNEtiT295TjdVY3dRemYzNlRPMG5Mdkh1Q2dpeENqMjRIRFVfalBBRENkT0hZcTQzaFZHYUVZQ3Vyei1qck9vTUhXMTRBZVo2T2p0bmxJZGdOMm9TdXNja1NxTlJfcGpkZmMtTERNNHl6cnFfYjF3Tk5DTXg4WGZuOVJfaFJf?oc=5",
       "summary": "Gobierno de Ayuso atribuye a Ley de la Dependencia \"minoraciones\" en ayudas a enfermos de ELA y dice que \"no hay copago\" Europa Press",
       "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
-    },
-    {
-      "title": "No es solo Madrid: Aragón, Cataluña o Cantabria también impondrán un copago a las ayudas de la ELA, ya que “la ley permite cobrarlos” - Infobae",
-      "source": "Infobae",
-      "date": "2026-05-25",
-      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQZUxINlB3MkZlU2pZQXg2Rk9tSmROWDJJMUNIZURGTl82VHBaU2ZYVWQ2RG5GTlJRTzlVRi0zVEoxQU1hclNVMkZQMk5WSndGNVoxRDUtbkJFbXBuWXFTNlk5ZGdqbmRxMnlobkJENzhMMFVNcWtUTmNiQWoxdWdpUFE5eWRYZW4tdmI3ODZRbW1rR0lwRHRzbVkyRGszOEJZOVFnNnhlU0cyNFZybnVsR3gxN3hsbWtwVFZnOWlIY0hQUDNlWV8zcGRCVU53MnhMYUs0UVBaQ3prbzYxUW5CcV9kMXhXX2pYeVYzbUhKcTUtRWNZNmpYOTBhZnV0WlMt0gGbAkFVX3lxTE45NFVrdEx5a2xqeFp4ZTVNYkl0eGZqZGl5UlN6Nk1JUmpiZ2ZlY3BXTktwS3hpVUYwV0U2RmU5QWMzTTRxZWNMZmlVS2ZJM3V0MTBCc21UZWs1X29ERWcxOXpJeHlGcW5ZejRidlNoaGZNa3N4aXpKeVRzb3FEbGtLZEVzNE9ralBkdG5IUzhMYzZUakZnWUswMUtfbGdhenFjdVVtT0gtV3hXRHhac3lTZlNDZXlSWXFlZlZSektjcDRNUXdNLTdnWFo5VVcxWVRrYmFmamtvSFdqVE1JR1RoT2d5eTc3UUMxWEU4ak5BYmNZX1NIQWNyRVJkZDI0Ym13NUd3SXBJZEY3MExEdVpRMjVfWTJORHdQY0U?oc=5",
-      "summary": "No es solo Madrid: Aragón, Cataluña o Cantabria también impondrán un copago a las ayudas de la ELA, ya que “la ley permite cobrarlos” Infobae",
-      "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 26
     },
     {
       "title": "Ocho comunidades autónomas perderán financiación en dependencia por incumplir los objetivos - RTVE.es",
@@ -211,7 +269,18 @@
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMU9QeVFNUHI3WmJtY0h0VW82Y1oxMkNJd2lBN2xGa3hiR1RKQzczYVN6TDJib2VkRk1kSmtiQ0tOX3JOaHA5cndxdXJpVDQ2ZHhwMGxnc1VHanVCX200blVYU0FJbEdDVGpKOFdkbHJYVGUtUUNiZE9yUUNaM0JUc2RadlNRNVBTZG1pTXNCUF9UZ24ydWRvWWo0VzlLOFJBd04xS1FKNzRoSTAwcDNEWTFWazlqeF9Nc3hGb01QM1RIMHY2RHMzV04xWWXSAcwBQVVfeXFMTzVGaEd4SHItcU03YldZb2ppVTJPZGhMcWgzbUhENURFODdRWEYzOXJjbE5yanpYMl9ZUi1Pa0l4MVdTU3NfaDJEZ1dTeFFFejc4VXB4ZmUyVGYweWcxRC00YVZLelRaUGEtX1NKZmF1bXRMWFRBU0Rzb1lCWFY3a0NyM1RpeG42cWtMQnE3UXM1U3pkTGp5VThmUFI0dXlPT3NycEtKY2FVaHhVNU5Ud1RGeWVmdm5NeU43OHhLVnlOWEljb2RlRGhPLURN?oc=5",
       "summary": "Ocho comunidades autónomas perderán financiación en dependencia por incumplir los objetivos RTVE.es",
       "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 27
+    },
+    {
+      "title": "No es solo Madrid: Aragón, Cataluña o Cantabria también impondrán un copago a las ayudas de la ELA, ya que “la ley permite cobrarlos” - Infobae",
+      "source": "Infobae",
+      "date": "2026-05-25",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQZUxINlB3MkZlU2pZQXg2Rk9tSmROWDJJMUNIZURGTl82VHBaU2ZYVWQ2RG5GTlJRTzlVRi0zVEoxQU1hclNVMkZQMk5WSndGNVoxRDUtbkJFbXBuWXFTNlk5ZGdqbmRxMnlobkJENzhMMFVNcWtUTmNiQWoxdWdpUFE5eWRYZW4tdmI3ODZRbW1rR0lwRHRzbVkyRGszOEJZOVFnNnhlU0cyNFZybnVsR3gxN3hsbWtwVFZnOWlIY0hQUDNlWV8zcGRCVU53MnhMYUs0UVBaQ3prbzYxUW5CcV9kMXhXX2pYeVYzbUhKcTUtRWNZNmpYOTBhZnV0WlMt0gGbAkFVX3lxTE45NFVrdEx5a2xqeFp4ZTVNYkl0eGZqZGl5UlN6Nk1JUmpiZ2ZlY3BXTktwS3hpVUYwV0U2RmU5QWMzTTRxZWNMZmlVS2ZJM3V0MTBCc21UZWs1X29ERWcxOXpJeHlGcW5ZejRidlNoaGZNa3N4aXpKeVRzb3FEbGtLZEVzNE9ralBkdG5IUzhMYzZUakZnWUswMUtfbGdhenFjdVVtT0gtV3hXRHhac3lTZlNDZXlSWXFlZlZSektjcDRNUXdNLTdnWFo5VVcxWVRrYmFmamtvSFdqVE1JR1RoT2d5eTc3UUMxWEU4ak5BYmNZX1NIQWNyRVJkZDI0Ym13NUd3SXBJZEY3MExEdVpRMjVfWTJORHdQY0U?oc=5",
+      "summary": "No es solo Madrid: Aragón, Cataluña o Cantabria también impondrán un copago a las ayudas de la ELA, ya que “la ley permite cobrarlos” Infobae",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 28
     },
     {
       "title": "Los enfermos de ELA muestran su indignación por el copago impuesto por Ayuso que reduce sus ayudas - Elplural.com",
@@ -220,7 +289,18 @@
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMHc0UnV1eFMtZER3TW5aajduRjMwRUQ0V25XSUtrZ2kydU5MUTVYOG1JeVllMVpWZ1ppMnh4Wno4MzdsSGwwYUw2blRiTlZRdGk2Skh3LXNMWHRBVkRqTVl3am5IcDRobm9UQWVRczZpR2pUNktUeHRHT3k2U2stY1J3V3hMTktRTkZCd0J0Q3JxNjlMaDFLQnZOR09BNjdiZDdVSGdhNVRUOFFpLUJkTXRPcmRXOUJNTm0wS0NNWdIBxAFBVV95cUxOTklvcmd2dndCcFpITVN5bkg2OThxeFdBdmU5ZzRyX2x0eFNCRFRsTGNYQUFOd3NWdXV0X2hCQU9jbW5KY1NZbkd0Wkc3czhFVzVzN3dOZHJ1aHZZM1lXdXZGaTBTR29JMkplNWtLYUg3T0lCSFFtUG5CNDZkREtUVlAwc2dqc2ppMThjTlFPbW5GUm41a0tmZUFQV3gzRTZkaGRITE5sV3lEbkdMc3VCdnV4QTlKQlVubFRkamFEM0VCMTFr?oc=5",
       "summary": "Los enfermos de ELA muestran su indignación por el copago impuesto por Ayuso que reduce sus ayudas Elplural.com",
       "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 29
+    },
+    {
+      "title": "Ayuso culpa a la Ley de Dependencia de los recortes en ayudas a enfermos de ELA y niega que exista copago - Demócrata",
+      "source": "Demócrata",
+      "date": "2026-05-25",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMzVYSkV3Mm9tNzlPTC1GRGR1MVZKaTFWYjJZdTAyUm9Kb0JWTllTSmRqZk9VcEE5VDlLVjdZaU5RVURqR1Q0MENkcEtUNDhoWDBNSVBOcmw4V0N0SUgtUWthQnRCTDdFc3g1ZzMyWnhxUml5RkZNQjMtSW44a0NUWTdQNFUxSUx0YVd6aExYWUVSdlVFM0RDeWJRWUdicEJFQTItQ3QwT2VZYjFYUngybWNCUENkenRaeDNjS3FpSTVLaEU3TWJNZVZ0YVQ4UU1CRWhub2x30gHbAUFVX3lxTFByS0UzaDluRHhSbEVNdnE4VENra2pPalM3anV6dDR0SFA1cElnN2Yzd0xjT1JRUzRZOUFmOURBcGpwQk1KaDI5UUpJS3Itb3VHbnltNmZPZzVpUG9TRWVLRkVpblFIQW03RVhlYjR5QjYwOWlqTzZMemY5MVRza2Rsb3JHNUNrSHNQUDlDb2NiZ2ZFbmtNaGVJSmVpNXV6RmpzNTMtdkEyekJHejZwWHBHRmtNWmdScFBQM3pfTnRvQk9tOTNUYnVwdldtYkJWQWxxWVc3X3o2SGQ5Yw?oc=5",
+      "summary": "Ayuso culpa a la Ley de Dependencia de los recortes en ayudas a enfermos de ELA y niega que exista copago Demócrata",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 30
     }
   ]
 }
