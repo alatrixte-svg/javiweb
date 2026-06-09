@@ -1,17 +1,5 @@
 [
-  {
-    "id": "post-articulo-de-prueba",
-    "fecha": "9 de junio de 2026",
-    "titulo": "Artículo de prueba",
-    "extracto": "Este es un artículo de prueba para comprobar la publicación automática.",
-    "cuerpo": [
-      "Este es el primer párrafo del artículo de prueba.",
-      "Este es el segundo párrafo. Sirve para comprobar que el sistema crea correctamente el archivo Markdown.",
-      "Si todo funciona bien, este artículo aparecerá también dentro de blog-posts.json."
-    ],
-    "etiqueta": "Prueba"
-  },
-  {
+   {
     "id": "post-bienvenida",
     "fecha": "31 de mayo de 2026",
     "titulo": "Bienvenidos a mi blog",
