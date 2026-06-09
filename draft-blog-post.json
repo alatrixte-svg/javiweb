@@ -1,12 +1,16 @@
-{
-  "titulo": "Artículo de prueba",
-  "fecha": "9 de junio de 2026",
-  "date": "2026-06-09",
-  "extracto": "Este es un artículo de prueba para comprobar la publicación automática.",
-  "etiqueta": "Prueba",
-  "cuerpo": [
-    "Este es el primer párrafo del artículo de prueba.",
-    "Este es el segundo párrafo. Sirve para comprobar que el sistema crea correctamente el archivo Markdown.",
-    "Si todo funciona bien, este artículo aparecerá también dentro de blog-posts.json."
-  ]
-}
+  {
+    "id": "post-hoy-es-nochebuena",
+    "fecha": "9 de junio de 2026",
+    "titulo": "Hoy es Nochebuena",
+    "extracto": "El sabor de mis navidades",
+    "cuerpo": [
+      "Hoy es Nochebuena, una fecha que, desde muy pequeño, he tenido marcada con letras de oro en el calendario y en mi corazón porque me llenaba de alegría. Era mágica.",
+      "En este día siempre nos reuníamos en casa de mis padres con mis abuelos, hijos, hermanos, cuñados, tíos y sobrinos en lo que era la mayor expresión de amor familiar y de fiesta que recuerdo, año tras año y cada vez con más miembros.",
+      "Esta noche echaré mucho de menos esa congregación en la que, mis abuelos, hace ya años que faltan por ley de vida, mi cuñado Eladio, porque la maldita doña ELA nos lo arrebató en febrero, y yo, porque esta misma enfermedad me mantiene postrado e inmóvil desde hace ya demasiado tiempo, privándome con ello de tan festivo evento.",
+      "Echaré en falta tomarme una cerveza con mi titi, mis primos, mis hermanos y mi cuñado Juanmi, hablando indefectiblemente de su glorioso Barça; los corrillos de mis hijos con mis sobrinos, cada vez más hombres y menos niños; la sopa de albóndigas y el pavo y; sobre todo, añoraré la mirada feliz de mis padres contemplando juntos a todos sus polluelos y la estirpe a la que dieron inicio hace más de medio siglo.",
+      "No negaré que perdérmelo, no poder compartir todo eso con mi familia, me provoca tristeza y que, aquellas letras de oro que antaño lucían brillantes, ahora han perdido lustre y esplendor, pero, por otra parte, me llena de alegría que la cita se siga repitiendo y que, al menos dos de mis hijos puedan asistir, como también me colma de dicha ver que, contra todo pronóstico, sigo contando navidades, aunque sea desde la cama, con mi cariñito y su familia, que también es la mía por ley, pero especialmente porque se lo han ganado con su afecto hacia mí.",
+      "Como siempre digo, doy gracias por seguir disfrutando de cada minuto de la prórroga, por poder continuar haciendo cosas que me llenan, por reír con vuestras ocurrencias y sonreír con vuestra presencia. En definitiva, doy gracias por continuar respirando, aunque tenga que hacerlo con ayuda y, de ese modo, poder seguir formando parte de este selecto y exclusivo club que es el de los vivos.",
+      "Os deseo una feliz Navidad y un próspero 2026 lleno de salud y felicidad."
+    ],
+    "etiqueta": "Familia"
+  }
