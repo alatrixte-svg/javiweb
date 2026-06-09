@@ -40,12 +40,12 @@ function normalizarTextoFecha(texto) {
 
 function fechaPostTimestamp(post) {
   if (post.date) {
-    const t = new Date(post.date).getTime();
-    if (!Number.isNaN(t)) return t;
+    const timestamp = Date.parse(post.date);
+    if (!Number.isNaN(timestamp)) return timestamp;
   }
 
   const fecha = normalizarTextoFecha(post.fecha);
-  const match = fecha.match(/(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})/);
+  const match = fecha.match(/^(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})$/);
 
   if (!match) return 0;
 
@@ -60,14 +60,10 @@ function fechaPostTimestamp(post) {
 
 function ordenarPostsPorFecha(posts) {
   return [...posts].sort((a, b) => {
-    const fechaB = fechaPostTimestamp(b);
     const fechaA = fechaPostTimestamp(a);
+    const fechaB = fechaPostTimestamp(b);
 
-    if (fechaB !== fechaA) {
-      return fechaB - fechaA;
-    }
-
-    return String(b.titulo || '').localeCompare(String(a.titulo || ''), 'es');
+    return fechaB - fechaA;
   });
 }
 
@@ -82,39 +78,53 @@ function escapeHTML(value) {
 
 
 // CARGA DE ENTRADAS EN LA PÁGINA PRINCIPAL
-fetch('blog-posts.json?v=' + Date.now())
-  .then(r => r.json())
-  .then(posts => {
-    const grid = document.getElementById('blog-preview-grid');
-    if (!grid) return;
+function cargarEntradasPortada() {
+  const grid = document.getElementById('blog-preview-grid');
 
-    const postsOrdenados = ordenarPostsPorFecha(posts);
-    const recientes = postsOrdenados.slice(0, 3);
+  if (!grid) return;
 
-    if (!recientes.length) {
-      grid.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>';
-      return;
-    }
+  fetch('blog-posts.json?v=' + Date.now())
+    .then(r => r.json())
+    .then(posts => {
+      if (!Array.isArray(posts)) {
+        grid.innerHTML = '<p style="color:var(--muted)">No se pudieron cargar los artículos.</p>';
+        return;
+      }
 
-    grid.innerHTML = recientes.map(p => `
-      <article class="blog-preview-card${p.imagen ? ' has-imagen' : ''}" onclick="location.href='blog-articulo.html?id=${encodeURIComponent(p.id)}'" style="cursor:pointer">
-        ${p.imagen ? `<img src="${escapeHTML(p.imagen)}" alt="${escapeHTML(p.titulo)}" class="blog-preview-img" />` : ''}
-        <div class="blog-preview-body">
-          <span class="blog-date">${escapeHTML(p.fecha)}</span>
-          <h3>${escapeHTML(p.titulo)}</h3>
-          <p>${escapeHTML(p.extracto)}</p>
-          <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}" class="blog-read-more">Leer →</a>
-        </div>
-      </article>
-    `).join('');
-  })
-  .catch(error => {
-    console.error('Error cargando entradas recientes:', error);
-  });
+      const postsOrdenados = ordenarPostsPorFecha(posts);
+      const recientes = postsOrdenados.slice(0, 3);
+
+      if (!recientes.length) {
+        grid.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>';
+        return;
+      }
+
+      grid.innerHTML = recientes.map(p => `
+        <article
+          class="blog-preview-card${p.imagen ? ' has-imagen' : ''}"
+          onclick="location.href='blog-articulo.html?id=${encodeURIComponent(p.id)}'"
+          style="cursor:pointer"
+        >
+          ${p.imagen ? `<img src="${escapeHTML(p.imagen)}" alt="${escapeHTML(p.titulo)}" class="blog-preview-img" />` : ''}
+
+          <div class="blog-preview-body">
+            <span class="blog-date">${escapeHTML(p.fecha)}</span>
+            <h3>${escapeHTML(p.titulo)}</h3>
+            <p>${escapeHTML(p.extracto)}</p>
+            <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}" class="blog-read-more">Leer →</a>
+          </div>
+        </article>
+      `).join('');
+    })
+    .catch(error => {
+      console.error('Error cargando entradas recientes:', error);
+      grid.innerHTML = '<p style="color:var(--muted)">Error al cargar las entradas recientes.</p>';
+    });
+}
 
 
 // EMAILJS
-document.addEventListener('DOMContentLoaded', () => {
+function inicializarEmailJS() {
   const form = document.getElementById('contact-form');
 
   if (!form) return;
@@ -162,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-});
+}
 
 
 // ÍNDICE DEL BLOG
@@ -200,8 +210,9 @@ function cargarIndiceBlog() {
     });
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', cargarIndiceBlog);
-} else {
+
+document.addEventListener('DOMContentLoaded', () => {
+  cargarEntradasPortada();
   cargarIndiceBlog();
-}
+  inicializarEmailJS();
+});
