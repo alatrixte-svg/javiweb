@@ -149,19 +149,17 @@
       }
 
       if (indice) {
-        indice.innerHTML = `
-          <ul>
-            ${postsOrdenados.map(p => `
-              <li>
-                <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}">
-                  ${escapeHTML(p.fecha)} — ${escapeHTML(p.titulo)}
-                </a>
-              </li>
-            `).join('')}
-          </ul>
-        `;
-      }
-
+  indice.innerHTML = `
+    <div class="blog-index-tabs">
+      ${postsOrdenados.map(p => `
+        <a class="blog-index-tab" href="blog-articulo.html?id=${encodeURIComponent(p.id)}">
+          <span class="blog-index-tab-date">${escapeHTML(p.fecha)}</span>
+          <span class="blog-index-tab-title">${escapeHTML(p.titulo)}</span>
+        </a>
+      `).join('')}
+    </div>
+  `;
+}
       lista.innerHTML = postsOrdenados.map(p => `
         <article class="blog-post" id="${escapeHTML(p.id)}">
           ${p.imagen ? `<img src="${escapeHTML(p.imagen)}" alt="${escapeHTML(p.titulo)}" class="blog-post-imagen" />` : ''}
