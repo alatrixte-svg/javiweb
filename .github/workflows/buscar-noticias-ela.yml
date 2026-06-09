@@ -1,0 +1,34 @@
+name: Buscar noticias sobre ELA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  buscar-noticias:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Buscar noticias
+        run: python scripts/buscar_noticias_ela.py
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Guardar candidate-news.json
+        run: |
+          git add candidate-news.json
+          git diff --cached --quiet && echo "No hay cambios que guardar" || git commit -m "Actualiza noticias candidatas sobre ELA"
+          git push
