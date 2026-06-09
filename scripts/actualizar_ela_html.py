@@ -5,6 +5,7 @@ from pathlib import Path
 
 ELA_FILE = Path("ELA.html")
 CANDIDATE_FILE = Path("candidate-news.json")
+MAX_NEWS_IN_ELA = 30
 
 
 def js_string(value):
@@ -25,7 +26,7 @@ def load_candidates():
     return data.get("news", [])
 
 
-def build_news_object(item):
+def clean_candidate_item(item):
     title = item.get("title", "").strip()
     source = item.get("source", "").strip()
     summary = item.get("summary", "").strip()
@@ -43,12 +44,80 @@ def build_news_object(item):
             "cuidados, prestaciones o derechos."
         )
 
+    return {
+        "title": title,
+        "description": description,
+        "link": link,
+        "date": date
+    }
+
+
+def extract_current_news(html):
+    match = re.search(
+        r"const\s+newsData\s*=\s*\[(.*?)\];",
+        html,
+        flags=re.DOTALL
+    )
+
+    if not match:
+        print("No se encontró el array newsData en ELA.html.")
+        sys.exit(1)
+
+    array_content = match.group(1)
+
+    object_pattern = re.compile(
+        r"\{\s*"
+        r"title:\s*(?P<title>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*"
+        r"description:\s*(?P<description>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*"
+        r"link:\s*(?P<link>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*"
+        r"date:\s*(?P<date>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*"
+        r"\}",
+        flags=re.DOTALL
+    )
+
+    current_news = []
+
+    for object_match in object_pattern.finditer(array_content):
+        try:
+            current_news.append({
+                "title": json.loads(object_match.group("title")),
+                "description": json.loads(object_match.group("description")),
+                "link": json.loads(object_match.group("link")),
+                "date": json.loads(object_match.group("date"))
+            })
+        except json.JSONDecodeError:
+            continue
+
+    return current_news
+
+
+def build_news_object(item):
     return f"""      {{
-        title: {js_string(title)},
-        description: {js_string(description)},
-        link: {js_string(link)},
-        date: {js_string(date)}
+        title: {js_string(item.get("title", ""))},
+        description: {js_string(item.get("description", ""))},
+        link: {js_string(item.get("link", ""))},
+        date: {js_string(item.get("date", ""))}
       }}"""
+
+
+def replace_news_array(html, news):
+    news_objects = ",\n".join(build_news_object(item) for item in news)
+
+    new_array = f"const newsData = [\n{news_objects}\n    ];"
+
+    updated_html = re.sub(
+        r"const\s+newsData\s*=\s*\[.*?\];",
+        new_array,
+        html,
+        count=1,
+        flags=re.DOTALL
+    )
+
+    return updated_html
+
+
+def sort_key(item):
+    return item.get("date", "") or ""
 
 
 def main():
@@ -91,51 +160,47 @@ def main():
             print(f"El índice {index} no existe en candidate-news.json.")
             sys.exit(1)
 
-        selected_news.append(candidates[real_index])
+        selected_news.append(clean_candidate_item(candidates[real_index]))
 
     if not ELA_FILE.exists():
         raise FileNotFoundError("No se encontró ELA.html en la raíz del repositorio.")
 
     html = ELA_FILE.read_text(encoding="utf-8")
 
-    if "const newsData = [" not in html:
-        print("No se encontró 'const newsData = [' en ELA.html.")
-        sys.exit(1)
+    current_news = extract_current_news(html)
 
-    existing_links = set(
-        normalize_url(match.group(1))
-        for match in re.finditer(r"link:\s*[\"']([^\"']+)[\"']", html)
-    )
+    combined_news = selected_news + current_news
 
-    fresh_news = []
+    unique_news = []
+    seen_links = set()
 
-    for item in selected_news:
+    for item in combined_news:
         link = normalize_url(item.get("link", ""))
 
         if not link:
             continue
 
-        if link in existing_links:
-            print(f"Duplicada, omitida: {item.get('title', '')}")
+        if link in seen_links:
             continue
 
-        fresh_news.append(item)
+        seen_links.add(link)
+        unique_news.append(item)
 
-    if not fresh_news:
-        print("No hay noticias nuevas que añadir.")
-        return
+    unique_news.sort(key=sort_key, reverse=True)
 
-    news_objects = ",\n".join(build_news_object(item) for item in fresh_news)
+    limited_news = unique_news[:MAX_NEWS_IN_ELA]
 
-    updated_html = html.replace(
-        "const newsData = [",
-        f"const newsData = [\n{news_objects},",
-        1
-    )
+    updated_html = replace_news_array(html, limited_news)
 
     ELA_FILE.write_text(updated_html, encoding="utf-8")
 
-    print(f"Añadidas {len(fresh_news)} noticias a ELA.html.")
+    removed_count = max(0, len(unique_news) - len(limited_news))
+
+    print(f"Noticias actuales antes de actualizar: {len(current_news)}")
+    print(f"Noticias seleccionadas: {len(selected_news)}")
+    print(f"Noticias guardadas finalmente en ELA.html: {len(limited_news)}")
+    print(f"Noticias eliminadas por superar el límite de {MAX_NEWS_IN_ELA}: {removed_count}")
+    print(f"Límite máximo configurado: {MAX_NEWS_IN_ELA}")
 
 
 if __name__ == "__main__":
