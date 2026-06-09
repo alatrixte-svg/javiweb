@@ -81,7 +81,9 @@ def extract_items_from_feed(query, root):
         pub_date = parse_date(item.findtext("pubDate"))
 
         source_element = item.find("source")
-        source = clean_text(source_element.text if source_element is not None else "Google News")
+        source = clean_text(
+            source_element.text if source_element is not None else "Google News"
+        )
 
         if not title or not link:
             continue
@@ -93,7 +95,10 @@ def extract_items_from_feed(query, root):
             "link": link,
             "summary": description,
             "query": query,
-            "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones."
+            "relevance_reason": (
+                "Noticia encontrada en búsquedas relacionadas con ELA, "
+                "cuidados, investigación, ley ELA o prestaciones."
+            )
         })
 
     return items
@@ -126,7 +131,7 @@ def main():
 
     unique_items.sort(key=lambda item: item.get("date", ""), reverse=True)
 
-        selected_items = unique_items[:MAX_TOTAL_RESULTS]
+    selected_items = unique_items[:MAX_TOTAL_RESULTS]
 
     for index, item in enumerate(selected_items, start=1):
         item["id"] = index
