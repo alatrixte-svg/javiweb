@@ -13,6 +13,74 @@ document.addEventListener('click', (e) => {
 });
 
 
+// UTILIDADES PARA ORDENAR POSTS POR FECHA
+const MESES_BLOG = {
+  enero: 0,
+  febrero: 1,
+  marzo: 2,
+  abril: 3,
+  mayo: 4,
+  junio: 5,
+  julio: 6,
+  agosto: 7,
+  septiembre: 8,
+  setiembre: 8,
+  octubre: 9,
+  noviembre: 10,
+  diciembre: 11
+};
+
+function normalizarTextoFecha(texto) {
+  return String(texto || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+function fechaPostTimestamp(post) {
+  if (post.date) {
+    const t = new Date(post.date).getTime();
+    if (!Number.isNaN(t)) return t;
+  }
+
+  const fecha = normalizarTextoFecha(post.fecha);
+  const match = fecha.match(/(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})/);
+
+  if (!match) return 0;
+
+  const dia = Number(match[1]);
+  const mes = MESES_BLOG[match[2]];
+  const anio = Number(match[3]);
+
+  if (mes === undefined) return 0;
+
+  return new Date(anio, mes, dia).getTime();
+}
+
+function ordenarPostsPorFecha(posts) {
+  return [...posts].sort((a, b) => {
+    const fechaB = fechaPostTimestamp(b);
+    const fechaA = fechaPostTimestamp(a);
+
+    if (fechaB !== fechaA) {
+      return fechaB - fechaA;
+    }
+
+    return String(b.titulo || '').localeCompare(String(a.titulo || ''), 'es');
+  });
+}
+
+function escapeHTML(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+
 // CARGA DE ENTRADAS EN LA PÁGINA PRINCIPAL
 fetch('blog-posts.json?v=' + Date.now())
   .then(r => r.json())
@@ -20,7 +88,8 @@ fetch('blog-posts.json?v=' + Date.now())
     const grid = document.getElementById('blog-preview-grid');
     if (!grid) return;
 
-    const recientes = posts.slice(0, 3);
+    const postsOrdenados = ordenarPostsPorFecha(posts);
+    const recientes = postsOrdenados.slice(0, 3);
 
     if (!recientes.length) {
       grid.innerHTML = '<p style="color:var(--muted)">Aún no hay artículos.</p>';
@@ -28,13 +97,13 @@ fetch('blog-posts.json?v=' + Date.now())
     }
 
     grid.innerHTML = recientes.map(p => `
-      <article class="blog-preview-card${p.imagen ? ' has-imagen' : ''}" onclick="location.href='blog-articulo.html?id=${p.id}'" style="cursor:pointer">
-        ${p.imagen ? `<img src="${p.imagen}" alt="${p.titulo}" class="blog-preview-img" />` : ''}
+      <article class="blog-preview-card${p.imagen ? ' has-imagen' : ''}" onclick="location.href='blog-articulo.html?id=${encodeURIComponent(p.id)}'" style="cursor:pointer">
+        ${p.imagen ? `<img src="${escapeHTML(p.imagen)}" alt="${escapeHTML(p.titulo)}" class="blog-preview-img" />` : ''}
         <div class="blog-preview-body">
-          <span class="blog-date">${p.fecha}</span>
-          <h3>${p.titulo}</h3>
-          <p>${p.extracto}</p>
-          <a href="blog-articulo.html?id=${p.id}" class="blog-read-more">Leer →</a>
+          <span class="blog-date">${escapeHTML(p.fecha)}</span>
+          <h3>${escapeHTML(p.titulo)}</h3>
+          <p>${escapeHTML(p.extracto)}</p>
+          <a href="blog-articulo.html?id=${encodeURIComponent(p.id)}" class="blog-read-more">Leer →</a>
         </div>
       </article>
     `).join('');
@@ -116,10 +185,12 @@ function cargarIndiceBlog() {
         return;
       }
 
-      indexList.innerHTML = posts.map(post => `
+      const postsOrdenados = ordenarPostsPorFecha(posts);
+
+      indexList.innerHTML = postsOrdenados.map(post => `
         <a class="blog-index-link" href="blog-articulo.html?id=${encodeURIComponent(post.id)}">
-          <span>${post.fecha}</span>
-          <strong>${post.titulo}</strong>
+          <span>${escapeHTML(post.fecha)}</span>
+          <strong>${escapeHTML(post.titulo)}</strong>
         </a>
       `).join('');
     })
