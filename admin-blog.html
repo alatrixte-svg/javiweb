@@ -25,12 +25,12 @@
     .gen-btn{width:100%;padding:1rem;font-size:1.05rem;font-weight:700;background:var(--gold);color:#0d1118;border:none;border-radius:14px;cursor:pointer;transition:opacity .2s;letter-spacing:.04em}
     .gen-btn:hover{opacity:.88}
     .resultado{display:none;margin-top:1.5rem}
-    .resultado-tabs{display:flex;gap:.5rem;margin-bottom:1rem}
+    .resultado-tabs{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}
     .tab-btn{padding:.45rem 1.1rem;border-radius:20px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--muted);font-size:.85rem;cursor:pointer;transition:all .2s}
     .tab-btn.active{background:var(--gold);color:#0d1118;border-color:var(--gold);font-weight:700}
     .tab-panel{display:none}
     .tab-panel.active{display:block}
-    #md-output,#json-output{width:100%;min-height:280px;padding:1rem;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.12);border-radius:12px;color:#c8e6c9;font-family:monospace;font-size:.82rem;line-height:1.7;resize:vertical;white-space:pre}
+    #md-output,#json-output,#draft-output{width:100%;min-height:280px;padding:1rem;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.12);border-radius:12px;color:#c8e6c9;font-family:monospace;font-size:.82rem;line-height:1.7;resize:vertical;white-space:pre}
     .output-actions{display:flex;gap:.7rem;margin-top:.8rem;flex-wrap:wrap}
     .out-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem 1.1rem;border-radius:30px;font-size:.85rem;font-weight:700;cursor:pointer;border:none;transition:opacity .2s}
     .out-btn:hover{opacity:.82}
@@ -87,18 +87,21 @@
     <div class="admin-header">
       <p class="eyebrow">Panel privado</p>
       <h1>Crear entrada del blog</h1>
-      <p>Rellena el formulario y descarga el archivo Markdown listo para subir a la carpeta <code style="background:rgba(255,255,255,.08);padding:.1em .4em;border-radius:4px;font-size:.9em">posts/</code>.</p>
+      <p>
+        Rellena el formulario y genera el contenido listo para publicar el artículo mediante
+        <code style="background:rgba(255,255,255,.08);padding:.1em .4em;border-radius:4px;font-size:.9em">draft-blog-post.json</code>.
+      </p>
     </div>
 
     <div class="instrucciones-rapidas">
-      <strong>Flujo de publicación:</strong>
+      <strong>Flujo de publicación recomendado:</strong>
       <ol>
         <li>Rellena el formulario y pulsa <strong>Generar Markdown</strong></li>
-        <li>Descarga el archivo <code>.md</code> generado</li>
-        <li>En Replit, sube ese archivo a la carpeta <code>posts/</code></li>
-        <li>Copia el bloque JSON de la pestaña "JSON para blog-posts.json"</li>
-        <li>Abre <code>blog-posts.json</code> y pega el bloque <strong>al principio</strong> de la lista</li>
-        <li>Pulsa <strong>Deploy / Publish</strong></li>
+        <li>Abre la pestaña <strong>draft-blog-post.json</strong></li>
+        <li>Copia todo su contenido</li>
+        <li>Abre <code>draft-blog-post.json</code> en GitHub y reemplaza su contenido</li>
+        <li>Ejecuta la Action <strong>Publicar artículo del blog</strong></li>
+        <li>La Action actualizará <code>blog-posts.json</code> y creará automáticamente el archivo en <code>posts/</code></li>
       </ol>
     </div>
 
@@ -106,13 +109,15 @@
 
       <div class="admin-card">
         <h2>Datos principales</h2>
+
         <label for="f-titulo">Título</label>
         <input type="text" id="f-titulo" placeholder="El copago que nadie explica" autocomplete="off" />
+
         <p class="slug-preview">Archivo: <span id="slug-preview">—</span></p>
 
         <div class="field-row">
           <div>
-            <label for="f-date">Fecha (para el sistema)</label>
+            <label for="f-date">Fecha para el sistema</label>
             <input type="date" id="f-date" />
           </div>
           <div>
@@ -135,18 +140,18 @@
             </select>
           </div>
           <div>
-            <label for="f-imagen">Imagen destacada (opcional)</label>
+            <label for="f-imagen">Imagen destacada opcional</label>
             <input type="text" id="f-imagen" placeholder="assets/mi-foto.jpg" />
           </div>
         </div>
 
-        <label for="f-extracto">Extracto (frase de resumen)</label>
+        <label for="f-extracto">Extracto</label>
         <input type="text" id="f-extracto" placeholder="Lo que el sistema no entiende sobre vivir con la ELA." />
       </div>
 
       <div class="admin-card">
         <h2>Cuerpo del artículo</h2>
-        <label for="cuerpo-textarea">Texto (separa los párrafos con una línea en blanco)</label>
+        <label for="cuerpo-textarea">Texto, separando los párrafos con una línea en blanco</label>
         <textarea id="cuerpo-textarea" placeholder="Primer párrafo del artículo.
 
 Segundo párrafo. Puedes escribir lo que quieras aquí.
@@ -161,45 +166,59 @@ Tercer párrafo. Cada bloque separado por línea en blanco se convierte en un p�
     <div class="resultado" id="resultado">
 
       <div class="resultado-tabs">
-  <button class="tab-btn active" onclick="switchTab('md', this)">Markdown (.md)</button>
-  <button class="tab-btn" onclick="switchTab('json', this)">JSON para blog-posts.json</button>
-  <button class="tab-btn" onclick="switchTab('draft', this)">draft-blog-post.json</button>
-</div>
+        <button class="tab-btn active" onclick="switchTab('md', this)">Markdown (.md)</button>
+        <button class="tab-btn" onclick="switchTab('json', this)">JSON para blog-posts.json</button>
+        <button class="tab-btn" onclick="switchTab('draft', this)">draft-blog-post.json</button>
+      </div>
 
       <div class="tab-panel active" id="tab-md">
         <textarea id="md-output" readonly></textarea>
         <div class="output-actions">
           <button class="out-btn btn-copy" onclick="copiar('md-output', this)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
             Copiar Markdown
           </button>
           <button class="out-btn btn-dl" id="dl-btn" onclick="descargar()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Descargar .md
           </button>
         </div>
       </div>
 
+      <div class="tab-panel" id="tab-json">
+        <textarea id="json-output" readonly></textarea>
+        <div class="output-actions">
+          <button class="out-btn btn-copy" onclick="copiar('json-output', this)">
+            Copiar JSON
+          </button>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:.7rem">
+          Este bloque se mantiene por compatibilidad. Con el nuevo sistema, lo recomendable es usar la pestaña
+          <strong>draft-blog-post.json</strong>.
+        </p>
+      </div>
+
       <div class="tab-panel" id="tab-draft">
-  <textarea id="draft-output" readonly></textarea>
-  <div class="output-actions">
-    <button class="out-btn btn-copy" onclick="copiar('draft-output', this)">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-      Copiar draft-blog-post.json
-    </button>
-  </div>
-  <p style="font-size:.82rem;color:var(--muted);margin-top:.7rem">
-    Copia este contenido completo, abre <code style="background:rgba(255,255,255,.08);padding:.1em .3em;border-radius:4px">draft-blog-post.json</code>,
-    reemplaza todo su contenido y ejecuta la Action <strong>Publicar artículo del blog</strong>.
-  </p>
-</div>
+        <textarea id="draft-output" readonly></textarea>
+        <div class="output-actions">
+          <button class="out-btn btn-copy" onclick="copiar('draft-output', this)">
+            Copiar draft-blog-post.json
+          </button>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:.7rem">
+          Copia este contenido completo, abre
+          <code style="background:rgba(255,255,255,.08);padding:.1em .3em;border-radius:4px">draft-blog-post.json</code>,
+          reemplaza todo su contenido y ejecuta la Action <strong>Publicar artículo del blog</strong>.
+        </p>
+      </div>
 
     </div>
 
   </div>
 
   <script>
-    const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    const MESES = [
+      'enero','febrero','marzo','abril','mayo','junio',
+      'julio','agosto','septiembre','octubre','noviembre','diciembre'
+    ];
 
     function toSlug(texto) {
       return texto
@@ -212,6 +231,12 @@ Tercer párrafo. Cada bloque separado por línea en blanco se convierte en un p�
         .replace(/-+/g, '-');
     }
 
+    function escapeMarkdownValue(value) {
+      return String(value || '')
+        .replace(/\\/g, '\\\\')
+        .replace(/"/g, '\\"');
+    }
+
     function dateToEsp(dateStr) {
       if (!dateStr) return '';
       const [y, m, d] = dateStr.split('-').map(Number);
@@ -222,25 +247,27 @@ Tercer párrafo. Cada bloque separado por línea en blanco se convierte en un p�
     const fDate   = document.getElementById('f-date');
     const fFecha  = document.getElementById('f-fecha');
 
-    fTitulo.addEventListener('input', () => {
+    function actualizarSlugPreview() {
       const slug = toSlug(fTitulo.value);
       const date = fDate.value || 'YYYY-MM-DD';
       document.getElementById('slug-preview').textContent =
         slug ? `${date}-${slug}.md` : '—';
-    });
+    }
+
+    fTitulo.addEventListener('input', actualizarSlugPreview);
 
     fDate.addEventListener('input', () => {
       if (fFecha.value === '' || fFecha.dataset.auto === '1') {
         fFecha.value = dateToEsp(fDate.value);
         fFecha.dataset.auto = '1';
       }
-      const slug = toSlug(fTitulo.value);
-      const date = fDate.value || 'YYYY-MM-DD';
-      document.getElementById('slug-preview').textContent =
-        slug ? `${date}-${slug}.md` : '—';
+
+      actualizarSlugPreview();
     });
 
-    fFecha.addEventListener('input', () => { fFecha.dataset.auto = '0'; });
+    fFecha.addEventListener('input', () => {
+      fFecha.dataset.auto = '0';
+    });
 
     function generar() {
       const titulo   = document.getElementById('f-titulo').value.trim();
@@ -257,43 +284,64 @@ Tercer párrafo. Cada bloque separado por línea en blanco se convierte en un p�
       }
 
       const slug = toSlug(titulo);
-      const id   = 'post-' + slug;
+      const id = 'post-' + slug;
 
       const parrafos = cuerpo
         .split(/\n\s*\n/)
         .map(p => p.replace(/\n/g, ' ').trim())
         .filter(Boolean);
 
-      const imagenLinea = imagen ? `image: "${imagen}"` : '';
+      const imagenLinea = imagen ? `image: "${escapeMarkdownValue(imagen)}"` : '';
 
       const md = `---
-id: "${id}"
-title: "${titulo}"
-date: "${dateVal}"
-fecha: "${fecha}"
-tag: "${tag}"
-excerpt: "${extracto}"${imagenLinea ? '\n' + imagenLinea : ''}
+id: "${escapeMarkdownValue(id)}"
+title: "${escapeMarkdownValue(titulo)}"
+date: "${escapeMarkdownValue(dateVal)}"
+fecha: "${escapeMarkdownValue(fecha)}"
+tag: "${escapeMarkdownValue(tag)}"
+excerpt: "${escapeMarkdownValue(extracto)}"${imagenLinea ? '\n' + imagenLinea : ''}
 ---
 
 ${parrafos.join('\n\n')}
 `;
 
-      const cuerpoJson = parrafos.map(p => `      "${p.replace(/"/g, '\\"')}"`).join(',\n');
-      const imagenJson = imagen ? `,\n    "imagen": "${imagen}"` : '';
+      const blogJsonObject = {
+        id: id,
+        fecha: fecha,
+        titulo: titulo,
+        extracto: extracto,
+        cuerpo: parrafos,
+        etiqueta: tag
+      };
 
-      const json = `  {
-    "id": "${id}",
-    "fecha": "${fecha}",
-    "titulo": "${titulo}",
-    "extracto": "${extracto}"${imagenJson},
-    "cuerpo": [
-${cuerpoJson}
-    ],
-    "etiqueta": "${tag}"
-  }`;
+      if (imagen) {
+        blogJsonObject.imagen = imagen;
+      }
+
+      const json = JSON.stringify(blogJsonObject, null, 2)
+        .split('\n')
+        .map(line => '  ' + line)
+        .join('\n');
+
+      const draft = {
+        titulo: titulo,
+        fecha: fecha,
+        date: dateVal,
+        extracto: extracto,
+        etiqueta: tag,
+        cuerpo: parrafos
+      };
+
+      if (imagen) {
+        draft.imagen = imagen;
+      }
+
+      const draftJson = JSON.stringify(draft, null, 2);
 
       document.getElementById('md-output').value = md;
       document.getElementById('json-output').value = json;
+      document.getElementById('draft-output').value = draftJson;
+
       document.getElementById('dl-btn').dataset.filename = `${dateVal}-${slug}.md`;
       document.getElementById('dl-btn').dataset.content = md;
 
@@ -311,10 +359,13 @@ ${cuerpoJson}
 
     function copiar(id, btn) {
       const txt = document.getElementById(id).value;
+
       navigator.clipboard.writeText(txt).then(() => {
         const orig = btn.innerHTML;
         btn.textContent = '✓ Copiado';
-        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+        setTimeout(() => {
+          btn.innerHTML = orig;
+        }, 2000);
       });
     }
 
@@ -323,9 +374,11 @@ ${cuerpoJson}
       const blob = new Blob([btn.dataset.content], { type: 'text/markdown' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
+
       a.href = url;
       a.download = btn.dataset.filename;
       a.click();
+
       URL.revokeObjectURL(url);
     }
 
@@ -333,6 +386,7 @@ ${cuerpoJson}
     document.getElementById('f-date').value = today;
     document.getElementById('f-fecha').value = dateToEsp(today);
     document.getElementById('f-fecha').dataset.auto = '1';
+    actualizarSlugPreview();
   </script>
 
 </body>
