@@ -161,9 +161,10 @@ Tercer párrafo. Cada bloque separado por línea en blanco se convierte en un p�
     <div class="resultado" id="resultado">
 
       <div class="resultado-tabs">
-        <button class="tab-btn active" onclick="switchTab('md', this)">Markdown (.md)</button>
-        <button class="tab-btn" onclick="switchTab('json', this)">JSON para blog-posts.json</button>
-      </div>
+  <button class="tab-btn active" onclick="switchTab('md', this)">Markdown (.md)</button>
+  <button class="tab-btn" onclick="switchTab('json', this)">JSON para blog-posts.json</button>
+  <button class="tab-btn" onclick="switchTab('draft', this)">draft-blog-post.json</button>
+</div>
 
       <div class="tab-panel active" id="tab-md">
         <textarea id="md-output" readonly></textarea>
@@ -179,16 +180,19 @@ Tercer párrafo. Cada bloque separado por línea en blanco se convierte en un p�
         </div>
       </div>
 
-      <div class="tab-panel" id="tab-json">
-        <textarea id="json-output" readonly></textarea>
-        <div class="output-actions">
-          <button class="out-btn btn-copy" onclick="copiar('json-output', this)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-            Copiar JSON
-          </button>
-        </div>
-        <p style="font-size:.82rem;color:var(--muted);margin-top:.7rem">Pega este bloque <strong>al principio</strong> de <code style="background:rgba(255,255,255,.08);padding:.1em .3em;border-radius:4px">blog-posts.json</code>, justo después del primer <code>[</code>, seguido de una coma.</p>
-      </div>
+      <div class="tab-panel" id="tab-draft">
+  <textarea id="draft-output" readonly></textarea>
+  <div class="output-actions">
+    <button class="out-btn btn-copy" onclick="copiar('draft-output', this)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copiar draft-blog-post.json
+    </button>
+  </div>
+  <p style="font-size:.82rem;color:var(--muted);margin-top:.7rem">
+    Copia este contenido completo, abre <code style="background:rgba(255,255,255,.08);padding:.1em .3em;border-radius:4px">draft-blog-post.json</code>,
+    reemplaza todo su contenido y ejecuta la Action <strong>Publicar artículo del blog</strong>.
+  </p>
+</div>
 
     </div>
 
