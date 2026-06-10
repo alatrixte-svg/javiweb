@@ -990,3 +990,11 @@ footer small,
     color: #fff8ef;
   }
 }
+/* Vídeos de YouTube en modales */
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 16px;
+  background: #000;
+}
