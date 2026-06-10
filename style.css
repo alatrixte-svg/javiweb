@@ -840,3 +840,153 @@ body {
     padding: 0 !important;
   }
 }
+/* =========================================================
+   MEJORA DE LEGIBILIDAD Y CONTRASTE
+   ========================================================= */
+
+:root {
+  --gold: #f0c85a;
+  --text: #f4f1ea;
+  --soft: #d7dce3;
+  --muted: #c2c8d0;
+  --bg-dark: #100b0d;
+  --card-dark: #211c1a;
+  --card-border: rgba(240, 200, 90, 0.35);
+}
+
+/* Texto general */
+body {
+  color: var(--text);
+}
+
+/* Párrafos y textos secundarios */
+p,
+li,
+.blog-body,
+.timeline article p,
+.book-card p,
+.testimonio p,
+.conf-tema p,
+.prensa-titulo,
+.lead {
+  color: var(--soft);
+}
+
+/* Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.timeline article h3,
+.blog-preview-card h3,
+.book-card h3 {
+  color: var(--text);
+}
+
+/* Fechas, etiquetas y textos dorados */
+.eyebrow,
+.timeline article span,
+.blog-date,
+.blog-tag,
+.blog-index-tab-date {
+  color: var(--gold);
+}
+
+/* Tarjetas de la historia */
+.timeline article {
+  background: linear-gradient(
+    180deg,
+    rgba(36, 33, 29, 0.98),
+    rgba(27, 25, 23, 0.98)
+  );
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Refuerzo específico para textos dentro de tarjetas oscuras */
+.timeline article p {
+  color: #dce2ea;
+}
+
+.timeline article h3 {
+  color: #f5f1e8;
+}
+
+.timeline article span {
+  color: #f2cc67;
+}
+
+/* Tarjetas del blog en portada */
+.blog-preview-card {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 24, 27, 0.98),
+    rgba(25, 18, 20, 0.98)
+  );
+  border-color: rgba(240, 200, 90, 0.32);
+}
+
+.blog-preview-card h3 {
+  color: #fff7ea;
+}
+
+.blog-preview-card p {
+  color: #d7d0c8;
+}
+
+.blog-preview-card .blog-date {
+  color: #f2cc67;
+}
+
+/* Índice del blog */
+.blog-index-tab-title,
+.blog-index-link strong {
+  color: #f3efe7;
+}
+
+.blog-index-tab-date,
+.blog-index-link span {
+  color: #f2cc67;
+}
+
+/* Enlaces */
+a {
+  color: #f2cc67;
+}
+
+a:hover {
+  color: #ffe08a;
+}
+
+/* Botones secundarios */
+a.secondary,
+button.secondary {
+  color: #f3efe7;
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+/* Figcaption y textos pequeños */
+figcaption,
+small,
+footer small,
+.footer-counter,
+.book-subtitle {
+  color: #cbd2dc;
+}
+
+/* Mejora en móviles y pantallas con poco contraste */
+@media (max-width: 768px) {
+  p,
+  li,
+  .timeline article p,
+  .blog-preview-card p,
+  .lead {
+    color: #e0e5ec;
+  }
+
+  .timeline article h3,
+  .blog-preview-card h3 {
+    color: #fff8ef;
+  }
+}
