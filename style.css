@@ -998,3 +998,10 @@ footer small,
   border-radius: 16px;
   background: #000;
 }
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 16px;
+  background: #000;
+}
