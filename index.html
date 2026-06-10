@@ -7,6 +7,14 @@
   <meta name="description" content="Web oficial de Javier Gámez Martín: Polilla, policía, abogado y escritor. Autor de Marquitos, Cuaderno de bitácora de un gladiador con ELA y Guía para personas dependientes con espíritu guerrero." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .pdf-embed {
+      width: 100%;
+      height: 520px;
+    }
+  </style>
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js?v=20260609-orden-blog" defer></script>
 </head>
@@ -37,7 +45,7 @@
 
           <hgroup>
             <h2>Javier Gámez Martín</h2>
-            <h3>Una oda a la vida, al amor y a la voluntad de seguir adelante.</h3>
+            <p>Una oda a la vida, al amor y a la voluntad de seguir adelante.</p>
           </hgroup>
         
           <p class="lead">
@@ -305,7 +313,7 @@
       <article>
         <hgroup>
           <h2>Contacto</h2>
-          <h3>Lectores, medios, clubes de lectura, asociaciones y conferencias</h3>
+          <p>Lectores, medios, clubes de lectura, asociaciones y conferencias</p>
         </hgroup>
         <form id="contact-form">
           <div class="grid">
@@ -414,7 +422,7 @@
         <h3>Marquitos — Primeras páginas</h3>
       </header>
       <div class="pdf-viewer">
-        <embed src="assets/fragmento-marquitos.pdf" type="application/pdf" width="100%" height="520" />
+        <embed src="assets/fragmento-marquitos.pdf" type="application/pdf" class="pdf-embed" />
         <p class="pdf-fallback">Si el PDF no se muestra, <a href="assets/fragmento-marquitos.pdf" target="_blank">ábrelo aquí</a>.</p>
       </div>
     </article>
@@ -428,7 +436,7 @@
         <h3>Cuaderno de bitácora — Primeras páginas</h3>
       </header>
       <div class="pdf-viewer">
-        <embed src="assets/fragmento-bitacora.pdf" type="application/pdf" width="100%" height="520" />
+        <embed src="assets/fragmento-bitacora.pdf" type="application/pdf" class="pdf-embed" />
         <p class="pdf-fallback">Si el PDF no se muestra, <a href="assets/fragmento-bitacora.pdf" target="_blank">ábrelo aquí</a>.</p>
       </div>
     </article>
