@@ -1,0 +1,30 @@
+name: Backup diario de la web
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio principal
+        uses: actions/checkout@v4
+
+      - name: Crear carpeta de backup
+        run: |
+          mkdir backup
+          rsync -av --exclude='.git' ./ backup/
+
+      - name: Comprimir backup
+        run: |
+          tar -czf backup-web-$(date +%Y-%m-%d).tar.gz backup
+
+      - name: Guardar backup como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: backup-web-${{ github.run_number }}
+          path: backup-web-*.tar.gz
+          retention-days: 30
