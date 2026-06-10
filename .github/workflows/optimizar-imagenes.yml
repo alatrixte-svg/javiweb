@@ -2,6 +2,14 @@ name: Optimizar imágenes de assets
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "assets/**/*.jpg"
+      - "assets/**/*.jpeg"
+      - "assets/**/*.png"
+      - "assets/**/*.webp"
 
 permissions:
   contents: write
@@ -33,5 +41,9 @@ jobs:
       - name: Guardar imágenes optimizadas
         run: |
           git add assets/
-          git diff --cached --quiet && echo "No hay imágenes que guardar" || git commit -m "Optimiza imágenes de assets"
-          git push
+          if git diff --cached --quiet; then
+            echo "No hay imágenes que guardar"
+          else
+            git commit -m "Optimiza imágenes de assets"
+            git push
+          fi
