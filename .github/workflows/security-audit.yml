@@ -1,0 +1,45 @@
+name: Auditoría de seguridad
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar si existe package.json
+        id: check-package
+        run: |
+          if [ -f package.json ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Configurar Node.js
+        if: steps.check-package.outputs.exists == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        if: steps.check-package.outputs.exists == 'true'
+        run: npm ci
+
+      - name: Ejecutar auditoría npm
+        if: steps.check-package.outputs.exists == 'true'
+        run: npm audit --audit-level=moderate
+
+      - name: Sin dependencias Node
+        if: steps.check-package.outputs.exists == 'false'
+        run: echo "No existe package.json. No hay dependencias Node que auditar."
