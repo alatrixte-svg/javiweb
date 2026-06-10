@@ -12,7 +12,6 @@
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 1
     },
-    
     {
       "title": "El importante paso que se acaba de dar en Albacete para mejorar la vida de quienes padecen ELA - El Digital de Albacete",
       "source": "El Digital de Albacete",
@@ -23,7 +22,6 @@
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 3
     },
-    
     {
       "title": "El fallo respiratorio es la principal causa de muerte en pacientes con esclerosis lateral amiotrófica. - Medicina y Salud Pública",
       "source": "Medicina y Salud Pública",
@@ -43,10 +41,8 @@
       "query": "esclerosis lateral amiotrófica España",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 6
-  
-    },
-       
-    {
+      },
+     {
       "title": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación - Revista Perfiles",
       "source": "Revista Perfiles",
       "date": "2026-05-29",
@@ -56,6 +52,5 @@
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 24
     },
-   
   ]
 }
