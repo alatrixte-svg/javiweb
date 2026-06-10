@@ -1,0 +1,37 @@
+name: Optimizar imágenes de assets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimizar-imagenes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install pillow
+
+      - name: Optimizar imágenes
+        run: python scripts/optimizar_imagenes.py
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Guardar imágenes optimizadas
+        run: |
+          git add assets/
+          git diff --cached --quiet && echo "No hay imágenes que guardar" || git commit -m "Optimiza imágenes de assets"
+          git push
