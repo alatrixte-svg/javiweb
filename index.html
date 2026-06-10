@@ -435,19 +435,33 @@
   </dialog>
 
   <!-- MODAL: Material relacionado Marquitos (vídeos) -->
-  <dialog id="modal-material-marquitos" class="book-modal modal-wide">
-    <article>
-      <header>
-        <button class="modal-close" onclick="closeModal('modal-material-marquitos')" aria-label="Cerrar">✕</button>
-        <h3>Marquitos — Material relacionado</h3>
-      </header>
-      <div class="video-grid">
-        <video controls poster="assets/marquitos.jpg"><source src="assets/video-marquitos-1.mp4" type="video/mp4" /></video>
-        <video controls poster="assets/marquitos.jpg"><source src="assets/video-marquitos-2.mp4" type="video/mp4" /></video>
-      </div>
-    </article>
-  </dialog>
+  <!-- MODAL: Material relacionado Marquitos (vídeos) -->
+<dialog id="modal-material-marquitos" class="book-modal modal-wide">
+  <article>
+    <header>
+      <button class="modal-close" onclick="closeModal('modal-material-marquitos')" aria-label="Cerrar">✕</button>
+      <h3>Marquitos — Material relacionado</h3>
+    </header>
 
+    <div class="video-grid">
+      <iframe
+        src="https://www.youtube.com/embed/U_isOfa-Y2s"
+        title="Marquitos — Material relacionado 1"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+      <iframe
+        src="https://www.youtube.com/embed/beEb40ClqVs"
+        title="Marquitos — Material relacionado 2"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </article>
+</dialog>
   <!-- MODAL: Material relacionado Bitácora (fotos) -->
   <dialog id="modal-material-bitacora" class="book-modal modal-wide">
     <article>
