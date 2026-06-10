@@ -1,99 +1,66 @@
 from pathlib import Path
-from PIL import Image, ImageOps
+from PIL import Image
 
 ASSETS_DIR = Path("assets")
-
-MAX_WIDTH = 1600
-MAX_HEIGHT = 1600
-
-JPEG_QUALITY = 82
-WEBP_QUALITY = 82
-PNG_COMPRESS_LEVEL = 9
-
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
+MAX_WIDTH = 1800
+JPEG_QUALITY = 85
+WEBP_QUALITY = 85
 
-def optimize_image(path: Path) -> bool:
+
+def optimize_image(path: Path) -> None:
     try:
-        original_size = path.stat().st_size
-
         with Image.open(path) as img:
-            img = ImageOps.exif_transpose(img)
+            original_format = img.format
+            img = img.convert("RGB") if img.mode in ("RGBA", "P") and path.suffix.lower() in {".jpg", ".jpeg"} else img
 
-            if img.mode in ("RGBA", "LA"):
-                has_alpha = True
-            else:
-                has_alpha = False
+            if img.width > MAX_WIDTH:
+                ratio = MAX_WIDTH / img.width
+                new_height = int(img.height * ratio)
+                img = img.resize((MAX_WIDTH, new_height), Image.LANCZOS)
 
-            width, height = img.size
+            save_kwargs = {}
 
-            if width > MAX_WIDTH or height > MAX_HEIGHT:
-                img.thumbnail((MAX_WIDTH, MAX_HEIGHT), Image.LANCZOS)
+            if path.suffix.lower() in {".jpg", ".jpeg"}:
+                save_kwargs = {
+                    "quality": JPEG_QUALITY,
+                    "optimize": True,
+                    "progressive": True,
+                }
+            elif path.suffix.lower() == ".png":
+                save_kwargs = {
+                    "optimize": True,
+                }
+            elif path.suffix.lower() == ".webp":
+                save_kwargs = {
+                    "quality": WEBP_QUALITY,
+                    "method": 6,
+                }
 
-            suffix = path.suffix.lower()
-
-            if suffix in [".jpg", ".jpeg"]:
-                if img.mode not in ("RGB", "L"):
-                    img = img.convert("RGB")
-
-                img.save(
-                    path,
-                    format="JPEG",
-                    quality=JPEG_QUALITY,
-                    optimize=True,
-                    progressive=True
-                )
-
-            elif suffix == ".png":
-                if not has_alpha and img.mode != "P":
-                    img = img.convert("RGB")
-
-                img.save(
-                    path,
-                    format="PNG",
-                    optimize=True,
-                    compress_level=PNG_COMPRESS_LEVEL
-                )
-
-            elif suffix == ".webp":
-                img.save(
-                    path,
-                    format="WEBP",
-                    quality=WEBP_QUALITY,
-                    method=6
-                )
-
-        new_size = path.stat().st_size
-
-        if new_size < original_size:
-            saved_kb = (original_size - new_size) / 1024
-            print(f"Optimizada: {path} (-{saved_kb:.1f} KB)")
-            return True
-
-        print(f"Sin mejora: {path}")
-        return False
+            img.save(path, format=original_format, **save_kwargs)
+            print(f"Optimizada: {path}")
 
     except Exception as error:
-        print(f"Error optimizando {path}: {error}")
-        return False
+        print(f"No se pudo optimizar {path}: {error}")
 
 
-def main():
+def main() -> None:
     if not ASSETS_DIR.exists():
         print("No existe la carpeta assets/")
         return
 
-    changed = False
+    images = [
+        path for path in ASSETS_DIR.rglob("*")
+        if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS
+    ]
 
-    for path in ASSETS_DIR.rglob("*"):
-        if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS:
-            if optimize_image(path):
-                changed = True
+    if not images:
+        print("No se encontraron imágenes para optimizar.")
+        return
 
-    if changed:
-        print("Optimización completada con cambios.")
-    else:
-        print("No hubo imágenes que mejorar.")
+    for image_path in images:
+        optimize_image(image_path)
 
 
 if __name__ == "__main__":
