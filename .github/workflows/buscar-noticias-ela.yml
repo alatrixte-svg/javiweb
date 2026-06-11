@@ -2,6 +2,9 @@ name: Buscar noticias sobre ELA
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
