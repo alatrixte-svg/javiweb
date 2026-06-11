@@ -1067,3 +1067,43 @@ footer small,
   font-weight: 700;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
+.youtube-cards-mini {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.youtube-card-mini {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.85rem;
+  background: #000;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.youtube-card-mini img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  opacity: 0.82;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.youtube-card-mini span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.youtube-card-mini:hover img {
+  transform: scale(1.04);
+  opacity: 0.68;
+}
