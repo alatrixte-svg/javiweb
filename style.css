@@ -1067,3 +1067,151 @@ footer small,
   font-weight: 700;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
+/* Tarjetas pequeñas de YouTube bajo la portada de Marquitos */
+.libro-ficha.marquitos .youtube-cards-mini {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.libro-ficha.marquitos .youtube-card-mini {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.85rem;
+  background: #000;
+  text-decoration: none;
+  border: 1px solid rgba(240, 200, 90, 0.28);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.libro-ficha.marquitos .youtube-card-mini img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: none;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  background: #000;
+  opacity: 0.82;
+}
+
+.libro-ficha.marquitos .youtube-card-mini span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+}
+
+.libro-ficha.marquitos .youtube-card-mini:hover img {
+  opacity: 0.65;
+}
+/* Miniaturas de YouTube junto a la portada de Marquitos en index */
+.book-card.marquitos .marquitos-index-media {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) minmax(64px, 0.44fr);
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.book-card.marquitos .marquitos-index-cover {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 360px !important;
+  display: block !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: 0.65rem !important;
+  margin: 0 !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.book-card.marquitos .marquitos-index-videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  align-content: center;
+}
+
+.book-card.marquitos .marquitos-index-video {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.65rem;
+  background: #000;
+  text-decoration: none;
+  border: 1px solid rgba(240, 200, 90, 0.28);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.book-card.marquitos .marquitos-index-video img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 16 / 9 !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: #000 !important;
+  opacity: 0.82 !important;
+}
+
+.book-card.marquitos .marquitos-index-video span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0.15rem;
+  color: #fff;
+  font-size: 0.48rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+}
+
+.book-card.marquitos .marquitos-index-video:hover img {
+  opacity: 0.65 !important;
+}
+
+@media (max-width: 520px) {
+  .book-card.marquitos .marquitos-index-media {
+  grid-template-columns: minmax(150px, 1fr) minmax(55px, 0.4fr);
+  gap: 0.5rem;
+}
+
+  .book-card.marquitos .marquitos-index-cover {
+    max-height: 300px !important;
+    padding: 0.5rem !important;
+  }
+
+  .book-card.marquitos .marquitos-index-videos {
+    gap: 0.5rem;
+  }
+
+  .book-card.marquitos .marquitos-index-video span {
+  font-size: 0.42rem;
+  }
+}
