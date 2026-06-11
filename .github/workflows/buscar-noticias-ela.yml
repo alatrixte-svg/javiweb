@@ -23,12 +23,17 @@ jobs:
         run: python scripts/buscar_noticias_ela.py
 
       - name: Configurar Git
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+  run: |
+    git config user.name "alatrixte-svg"
+    git config user.email "github-actions@github.com"
 
-      - name: Guardar candidate-news.json
-        run: |
-          git add candidate-news.json
-          git diff --cached --quiet && echo "No hay cambios que guardar" || git commit -m "Actualiza noticias candidatas sobre ELA"
-          git push
+- name: Guardar candidate-news.json
+  run: |
+    git add candidate-news.json
+
+    if git diff --cached --quiet; then
+      echo "No hay cambios que guardar"
+    else
+      git commit -m "Actualiza noticias candidatas sobre ELA"
+      git push https://x-access-token:${{ secrets.ACTIONS_PUSH_TOKEN }}@github.com/alatrixte-svg/javiweb.git HEAD:main
+    fi
