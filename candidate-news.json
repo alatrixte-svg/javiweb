@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T11:35:29.058748+00:00",
+  "generated_at": "2026-06-11T11:37:38.110191+00:00",
   "total": 30,
   "news": [
     {
@@ -273,16 +273,6 @@
       "id": 27
     },
     {
-      "title": "La guerra del copago llega a la Ley ELA: cinco comunidades ponen en cuestión ayudas de hasta 9.850 euros al mes - Demócrata",
-      "source": "Demócrata",
-      "date": "2026-05-25",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBZU0tXOW1lSFptQUZwdDNlQTlpc0xWUXRJaVloNGdZbFVELWtmOWdqS08tY0ZCMFhPbkFINkctemFYTHZqLVVvcXlpamtZWXJQUEpfWDR4SWhEaXQ2Vm9DaWJCRXlGalJyRWxIUlZmS3c0blY5UjlEMFpiaUXSAYIBQVVfeXFMTi1qNHJWQ2trY2VLR296b0JkRG03aHpxdzdJc0lZaG81UEhVWkhyMDVRX3VTaXg3cGhkYnBhaGJXbFozSFlmQWY5Z191Sng2NnU3eHRSelcwMGtiOEFiQlRuM2hzeFR1X19Qdlk1aFpjT2Zhb0xZbFFhbzFSLWRubGJtdw?oc=5",
-      "summary": "La guerra del copago llega a la Ley ELA: cinco comunidades ponen en cuestión ayudas de hasta 9.850 euros al mes Demócrata",
-      "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 28
-    },
-    {
       "title": "Los enfermos de ELA muestran su indignación por el copago impuesto por Ayuso que reduce sus ayudas - Elplural.com",
       "source": "Elplural.com",
       "date": "2026-05-25",
@@ -290,14 +280,24 @@
       "summary": "Los enfermos de ELA muestran su indignación por el copago impuesto por Ayuso que reduce sus ayudas Elplural.com",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 28
+    },
+    {
+      "title": "Afectados de ELA denuncian que cinco comunidades quieren recortarles las ayudas previstas por ley - Diari ARA",
+      "source": "Diari ARA",
+      "date": "2026-05-25",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNkdhOGJnRVpGbjBOSDNTR3BfRjlJLWpXaFgyVm4td19KTmRLazBVS0trTHJPVU5HVXJGalNUYmRrNy0yc1VfR01ZbUtUTlFFeFlNaW9KMWMyZnJiTTVsampXejlZdEZycDNGVWRkZXMzZFZQLXBSWDNabklxQTNXZmdqUVBsTWU4SXgtUWw1WVY5dmlkUFN0a3NOc3V1S3NJMW1EVmFvc0hFWVNKdkZ5YlpfU0MzU2Q1WTV6UGdQdnR3SHFCaWVMdUg2d9IB0AFBVV95cUxNUUttR0dmNGNXSzNGQ2loYjFEZUMwSkYtNl9TaEFPUW1uV25Nc0lBVFRtU1hqMUNfTV9hcXRsaksybDI2cFJHd2ZtUE9GUzlCZ054S2RMSklVTnBFZUhNckdqMTdOeEo1cC1PQ0RyM1pqbmwwQnhpaUN5dU1lZ3VTQzVWSjg0MDNGbHl4YjZ5TTNremtpcVotOURtU0JidGJ0TUNTN2ctT1h2Z2ZvelQ3dFJHenBQc3Bqb0JmTDlrZXlNXzJ0dndBNXdJZGdLa0pm?oc=5",
+      "summary": "Afectados de ELA denuncian que cinco comunidades quieren recortarles las ayudas previstas por ley Diari ARA",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 29
     },
     {
-      "title": "Mónica García tacha de «vergüenza» el copago del Gobierno de Ayuso a pacientes con ELA - El Boletín",
-      "source": "El Boletín",
+      "title": "La guerra del copago llega a la Ley ELA: cinco comunidades ponen en cuestión ayudas de hasta 9.850 euros al mes - Demócrata",
+      "source": "Demócrata",
       "date": "2026-05-25",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMGplRG1lTXlRN2NQZkh0T2hDNWc3ZjRFX19pVUZKcVNnZm9ydFFyaUVsM0xRTDF6SmlqUXE3NDRXRUp2VHNYM1luTjVhOUVWTE1YTVp0Y251SkItRmhmclBhYmRwZkw2MFduRTdEUm9Gdi1nZVh4ejFJYlpzcmJYbDRHRUZSQlVpWV9NNmRqai16T08yR1FYeDJxWnhqZkh2TmpUVXlzNjRkcGV1Si1FTtIBtgFBVV95cUxQYkVkMXhwNDJCa3lkZ1BLU0ZSX2tsMHZiRXhBQmNqT0dLbGlnc1JKZTN0OFFrMUFYSWw2eVBDVV84UExteEZNTmtPMUs5Y0pwZHF6bEo4NFh6VENyR1UtYWdaOFlseEJlOW51T3V6Wk5GQVVnckQ1Y3VxOERta3RENXNoWEw4VXRnVC1KM1RxT3BWZEhndERSTTI4NU9rdkdCSGtVX1ZkZjROcHRGR04wb0xFMXplUQ?oc=5",
-      "summary": "Mónica García tacha de «vergüenza» el copago del Gobierno de Ayuso a pacientes con ELA El Boletín",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBZU0tXOW1lSFptQUZwdDNlQTlpc0xWUXRJaVloNGdZbFVELWtmOWdqS08tY0ZCMFhPbkFINkctemFYTHZqLVVvcXlpamtZWXJQUEpfWDR4SWhEaXQ2Vm9DaWJCRXlGalJyRWxIUlZmS3c0blY5UjlEMFpiaUXSAYIBQVVfeXFMTi1qNHJWQ2trY2VLR296b0JkRG03aHpxdzdJc0lZaG81UEhVWkhyMDVRX3VTaXg3cGhkYnBhaGJXbFozSFlmQWY5Z191Sng2NnU3eHRSelcwMGtiOEFiQlRuM2hzeFR1X19Qdlk1aFpjT2Zhb0xZbFFhbzFSLWRubGJtdw?oc=5",
+      "summary": "La guerra del copago llega a la Ley ELA: cinco comunidades ponen en cuestión ayudas de hasta 9.850 euros al mes Demócrata",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 30
