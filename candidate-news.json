@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T16:04:47.967047+00:00",
+  "generated_at": "2026-06-11T16:08:37.386169+00:00",
   "total": 30,
   "news": [
     {
@@ -213,16 +213,6 @@
       "id": 21
     },
     {
-      "title": "La Fundación San Juan de Dios y la Asociación Española de ELA ayudarán a los enfermos con impresión 3D - Alfa y Omega",
-      "source": "Alfa y Omega",
-      "date": "2026-06-03",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOOWxQRFRKZ0hMcktlOGV1ZlNJWHNuS2JPM2otQk1TWGdtNk1LQ285eDlheGhXVm83aHYyMUNadDVoUm1DUFJfdjZhUEFrZTh6STVzNHI0SjQ2NC1RU2U1Mkl0RkMtaVZ0dm5lOEhsdWM0b3lmZVpPaXVKTTBqRzhQaEw1Q3RNaGo3R0N0U2ZLdGN4a2lKaU5UU3RlVlNiRTM2NGRZVXlBMmNkTkRrdGZNWWZLOUZXUFFsWENXU2lOd29meWs?oc=5",
-      "summary": "La Fundación San Juan de Dios y la Asociación Española de ELA ayudarán a los enfermos con impresión 3D Alfa y Omega",
-      "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 22
-    },
-    {
       "title": "La dieta sí podrá complementar tratamientos oncológicos, pero faltan investigación básica y ensayos clínicos - Centro Nacional de Investigaciones Oncológicas - CNIO",
       "source": "Centro Nacional de Investigaciones Oncológicas - CNIO",
       "date": "2026-06-03",
@@ -230,7 +220,7 @@
       "summary": "La dieta sí podrá complementar tratamientos oncológicos, pero faltan investigación básica y ensayos clínicos Centro Nacional de Investigaciones Oncológicas - CNIO",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 23
+      "id": 22
     },
     {
       "title": "Ley ELA sin copagos - La Razón",
@@ -240,7 +230,7 @@
       "summary": "Ley ELA sin copagos La Razón",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 24
+      "id": 23
     },
     {
       "title": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio - mediaset.es",
@@ -250,7 +240,7 @@
       "summary": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio mediaset.es",
       "query": "esclerosis lateral amiotrófica España",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 25
+      "id": 24
     },
     {
       "title": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación - Revista Perfiles",
@@ -260,7 +250,7 @@
       "summary": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación Revista Perfiles",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 26
+      "id": 25
     },
     {
       "title": "Qué sabemos de las ayudas por ELA y la confrontación entre el Gobierno central y la Comunidad de Madrid - Newtral",
@@ -270,7 +260,7 @@
       "summary": "Qué sabemos de las ayudas por ELA y la confrontación entre el Gobierno central y la Comunidad de Madrid Newtral",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 27
+      "id": 26
     },
     {
       "title": "Los pacientes con ELA reclaman que ninguna comunidad autónoma aplique copagos a las ayudas: \"Rompe con el espíritu de la ley\" - 20minutos.es",
@@ -280,7 +270,7 @@
       "summary": "Los pacientes con ELA reclaman que ninguna comunidad autónoma aplique copagos a las ayudas: \"Rompe con el espíritu de la ley\" 20minutos.es",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 28
+      "id": 27
     },
     {
       "title": "Ocho comunidades autónomas perderán financiación en dependencia por incumplir los objetivos - RTVE.es",
@@ -290,7 +280,7 @@
       "summary": "Ocho comunidades autónomas perderán financiación en dependencia por incumplir los objetivos RTVE.es",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 29
+      "id": 28
     },
     {
       "title": "Gobierno de Ayuso atribuye a Ley de la Dependencia \"minoraciones\" en ayudas a enfermos de ELA y dice que \"no hay copago\" - Europa Press",
@@ -298,6 +288,16 @@
       "date": "2026-05-25",
       "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNckVBM2Z6THJsMmZGaF9pMHhFMGFyU2JMb09Sb3FqVHNjS3RHUjlEUzRsX211T3N2VEd0cTRyYmtYVms0Zk9oQWI5NmFPXzlHMTNxREFCdndRQURmUjBWQ29uX01tdWNQcVRoNEtiT295TjdVY3dRemYzNlRPMG5Mdkh1Q2dpeENqMjRIRFVfalBBRENkT0hZcTQzaFZHYUVZQ3Vyei1qck9vTUhXMTRBZVo2T2p0bmxJZGdOMm9TdXNja1NxTlJfcGpkZmMtTERNNHl6cnFfYjF3Tk5DTXg4WGZuOVJfaFJf?oc=5",
       "summary": "Gobierno de Ayuso atribuye a Ley de la Dependencia \"minoraciones\" en ayudas a enfermos de ELA y dice que \"no hay copago\" Europa Press",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 29
+    },
+    {
+      "title": "No es solo Madrid: Aragón, Cataluña o Cantabria también impondrán un copago a las ayudas de la ELA, ya que “la ley permite cobrarlos” - Infobae",
+      "source": "Infobae",
+      "date": "2026-05-25",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQZUxINlB3MkZlU2pZQXg2Rk9tSmROWDJJMUNIZURGTl82VHBaU2ZYVWQ2RG5GTlJRTzlVRi0zVEoxQU1hclNVMkZQMk5WSndGNVoxRDUtbkJFbXBuWXFTNlk5ZGdqbmRxMnlobkJENzhMMFVNcWtUTmNiQWoxdWdpUFE5eWRYZW4tdmI3ODZRbW1rR0lwRHRzbVkyRGszOEJZOVFnNnhlU0cyNFZybnVsR3gxN3hsbWtwVFZnOWlIY0hQUDNlWV8zcGRCVU53MnhMYUs0UVBaQ3prbzYxUW5CcV9kMXhXX2pYeVYzbUhKcTUtRWNZNmpYOTBhZnV0WlMt0gGbAkFVX3lxTE45NFVrdEx5a2xqeFp4ZTVNYkl0eGZqZGl5UlN6Nk1JUmpiZ2ZlY3BXTktwS3hpVUYwV0U2RmU5QWMzTTRxZWNMZmlVS2ZJM3V0MTBCc21UZWs1X29ERWcxOXpJeHlGcW5ZejRidlNoaGZNa3N4aXpKeVRzb3FEbGtLZEVzNE9ralBkdG5IUzhMYzZUakZnWUswMUtfbGdhenFjdVVtT0gtV3hXRHhac3lTZlNDZXlSWXFlZlZSektjcDRNUXdNLTdnWFo5VVcxWVRrYmFmamtvSFdqVE1JR1RoT2d5eTc3UUMxWEU4ak5BYmNZX1NIQWNyRVJkZDI0Ym13NUd3SXBJZEY3MExEdVpRMjVfWTJORHdQY0U?oc=5",
+      "summary": "No es solo Madrid: Aragón, Cataluña o Cantabria también impondrán un copago a las ayudas de la ELA, ya que “la ley permite cobrarlos” Infobae",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 30
