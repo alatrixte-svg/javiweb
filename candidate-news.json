@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T08:09:18.052628+00:00",
+  "generated_at": "2026-06-12T08:11:26.916146+00:00",
   "total": 30,
   "news": [
     {
@@ -68,7 +68,7 @@
       "date": "2026-06-11",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYkFHTkcxWGZqZ0tfOERGUHVrNzlOWWVYYkc5b2ZwTlliOVlsSEZIbmhoNWtSNW84ZlcxNnVtQ1NRSGY5NEk0b040TEFEUkNTblFWSjZ1d0xucEZvOWstWXMwMGZKNmNnVnhYVXVUTHlYVHlKMTJIVFpPOTluNlBMUTZ1NjdnQ1JjRThPdWdWMEd6OEtkdDNiRU1GdjhRTmhE?oc=5",
       "summary": "Tatiana Badiola, paciente de 34 años, comienza a recibir las ayudas de la Ley ELA Tododisca",
-      "query": "ley ELA prestación dependencia",
+      "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 7
     },
@@ -133,6 +133,16 @@
       "id": 13
     },
     {
+      "title": "La investigación sobre la distrofia de Steinert impulsa nuevos avances científicos aplicables al tratamiento del cáncer - Onda Vasca",
+      "source": "Onda Vasca",
+      "date": "2026-06-10",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNbnJHaUFFZ3RiRk9reThsR2UwNFp5TXJPUjM4T2VhQS1SZzMyenBWUXRoM3UxTEhwXzJucW5qejJPMnRiOWhjblhFREp3N1BMU2NRUk9IdHFYRzMzb3JzZDBMcmFZUHBpVXlQS2NseUk4X3RuNXdLbXlwVHdfOERITHplNl9TX3ZCMWdvenZaVUlFYUdkX3JhYmc2dy1tZTVLNU9uWFlaUGUxRG1LOTRwWWtJMG9aNngxWTFsckpEWV9LdVZUVnRqXzhSVDJQREZ1N3FVZkFyam1zZFZQaTdr?oc=5",
+      "summary": "La investigación sobre la distrofia de Steinert impulsa nuevos avances científicos aplicables al tratamiento del cáncer Onda Vasca",
+      "query": "ELA investigación tratamiento",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 14
+    },
+    {
       "title": "Arte por ELA recauda fondos en Fernán Núñez para la investigación de la esclerosis lateral amiotrófica - Diario Córdoba",
       "source": "Diario Córdoba",
       "date": "2026-06-09",
@@ -140,7 +150,7 @@
       "summary": "Arte por ELA recauda fondos en Fernán Núñez para la investigación de la esclerosis lateral amiotrófica Diario Córdoba",
       "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 14
+      "id": 15
     },
     {
       "title": "La Cala de Mijas acogerá el lazo de hojaldre más grande de España con motivo del Día Internacional de la ELA - Cadena SER",
@@ -148,9 +158,9 @@
       "date": "2026-06-09",
       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNZDI4X1d5X09hb3EzT1dVSDliR1J6RndzY3U0Qkt6NDNjV2Y3T0lzNUpjdUVyR0tjYkN1TUFoVXlaWG5aS09Ea3FnTUFDRVFpakxLcWxSdWNFT3pGUk51WDhlTm0xVGpJQnRuZnJXRkwxQm93dV9TOVFIV0pwd24wdzlfMjN1MXBFeFNqZVBvemYzQV9CZUdIek91RnJkMVNMdUtBY0R0elRoYWVFdi1NakkxMTlEelhpMmN3WkM5bkRUNmY5ZHhGS3B1R3VpZzBwYmUxcUZrSDlMYXNfMUR4WElBYXo4bEtmOGQ3VTlGRlN2Y1BTU3fSAYoCQVVfeXFMTTAyYTBTZ0hzdjZLNnlzampTUmpHSkdOWF96cUtPUHhaMUszZ2I0X2k0YmU5dklhYVRGYjBkV0Jpb2xhVlhlTzhGVUxPWU0tOHZxWkJEVWlaSWpOSm1ISExET1FIUTVhVWl0bXRPa0J4T2ZuTU9xd0M2RUxfMVhYMzhxazczR09BeGZROTE3SUZxQmN5d2w3bFlqejlabE03TVlMN01yVjJMenpNQkEwcXUzZW5RSmpoMEJqeDNmcUdBUHcxUjNDV0lXMXFqSFhmTXpKNThERVBIUEpGVUdvSFFtMXluSkVuMmoxRWNuQVNWNTIwWmJPSlh6TXA2OUhwdFd4VExob3VKM3c?oc=5",
       "summary": "La Cala de Mijas acogerá el lazo de hojaldre más grande de España con motivo del Día Internacional de la ELA Cadena SER",
-      "query": "ELA esclerosis lateral amiotrófica",
+      "query": "esclerosis lateral amiotrófica España",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 15
+      "id": 16
     },
     {
       "title": "Madrid, capital europea del cine sobre esclerosis lateral amiotrófica - Diario Médico",
@@ -160,7 +170,7 @@
       "summary": "Madrid, capital europea del cine sobre esclerosis lateral amiotrófica Diario Médico",
       "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 16
+      "id": 17
     },
     {
       "title": "Bustinduy dejó sin ejecutar 54 millones que estaban destinados a la Ley ELA en 2025 - The Objective",
@@ -169,16 +179,6 @@
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdG8yTFptVzJTQlJvRno1Q3huZU5xbTAwSW93N19ocUwyZHhuQ1FBaUJlLTdKV0JodmJETnVTOTZHdW5TU1BvRUdkc2xvYlRtX0x5al94dWp0YnVKN1VhVDNQemRhb3ZDcEdaaTVQRWZ2Q051dkxwaGdSZS02aDdHbzBMX2dINFRRT0o4a3FNY3NveUhSMWdQWDMxdE1TR1JlSHfSAacBQVVfeXFMUFQzWnBuYW95YmV4bHZBMlQ4dHc3dFFUTzdKdjBMTHJQcm1tdlpLUnlQNWNsb2VxT0stdF9WX196STNDTlZXQVZFeDZQNXRjNWRjRFd5VkcyamVZWlhZODBieFBiakNBbEpyMUxBNTRqNXZYOUF1MUQ2YzZYX0lpMlBDZmp3WWlqa0ktTU01aE9BWHBBNlI4QU8yMHlYVTRhc0VwMVJSOVE?oc=5",
       "summary": "Bustinduy dejó sin ejecutar 54 millones que estaban destinados a la Ley ELA en 2025 The Objective",
       "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 17
-    },
-    {
-      "title": "La investigación sobre la distrofia de Steinert impulsa nuevos avances científicos aplicables al tratamiento del cáncer - Onda Vasca",
-      "source": "Onda Vasca",
-      "date": "2026-06-08",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNbnJHaUFFZ3RiRk9reThsR2UwNFp5TXJPUjM4T2VhQS1SZzMyenBWUXRoM3UxTEhwXzJucW5qejJPMnRiOWhjblhFREp3N1BMU2NRUk9IdHFYRzMzb3JzZDBMcmFZUHBpVXlQS2NseUk4X3RuNXdLbXlwVHdfOERITHplNl9TX3ZCMWdvenZaVUlFYUdkX3JhYmc2dy1tZTVLNU9uWFlaUGUxRG1LOTRwWWtJMG9aNngxWTFsckpEWV9LdVZUVnRqXzhSVDJQREZ1N3FVZkFyam1zZFZQaTdr?oc=5",
-      "summary": "La investigación sobre la distrofia de Steinert impulsa nuevos avances científicos aplicables al tratamiento del cáncer Onda Vasca",
-      "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 18
     },
@@ -213,16 +213,6 @@
       "id": 21
     },
     {
-      "title": "La Fundación San Juan de Dios y la Asociación Española de ELA ayudarán a los enfermos con impresión 3D - Alfa y Omega",
-      "source": "Alfa y Omega",
-      "date": "2026-06-03",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOOWxQRFRKZ0hMcktlOGV1ZlNJWHNuS2JPM2otQk1TWGdtNk1LQ285eDlheGhXVm83aHYyMUNadDVoUm1DUFJfdjZhUEFrZTh6STVzNHI0SjQ2NC1RU2U1Mkl0RkMtaVZ0dm5lOEhsdWM0b3lmZVpPaXVKTTBqRzhQaEw1Q3RNaGo3R0N0U2ZLdGN4a2lKaU5UU3RlVlNiRTM2NGRZVXlBMmNkTkRrdGZNWWZLOUZXUFFsWENXU2lOd29meWs?oc=5",
-      "summary": "La Fundación San Juan de Dios y la Asociación Española de ELA ayudarán a los enfermos con impresión 3D Alfa y Omega",
-      "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 22
-    },
-    {
       "title": "La dieta sí podrá complementar tratamientos oncológicos, pero faltan investigación básica y ensayos clínicos - Centro Nacional de Investigaciones Oncológicas - CNIO",
       "source": "Centro Nacional de Investigaciones Oncológicas - CNIO",
       "date": "2026-06-03",
@@ -230,17 +220,7 @@
       "summary": "La dieta sí podrá complementar tratamientos oncológicos, pero faltan investigación básica y ensayos clínicos Centro Nacional de Investigaciones Oncológicas - CNIO",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 23
-    },
-    {
-      "title": "Publicado el estudio del grupo de Mariano Barbacid sobre la terapia que elimina tumores de páncreas en ratones - Centro Nacional de Investigaciones Oncológicas - CNIO",
-      "source": "Centro Nacional de Investigaciones Oncológicas - CNIO",
-      "date": "2026-06-02",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNURkMmZWWkpDbEh2cGZibWE1R05UbWJYOEFLM0pBN0EzSldYMGVBVTlJY0V0SUZZOXlJSzI1czdTSE1xbzc4TFp1RHNjUndIdFd2TkpkaG5HaW9CT2NMX1dvLTRrYzZ1emRNZzJpRlRUb0IweXlMa0ZfNWRwM3B0RUg0SV9EVXFfWkI0b256UEFkVm0xSTBvZmZRME4zLUxibko0ZHl0T2RWZnN0UURVVmoxUHhGOHpDeklFWTJLVGM0TTVnNnZ3YlN3bkdLbEhCeU5sbHVaQQ?oc=5",
-      "summary": "Publicado el estudio del grupo de Mariano Barbacid sobre la terapia que elimina tumores de páncreas en ratones Centro Nacional de Investigaciones Oncológicas - CNIO",
-      "query": "ELA investigación tratamiento",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 24
+      "id": 22
     },
     {
       "title": "Ley ELA sin copagos - La Razón",
@@ -250,7 +230,17 @@
       "summary": "Ley ELA sin copagos La Razón",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 25
+      "id": 23
+    },
+    {
+      "title": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio - mediaset.es",
+      "source": "mediaset.es",
+      "date": "2026-05-29",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNX3l2RmxId05hRlBibVh3bHk4WGdyQ2ZuQWVTbXhrODNTM3c4SWJkVG9wYy1VN2dXMVpmTjh2MktuUk9kcDE1Zlc3eERmMjZGQmtUczU0cHlOZGhjM0ZwUEdQZzRWMkZNWGlONVlBeHVMQ3Q3dk9mVkRKaWMwTWJfWWVreXIwZXR3c1o5ZjBuSW0tTkpfOFN2QzFsQno4dTFKZEpXd05EZ1JDd3J6ZERkYVYydVR4ZVNXa2g0S0FNUXphaVl3VVA4SkxXVFdWM3BjUlZ5eEFQNWNNR0FiLVBjc0pqb1Y1UFBFa1lPOVpyM1BVZDQ?oc=5",
+      "summary": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio mediaset.es",
+      "query": "esclerosis lateral amiotrófica España",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 24
     },
     {
       "title": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación - Revista Perfiles",
@@ -260,7 +250,7 @@
       "summary": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación Revista Perfiles",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 26
+      "id": 25
     },
     {
       "title": "Qué sabemos de las ayudas por ELA y la confrontación entre el Gobierno central y la Comunidad de Madrid - Newtral",
@@ -270,7 +260,7 @@
       "summary": "Qué sabemos de las ayudas por ELA y la confrontación entre el Gobierno central y la Comunidad de Madrid Newtral",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 27
+      "id": 26
     },
     {
       "title": "Los pacientes con ELA reclaman que ninguna comunidad autónoma aplique copagos a las ayudas: \"Rompe con el espíritu de la ley\" - 20Minutos",
@@ -280,7 +270,7 @@
       "summary": "Los pacientes con ELA reclaman que ninguna comunidad autónoma aplique copagos a las ayudas: \"Rompe con el espíritu de la ley\" 20Minutos",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 28
+      "id": 27
     },
     {
       "title": "Cantabria asegura que el copago en las ayudas a pacientes ELA \"lo ha establecido el Ministerio\" - consalud.es",
@@ -290,7 +280,7 @@
       "summary": "Cantabria asegura que el copago en las ayudas a pacientes ELA \"lo ha establecido el Ministerio\" consalud.es",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 29
+      "id": 28
     },
     {
       "title": "Ocho comunidades autónomas perderán financiación en dependencia por incumplir los objetivos - RTVE.es",
@@ -298,6 +288,16 @@
       "date": "2026-05-25",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMU9QeVFNUHI3WmJtY0h0VW82Y1oxMkNJd2lBN2xGa3hiR1RKQzczYVN6TDJib2VkRk1kSmtiQ0tOX3JOaHA5cndxdXJpVDQ2ZHhwMGxnc1VHanVCX200blVYU0FJbEdDVGpKOFdkbHJYVGUtUUNiZE9yUUNaM0JUc2RadlNRNVBTZG1pTXNCUF9UZ24ydWRvWWo0VzlLOFJBd04xS1FKNzRoSTAwcDNEWTFWazlqeF9Nc3hGb01QM1RIMHY2RHMzV04xWWXSAcwBQVVfeXFMTzVGaEd4SHItcU03YldZb2ppVTJPZGhMcWgzbUhENURFODdRWEYzOXJjbE5yanpYMl9ZUi1Pa0l4MVdTU3NfaDJEZ1dTeFFFejc4VXB4ZmUyVGYweWcxRC00YVZLelRaUGEtX1NKZmF1bXRMWFRBU0Rzb1lCWFY3a0NyM1RpeG42cWtMQnE3UXM1U3pkTGp5VThmUFI0dXlPT3NycEtKY2FVaHhVNU5Ud1RGeWVmdm5NeU43OHhLVnlOWEljb2RlRGhPLURN?oc=5",
       "summary": "Ocho comunidades autónomas perderán financiación en dependencia por incumplir los objetivos RTVE.es",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 29
+    },
+    {
+      "title": "Gobierno de Ayuso atribuye a Ley de la Dependencia \"minoraciones\" en ayudas a enfermos de ELA y dice que \"no hay copago\" - Europa Press",
+      "source": "Europa Press",
+      "date": "2026-05-25",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNckVBM2Z6THJsMmZGaF9pMHhFMGFyU2JMb09Sb3FqVHNjS3RHUjlEUzRsX211T3N2VEd0cTRyYmtYVms0Zk9oQWI5NmFPXzlHMTNxREFCdndRQURmUjBWQ29uX01tdWNQcVRoNEtiT295TjdVY3dRemYzNlRPMG5Mdkh1Q2dpeENqMjRIRFVfalBBRENkT0hZcTQzaFZHYUVZQ3Vyei1qck9vTUhXMTRBZVo2T2p0bmxJZGdOMm9TdXNja1NxTlJfcGpkZmMtTERNNHl6cnFfYjF3Tk5DTXg4WGZuOVJfaFJf?oc=5",
+      "summary": "Gobierno de Ayuso atribuye a Ley de la Dependencia \"minoraciones\" en ayudas a enfermos de ELA y dice que \"no hay copago\" Europa Press",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 30
