@@ -58,7 +58,7 @@
     }
 
     .research-hero p {
-      color: var(--soft);
+      color: #ffffff;
       max-width: 880px;
       font-size: 1.08rem;
       margin-bottom: 0.85rem;
@@ -121,7 +121,7 @@
 
     .research-section p,
     .research-section li {
-      color: var(--soft);
+      color: #ffffff;
     }
 
     .notice {
@@ -130,7 +130,7 @@
       border-left: 5px solid var(--accent-yellow);
       border-radius: 0.75rem;
       padding: 1.2rem 1.35rem;
-      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.35);`r`n      color: #ffffff;
     }
 
     .notice strong {
@@ -236,7 +236,20 @@
     }
 
     .research-table td {
-      color: #e8dcc9;
+      color: #ffffff;
+    }
+    .research-table tbody td:first-child a,
+    .mechanism-card h3 a {
+      color: var(--accent-yellow);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .research-table tbody td:first-child a:hover,
+    .mechanism-card h3 a:hover {
+      color: #ffe08a;
+      text-decoration: underline;
     }
 
     .research-table tbody tr:nth-child(even) {
@@ -518,7 +531,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>AP-2</strong></td>
+              <td><a href="assets/AP2.jpeg"><strong>AP-2</strong></a></td>
               <td>Ensayo first-in-human AP-2</td>
               <td>I</td>
               <td><span class="tag">Activo</span> En ejecución inicial tras autorización de AEMPS</td>
@@ -527,7 +540,7 @@
               <td>Comunidad de Madrid / IIS La Princesa / CSIC / Molefy</td>
             </tr>
             <tr>
-              <td><strong>EH-301 + N-acetilcisteína + riluzol</strong></td>
+              <td><a href="assets/Nadals.jpeg"><strong>EH-301 + N-acetilcisteína + riluzol</strong></a></td>
               <td><strong>NADALS-001-ALS</strong>, <strong>NCT07414212</strong>, <strong>EU CT 2024-519857-13-00</strong></td>
               <td>I/II integrada</td>
               <td><span class="tag">Reclutando</span></td>
@@ -536,7 +549,7 @@
               <td>ClinicalTrials.gov / Veeva / CTIS-derived public mirror</td>
             </tr>
             <tr>
-              <td><strong>VTx-002</strong></td>
+              <td><a href="assets/Pioneer.jpeg"><strong>VTx-002</strong></a></td>
               <td><strong>PIONEER-ALS</strong>, <strong>NCT07287397</strong>, <strong>EU CT 2025-522697-37-00</strong></td>
               <td>I/II</td>
               <td><span class="tag pending split">Discrepancia<br>pública</span> CTIS muestra “recruitment pending” y el sponsor comunicó primer participante dosificado</td>
@@ -545,7 +558,7 @@
               <td>CTIS / ClinicalTrials.gov / sponsor / MND Association</td>
             </tr>
             <tr>
-              <td><strong>PHENOGENE-1A cromoglicato sódico inhalado + riluzol</strong></td>
+              <td><a href="assets/Phenogene.jpeg"><strong>PHENOGENE-1A cromoglicato sódico inhalado + riluzol</strong></a></td>
               <td><strong>PHENOALS-001</strong>, <strong>NCT07142291</strong>, <strong>EU CT 2025-520688-42-00</strong></td>
               <td>IIb</td>
               <td><span class="tag">Reclutando</span></td>
@@ -580,7 +593,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Pridopidina</strong></td>
+              <td><a href="assets/Prevails.jpeg"><strong>Pridopidina</strong></a></td>
               <td><strong>PREVAiLS</strong>, <strong>NCT07322003</strong>, <strong>EU CT 2025-524002-16-00</strong></td>
               <td>III</td>
               <td><span class="tag">Reclutando</span></td>
@@ -589,7 +602,7 @@
               <td>ClinicalTrials.gov / sponsor / trial site / CTIS</td>
             </tr>
             <tr>
-              <td><strong>ION363 / ulefnersen / jacifusen</strong></td>
+              <td><a href="assets/Fusión.jpeg"><strong>ION363 / ulefnersen / jacifusen</strong></a></td>
               <td><strong>FUSION</strong>, <strong>NCT04768972</strong></td>
               <td>III</td>
               <td><span class="tag pending split recruitment">Reclutamiento<br>cerrado</span> Datos en recogida</td>
@@ -598,7 +611,7 @@
               <td>Veeva / MND Association</td>
             </tr>
             <tr>
-              <td><strong>VHB937</strong></td>
+              <td><a href="assets/Astrals.jpeg"><strong>VHB937</strong></a></td>
               <td><strong>ASTRALS</strong>, <strong>NCT06643481</strong>, <strong>EU CT 2024-512536-29-00</strong></td>
               <td>II</td>
               <td><span class="tag pending split recruitment">Activo, sin<br>reclutamiento</span></td>
@@ -607,7 +620,7 @@
               <td>ClinicalTrials.gov / Veeva</td>
             </tr>
             <tr>
-              <td><strong>AMX0114</strong></td>
+              <td><a href="assets/Amxo.jpeg"><strong>AMX0114</strong></a></td>
               <td><strong>LUMINA</strong></td>
               <td>I</td>
               <td><span class="tag">Reclutando</span></td>
@@ -616,7 +629,7 @@
               <td>Veeva</td>
             </tr>
             <tr>
-              <td><strong>Tofersen en ELA no-SOD1</strong></td>
+              <td><a href="assets/Tofersen.jpeg"><strong>Tofersen en ELA no-SOD1</strong></a></td>
               <td>Estudio fase II</td>
               <td>II</td>
               <td><span class="tag">Reclutando</span></td>
@@ -625,7 +638,7 @@
               <td>Veeva</td>
             </tr>
             <tr>
-              <td><strong>NUZ-001</strong></td>
+              <td><a href="assets/Healey.jpeg"><strong>NUZ-001</strong></a></td>
               <td><strong>HEALEY Regimen I</strong>, <strong>NCT07410806</strong></td>
               <td>II/III</td>
               <td><span class="tag">Reclutando</span></td>
@@ -634,7 +647,7 @@
               <td>ClinicalTrials.gov / MGH / Cleveland Clinic</td>
             </tr>
             <tr>
-              <td><strong>AMT-162</strong></td>
+              <td><a href="assets/AMT.jpeg"><strong>AMT-162</strong></a></td>
               <td><strong>EPISOD1</strong>, <strong>NCT06100276</strong></td>
               <td>I/II</td>
               <td><span class="tag pending split recruitment">Activo, sin<br>reclutamiento</span></td>
@@ -643,7 +656,7 @@
               <td>Veeva / TRICALS</td>
             </tr>
             <tr>
-              <td><strong>Siplizumab</strong></td>
+              <td><a href="assets/Aurora.jpeg"><strong>Siplizumab</strong></a></td>
               <td><strong>AURORA</strong>, <strong>NCT06453668</strong>, <strong>EU CT 2023-506174-12-00</strong></td>
               <td>I</td>
               <td><span class="tag">Reclutando</span></td>
@@ -652,7 +665,7 @@
               <td>Veeva / CTIS-derived public mirror</td>
             </tr>
             <tr>
-              <td><strong>ILB comparado con riluzol</strong></td>
+              <td><a href="assets/ILB.jpeg"><strong>ILB comparado con riluzol</strong></a></td>
               <td><strong>EU CT 2024-513927-18-00</strong></td>
               <td>II</td>
               <td><span class="tag">Reclutando</span></td>
@@ -661,7 +674,7 @@
               <td>CTIS-derived public mirror</td>
             </tr>
             <tr>
-              <td><strong>LTX-002</strong></td>
+              <td><a href="assets/LTX002.jpg"><strong>LTX-002</strong></a></td>
               <td><strong>NeurALS / LTX-002-101</strong>, <strong>EU CT 2025-522039-33-00</strong></td>
               <td>I / I-II</td>
               <td><span class="tag pending split">Abierto /<br>iniciándose</span></td>
@@ -670,7 +683,7 @@
               <td>TRICALS / sponsor / public EU mirror</td>
             </tr>
             <tr>
-              <td><strong>RAG-17</strong></td>
+              <td><a href="assets/RAG17.jpg"><strong>RAG-17</strong></a></td>
               <td><strong>NCT06556394</strong></td>
               <td>I, con transición anunciada a II</td>
               <td><span class="tag pending split">Activo con<br>desfase de registro</span></td>
@@ -763,42 +776,42 @@
       <h2>Mecanismos y lectura crítica</h2>
       <div class="mechanism-grid">
         <article class="mechanism-card">
-          <h3>Oligonucleótidos y RNA</h3>
+          <h3><a href="assets/bloque1.jpeg">Oligonucleótidos y RNA</a></h3>
           <p>
             ION363/ulefnersen, RAG-17, AMT-162, AMX0114 y LTX-002 representan la línea más molecularmente
             precisa. Ganan claridad biológica, pero fragmentan mucho a los pacientes por subtipo.
           </p>
         </article>
         <article class="mechanism-card">
-          <h3>TDP-43 y proteostasis</h3>
+          <h3><a href="assets/bloque2.jpeg">TDP-43 y proteostasis</a></h3>
           <p>
             AP-2 y VTx-002 apuntan a una diana central en la ELA. El impacto potencial sería enorme, pero
             el riesgo translacional también lo es: son programas todavía muy tempranos.
           </p>
         </article>
         <article class="mechanism-card">
-          <h3>Neuroinflamación</h3>
+          <h3><a href="assets/bloque3.jpeg">Neuroinflamación</a></h3>
           <p>
             VHB937, siplizumab e ILB trabajan sobre rutas inflamatorias o inmunomoduladoras. La clave será
             combinar clínica, respiración y biomarcadores robustos.
           </p>
         </article>
         <article class="mechanism-card">
-          <h3>Sigma-1 y neuroprotección</h3>
+          <h3><a href="assets/bloque4.jpeg">Sigma-1 y neuroprotección</a></h3>
           <p>
             Pridopidina es el candidato más visible de este bloque. Su fortaleza es el fase III global; su
             debilidad, el origen en señales de subgrupo.
           </p>
         </article>
         <article class="mechanism-card">
-          <h3>Metabolismo y redox</h3>
+          <h3><a href="assets/bloque5.jpeg">Metabolismo y redox</a></h3>
           <p>
             NADALS-001-ALS explora una combinación orientada a metabolismo celular y estrés oxidativo, con
             diseño clínico ya interpretable.
           </p>
         </article>
         <article class="mechanism-card">
-          <h3>Señales de advertencia</h3>
+          <h3><a href="assets/bloque6.jpeg">Señales de advertencia</a></h3>
           <p>
             Masitinib figura suspendido, dazucorilant no cumplió su objetivo primario y programas como
             MAGNET-lithium o VRG50635 recuerdan que una buena hipótesis no basta.
