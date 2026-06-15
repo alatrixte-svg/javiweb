@@ -1,6 +1,8 @@
 import json
 import re
 import sys
+import difflib
+import unicodedata
 from pathlib import Path
 
 ELA_FILE = Path("ELA.html")
@@ -16,6 +18,145 @@ def normalize_url(url):
     return (url or "").strip()
 
 
+def clean_text(value):
+    value = value or ""
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
+def normalize_for_match(value):
+    value = clean_text(value).lower()
+    value = unicodedata.normalize("NFD", value)
+    value = "".join(char for char in value if unicodedata.category(char) != "Mn")
+    value = re.sub(r"[^\w\s]", " ", value)
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
+def remove_source_suffix(value, source):
+    value = clean_text(value)
+    source = clean_text(source)
+
+    if not value or not source:
+        return value
+
+    suffixes = [
+        f" - {source}",
+        f" – {source}",
+        f" — {source}",
+        f" | {source}",
+        f" {source}",
+    ]
+
+    for suffix in suffixes:
+        if value.lower().endswith(suffix.lower()):
+            return value[:-len(suffix)].strip()
+
+    return value
+
+
+def infer_source_from_title(title):
+    parts = re.split(r"\s[-–—|]\s", clean_text(title))
+
+    if len(parts) < 2:
+        return ""
+
+    source = parts[-1].strip()
+
+    if 2 <= len(source) <= 60:
+        return source
+
+    return ""
+
+
+def infer_source_from_description(description):
+    match = re.search(
+        r"Fuente:\s*(.*?)(?:\.\s*Publicada|\.$)",
+        clean_text(description)
+    )
+
+    if match:
+        return match.group(1).strip()
+
+    return ""
+
+
+def is_repeated_description(title, description, source):
+    normalized_title = normalize_for_match(remove_source_suffix(title, source))
+    normalized_description = normalize_for_match(
+        remove_source_suffix(description, source)
+    )
+
+    if not normalized_title or not normalized_description:
+        return False
+
+    if normalized_title == normalized_description:
+        return True
+
+    similarity = difflib.SequenceMatcher(
+        None,
+        normalized_title,
+        normalized_description
+    ).ratio()
+
+    return similarity >= 0.92
+
+
+def infer_topic(title, query=""):
+    text = normalize_for_match(f"{title} {query}")
+
+    if any(term in text for term in ["ley ela", "dependencia", "prestacion", "ayuda", "derecho"]):
+        return "ley ELA, prestaciones, dependencia y derechos de las personas afectadas"
+
+    if any(term in text for term in ["ensayo", "clinico", "farmaco", "tratamiento", "investigacion"]):
+        return "investigación, ensayos clínicos y posibles tratamientos"
+
+    if any(term in text for term in ["carrera", "solidari", "bicicleta", "reto", "visibilidad"]):
+        return "iniciativas sociales, sensibilización y visibilidad pública de la ELA"
+
+    if any(term in text for term in ["cuidados", "pacientes", "familia", "calidad de vida"]):
+        return "cuidados, calidad de vida y acompañamiento a pacientes"
+
+    return "actualidad relacionada con la ELA"
+
+
+def build_context_description(title, source, query, date):
+    topic = infer_topic(title, query)
+    source_text = f"Fuente: {source}." if source else "Fuente pendiente de confirmar."
+    date_text = f" Publicada el {date}." if date else ""
+
+    return f"Aborda {topic}. {source_text}{date_text}"
+
+
+def sanitize_news_item(item):
+    raw_title = clean_text(item.get("title", ""))
+    raw_description = clean_text(item.get("description", "") or item.get("summary", ""))
+    source = (
+        clean_text(item.get("source", ""))
+        or infer_source_from_title(raw_title)
+        or infer_source_from_description(raw_description)
+    )
+    query = clean_text(item.get("query", ""))
+    date = clean_text(item.get("date", ""))
+    title = remove_source_suffix(raw_title, source)
+    description = raw_description
+
+    if (
+        not description
+        or description.startswith("Aborda ")
+        or is_repeated_description(title, description, source)
+    ):
+        description = build_context_description(title, source, query, date)
+
+    return {
+        "title": title,
+        "source": source,
+        "description": description,
+        "link": clean_text(item.get("link", "")),
+        "date": date
+    }
+
+
 def load_candidates():
     if not CANDIDATE_FILE.exists():
         raise FileNotFoundError(
@@ -27,30 +168,7 @@ def load_candidates():
 
 
 def clean_candidate_item(item):
-    title = item.get("title", "").strip()
-    source = item.get("source", "").strip()
-    summary = item.get("summary", "").strip()
-    link = item.get("link", "").strip()
-    date = item.get("date", "").strip()
-
-    if source and source not in title:
-        description = f"Noticia de {source}. {summary}"
-    else:
-        description = summary
-
-    if not description:
-        description = (
-            "Noticia relacionada con la ELA, sus pacientes, investigación, "
-            "cuidados, prestaciones o derechos."
-        )
-
-    return {
-        "title": title,
-        "description": description,
-        "link": link,
-        "date": date
-    }
-
+    return sanitize_news_item(item)
 
 def extract_current_news(html):
     match = re.search(
@@ -68,6 +186,7 @@ def extract_current_news(html):
     object_pattern = re.compile(
         r"\{\s*"
         r"title:\s*(?P<title>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*"
+        r"(?:source:\s*(?P<source>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*)?"
         r"description:\s*(?P<description>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*"
         r"link:\s*(?P<link>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*,\s*"
         r"date:\s*(?P<date>\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')\s*"
@@ -81,6 +200,11 @@ def extract_current_news(html):
         try:
             current_news.append({
                 "title": json.loads(object_match.group("title")),
+                "source": (
+                    json.loads(object_match.group("source"))
+                    if object_match.group("source")
+                    else ""
+                ),
                 "description": json.loads(object_match.group("description")),
                 "link": json.loads(object_match.group("link")),
                 "date": json.loads(object_match.group("date"))
@@ -94,6 +218,7 @@ def extract_current_news(html):
 def build_news_object(item):
     return f"""      {{
         title: {js_string(item.get("title", ""))},
+        source: {js_string(item.get("source", ""))},
         description: {js_string(item.get("description", ""))},
         link: {js_string(item.get("link", ""))},
         date: {js_string(item.get("date", ""))}
@@ -167,7 +292,10 @@ def main():
 
     html = ELA_FILE.read_text(encoding="utf-8")
 
-    current_news = extract_current_news(html)
+    current_news = [
+        sanitize_news_item(item)
+        for item in extract_current_news(html)
+    ]
 
     combined_news = selected_news + current_news
 

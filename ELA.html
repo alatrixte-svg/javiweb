@@ -133,11 +133,18 @@
   color: #ffffff !important;
 	}
 
-	.news-item p {
+	.news-source {
 	  flex: 1;
-	  margin: 0 0 0.8rem 0;
-	  color: #ffffff !important;
-	  line-height: 1.65;
+	  margin: 0 0 0.9rem 0;
+	  color: rgba(255, 255, 255, 0.78) !important;
+	  font-size: 0.92rem;
+	  font-weight: 500;
+	  line-height: 1.35;
+	}
+
+	.news-source span {
+	  color: rgba(255, 255, 255, 0.58);
+	  font-weight: 400;
 	}
 
 	.news-item a {
@@ -543,182 +550,212 @@
   <script>
     const newsData = [
       {
-        title: "José Luis Sanz recibe en el Ayuntamiento a Jaime Lafita tras culminar su reto solidario por la Ley ELA - Ayuntamiento de Sevilla",
-        description: "José Luis Sanz recibe en el Ayuntamiento a Jaime Lafita tras culminar su reto solidario por la Ley ELA Ayuntamiento de Sevilla",
+        title: "José Luis Sanz recibe en el Ayuntamiento a Jaime Lafita tras culminar su reto solidario por la Ley ELA",
+        source: "Ayuntamiento de Sevilla",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Ayuntamiento de Sevilla. Publicada el 2026-06-15.",
         link: "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOUWJKa25SMnJWQzVvVGE4bGtPWk9GUFJIZHpaQWc2aUZaNzh5TUxtd2lNc0tFTWRKU21mR05JU3BueFhYVDE0dENBSGt4Z21fMkpPeHRlemNraWhFZ0xKaDd5UDVNTDZ6QVlpS2ZKaHBVcDRqR240N1FWZ3dSSTVlSC1MVVE0U0JiX0JBelVxNE52VUFRTTZzN09GVThmV3BGMDBibjR3dk8wUmZHcHJOQ3JySWhuWDVYU3AxWVNRLUJqMGNFR21TVFQ1OHVwczh6VWs4OFFYcVFya1RHdGtkUnI0aEJSdw?oc=5",
         date: "2026-06-15"
       },
       {
-        title: "Más de 2.000 participantes en la tercera edición de la Carrera Madrid con la ELA - Diario del Ayuntamiento de Madrid",
-        description: "Más de 2.000 participantes en la tercera edición de la Carrera Madrid con la ELA Diario del Ayuntamiento de Madrid",
+        title: "Más de 2.000 participantes en la tercera edición de la Carrera Madrid con la ELA",
+        source: "Diario del Ayuntamiento de Madrid",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Diario del Ayuntamiento de Madrid. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMixgFBVV95cUxPYzNtUnk0UEJTU2I4UDNZdkxHeGRLbjg5SEFDeTB2bDVOVW9iYW9udGlrb19jRm1UaDBjSERNalNBQ1ZNTng3WTJFTEZaclJwUmMwOUtMVldzdzhhN19MZU1uMklCdDhWMUhqbk91S2s3RHJ4bDBFazRRRDdWUTdFUnVQeXJfaFRmdC1ueUF6dHl4U3RhckMtV0FRUzFjb1RETU01S3JMN19kaFprYlpfb2RsTDBwd2Y3b3ZNTXliWFY1ekR0M3c?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "El impacto de la ELA en la vida de un referente del rugby británico: su misión por cambiar el futuro de la enfermedad - Infobae",
-        description: "El impacto de la ELA en la vida de un referente del rugby británico: su misión por cambiar el futuro de la enfermedad Infobae",
+        title: "El impacto de la ELA en la vida de un referente del rugby británico: su misión por cambiar el futuro de la enfermedad",
+        source: "Infobae",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Infobae. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQU1NUQ2dpdWkxdHo1b3dENEdIT3kyVDBKYU8zb21VTDk4ZExfOE13Y25NN1FQSmdVNFBRaDNMUDN1Q0RZWG44Rl9RQzU0N2N3SkJaXzhJV3JZRnRHVlRNeXBDNUtDZ3FmbGl3TXNNbmJBQXBVSktpWGJ5UG5oZUQ3WEg3d2FCdTJjOFBLLW5NVU9ucXJDblRzU0lvNzVPSmFIRm5iaFpnWHd5NnU1Ml85NWk2X0pUSml2dzFTbkxuVjJEZ1BCTlFMY3BQRmVVQnlaRmpEeHdhd2x1ZE12MGpOS0VVNXpoQUVIaE9nWXpsYkVFeGPSAY4CQVVfeXFMT1BlLVpCc0NOREVBTmQzVlZqS2l0bHRmRHQ0cHJ0d1BOU1dvVlAtUHA3cGFFMlM0VzdVbHM5Z1lsUUJuZk53T05WZUhWa01pVlJzZjZyVEpiQ2NOYjM4MlkycnJUNmtqSmpUQTF3OWc1MEo4WmpVdS03SmxRSUFjQWM2a296azlUcU5VbFlQLXdidkxZUUpvQkhoek9QZWh6cnR5bm40Ry1HMVJrZW5NUi1mY1ozYVdtT0h3b2RKYjVZMEtyRzhab00wMXFnYU9pSnluNDBzRUFOWlZ1MkY4R09ocDV0UUxJenZDRklWaUZXX2dORFZyZXFsY2NqVy1sd3V1Yy1fcjB0NkVCMk1R?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "Carrera en Madrid para dar visibilidad a la ELA - ABC",
-        description: "Carrera en Madrid para dar visibilidad a la ELA ABC",
+        title: "Carrera en Madrid para dar visibilidad a la ELA",
+        source: "ABC",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: ABC. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ09vMzN1MmVmX2lmQWgzZkpFRmRXZFVIVUY0Zm1BRzZSbVZUMHdjc2Q5VzNqOFo5Q0tORVJEeEVGdUFYNlNhanRLT2FPdnQ4cVdCa2xtbWQ2WllfNkZaMGM1Ny16a24wbm1QVEotRFRBODdpX1NZRXBvZzhxZjlsbnNKRW1CYzhVU2c?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "La Carrera Madrid con la ELA atrae a más de 2.000 participantes - MadridPress",
-        description: "La Carrera Madrid con la ELA atrae a más de 2.000 participantes MadridPress",
+        title: "La Carrera Madrid con la ELA atrae a más de 2.000 participantes",
+        source: "MadridPress",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: MadridPress. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMingFBVV95cUxQZm1Va3pEdlVsRWNBVl82b3hpU3dlb3EwdmRVaXBCSFlZTUl4ZFdVbzQ3RWZma3VKWTZraWFjbEE2VVlycjRsYW9jalRoZWRETE9BTjZQSVUwZnZ4N3JlaF85TmdDTHRxWFpJNEhpT2pyWWlVLXRickR4NkdFSjhycmpvYTlVS0I5NTNiZXRKenhmVmUzSkJWT0lsMkctZw?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "La Carrera Madrid con la ELA recorre el paseo de la Castellana - El Periódico Extremadura",
-        description: "La Carrera Madrid con la ELA recorre el paseo de la Castellana El Periódico Extremadura",
+        title: "La Carrera Madrid con la ELA recorre el paseo de la Castellana",
+        source: "El Periódico Extremadura",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: El Periódico Extremadura. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMiswFBVV95cUxONTBLVG0yZkNzaklCdmx4MjVEUWs1dWluYzJ3cVRpMDJpME1XR2hrNUhmWEptMktUa2VkM3FvcHFrYlM5TDZLd3Z1SHM2V3lPVVFBWWFEWk5sZ29WdmtuTmpPNnc3RHlEcFpfbk9BcDhMalBBaDU2Tlc3OHliUmZQUVZfTlVDUDBUR3dPdktBa2hIblZNVlVUV0E1am41YWxFRXpqY25DRnIzZ0VsZEZ4em9SUdIBuAFBVV95cUxQdDhrZVJscXdwbVE5a0QyVEJRTFBCT3l5UmlBenBfQWJaV2VQN3F4R0l6UEZfem1RNHBTOG1DTFNyRWZFLWZuVWFQRG1aUkxRZXNuMUFQSXpIVWx3aEVJQnR4ZnV5UFBUNzlja0pLeXpZMDJQTGUwcVctaXNjRzRFQmdzZlpYVzRrT25DTlJ5MnA5SVlrN214bm90S2NYTWpOMmE5YWFqYVhvSHZqSVpMZ2xKQkZLUTUy?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "\"En la cura está la solución y hay que luchar por ella\": 2.000 personas participan en la Carrera por la ELA - LaSexta",
-        description: "\"En la cura está la solución y hay que luchar por ella\": 2.000 personas participan en la Carrera por la ELA LaSexta",
+        title: "\"En la cura está la solución y hay que luchar por ella\": 2.000 personas participan en la Carrera por la ELA",
+        source: "LaSexta",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: LaSexta. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOc1VSYUNXRVFQSUs0eGp3VjNJOVVtR2lyWGpaS3B1UlA5QXNPb1NEVUpYME9rbzJGOFlCSDBsOGtmeWYzaTM1RFU2a19hUzBOZWoxQlo3cEl2STA1X1JwMFI2LVYwX2p4Z2pZTVBDbjdfam42ODBRRjRTYjB6a3ZaVWhTXzlxSFJyZ0oxc014Q1Vqdnc4aEV1WXkxR2VXQ1VsOUkxOVJxTGVLenExOS1KbmUyR080Z2w3SWpCLWhRQU9Wd1dHRzVzSnl4elVLbFFReUd6XzE3LVpRaEEzWEF4eFVGQXR3aVJwbXZnUUVxeWpBMTBQZG9kTVVHWlhYUdIB_gFBVV95cUxPZEN0cTc4VkZrWjV1WXl3dmtzRGowQlB0WVBDcGNnRXhGQ0haekhhOHA3LTM1RWEzanFhMmVGR1A2ekdLXzE2QmNBZ3dKaUNTT0ZJZEZXUndKdGphQmY2ODFxQ0lfNkYybWlHZ0JoSjRGS1VXQnZPYkY1QWxXcTJxZ3RfZC0tYUFhcjZhcEZhWHFzckZIMi0wa1Juc0xocmNVc2FuTFRQTW5FcW9ISDR4X29SZlUwckVVZ0l2bW9KS3ZFMEtrLW9GWTdQXzBNYXMtcENpVVo3YjN4N3pWRVA1M0lpRlU3Rm5WRWNrd2dPQ0QzUTZtalhxejVEYVM0Zw?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "La Carrera Madrid con la ELA recorre el paseo de la Castellana - El Periódico de Aragón",
-        description: "La Carrera Madrid con la ELA recorre el paseo de la Castellana El Periódico de Aragón",
+        title: "La Carrera Madrid con la ELA recorre el paseo de la Castellana",
+        source: "El Periódico de Aragón",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: El Periódico de Aragón. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVVZnZUNJVUlpcXpGRmVEbEliOVd0c2NzTlh3a21YcEF0dFBCVFMzaU1lazZIZVFobTUxWS1HOGFvcVVQN3p5QzlwaGtRdEktNnJHU1VNbjZwYXJfbnBuUUh5VHBJenp6Vi1ocGd0dEVTMzdGTnRTc2xlNVhrYmdxeXVaVDc0UHViS2J0NmM1anN0bGt6VEtleDlfLWE0VkpsVlg0SkFkZDkxb1JFTThv0gG0AUFVX3lxTE03czJrZTlKNFVOaS0xazB1MTR1LVVqNXVUMXhxQVp2OWdiVG5ISGVhRk45TlJNME5idEN4OWZVQnZIc2hPZlJKN3Y2VVljaVp4M1J5T1FQYzlpNDVxN0h3elVFaTJuNjJHTE5LNzZsY0lKX1ZDLVgySGlMTW5CZkJ0dGxCM2N2cDVNUzk2Rm5HV1FnWWY5R2NIaVl2anRnNm1rOFRZZkhoR2tncUxxU2pud0ExRw?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "La III Carrera Madrid con la ELA reúne hoy a corredores, familias y asociaciones en la Castellana - Servimedia",
-        description: "La III Carrera Madrid con la ELA reúne hoy a corredores, familias y asociaciones en la Castellana Servimedia",
+        title: "La III Carrera Madrid con la ELA reúne hoy a corredores, familias y asociaciones en la Castellana",
+        source: "Servimedia",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Servimedia. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMivwFBVV95cUxNekJRWmJRSWIzQVJGREVJTnY4eHYwUkV3QVNYbF9OYTBEOFdpYWV5QXQzVllKbWsteWxHLTZ4X1JlbDRudDNQY29iTjBZMzRmVFE1czJ4aHNta0JPVllSemw1OHRyYWFTVi0tXy1fVUJCaHRlYk9EYTY5QVg0UFRmbVFYRUtFQkFkLW9oUWZjZ3E4Vnk1Y2hqSC1aSzJLWG1lUVhBdGk0TElzdEYwbWZSMjNyVVNIM29XUUZwTjk2MA?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "José Luis Capitán: vivir con ELA sin renunciar a cumplir ningún sueño - Noticias de Navarra",
-        description: "José Luis Capitán: vivir con ELA sin renunciar a cumplir ningún sueño Noticias de Navarra",
+        title: "José Luis Capitán: vivir con ELA sin renunciar a cumplir ningún sueño",
+        source: "Noticias de Navarra",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Noticias de Navarra. Publicada el 2026-06-14.",
         link: "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNV91ZTRydWtReTVDTjJ6OGtLX1A3UHd1M3B5QmRJdkl2aFRCcGdqQXVkb203aGdjTmpTUUhrZkY5U2dqRXFtTF9TaHUwbHlSUER2dU1EaW5aVGVPc1RPS3h1VHZaN0V6RTd3WWdKMU5JWTgtN1M0Q1oxSXgySFB4cDExUzNpTWVqQ2duYUVJaHlEaWxTWWdqRzFCazVWY1lNaTZKcUg4eDJQTlZD0gGyAUFVX3lxTE5jaEhydmtWSjBval9acEx6MGRJUkRBc2NQRGktZjlFVW5jNVdHX2VqS0Y0M2IwX3NDT2w5Q1ZGUWZud0lETDV6MXYwTzhYUHpzWFlQa1Y2d2RHVkdXSkVqR3Fsa0VnZ2p1UjdOcE8tYUI3b0FPV1dPQUg4ZWJBak1uVHRsMmZGVUY4d3c1LUxzQUVZRXRMbmxBMEFkeVc1cG1tbENiLV9yR3dycmU2R2Y5eVE?oc=5",
         date: "2026-06-14"
       },
       {
-        title: "UPM y adELA, unidas para mejorar la calidad de vida en la ELA: “La tecnología debe estar al servicio de la persona, no al revés” - consalud.es",
-        description: "UPM y adELA, unidas para mejorar la calidad de vida en la ELA: “La tecnología debe estar al servicio de la persona, no al revés” consalud.es",
+        title: "UPM y adELA, unidas para mejorar la calidad de vida en la ELA: “La tecnología debe estar al servicio de la persona, no al revés”",
+        source: "consalud.es",
+        description: "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: consalud.es. Publicada el 2026-06-13.",
         link: "https://news.google.com/rss/articles/CBMingJBVV95cUxQSjdNaENodmI1djVoa1REaFJtVC03LXl2YzFkNVBmOWZpeU5jNFhsT0N3SHFCYjgyTURWUU9DcXA3X2hJdXRxVjdldGpzR0NzQ3oxNEhnaTl0X1FaLWY0bkhNakVGSXNZR19IelVjTFUyd0x0akFuRUVPcURPOVE0TVNsRnpQc3NOXzJqNE0ycEdtME85cEY0UHFRT1J6U3B4UTNrM2x3YXNqbkRZZ0wyb3pSUnM5WXFLUC1pM1ppeVMwTm1nXzNYcUROc2ZGVWhLUDZ0NTdxemVUYjNRZklQWUN6LXNnM3Fpdm81ODRpbnN0Q3IxSm03UWlWV2tSSWNLc2taQkFncVlHZkJJazdXWGwtVnhQejQyXzVDNmFB?oc=5",
         date: "2026-06-13"
       },
       {
-        title: "\"¿Hasta qué punto hay que alargar la vida sin buena calidad? Ese es el debate” - Noticias de Gipuzkoa",
-        description: "\"¿Hasta qué punto hay que alargar la vida sin buena calidad? Ese es el debate” Noticias de Gipuzkoa",
+        title: "\"¿Hasta qué punto hay que alargar la vida sin buena calidad? Ese es el debate”",
+        source: "Noticias de Gipuzkoa",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Noticias de Gipuzkoa. Publicada el 2026-06-13.",
         link: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNLUJQY0JfYkdONWZKTzRQcXVzUVhpZk1zNFB2bUZvanhMc2luVEZDZXBjWWp0SGQyckE2ZFVubHNVX0xkakh6WUZKRGhSM2JPQ0pvX016YWh3bVZ6OFpjRGpvYlFSVml3RVNLSHlGYTRuZVJhWjYyQ1ZSSUhmbDRPa2NIbHUwX041TFc5c19udDNpUEw5ZTgzLVg1NnNrUDJSR1lOaURpRHMtZWJZWDNrU1FqMi1GZk9D0gG-AUFVX3lxTFBBbms1LVVEYm9RT1poYWNzLXFUUzdYOV9MVlhWSmJqUWNaWTNsdVZrMUw5N2NNVzY4dktEb0pBRXJic2xuYmpFekRuQTBOUzhjZ1VoM3JMc3RuLXczeVVVcWJRdEVEcGlQMHdQbUdLNzNhSWZOeHF1R1gtQTlEYmpBeWRlcEJwZ0xnSnFNQXoxZ056eFF0c1ZvUy03NEFtQW5SbGVwSzdpc1dMU2cyQ0FGSkRGZHdrRmFLM0N0Unc?oc=5",
         date: "2026-06-13"
       },
       {
-        title: "El alcalde de Sevilla recibe en el Ayuntamiento a Jaime Lafita tras culminar su reto solidario por la Ley ELA - Europa Press",
-        description: "El alcalde de Sevilla recibe en el Ayuntamiento a Jaime Lafita tras culminar su reto solidario por la Ley ELA Europa Press",
+        title: "El alcalde de Sevilla recibe en el Ayuntamiento a Jaime Lafita tras culminar su reto solidario por la Ley ELA",
+        source: "Europa Press",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Europa Press. Publicada el 2026-06-13.",
         link: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQMFhJeFFPQ2pMMkwxcExfQ0hfcTZ2LTRweVBEb09MempmMF85NG1ITFFrdlNJQjdBcG4zdFpVVDJZeWQxMUcwTTRuUnhKZndNMkpoVGZPUGpYR2IxZjZaeXVoRHByZllVZ1EtNUJBQ2NNdTNycHlNcC03Vzd2Sl9OR2k2dmN0QzZXOXpzMlF4YkkyRDlzdnBDa2ZLVEg0eG05bjNwd3hkTVRNajhsNjhaY19fZ1ZKWXcxTEFvQVRxTXZpUHJ2X082cmQwQ3dlUkhUR1dYODN1UWhsWDhsYUN4WUdiZW52SDN5UXNmZHhyeEE?oc=5",
         date: "2026-06-13"
       },
       {
-        title: "Cruzar España en bicicleta desde Getxo para reclamar la aplicación de la Ley ELA de manera uniforme - Andalucía Información",
-        description: "Cruzar España en bicicleta desde Getxo para reclamar la aplicación de la Ley ELA de manera uniforme Andalucía Información",
+        title: "Cruzar España en bicicleta desde Getxo para reclamar la aplicación de la Ley ELA de manera uniforme",
+        source: "Andalucía Información",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Andalucía Información. Publicada el 2026-06-13.",
         link: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNQWZzOVllM21URm43ZkRNWU9QRFJRajIwYW4xWERMYWcwYVpBVUQ0UlE2NXl0clBzMXBuTjk0andyUVpkeGxsYnpsMDU1NkdiVktSVGxiMlhGWDB2YVlvZlRRMUhfU1p5QlBRVW52UG1wYkJQQ3pFWFFYVngyNUFxTnd1V2R3ZlVYOXAzTDV1dUV4TGVtMnRZTmU4TG9PS0hzX2dNVzZqSHNUOHZZREVnV3RRcDhrS1pwUjI3XzBRR3NBbkFKR1M1NEc4LUpuZE5qeWFjdXZEeWdueERTWmZhSjRWbDg2NW50bGNYVVVB0gHuAUFVX3lxTE1BZnM5WWUzbVRGbjdmRE1ZT1BEUlFqMjBhbjFYRExhZzBhWkFVRDRSUTY1eXRyUHMxcG5OOTRqd3JRWmR4bGxiemwwNTU2R2JWS1JUbGIyWEZYMHZhWW9mVFExSF9TWnlCUFFVbnZQbXBiQlBDekVYUVhWeDI1QXFOd3VXZHdmVVg5cDNMNXV1RXhMZW0ydFlOZThMb09LSHNfZ01XNmpIc1Q4dllERWdXdFFwOGtLWnBSMjdfMFFHc0FuQUpHUzU0RzgtSm5kTmp5YWN1dkR5Z254RFNaZmFKNFZsODY1bnRsY1hVVUE?oc=5",
         date: "2026-06-13"
       },
       {
-        title: "Harán el lazo de hojaldre más grande de España en un evento solidario en Mijas contra la ELA - El Español",
-        description: "Harán el lazo de hojaldre más grande de España en un evento solidario en Mijas contra la ELA El Español",
+        title: "Harán el lazo de hojaldre más grande de España en un evento solidario en Mijas contra la ELA",
+        source: "El Español",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: El Español. Publicada el 2026-06-12.",
         link: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWF9naUJ5Z3hPNHdlUlc1b3lrd2hoby00NzJGNFFsN3dkanVTYmxnSUR5VUFMcTdEZFRzOEUya3ZNNE9wcE9IaE9RUFN6cEotQXBobE1vNkVGaE1vbmQ1ZzAwTlJKSm1OQzNoMzMyRTY4S1dJb2E2VjJHa09EQ2tyMlliQlNhZ3ozbWdSckNsNEdDd1VOMk5fcGxncjBjak5DQnlKeWFBbTFfalNLcjhxVFMyZWRmTjNtQzlmN0NiNmdRSXQwU0FradIBzgFBVV95cUxOc0oxMllwUW5UVDE1bFltZ3E2YVIxa0J4V2tMdDJ5ZDhhc3NKc2tnZEJrNnF5RWxVcEtsX2ZVLUFKYVY2d1gyQW91TndKQ3RHMlhaZmtZOVkzYkRrRGFSNVdtMW1RQkxFdjBOTjlNMXpHV0FOdnp2T1ctX2JoM2owRTRNNkt5UTlkY1JaUTBCU3lqUDE1Q3hUbTg1NGNvZG9rZ0FFMlNibmgxYnRnQmZjMVBJU3ZTblJNZ245YjNrZHZCeHlRYU9uMkJGbDJMZw?oc=5",
         date: "2026-06-12"
       },
       {
-        title: "Jóvenes estudiantes impulsan este sábado una carrera solidaria contra la ELA en Bilbao - Cadena SER",
-        description: "Jóvenes estudiantes impulsan este sábado una carrera solidaria contra la ELA en Bilbao Cadena SER",
+        title: "Jóvenes estudiantes impulsan este sábado una carrera solidaria contra la ELA en Bilbao",
+        source: "Cadena SER",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Cadena SER. Publicada el 2026-06-12.",
         link: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYTg5QVVwR3hKemdEYkE0bjlSNEpSQmUwemxEbHdzNi1qWDV0aW1KWjJMeFhVby1Bb3BmQmNhNXFDdmdoSlFQbkthTE1DNWlfQV95dE5yTG1qeXpWUlV6ZjdCRm1VbGVUbzh4R0Z6VWN3aWFKbEQxaHBvaHVvd1dDN2ZMeUJ2RTNhQTFuQmdpQjdVN1FqN3NhRko4QVU0bVc0bDJ5RjhLV1RqdFZwZjlfZEs0REZEcWR5Vm54c3hiUms4ZkVpaWp2ctIB3AFBVV95cUxQMFhZMENjeER6U195d3ZoU1hTUFYydTdLQWtBS3h2bEFpSF9PT0IySVB3c3lLd0VIVkFDekhSd3lRdWVjMXd0clNYczk1WlVaMkJpSVI2YVFpOTBzWFJXZEtfVUVyd25sU0laRmtRYTZGYU93aHJ3Q2pFNmUxcG1Fd1JwUFo3ZkUxTkdTaXphXzZPSjg0R21ReWJoUmZXQ3dyNUhtUHRlSTlnTVYyOENvVEZxR21FcDM0MEpLRm1LUHF4c2VUM1JMSGZrbkZyVHdFZDRpQ09tZWFnb1hs?oc=5",
         date: "2026-06-12"
       },
       {
-        title: "Adrián Fernández, el joven malagueño con ELA para el que \"rendirse no es una opción\" - El Mundo",
-        description: "Adrián Fernández, el joven malagueño con ELA para el que \"rendirse no es una opción\" El Mundo",
+        title: "Adrián Fernández, el joven malagueño con ELA para el que \"rendirse no es una opción\"",
+        source: "El Mundo",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: El Mundo. Publicada el 2026-06-12.",
         link: "https://news.google.com/rss/articles/CBMifkFVX3lxTFBlUFVUV1BHSXRua0RRZWVOZXFLSzVSZjNibDVpNnNFbkZVTndEcW40cE0xZXNSVVA5S2N3Q0F4UGVxS1ZhN2lMT2dfdFFpbTdKX1B1RXBTRVoyRTZZNnVZWERKRUV5M0xnejR1UElmLVRiWUhTUkZkYTFDNko3QdIBfkFVX3lxTE1xQWw5VlpqZVAyWWZJdFdIQ3QtQ0RyOG8wWjkzYy1WTWUzZ3VPdC1QUEliU2RKSEtXQVQ2a0FlUG1CTzhXR2tkRnNTMEdfWk93U3hmbnpGWmJrMHBSWk9KLW8ySmh2OW0tRUFjYVFoTngzU0YtemUtRkQ4cmh0Zw?oc=5",
         date: "2026-06-12"
       },
       {
-        title: "Esclerosis lateral amiotrófica: las opciones modificadoras de la enfermedad siguen siendo modestas y dependen del genotipo - Vera Health",
-        description: "Esclerosis lateral amiotrófica: las opciones modificadoras de la enfermedad siguen siendo modestas y dependen del genotipo Vera Health",
+        title: "Esclerosis lateral amiotrófica: las opciones modificadoras de la enfermedad siguen siendo modestas y dependen del genotipo",
+        source: "Vera Health",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Vera Health. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMirwFBVV95cUxOV2lzTUhfempYNHN3VU1QNkRVTVl6aFczNTdQTjh5WndlZ0JPeks4SFBPTnEwYjA4RG1qUGdGTW14dkc2NmRFVld2OFR2VVZuVGJqa08ydGZSbkJDNHgyZHNlamlLQVJUbjQzUV9pSlFiNXRoNktwekVCSkV0UENCb0RacHNRVmFuOTRaWHBMRnVjcUNpeC1JLUJWWWhIZlVPXzlaSkRNZ2tPS3hla3RZ?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "La asociación gallega de ELA conciencia sobre la enfermedad en el CHUO - La Región",
-        description: "La asociación gallega de ELA conciencia sobre la enfermedad en el CHUO La Región",
+        title: "La asociación gallega de ELA conciencia sobre la enfermedad en el CHUO",
+        source: "La Región",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: La Región. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWWp4Z1VoNGdCLUVtLTFJUjF2c0xDN0pNVkdnV1RtamN4aFpkOVY1T1pNVlF5dDJzbFU5LUtJMDgyOENKVGFGV3gtSVZJdFcwS3lNalNRemxMRWo3LUhHdVZZMU00bF9MUDFsU0h2T2huTzU2eG9EZll4NnF1UGdVNGRfZFY3RXpyVzVDS2F2NmdBQ1pncHdrb09ISmxhSnZwOVE?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Un enfermo de ELA recorre 1.000 km en bici para exigir la plena aplicación de la Ley - ABC",
-        description: "Un enfermo de ELA recorre 1.000 km en bici para exigir la plena aplicación de la Ley ABC",
+        title: "Un enfermo de ELA recorre 1.000 km en bici para exigir la plena aplicación de la Ley",
+        source: "ABC",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: ABC. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMilAFBVV95cUxORG1PRHV6VkVsZUswb1FSWVFvbzVOUThyXzVZbU1PN0NCRk5NZWM2QkJJSWowYllnY1psczFzTEF1ZGVVZXRSZFY5ellZeUp1QUQyRGNlbHpLYjR1S2VHZTd3NHdGRG9UenV0M0tkMTRmMVljQ01KNEJtNUZNeEFkM29qcmtnZGFkb0xNRUozTHJVcmNP?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Únase a la lucha contra la ELA: Regístrese y marque la diferencia - Noticias Newswire",
-        description: "Únase a la lucha contra la ELA: Regístrese y marque la diferencia Noticias Newswire",
+        title: "Únase a la lucha contra la ELA: Regístrese y marque la diferencia",
+        source: "Noticias Newswire",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Noticias Newswire. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMidkFVX3lxTE5JNm1CVjVZMEtxNFItWG9vMEhPckZxLWNpYlhmQ2t6VXVtTjRJOXdUVEFYLTAwREdVMHNQc29UY05XMnlIQ21rcFFkZl81Yk13UW5qcGV6M3h6eHowNjFBU1RBZDlfcDlULTFiSVN6d1d3MDA1MUE?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Mukua vestirá a más de 2.000 corredores de la Carrera Madrid con la ELA - Corresponsables",
-        description: "Mukua vestirá a más de 2.000 corredores de la Carrera Madrid con la ELA Corresponsables",
+        title: "Mukua vestirá a más de 2.000 corredores de la Carrera Madrid con la ELA",
+        source: "Corresponsables",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Corresponsables. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMingFBVV95cUxNdjU3alltVE5teFdiWmtiWkJ5N0dZT0Y1LVBlY0ZQZXVmZG5KUDc0emFpTHpoMXAyaFFYMmljU0EzcVo0WVRXaFRvVk1ydE9GQ3puemtEU2JHV2JwTTlQMGJhYUJJZWQtZVFIWkVxUDI1aTJZeHpfU3NMWktQRzByR0xSaXVuaTl1Rm95bHlwVjlvS3c5NC01M0tsN3BjUQ?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Tatiana Badiola, paciente de 34 años, comienza a recibir las ayudas de la Ley ELA - Tododisca",
-        description: "Tatiana Badiola, paciente de 34 años, comienza a recibir las ayudas de la Ley ELA Tododisca",
+        title: "Tatiana Badiola, paciente de 34 años, comienza a recibir las ayudas de la Ley ELA",
+        source: "Tododisca",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Tododisca. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYkFHTkcxWGZqZ0tfOERGUHVrNzlOWWVYYkc5b2ZwTlliOVlsSEZIbmhoNWtSNW84ZlcxNnVtQ1NRSGY5NEk0b040TEFEUkNTblFWSjZ1d0xucEZvOWstWXMwMGZKNmNnVnhYVXVUTHlYVHlKMTJIVFpPOTluNlBMUTZ1NjdnQ1JjRThPdWdWMEd6OEtkdDNiRU1GdjhRTmhE?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Jaime Lafita finaliza en Sevilla su recorrido de 930 kilómetros en bicicleta para exigir la aplicación de la Ley ELA en toda España - Cadena SER",
-        description: "Jaime Lafita finaliza en Sevilla su recorrido de 930 kilómetros en bicicleta para exigir la aplicación de la Ley ELA en toda España Cadena SER",
+        title: "Jaime Lafita finaliza en Sevilla su recorrido de 930 kilómetros en bicicleta para exigir la aplicación de la Ley ELA en toda España",
+        source: "Cadena SER",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Cadena SER. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMirAJBVV95cUxPLS05VmhILWdBZExDenVNeUpQb20yWDdVZERXMVBNZGRvRTFZU0xmcV9RN1FIMTlpNk4wRHk4QV9oY1BXOFNER3dXenJ0YlJtTlpXR2laczIyWHpVMm10b0hfdGhLQnpUN0xBU2NBTUpXODRwbThjbi1UZjh0eVhLdk5lTVJGQ2N3d25PYUZwTktpMjVuYVNIUjhablMtUWlRTnZXWm54cDhURjlwdjVxSkRmWUp4c1QtTFRoaGthMjJ5VXFBRmF5LWNqYXl6SXo3TUwwTjFvNGpMc1VvS3pNU0pPYzJfeWxvLXpFbENITklfX05PLUdNS0FZdkVpVm16RU9HSlNGS0NrMVY3eUtlNk11amVENS14RTNkMlZyWFo2NWFvS2VuLTUzRi3SAawCQVVfeXFMTy0tOVZoSC1nQWRMQ3p1TXlKUG9tMlg3VWREVzFQTWRkb0UxWVNMZnFfUTdRSDE5aTZOMER5OEFfaGNQVzhTREd3V3pydGJSbU5aV0dpWnMyMlh6VTJtdG9IX3RoS0J6VDdMQVNjQU1KVzg0cG04Y24tVGY4dHlYS3ZOZU1SRkNjd3duT2FGcE5LaTI1bmFTSFI4Wm5TLVFpUU52V1pueHA4VEY5cHY1cUpEZllKeHNULUxUaGhrYTIyeVVxQUZheS1jamF5ekl6N01MME4xbzRqTHNVb0t6TVNKT2MyX3lsby16RWxDSE5JX19OTy1HTUtBWXZFaVZtekVPR0pTRktDazFWN3lLZTZNdWplRDUteEUzZDJWclhaNjVhb0tlbi01M0Yt?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Jaime Lafita recorre España en bicicleta para exigir la aplicación equitativa de la Ley ELA - Onda Cero",
-        description: "Jaime Lafita recorre España en bicicleta para exigir la aplicación equitativa de la Ley ELA Onda Cero",
+        title: "Jaime Lafita recorre España en bicicleta para exigir la aplicación equitativa de la Ley ELA",
+        source: "Onda Cero",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Onda Cero. Publicada el 2026-06-11.",
         link: "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNaVl0enNRaDRlNXZZdm5Sekhva2tpVl9XbTE2LTNnVjRYbFZHbU5yYTFtM2hOdy15MExQR01Ja2xKUzNXb01NbUdfRC1lRTZBSTB4bjBLVmNBM1dhNHJxeXQxSnhiT1BjRFB3NmVJY2JOMG5MTkR3S3hfN3VYSkxiYl9VODBqc21lT3pzcGxNaUtXZ3ZBaVpyNWw2bXRTWXdZQ0FhUEV4WnBneG5lYmlGWjVJc1l2eTFhTHVXaUx6SlB0Q203Q3F4T2E0cktCQW1LMGp0aWNYOElXbFVoX19sLXFKckQ1WkJvRXlybDViNnkwQmF1ajlV0gH3AUFVX3lxTE54NDVRQ1FkQ3NXcFNwSEJhYlRHRkZoVnZqVnlxNWx6TThIUmQ5UnhNa1FDNmUwMkxiZ0RTWHAwNER2M2hobWxYdFQ3ZEQzNTdHN085aFFteG5ObFZaSjExTjdrT2NnX2dXRDVvUWRTNWtncTMtV2ZaZ3BxVk9pY3BHQkMyWmk5akVDS1RfM2ltLTlDMjdGc01VWHN1VmN2VFdHaVFhbzJ1V2ZMWEQtU3BXLWM4NU1kQ2lHVDBaS082SkJTNzM3cGJfZ3BvdXR2RExkeTY3d3FHZGJjNUVZRkxrV3I1WlZEbkpDYW5TVE0ydDNrclZZT3c?oc=5",
         date: "2026-06-11"
       },
       {
-        title: "Jaime Lafita pedalea 930 km para visibilizar la ELA - Canal Extremadura",
-        description: "Jaime Lafita pedalea 930 km para visibilizar la ELA Canal Extremadura",
+        title: "Jaime Lafita pedalea 930 km para visibilizar la ELA",
+        source: "Canal Extremadura",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Canal Extremadura. Publicada el 2026-06-10.",
         link: "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZF9WMVF2VzJPRlR0WlBOVV9mZ0REbWtkSzRPUjdTa24wVkVsQ2hDdzJESURZUWZUMzdGcFFlemhFNzdSQ0d1QzNJYnBfOWl6M1UxbDJwWFFiWENzTVZCY2ZVSWU5cDd0LUstMC1fcVA0UkRBQW1rczVrYk5NYVU3RnNLN0dJWWlUWjhqUUd3NHh3S19kU0hxRFVUc1VTbUk?oc=5",
         date: "2026-06-10"
       },
       {
-        title: "La tercera Carrera Madrid con la ELA recorrerá este domingo el paseo de la Castellana - Diario del Ayuntamiento de Madrid",
-        description: "La tercera Carrera Madrid con la ELA recorrerá este domingo el paseo de la Castellana Diario del Ayuntamiento de Madrid",
+        title: "La tercera Carrera Madrid con la ELA recorrerá este domingo el paseo de la Castellana",
+        source: "Diario del Ayuntamiento de Madrid",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Diario del Ayuntamiento de Madrid. Publicada el 2026-06-10.",
         link: "https://news.google.com/rss/articles/CBMizAFBVV95cUxPN1dIaXcybk81YzNnVzlrWkw0Smh2VXpoTEtITmg1SUZISVRxclhrZTBFN0lOYXc2VmlGSXB1S3NjdFo4cW5kM253a0dLNHVqTXVKaEU4Si1MR0NkVWZIQy1aV2dWOG5qLTdWUlVfYzktNWFJbVByQlJWbExheUFIZzczTC10SlJVN2M2RVZfU1o4N1daNXFQb1VRWWkyVEM3MkVTMFVlM0ZFWDhsaWE4ZlZMNkYzcU9vZTdDNzAwUFFjT3FJNUYwMl9maUc?oc=5",
         date: "2026-06-10"
       },
       {
-        title: "La tercera Carrera Madrid con la ELA recorre el paseo de la Castellana - Vivir Ediciones",
-        description: "La tercera Carrera Madrid con la ELA recorre el paseo de la Castellana Vivir Ediciones",
+        title: "La tercera Carrera Madrid con la ELA recorre el paseo de la Castellana",
+        source: "Vivir Ediciones",
+        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Vivir Ediciones. Publicada el 2026-06-10.",
         link: "https://news.google.com/rss/articles/CBMie0FVX3lxTFBUWm9DOGJOaW5OSVduV1Z4eHVNbkxOOUtZeEhyNXM0UUEwQ3NuWHJhOTFud1pRY19GYU1xd3dOYnRkbnFYQld6ZGZHTHRJcGYxa2lXZzFXMUNIdDg2eVVxbzN1UWVwZTNVbnpRM2F5ZEwzVFlqV05sbm1MSQ?oc=5",
         date: "2026-06-10"
       },
       {
-        title: "La gallega Tatiana Badiola de 33 años, entre las primeras beneficiadas por las ayudas de la ley ELA: «Ahora empieza otro desafío; convertir ese derecho en cuidados reales» - Faro de Vigo",
-        description: "La gallega Tatiana Badiola de 33 años, entre las primeras beneficiadas por las ayudas de la ley ELA: «Ahora empieza otro desafío; convertir ese derecho en cuidados reales» Faro de Vigo",
+        title: "La gallega Tatiana Badiola de 33 años, entre las primeras beneficiadas por las ayudas de la ley ELA: «Ahora empieza otro desafío; convertir ese derecho en cuidados reales»",
+        source: "Faro de Vigo",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Faro de Vigo. Publicada el 2026-06-10.",
         link: "https://news.google.com/rss/articles/CBMilgFBVV95cUxNX2hUdHNadWozWXR4c0lhWHRVSTR0US1pTmctbVQ3eVFWLWpUUzVlQnVBcG9IcVFHMTV6QTk5OXRqYWZBSXZIRy1VaV9CODg5WGczVXhyU0p0UGVVMlVmMWhUbVlhN1M1Ymdjak1WdjhlWnNVMEllRmJWemtZaWxIdGc2N1RmakNNczVzVm9jZkdEbnBzVXfSAZsBQVVfeXFMTTlScWVNTVZTSEhlSnM1QzNQZ2g3dHpIVVdVaVVpUDhYZXJNUGZaUm1oNHV6X3doWURaZGFxQnFJckVEMTVFWmxWcFA5VHNQX0ZuenhjVndPRGdqcTFLUUNQYk52THNyS0RYalhkdkFsNjF0WE5sZHpPeW4wT0twbFlNa1R1Ukx5Y00wd2tvUUU2RDh4WkFjU01Pa2c?oc=5",
         date: "2026-06-10"
       },
       {
-        title: "Ley ELA: Tatiana Badiola celebra ayuda pero alerta de \"desafío\" - diariogallego.es",
-        description: "Ley ELA: Tatiana Badiola celebra ayuda pero alerta de \"desafío\" diariogallego.es",
+        title: "Ley ELA: Tatiana Badiola celebra ayuda pero alerta de \"desafío\"",
+        source: "diariogallego.es",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: diariogallego.es. Publicada el 2026-06-10.",
         link: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVFo2eHZBbFFIWnVEX0I4N1FBNkRyb3pvd3VMdFZITE03ZEhDdDJMNDBpQ1pjZGpRc2FUaU1TT3RoVTZuRWR0MnduX3Etc0JsTXJRdElmNUhiVzNLcVU4WEhlZXRKM2hQOVZYVnVzdUR3UVNzWndqcV9WdVRZSTlBdjVKNXFPNEdYWEdBSDZZNURpYlB1eGFzNmVlMElLYWdyNDJGMDMzb2ZtY0YwYk9iVTBlN2Y?oc=5",
         date: "2026-06-10"
       }
@@ -731,11 +768,18 @@
       const sorted = newsData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
       sorted.slice(0, 21).forEach(item => {
+        const formattedDate = item.date
+          ? new Date(`${item.date}T00:00:00`).toLocaleDateString('es-ES', {
+              day: '2-digit',
+              month: '2-digit',
+              year: 'numeric'
+            })
+          : '';
         const div = document.createElement('div');
         div.className = 'news-item';
         div.innerHTML = `
           <h4>${item.title}</h4>
-          <p>${item.description}</p>
+          <div class="news-source">${item.source || 'Medio no disponible'}${formattedDate ? ` <span>· ${formattedDate}</span>` : ''}</div>
           <a href="${item.link}" target="_blank">Leer más…</a>
         `;
         list.appendChild(div);
