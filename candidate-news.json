@@ -1,7 +1,17 @@
 {
-  "generated_at": "2026-06-16T09:21:45.894898+00:00",
+  "generated_at": "2026-06-17T05:52:31.343706+00:00",
   "total": 30,
   "news": [
+    {
+      "title": "José Jiménez, presidente de ADELA CV: \"La Ley ELA permite que, gracias a los cuidadores, nuestros familiares sigan siendo nuestros familiares\"",
+      "source": "Cadena SER",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPVXpteVpaVlRFQ1ZVMEg2Z3Y1QkJLU3dkV3JUNTVmemxBX3FjN3hhajF2bF92bnJ6WEF5TVZ5aGZwR3M5YmU0TWhxWXh4dGs3anE4eGQzV1dET01RRW5Qb1owN0VsR1FycXNYMFlJbDFxWW4yVFNKYWlpb3M0SDQ1M0RwNVlGRU8xX0pUMWJRWnd3dEFtOGg1eVdrWWtLMzdEMV8tQ3lfeHNpbzZwYlB6eTV5UjdweEZjaS1GT1VKOVpVV0lRSnFBY2Nld1FyZ2d2SGRYOVpSTDN4cWJFZHBOS2trMW1pZ2hxT0hrVFZqXzJGNXh5aVd0QmNvSkZNOUpGSC1SMjY0XzR0R2QzMFpBMmVkdC0xOExRM2ZXb0hIWjEzeGR6Q21yeWZrX2V4UjTSAcMCQVVfeXFMTnRuUGExRl82MlppXzd4X2J4Nk8zdS1sV0IyVVg3T1pXczF5d3pwMHktMmN0N3hkYkZxcGRJN1NGVGsyWlBaRjRkc09qMmtUR1Zvb0FtbFhCeG4xLWMtWnIwajEyelVYd3YzN3VRTjR5TW5JWnZ6U3Y2cGJiZHQ4MHV2ZXRDc3RSeXRMYUM3VTluczcyMVc1T3VrOUVoX2Nlc1hsRDJWMUlrYUowQU80NENjQ1U5bEhpb2d6ME1zc1oxYVZXSnNNYkd0cDZZSnNTVWFoZGUybVoxa3FMVlZQR2cyUVVVTDVPeXpPOERaSi1yYTdDcXJVd2NnYWgwdk1PSGFrOUpQTXdpZHo3ak9JR3hfMVZ5THA5RUkwUDM5R1BUeVVyNzRPTlJsTnQ3S3AySFlfcXRNa3BLWmtHaVJfLVViXzg?oc=5",
+      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Cadena SER. Publicada el 2026-06-16.",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 1
+    },
     {
       "title": "Luis Estiragués (Asociación Aragonesa de Esclerosis Lateral Amiotrófica, Araela): \"El deporte de equipo te hace ser más solidario\"",
       "source": "heraldo.es",
@@ -10,7 +20,17 @@
       "summary": "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: heraldo.es. Publicada el 2026-06-16.",
       "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 1
+      "id": 2
+    },
+    {
+      "title": "El Parque de los Mártires se viste de solidaridad este viernes en el desfile benéfico 'ConócELA'",
+      "source": "HOY Miajadas",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNWc3a3BjTUFfdklBY1ZUaGRjdzMwSFFKbTFVUE04MUFqX0ZFNDRIYmtXMEFTN3QwTFB5RnJpbFV2RzdVeENRZHQ0S1RrcF9fbzhfR0dIM0hmN0RvaW90NWt0LXdwaUhNZTRVMFc3REEzVVh1RHNJRFpkNW9lNndhcVJ3QXdJUmhqa1duM1FQV1lVS3dFT2lYTzJnUlpQeWQyWExXYVp5QnXSAa4BQVVfeXFMTTNwX2ZjeHVWRVVCZ2RhTWZGM3BrdUNFbzA0UGdybzVTLS1mNzhMdUwySlg4ZmhKUDI1Q0dHU1BHdmxLbHJkQ1Z1Z3RHZHBQM0ZqcGtrZjB5b1F4eGhzZldlM1BTNFczUk5FRTRrdVNUcnc1ZU5HaTFhY2dxRGhEQmRiVnppSzZRcWJHZm9TNGJycjNlQWU2R2cydUVINVlWbC1IV3FDT2hVT2t2UXlB?oc=5",
+      "summary": "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: HOY Miajadas. Publicada el 2026-06-16.",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 3
     },
     {
       "title": "Música como refugio frente a la ELA: dos afectados por esta enfermedad crean una habanera",
@@ -20,7 +40,7 @@
       "summary": "Aborda actualidad relacionada con la ELA. Fuente: EFE - Agencia de noticias. Publicada el 2026-06-16.",
       "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 2
+      "id": 4
     },
     {
       "title": "La Politécnica y adELA reclaman cuidados tempranos y tecnología para afrontar la ELA: \"Se debe empezar en los primeros síntomas\"",
@@ -30,7 +50,77 @@
       "summary": "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: 20Minutos. Publicada el 2026-06-16.",
       "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 3
+      "id": 5
+    },
+    {
+      "title": "Un hombre con ELA logró mejorar el habla y comunicarse gracias a un implante cerebral autónomo",
+      "source": "Infobae",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOeXJJdDlERk1HTk0tNVBuX0VLOHY1UjYyZkZfU2NEUDVkTmhnTTBjbldsbmpzX2M4UUtIRnV2b0FLRlZReWNNZ2RPZlNPOTZWZ1hwZktjQ3VQNlN5amRkQUZkRVc1SFlHdl9TZ2dBb0lJVU1aUVZqaFBab1VQQ3JaVFdETFhQbm9aRVZ4WFJMWnVBSlZqZGNoUDhtUndxZHhjU3daM0V1bjgxa2Y1b0pkSUhFcEpqV1pWcVpGSDRVWHV2U1h2Ykl2bWhfU1FZWHdJY3dmX0xGS3g5QUh40gH3AUFVX3lxTE9ESmpPVWpZcEpMZVpUN1ZpN3gzdTlaUS1rTjBtVDJ0NW1FakV3eGcwM3dnNEEyQ0k2a081STNXRlJlbHVKVW9YMHcwTE1UZlFoZFRVcnVaTFhyTTMtMzRoZGhUTVJqSmpBSUxzMnVHbWVPT3ZrcUpyQ2R4dDlZUnM3SlQ4dkRfWDIwbHhLMFhYOGJrSXBPaVFNemJON2NGUUg4Nm1wMEFRcXFaNXVQaFF4ejdIdnBNaV96R1lRTHF3U0FxX2puR2Izd3lNT3g5alJtR1loNmJxeXpmbWwtNWpKc3lXMDJ1ODF4Z09VRE9qVUc1RkM3bUU?oc=5",
+      "summary": "Aborda actualidad relacionada con la ELA. Fuente: Infobae. Publicada el 2026-06-16.",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 6
+    },
+    {
+      "title": "Un hombre con ELA recupera el habla gracias a una interfaz instalada en su cerebro durante dos años",
+      "source": "Antena 3",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPenR1N3d5NkJSNGFVNzk4NTM3b3Bwd3pudmZoWjBqV3FQMFhhTko1NG1SdTlIdE5LaTQ2eU8zWnQwT25aOUc4Rm9BUnY2bW9mbUdqcHhpUDM4RkhoWnV6bTdJRmtTM1pPYXo0OUljVWZZVERtU3BhZm9BYURaZnpxdF82bHplZkNMNTFRUE1OT3FFc2ZXOVR0aFRndm9HUkxKWnpMM2doelM4RjlCZjhjblc1UGwtTThxZEhOelc3NXlHaVpTTGVOVGlyNjZDSUhOTWh5VEExZHl2c2VDREVn0gHfAUFVX3lxTE5DQnc5bWtZYzJDbDFDUkFoS3VaTXd0XzdKcFRFM2hIOUZyTURlbGE2UEtvYmxCQUhNRURZX0p4M05Ic0pCcWZnSU5GcnB2WEN4ZWFIUmp6dDNMX0I0aGJoY21MZ09lcmk4WmNKMmJad3Zrdl9peHRjUDNWNXhLQ2kyTk03eDFxNlI3Zk5PcEpETDNTdldTZnV5MDdCY3Iyamh4TEtQdUV3YWJILVdoYUMzcHpEZGxOWXJ1TUd3UFNSNlJWNWpIOUVBWGdQUk5xYlExcS1SalFxUHEybFFQWGs?oc=5",
+      "summary": "Aborda actualidad relacionada con la ELA. Fuente: Antena 3. Publicada el 2026-06-16.",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 7
+    },
+    {
+      "title": "Un paciente de ELA 'habla' de forma autónoma con la ayuda de un implante cerebral",
+      "source": "LaSexta",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNU2NuVmJMMVVXUEFOcENIU19rUGdQaUJhcDlzOUxpWXROekNxZEZCalVhZUJ3em1GcU9QZU9RRzRmdXdHdE5PUEQ5YWw1NjdFbXBZY3d5TWljRDMyNTEwM1c4VGJVOHJRXzN5ODNVYW1yNW43QThUZnZvaXcyU2ZBaFAtbDU0X1lpMllCa29pV0w0LW5ibWJIc0E5aFh6dUdrY2wybjdPWG12MVh0VlFiYThoWWMzaTZfRW90TjJrYWt1Mzh4UERzbjdYcmhRQXp4MzBmS0g1X29PRVVjUXljdNIB4AFBVV95cUxNcy1abk9rQWpraXN0RWNldC1VdXJjZ2syYm14OTJiVWhZd3Zyd184SGl2NHk2T2RuaURFZS1rY19OV1BPMUFRYlhmeDVlTHFjQ3Q5Q0EwRnBJdDZvZkl0S0FkY1l4dW9DM3EwTnhZZDlXWEduVy1jZWx5X3RCTGNpbUgxNmxNaXhUeXd0dzFzb0xEUkRZb3A3em1KYXJ4SjNDZlFPU01rODF5YW04bXRPT2N0QWw5cUs4NzVsTnI0VFo1aXRsTU93Nm5GME9UeU9uZl81bExsM1VoWkZnQ1E3VA?oc=5",
+      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: LaSexta. Publicada el 2026-06-16.",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 8
+    },
+    {
+      "title": "Mijas impulsa la lucha contra la ELA con un lazo de hojaldre solidario para financiar investigación",
+      "source": "Andalucía Información",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNMlJZTXdHOVliT1Nsa204TXhRVWJhU0Z3UGwyU3BWNW9xT3ZNVVdGU0FQQ1Ryc0ZiajhBLXJkc2FwMElJOGlXMFRGSjJjSVoxN2ZvT2xLVGc4cENxcnlPTzItejlwS3EzOTc0aDZYLVdFaUtiVWhqM1JqemFpaW1XSTVzTWRhdFBoZzFMZlBieUx2NG1FSG9NRTRvNmRVbkctX2RyUVRiTTRyaEM1WTBncjRSd1haTnFrNDB1bmdNSnFWQUdZc2RZRmhwbmlPSmtIZTNGSkxJdGJ4TTRjRWFJazhqYjJhLWtSMmtYeXlR0gHzAUFVX3lxTE9FcnB6UkYzemhiUHFWUHdkdVBRRTE2dThHYTBjc3ZXUHhhbjBxZHFvZkNoTl92X3pKZmpoRGNYSGZQdVhXVW5EbXNGM2M0SG45SnEwdWp0VU1vTW1QUUtUajQ1MXF1WmhDaVVEajNBWVduRExobGU5cGZycnJoREJKbVBHb2JsNG8zT2VIV2RWVXFaeDZTTGFHNVByVkZVMVJnNFZ0QThRN0Nnb1dJeE1vR1hlaUZOVlBkWWdOOU15dFhpMzdwX0NBSDVKcTVqTnU0UGVsUVowOVFrZ01DcWlmYWxDTVppZ1VpV1RpSXlnVXEyUQ?oc=5",
+      "summary": "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Andalucía Información. Publicada el 2026-06-16.",
+      "query": "ELA esclerosis lateral amiotrófica",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 9
+    },
+    {
+      "title": "El grito de la ELA en Murcia: \"O te arruinas o renuncias a vivir\"",
+      "source": "Cadena SER",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTElCNnpHRGI5WlFuRVFxekNRSXNoR1dHTzhIQlk2eDFXQTQ2TjBhSDlvSVhtVVFwN3hnemE3LVRUWWk1b1MwMEdUR1pzakdUYVlPNDUtNnZwbUI0V1drS09qblBiVmJXNXFsUDYyN0RTQTFfamFaSTVueHdJcHRDcHM3UGFpdXdETE92SWw2ajVVbjh3TXRHRnJwa3BsYjNoOElId1lYb0xYUUo5M1VQajdvbUN0VTjSAcsBQVVfeXFMTUZYWUNWS0lIZTdoUVQ1b0RFMEpkLUJDd2FldnNSWlBPTzBHTWNiLWEyQTNfd2p3V2dhOGRaVWFCODR0bi1vTUpFWEkzS3l0ZThweXVJYVVMbi01QlQ0SjRlNGI0YndpT1Y1eE5PaUdFbjlJNjZxS21nT21UVFpHRHRoSE5uTEJzTTIzWW1UZklJNXFabXVRSGZ3SFJGOWhRdDM1MVRpdFF5RmxwLWJhNUR2NmVmYklqUUdiN1RNcGh5ZDM4TFZtS3E2bFk?oc=5",
+      "summary": "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: Cadena SER. Publicada el 2026-06-16.",
+      "query": "ELA pacientes cuidados copago",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 10
+    },
+    {
+      "title": "El paciente de 45 años padecía de esclerosis lateral amiotrófica (ELA), lo que le provocaba parálisis y disartria severa",
+      "source": "facebook.com",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeFdLM1Z5ZFdpbG9SSW9uUVpuZGxUSE82Q19hdHZ1OXlRWjRFamZOUzcyUmRPZVNUVDhvdTNiOVluVjl2RE9iYnQ0Q3pIQV8xVGJHcWw2Y3l4MlJlNDM4ZGlKWW9WekZ3WTA1ZzloX25YSnZ3NjZrSlBiZTBWLWtQQ1lsOWtFLXJqR2FaNWVJWjlaaVlTQlZfWER0dE5IX09zMVpfMXZiTlZkbk5FVFR6bW1XZlNxUy1fUUV1Wmk0TDFwc0NVa2dkZmJvajJCVmEzMk1yUzdqZUdQbTB0UWNKSXc4cVNnNGltOFYtV3h3?oc=5",
+      "summary": "Aborda actualidad relacionada con la ELA. Fuente: facebook.com. Publicada el 2026-06-16.",
+      "query": "esclerosis lateral amiotrófica España",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 11
+    },
+    {
+      "title": "Un hombre recupera el habla y trabaja de forma independiente desde su casa gracias a la implantación de un chip en el cerebro",
+      "source": "Infobae",
+      "date": "2026-06-16",
+      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNZ2s5d0c5eEJsM1dZNjBqZVE1RmdLMERUdzRRa0xYZUFxUHNoanFVa21QWnBiVFowWEp3Z0U1VThfTU1kMG9RejFsb09VaEVlRjhrd3FERml0MFJZTmJBbGNoWEVTakN3bzREeEx1NEcyNm5RSWZ3ODVvTVhIUnQ0OFpfWUhIeXh1Z3diR2dNWWo5RjEzUl9vUTlmbGd5aW40NjFQT3IxeXFlZWRRbFRHZlE1VUNpckNaNG9HNkVEQ3pmMVl4aTVFQ1UtYURZYl9LOUhOSTJvNmlCM3gzUWI2T3prTzZvV2w0T0o2dWlfc01HUGJ4T3BobXczcEjSAZcCQVVfeXFMT0c3NlNLc2ZLZGtyTWtYak5kb3F4cUU2N3Vlb3V6UndnR1NnVEF6cDJqRldMMTNLM2lhZDg1YTZYcFFtb1c0RjhuUnpScU16T1BCS29QTldPa0l3TTFvUnRKV1BfS0pqVV9ySWtxWktmeGVSRTF4SVJpWnliWmlleGE3emtOazltbnRfSDN3M0lQVC1kS1FURk9uakd6X2VsQ3BjajVuNnNLMTFFaHVSdE0tX2d0NlByTV9hdHBBczJRMUh6bW8zbVRfWWViSDkyaDJINFlxV0VfUUZFUG9aQlQ0VWpiTVdQYWowWkdjZ1hoZmxOMk5ZWUxNSTdqYTBuSVJZY3ZJcjVpWThSTmgzbG4zeHM4U3lV?oc=5",
+      "summary": "Aborda actualidad relacionada con la ELA. Fuente: Infobae. Publicada el 2026-06-16.",
+      "query": "esclerosis lateral amiotrófica España",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 12
     },
     {
       "title": "La investigación pública vasca logra un hito científico al hallar un tratamiento para una enfermedad hepática rara",
@@ -40,7 +130,7 @@
       "summary": "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: BizkaiaGaur. Publicada el 2026-06-16.",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 4
+      "id": 13
     },
     {
       "title": "Tatiana Badiola, de 33 años, entre las primeras beneficiadas por las ayudas de la ley ELA: \"No somos cuerpos rotos, somos almas en movimiento\"",
@@ -50,7 +140,7 @@
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: El Periódico. Publicada el 2026-06-15.",
       "query": "ELA esclerosis lateral amiotrófica",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 5
+      "id": 14
     },
     {
       "title": "Asturias concede la primera ayuda de la ley ELA mientras tramita otras 28 solicitudes",
@@ -58,19 +148,19 @@
       "date": "2026-06-15",
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNGhoRWhJWndKSWZwdElVVHhfMEU5LUFKT1cwaGtXcVhfS3NFOFJ2TGJKeTNObWZFLV8yQXRzYk96S2wzRTZ1UElJT2h0VDFsTi1ZUlBLTWV2QWlja010bWNKRnNrejU1YUhtMlZNTGN6SmdDVzJwaDlUV20ySmhMZjNxaW10YlItUTF4czBJa01md9IBlwFBVV95cUxORlR4ajl4MmJ1MHZIbnpLUnpqM0hFRmJzbjUzTnJ1dkhlRE5VejFpYnVnM2VmdmJoNGs1VU1Fc0lvYU9DaUk2OEtHbXRkMzZ4V044RjY1MWJvQkZCLUw1bFVYZzgwY09SZmtETWdLS044dWhtRU9qdzRoQ3MxVV9PdVRMTjdmREM4Wi12RUpaQUJURWFTMnZN?oc=5",
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: La Nueva España. Publicada el 2026-06-15.",
-      "query": "ELA esclerosis lateral amiotrófica",
+      "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 6
+      "id": 15
     },
     {
-      "title": "Cáceres reunirá a leyendas del fútbol nacional en un partido solidario contra la ELA",
-      "source": "Extremadura 7Dias",
+      "title": "Mueren 90 dependientes al día sin recibir la asistencia que establece la ley",
+      "source": "La Vanguardia",
       "date": "2026-06-15",
-      "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOejlMbGR0czk5YW5BczFDY3BmTnBHa2NjMzEzSVdSNGtMSTF6ZXpWd19Kb0dYQ3hKU0haay00QkZXT2p2SDljNnYxT3Y2dG1wZUNpYlE3NnhjbjhXZjYxb19LZmRMQzJzQmw3MnNKc3hGMnlLUFBOUGxscmx2bXc1UUJzVlUydDNuNE13a1RNRW9NWkZPNDBaQ1dYZWdYMnNVM0RZMGgycUJyVlNlQ3RQWVFwYUpkNHJ1LV93eTN6emZ6Vmo4eHduTkp2UVNfUzBWWEgyN2IxYnRiMlhPV0lGTTNzeC1iaDk1QTdzSUR6RWJvLWViOEVnd2VfRXlidkVIX2lnVUFHLXJGc2htNUE?oc=5",
-      "summary": "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Extremadura 7Dias. Publicada el 2026-06-15.",
-      "query": "ELA esclerosis lateral amiotrófica",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbl9ubnItQndscUVfZUhIS0ZzRE5KQmF1VVNITzFQWFJWNUk0cXEtdmk5MGJIZmdLdDZWUzg3bE9MX0pGTmpObWhZbW9JdkhSdjNGbXp2YVdsM0Q4NENWZk1QT1JmT1diQ0ljYzRQS25yMmpWajhHREVkU01ZaUt6bjFPOE9GQlNEejRLZlZKQTBEZnpwMGZvQ2JuZjVGcnQ0SXUwQ0FsRHpFMUd0eEFleEY0UUVPd2fSAbwBQVVfeXFMUGd3LXFib2VieDJwQTd1Nk1YNW84elNiNkZ6dWlsaVl6U3A5Qkh1WlhGMGVWUFBzdWQwZ25XVC15WEVWVEExdmtEMlFaRlA4Rk5pcVNTZWV5STM0bTZtUXVtUDRxOE5NVzJOZnRKRkxhUWYwekItR0VoWnNKOXhuS1F5akhzWmlnb2RoTG56bGlORmpLN0VLT1h1WEdvWWdGVnZnNzdTaXp3cF9wbGdDbzVLMUU0OWxBaHd3VmI?oc=5",
+      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: La Vanguardia. Publicada el 2026-06-15.",
+      "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 7
+      "id": 16
     },
     {
       "title": "Atención prioritaria a personas con dependencia extrema",
@@ -80,17 +170,7 @@
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Revista Grada. Publicada el 2026-06-15.",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 8
-    },
-    {
-      "title": "Jaime Lafita recorre 930 km en tándem para reclamar la Ley ELA: oración en la Catedral y recibido por el alcalde de Sevilla",
-      "source": "lavozdelsur.es",
-      "date": "2026-06-15",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNVF9CRXpxZXBaVDNaSlpfWXpnTFdRVHEzU3lWRmlEU3BrZ2ZBQnpKOE9vYzMzcjBWYUpOX1ZrUjBBbXhpd1hHYzBuZ3dlb1NRd1BUTU5HRWR2YTdHZ2lmSDBTbnh6TUZuVzNzS3E3M0xyM3lmSjFmVmpkdkN5OS1lWnJyWVprZklhUFVRbWV1Q3dkVGhxMmNQU1lVdUVLdmsxaUFJRmhHRzJsYkFpSUxubVVSQnBxRGEwY19tQnVfckpNUERNYnUwVW1aa2lJaHFrd0E1ZUpTRlNYYzg1SlhRclVNNFN2aG8?oc=5",
-      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: lavozdelsur.es. Publicada el 2026-06-15.",
-      "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 9
+      "id": 17
     },
     {
       "title": "El Gobierno lanza un plan para que la ciencia también se interese por investigar en salud de la mujer",
@@ -100,7 +180,7 @@
       "summary": "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: EL PAÍS. Publicada el 2026-06-15.",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 10
+      "id": 18
     },
     {
       "title": "La investigación de Gilead y Kite refuerza el potencial de la terapia celular y los conjugados anticuerpo-fármaco",
@@ -110,47 +190,7 @@
       "summary": "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: pharmatech.es. Publicada el 2026-06-15.",
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 11
-    },
-    {
-      "title": "Más de 2.000 participantes en la tercera edición de la Carrera Madrid con la ELA",
-      "source": "Diario del Ayuntamiento de Madrid",
-      "date": "2026-06-14",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPYzNtUnk0UEJTU2I4UDNZdkxHeGRLbjg5SEFDeTB2bDVOVW9iYW9udGlrb19jRm1UaDBjSERNalNBQ1ZNTng3WTJFTEZaclJwUmMwOUtMVldzdzhhN19MZU1uMklCdDhWMUhqbk91S2s3RHJ4bDBFazRRRDdWUTdFUnVQeXJfaFRmdC1ueUF6dHl4U3RhckMtV0FRUzFjb1RETU01S3JMN19kaFprYlpfb2RsTDBwd2Y3b3ZNTXliWFY1ekR0M3c?oc=5",
-      "summary": "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Diario del Ayuntamiento de Madrid. Publicada el 2026-06-14.",
-      "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 12
-    },
-    {
-      "title": "El impacto de la ELA en la vida de un referente del rugby británico: su misión por cambiar el futuro de la enfermedad",
-      "source": "Infobae",
-      "date": "2026-06-14",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQU1NUQ2dpdWkxdHo1b3dENEdIT3kyVDBKYU8zb21VTDk4ZExfOE13Y25NN1FQSmdVNFBRaDNMUDN1Q0RZWG44Rl9RQzU0N2N3SkJaXzhJV3JZRnRHVlRNeXBDNUtDZ3FmbGl3TXNNbmJBQXBVSktpWGJ5UG5oZUQ3WEg3d2FCdTJjOFBLLW5NVU9ucXJDblRzU0lvNzVPSmFIRm5iaFpnWHd5NnU1Ml85NWk2X0pUSml2dzFTbkxuVjJEZ1BCTlFMY3BQRmVVQnlaRmpEeHdhd2x1ZE12MGpOS0VVNXpoQUVIaE9nWXpsYkVFeGPSAY4CQVVfeXFMT1BlLVpCc0NOREVBTmQzVlZqS2l0bHRmRHQ0cHJ0d1BOU1dvVlAtUHA3cGFFMlM0VzdVbHM5Z1lsUUJuZk53T05WZUhWa01pVlJzZjZyVEpiQ2NOYjM4MlkycnJUNmtqSmpUQTF3OWc1MEo4WmpVdS03SmxRSUFjQWM2a296azlUcU5VbFlQLXdidkxZUUpvQkhoek9QZWh6cnR5bm40Ry1HMVJrZW5NUi1mY1ozYVdtT0h3b2RKYjVZMEtyRzhab00wMXFnYU9pSnluNDBzRUFOWlZ1MkY4R09ocDV0UUxJenZDRklWaUZXX2dORFZyZXFsY2NqVy1sd3V1Yy1fcjB0NkVCMk1R?oc=5",
-      "summary": "Aborda actualidad relacionada con la ELA. Fuente: Infobae. Publicada el 2026-06-14.",
-      "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 13
-    },
-    {
-      "title": "\"¿Hasta qué punto hay que alargar la vida sin buena calidad? Ese es el debate”",
-      "source": "Deia",
-      "date": "2026-06-13",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM3ZOdDZOVXF3RGQzUXF2MmR5QTdCcTJRUjUtUEFHS2d4UEdTY0M0NUhubm9nQ2hHTG84cTh6WE9zQjdHNDJPbWs4R2VYRzU3SGJLeHRCYUtsYWc3QklNZDlxbV9QdHBNRkoxbGxTWVNQOWk3TUZWemxtbGpHdnZIYU9Rck1pTV9hLXZkeFZWRVA3azRSWkx2VmcxXzFMMXhBSDllSVZ30gGrAUFVX3lxTE5ucDhiaWNXMVo1M1JGUmUwV0V0b0I2bFBYcnRMSGIycF85WDZmZkRvdnVqZ0luWE1acEY0NzNaMUZfSHdNclFCTnRmUGVlakNGajVPR0FTbVVzRkNYdDJNS0dDNGNWeGg4RkhqVjJUYXo2bnU4alpfVTNpbk5mNFl3YVFUVGd3Ry1VSEMyTjNVU0JERUtFRGxNSGFibVN0WjV6ekVhcWpnbXRyYw?oc=5",
-      "summary": "Aborda actualidad relacionada con la ELA. Fuente: Deia. Publicada el 2026-06-13.",
-      "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 14
-    },
-    {
-      "title": "UPM y adELA, unidas para mejorar la calidad de vida en la ELA: “La tecnología debe estar al servicio de la persona, no al revés”",
-      "source": "consalud.es",
-      "date": "2026-06-13",
-      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxQSjdNaENodmI1djVoa1REaFJtVC03LXl2YzFkNVBmOWZpeU5jNFhsT0N3SHFCYjgyTURWUU9DcXA3X2hJdXRxVjdldGpzR0NzQ3oxNEhnaTl0X1FaLWY0bkhNakVGSXNZR19IelVjTFUyd0x0akFuRUVPcURPOVE0TVNsRnpQc3NOXzJqNE0ycEdtME85cEY0UHFRT1J6U3B4UTNrM2x3YXNqbkRZZ0wyb3pSUnM5WXFLUC1pM1ppeVMwTm1nXzNYcUROc2ZGVWhLUDZ0NTdxemVUYjNRZklQWUN6LXNnM3Fpdm81ODRpbnN0Q3IxSm03UWlWV2tSSWNLc2taQkFncVlHZkJJazdXWGwtVnhQejQyXzVDNmFB?oc=5",
-      "summary": "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: consalud.es. Publicada el 2026-06-13.",
-      "query": "ELA esclerosis lateral amiotrófica",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 15
+      "id": 19
     },
     {
       "title": "Cruzar España en bicicleta desde Getxo para reclamar la aplicación de la Ley ELA de manera uniforme",
@@ -160,17 +200,7 @@
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Andalucía Información. Publicada el 2026-06-13.",
       "query": "esclerosis lateral amiotrófica España",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 16
-    },
-    {
-      "title": "Harán el lazo de hojaldre más grande de España en un evento solidario en Mijas contra la ELA",
-      "source": "El Español",
-      "date": "2026-06-12",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWF9naUJ5Z3hPNHdlUlc1b3lrd2hoby00NzJGNFFsN3dkanVTYmxnSUR5VUFMcTdEZFRzOEUya3ZNNE9wcE9IaE9RUFN6cEotQXBobE1vNkVGaE1vbmQ1ZzAwTlJKSm1OQzNoMzMyRTY4S1dJb2E2VjJHa09EQ2tyMlliQlNhZ3ozbWdSckNsNEdDd1VOMk5fcGxncjBjak5DQnlKeWFBbTFfalNLcjhxVFMyZWRmTjNtQzlmN0NiNmdRSXQwU0FradIBzgFBVV95cUxOc0oxMllwUW5UVDE1bFltZ3E2YVIxa0J4V2tMdDJ5ZDhhc3NKc2tnZEJrNnF5RWxVcEtsX2ZVLUFKYVY2d1gyQW91TndKQ3RHMlhaZmtZOVkzYkRrRGFSNVdtMW1RQkxFdjBOTjlNMXpHV0FOdnp2T1ctX2JoM2owRTRNNkt5UTlkY1JaUTBCU3lqUDE1Q3hUbTg1NGNvZG9rZ0FFMlNibmgxYnRnQmZjMVBJU3ZTblJNZ245YjNrZHZCeHlRYU9uMkJGbDJMZw?oc=5",
-      "summary": "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: El Español. Publicada el 2026-06-12.",
-      "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 17
+      "id": 20
     },
     {
       "title": "Tatiana Badiola, paciente de 34 años, comienza a recibir las ayudas de la Ley ELA",
@@ -180,17 +210,7 @@
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Tododisca. Publicada el 2026-06-11.",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 18
-    },
-    {
-      "title": "Jaime Lafita finaliza en Sevilla su recorrido de 930 kilómetros en bicicleta para exigir la aplicación de la Ley ELA en toda España",
-      "source": "Cadena SER",
-      "date": "2026-06-11",
-      "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPSHBfSTk5R2kzU29UQm5DWHlrMlFJS0p5bHRGVlNjMk9CRDEzU3hDWGJOSWo0U212b1JuNTl6VmZUUExnSkpENExHRjhyaElQTDdrVnJmQjd2RW9YendVQm5rNlRGZUNhWVlpVUs2QmhYa0wtUWJRWVF4bmU5UXBZR2xIbkYtVDhpcnEwOHNNZzcwYzhaOE50eU9SSXpEeS1TTkszemJwZnRHWkxBQXJWdjNGZUNRV1FhNjdrN3BRb1ZzMFM1VFVrcEU5Y01GTmNGTUpHdzVsQTdHUW0zTmJlRG1BN211eEtNUUlldG10MEUzcWJac1BhbF9FbFhfdUt3UGRzZFZnSF95Q3NPWFZLX0Q4UFd0NHhL0gGsAkFVX3lxTE8tLTlWaEgtZ0FkTEN6dU15SlBvbTJYN1VkRFcxUE1kZG9FMVlTTGZxX1E3UUgxOWk2TjBEeThBX2hjUFc4U0RHd1d6cnRiUm1OWldHaVpzMjJYelUybXRvSF90aEtCelQ3TEFTY0FNSlc4NHBtOGNuLVRmOHR5WEt2TmVNUkZDY3d3bk9hRnBOS2kyNW5hU0hSOFpuUy1RaVFOdldabnhwOFRGOXB2NXFKRGZZSnhzVC1MVGhoa2EyMnlVcUFGYXktY2pheXpJejdNTDBOMW80akxzVW9Lek1TSk9jMl95bG8tekVsQ0hOSV9fTk8tR01LQVl2RWlWbXpFT0dKU0ZLQ2sxVjd5S2U2TXVqZUQ1LXhFM2QyVnJYWjY1YW9LZW4tNTNGLQ?oc=5",
-      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Cadena SER. Publicada el 2026-06-11.",
-      "query": "ley ELA prestación dependencia",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 19
+      "id": 21
     },
     {
       "title": "Jaime Lafita pedalea 930 km para visibilizar la ELA",
@@ -200,7 +220,7 @@
       "summary": "Aborda actualidad relacionada con la ELA. Fuente: Canal Extremadura. Publicada el 2026-06-10.",
       "query": "esclerosis lateral amiotrófica España",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 20
+      "id": 22
     },
     {
       "title": "La Cala de Mijas acogerá el lazo de hojaldre más grande de España con motivo del Día Internacional de la ELA",
@@ -210,7 +230,7 @@
       "summary": "Aborda actualidad relacionada con la ELA. Fuente: Cadena SER. Publicada el 2026-06-09.",
       "query": "esclerosis lateral amiotrófica España",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 21
+      "id": 23
     },
     {
       "title": "Bustinduy dejó sin ejecutar 54 millones que estaban destinados a la Ley ELA en 2025",
@@ -220,17 +240,7 @@
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: The Objective. Publicada el 2026-06-08.",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 22
-    },
-    {
-      "title": "Un enfermo de ELA recorre España en bicicleta para exigir la aplicación de la ley",
-      "source": "ABC",
-      "date": "2026-06-05",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQemFNRXZsaEFhY3hBN3VPcnJkSjFFUHNTLWYydWcyZUZmNk1PNEd2U01WUUtzUDYyZzNEX1hnYXhkMTVUR2JaVFlyYWotamVkUjZDQnZMa2xtOHh3Qnd6ZE1ySzJXMXVlUE9LRjBwODA0NU9EZ25XWktYMGxvWFRkbzlWdzdmeVNzbHFibk9CY19ZNFgzZUpLUzBqelZqMzBaTzFxSHRFR1FmUXdBeDVVYWpXYw?oc=5",
-      "summary": "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: ABC. Publicada el 2026-06-05.",
-      "query": "esclerosis lateral amiotrófica España",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 23
+      "id": 24
     },
     {
       "title": "Conflicto jurídico por la Ley ELA: el choque con la Ley de Dependencia abre la puerta al copago a los enfermos más graves",
@@ -240,7 +250,7 @@
       "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Confilegal. Publicada el 2026-06-03.",
       "query": "ley ELA prestación dependencia",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 24
+      "id": 25
     },
     {
       "title": "Madrid se echa atrás y retira el copago para los pacientes de ELA",
@@ -250,7 +260,7 @@
       "summary": "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: EL PAÍS. Publicada el 2026-06-03.",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 25
+      "id": 26
     },
     {
       "title": "El Gobierno de Ayuso recula y elimina el copago para los enfermos de ELA",
@@ -258,16 +268,6 @@
       "date": "2026-06-03",
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPX0Zpam91c2J3cXFGUGR6UEZYRWprR1c0MnFFVUdDLVE1UmlZX0ZFU1hoUVZKTGRNaWF6TjdrQzlNUW8xcVpNM3ZFamZWcVNYdmxLX2pUaUF6MUp0d3dSZE50Vi03NTFKY0VXYjhRYkRUdFZYdGZyQTVNUEdPa3U5ZUNtMm5kNThPYlNvZ1drcExWdDBNQUVTWGRSVkJ5WUNzaExfMtIBqgFBVV95cUxPb0JoTl9YaVZxa3ZKT2pJbWhtcm5WVVJHNVFsQjdRZUhqUEZOM0JuMnBRT2xYcXNfZDc0S0RCdEt4X21jSENBZHJkTVJFeHdrU0N5T21aVHVZTFQ3Uk5nRlZtNzF3M3Nva2pod0MwOTNwclN6Z1pocUFCZ0ROMmZqZWdVMkZiRGs3Mm5TS0RRYjJmTUwwcHJtbEhTdXZNN3lOQlEweGNkRy1wdw?oc=5",
       "summary": "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: Elplural.com. Publicada el 2026-06-03.",
-      "query": "ELA pacientes cuidados copago",
-      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
-      "id": 26
-    },
-    {
-      "title": "Las personas con ELA de Navarra recibirán hasta 13.500 euros de ayuda para los cuidados en domicilio",
-      "source": "consalud.es",
-      "date": "2026-06-03",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWmVRb25wTGRwWkJoRDhYTnI4TjdYZUtPV2RqWlNOVmg4WEl0THp2SEtlNDdTMlFGZkl3TGl2ODYyLThoSkVQdnBrcUJ5YUpPaGlrSDh1YWdYbUFPcHRhUHEwRlJrRjMyUFZmU3lpcVhiN29pMEptRVVscllqeDdMb2U0U1QyM3NnbGhjb3dILVh0WlFKQ21oVHBxUlk0UWZ3OXF5Q3lIeldvRVczaTkwQ0VzbnRYclNZd1RUOTBKYVdiRlJqYWRyMGRFSDZmVDVVVW1kVmFZd0dtenl1d1k1Xw?oc=5",
-      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: consalud.es. Publicada el 2026-06-03.",
       "query": "ELA pacientes cuidados copago",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 27
@@ -293,12 +293,12 @@
       "id": 29
     },
     {
-      "title": "Ana Terradillos promueve los cuidados para enfermos de ELA en la campaña de ‘12 Meses, 12 Causas’ de junio",
-      "source": "mediaset.es",
+      "title": "Día mundial de la esclerosis múltiple: qué es, tratamiento e investigación",
+      "source": "Revista Perfiles",
       "date": "2026-05-29",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNX3l2RmxId05hRlBibVh3bHk4WGdyQ2ZuQWVTbXhrODNTM3c4SWJkVG9wYy1VN2dXMVpmTjh2MktuUk9kcDE1Zlc3eERmMjZGQmtUczU0cHlOZGhjM0ZwUEdQZzRWMkZNWGlONVlBeHVMQ3Q3dk9mVkRKaWMwTWJfWWVreXIwZXR3c1o5ZjBuSW0tTkpfOFN2QzFsQno4dTFKZEpXd05EZ1JDd3J6ZERkYVYydVR4ZVNXa2g0S0FNUXphaVl3VVA4SkxXVFdWM3BjUlZ5eEFQNWNNR0FiLVBjc0pqb1Y1UFBFa1lPOVpyM1BVZDQ?oc=5",
-      "summary": "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: mediaset.es. Publicada el 2026-05-29.",
-      "query": "esclerosis lateral amiotrófica España",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdUVjUVBwb0J2SldYRHFlQWpkZWRiclRHZzkzUUx1WVJGNzF3NTFjMFVCeWpTOU5weWd5RXlqSUppelp1OEZ6Q2dXd1NVS3dxVUc0ems3emg2RUEtVVhKUWR4MkhXQmMyUTRFY0pndkNHakJfYlhPNG9sN0owSXJBSmR0bzduUUM1VElFMXk2bFlTVnF4MVRkQnhtUQ?oc=5",
+      "summary": "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Revista Perfiles. Publicada el 2026-05-29.",
+      "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 30
     }
