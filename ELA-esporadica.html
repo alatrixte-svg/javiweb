@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descifrando la ELA esporádica - Javier Gámez Martín</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    :root {
+      --research-bg: #090b10;
+      --research-panel: rgba(18, 20, 28, 0.96);
+      --research-panel-soft: rgba(30, 24, 25, 0.96);
+      --research-border: rgba(240, 200, 90, 0.34);
+      --accent-yellow: #f0c85a;
+      --accent-green: #6fd6b3;
+      --accent-blue: #76b7e7;
+      --accent-red: #ef8a7a;
+      --muted: #c9d0d8;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(240, 200, 90, 0.10), transparent 34%),
+        radial-gradient(circle at 85% 10%, rgba(111, 214, 179, 0.08), transparent 30%),
+        linear-gradient(180deg, #0b0d12 0%, #141015 48%, #0a0b0f 100%);
+      color: #ffffff;
+    }
+
+    nav.container-fluid {
+      background: rgba(5, 7, 11, 0.84);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(240, 200, 90, 0.2);
+    }
+
+    nav.container-fluid a {
+      color: #ffffff;
+    }
+
+    .research-hero {
+      position: relative;
+      min-height: 74vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(240, 200, 90, 0.22);
+    }
+
+    .research-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(6, 8, 12, 0.92) 0%, rgba(6, 8, 12, 0.76) 46%, rgba(6, 8, 12, 0.44) 100%),
+        url("assets/Factores_de_riesgo_en_ELA.png") center right / cover no-repeat;
+      filter: saturate(0.94);
+    }
+
+    .research-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--accent-yellow);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 0.7rem;
+    }
+
+    .research-hero h1 {
+      max-width: 760px;
+      color: #ffffff;
+      font-size: clamp(2.1rem, 6vw, 4.9rem);
+      line-height: 1.03;
+      margin-bottom: 1rem;
+    }
+
+    .research-hero h1 span {
+      color: var(--accent-yellow);
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      color: #f4f7fb;
+      font-size: 1.15rem;
+      line-height: 1.75;
+    }
+
+    main.container {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 0 0 2.5rem;
+      padding: 1rem;
+      background: rgba(10, 12, 18, 0.76);
+      border: 1px solid rgba(240, 200, 90, 0.2);
+      border-radius: 0.75rem;
+    }
+
+    .toc a {
+      color: #ffffff;
+      padding: 0.42rem 0.72rem;
+      border-radius: 0.4rem;
+      background: rgba(255, 255, 255, 0.06);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .toc a:hover {
+      color: #141015;
+      background: var(--accent-yellow);
+    }
+
+    .research-section {
+      margin-top: 3.6rem;
+    }
+
+    .research-section h2 {
+      color: var(--accent-yellow);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .research-section h3 {
+      color: #fff8ed;
+      font-size: 1.15rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .research-section p,
+    .research-section li {
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    .notice {
+      background: linear-gradient(180deg, rgba(9, 11, 16, 0.98), rgba(18, 20, 28, 0.98));
+      border: 1px solid var(--research-border);
+      border-left: 5px solid var(--accent-yellow);
+      border-radius: 0.75rem;
+      padding: 1.2rem 1.35rem;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.35);
+      color: #ffffff;
+    }
+
+    .evidence-grid,
+    .myth-grid,
+    .method-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .evidence-grid,
+    .myth-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .method-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .method-grid.primary {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .method-support {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .evidence-card,
+    .myth-card,
+    .method-card,
+    .video-card,
+    .image-panel {
+      background: linear-gradient(180deg, rgba(34, 24, 27, 0.98), rgba(25, 18, 20, 0.98));
+      border: 1px solid var(--research-border);
+      border-radius: 0.75rem;
+      padding: 1.1rem;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32);
+    }
+
+    .evidence-card p,
+    .myth-card p,
+    .method-card p {
+      margin-bottom: 0;
+    }
+
+    .method-card.secondary {
+      background: rgba(10, 12, 18, 0.72);
+      border-style: dashed;
+      box-shadow: none;
+      padding: 0.95rem 1rem;
+    }
+
+    .method-card.secondary h3 {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .method-card.secondary p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .concept-map {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.25rem;
+    }
+
+    .concept-column {
+      position: relative;
+      border: 1px solid var(--research-border);
+      border-radius: 0.75rem;
+      padding: 1rem 1rem 1rem 5.2rem;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
+      background: linear-gradient(180deg, rgba(34, 24, 27, 0.98), rgba(25, 18, 20, 0.98));
+    }
+
+    .concept-column::before {
+      content: "{";
+      position: absolute;
+      left: 1.05rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent-yellow);
+      font-size: 5.3rem;
+      line-height: 0.8;
+      font-weight: 300;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .concept-column.mixed::before {
+      color: var(--accent-blue);
+    }
+
+    .concept-column.myth::before {
+      color: #ff9a8f;
+    }
+
+    .concept-column h3 {
+      color: var(--accent-yellow);
+      margin: 0 0 0.45rem;
+      font-size: 1.18rem;
+    }
+
+    .concept-column.mixed h3 {
+      color: var(--accent-blue);
+    }
+
+    .concept-column.myth h3 {
+      color: #ff9a8f;
+    }
+
+    .concept-column ul {
+      margin: 0;
+      padding-left: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1.8rem;
+      row-gap: 0.5rem;
+    }
+
+    .concept-column li {
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .concept-column li::marker {
+      color: var(--accent-yellow);
+    }
+
+    .concept-column.mixed li::marker {
+      color: var(--accent-blue);
+    }
+
+    .concept-column.myth li::marker {
+      color: #ff9a8f;
+    }
+
+    .strength {
+      display: inline-block;
+      margin-bottom: 0.55rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #111318;
+      background: var(--accent-yellow);
+    }
+
+    .strength.mixed {
+      background: var(--accent-blue);
+    }
+
+    .strength.myth {
+      background: var(--accent-red);
+    }
+
+    .image-panel {
+      padding: 0.75rem;
+      overflow: hidden;
+    }
+
+    .image-panel img {
+      display: block;
+      width: 100%;
+      border-radius: 0.45rem;
+      background: #ffffff;
+    }
+
+    .image-panel figcaption {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 0.65rem;
+      padding: 0 0.2rem;
+    }
+
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.2rem;
+      align-items: start;
+      margin-top: 1.2rem;
+    }
+
+    .research-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--research-border);
+      border-radius: 0.75rem;
+      background: rgba(6, 8, 12, 0.8);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
+      margin-top: 1.2rem;
+    }
+
+    .research-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 900px;
+      margin: 0;
+      color: #ffffff !important;
+    }
+
+    .research-table th {
+      position: sticky;
+      top: 0;
+      background: rgba(25, 19, 16, 0.98);
+      color: #ffe08a;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(240, 200, 90, 0.38);
+      z-index: 1;
+    }
+
+    .research-table th,
+    .research-table td {
+      padding: 0.72rem;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-wrap: anywhere;
+      color: #ffffff !important;
+    }
+
+    .research-table th {
+      color: #ffe08a !important;
+    }
+
+    .research-table th:first-child,
+    .research-table td:first-child {
+      width: 22%;
+      min-width: 190px;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+
+    .research-table tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .video-card {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 1.35rem;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      margin-top: 1.2rem;
+      max-width: 1140px;
+      padding: 1.28rem;
+    }
+
+    .video-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background: #111318;
+    }
+
+    .video-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-thumb::after {
+      content: "▶";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 2rem;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.72);
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+    .video-card strong {
+      display: block;
+      color: var(--accent-yellow);
+      font-size: 1.62rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .video-card p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.42rem;
+      line-height: 1.45;
+    }
+
+    .sources-list {
+      columns: 2;
+      column-gap: 2rem;
+      padding-left: 1.2rem;
+    }
+
+    .summary-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .summary-heading h2 {
+      margin-bottom: 0;
+    }
+
+    .summary-mark {
+      width: clamp(92px, 16vw, 150px);
+      flex: 0 0 auto;
+      border: 0;
+      box-shadow: none;
+    }
+
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    footer small a {
+      color: #008ecf !important;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .evidence-grid,
+      .myth-grid,
+      .method-grid,
+      .method-grid.primary,
+      .method-support,
+      .split-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .concept-map {
+        grid-template-columns: 1fr;
+      }
+
+      .research-hero {
+        min-height: 68vh;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .research-hero h1 {
+        font-size: 2.35rem;
+      }
+
+      .concept-column {
+        padding-left: 4.2rem;
+      }
+
+      .concept-column::before {
+        left: 0.8rem;
+        font-size: 4.2rem;
+      }
+
+      .concept-column ul {
+        grid-template-columns: 1fr;
+      }
+
+      .video-card {
+        grid-template-columns: 1fr;
+      }
+
+      .research-table {
+        font-size: 0.78rem;
+      }
+
+      .sources-list {
+        columns: 1;
+      }
+
+      .summary-heading {
+        align-items: flex-start;
+      }
+
+      .summary-mark {
+        width: 84px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong><a href="index.html" style="text-decoration:none;color:inherit">Javier Gámez Martín</a></strong></li>
+    </ul>
+    <ul>
+      <li><a href="libros.html">Libros</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="prensa.html">Prensa</a></li>
+      <li><a href="guia.html">Guía gratuita</a></li>
+      <li><a href="ELA.html">ELA</a></li>
+      <li><a href="ELA-research.html">Investigación</a></li>
+      <li><a href="index.html#contacto" role="button">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="research-hero">
+    <div class="container">
+      <p class="eyebrow">Exposoma, hábitos y riesgo</p>
+      <h1>Descifrando la <span>ELA esporádica</span></h1>
+      <p class="hero-copy">
+        Una lectura clara de lo que sabemos - y de lo que todavía no sabemos - sobre tabaco,
+        exposiciones laborales, metales, pesticidas, traumatismos, actividad física, estrés,
+        dieta, café y alcohol antes del inicio de la enfermedad.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="toc" aria-label="Índice de la página">
+      <a href="#resumen">Resumen</a>
+      <a href="#senales">Señales fuertes</a>
+      <a href="#evidencia-mixta">Evidencia mixta</a>
+      <a href="#mitos">Falsas creencias</a>
+      <a href="#espana">España</a>
+      <a href="#cuestionario">Cuestionario</a>
+      <a href="#fuentes">Fuentes</a>
+    </nav>
+
+    <section id="resumen" class="research-section">
+      <div class="summary-heading">
+        <h2>Resumen ejecutivo</h2>
+        <img class="summary-mark" src="assets/exposoma_resumen_esfera.png" alt="Diana visual del exposoma en ELA esporádica" />
+      </div>
+      <div class="notice">
+        <p>
+          La ELA esporádica no se explica por un único hábito ni por una causa ambiental aislada.
+          La lectura más sólida es multifactorial: edad, susceptibilidad genética, metabolismo,
+          ocupación, exposiciones ambientales y sucesos vitales se combinan durante años o décadas.
+        </p>
+        <p>
+          Por eso conviene hablar de <strong>señales de asociación</strong>, no de certezas individuales:
+          un factor puede aumentar el riesgo en estudios poblacionales sin permitir predecir qué persona
+          concreta desarrollará ELA.
+        </p>
+      </div>
+
+      <div class="concept-map" aria-label="Sumario conceptual sobre riesgo, evidencia mixta y falsas creencias en ELA esporádica">
+        <article class="concept-column strong">
+          <h3>1. Señales fuertes</h3>
+          <ul>
+            <li>Tabaquismo</li>
+            <li>Metales, pesticidas, sílice, combustión y disolventes</li>
+            <li>Traumatismos graves o repetidos</li>
+            <li>Metabolismo e IMC premórbido</li>
+          </ul>
+        </article>
+        <article class="concept-column mixed">
+          <h3>2. Evidencia mixta</h3>
+          <ul>
+            <li>Actividad física intensa</li>
+            <li>Alcohol</li>
+            <li>Café y cafeína</li>
+            <li>Dieta concreta o suplementos</li>
+          </ul>
+        </article>
+        <article class="concept-column myth">
+          <h3>3. Falsas creencias</h3>
+          <ul>
+            <li>"El deporte causa ELA"</li>
+            <li>"El estrés psicológico la desencadena"</li>
+            <li>"Café o alcohol son preventivos"</li>
+            <li>"Una dieta milagro evita el riesgo"</li>
+          </ul>
+        </article>
+      </div>
+
+      <h2>Guía visual</h2>
+      <p>
+        Esta síntesis visual separa los factores con asociación más consistente de las señales todavía
+        heterogéneas y de las creencias que los estudios no han confirmado como causas demostradas.
+      </p>
+      <figure class="image-panel">
+        <img src="assets/ELA_esporadica_riesgos_y_mitos.png" alt="Infografía sobre factores de riesgo y mitos desmentidos en ELA esporádica" />
+        <figcaption>
+          Factores con mayor consistencia frente a falsas creencias o señales todavía heterogéneas.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="video" class="research-section">
+      <h2>Vídeo de referencia</h2>
+      <a class="video-card" href="https://youtu.be/7215Bv_Tj7U" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/7215Bv_Tj7U/hqdefault.jpg" alt="Miniatura del vídeo de referencia sobre exposoma y ELA esporádica" />
+        </div>
+        <div>
+          <strong>Ver el vídeo en YouTube</strong>
+          <p>
+            Acceso directo al material audiovisual asociado a esta página sobre exposoma, factores de riesgo
+            y ELA esporádica.
+          </p>
+        </div>
+      </a>
+    </section>
+
+    <section id="senales" class="research-section">
+      <h2>Factores con asociación más consistente</h2>
+      <p>
+        Estos bloques no son una sentencia causal para cada paciente, pero sí concentran las señales más
+        repetidas en estudios observacionales mejor diseñados.
+      </p>
+
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <span class="strength">Señal fuerte</span>
+          <h3>Tabaquismo y carga acumulada</h3>
+          <p>
+            El tabaco aparece de forma consistente como factor asociado. La lectura más útil no es
+            "fumador sí/no", sino edad de inicio, años de consumo, paquetes-año y abandono previo.
+          </p>
+        </article>
+        <article class="evidence-card">
+          <span class="strength">Señal fuerte</span>
+          <h3>Metales, pesticidas, sílice y disolventes</h3>
+          <p>
+            La evidencia converge mejor cuando se estudian exposiciones laborales concretas y repetidas:
+            agricultura, industria, pinturas, combustión, polvo mineral, metales pesados y mezclas de tóxicos.
+          </p>
+        </article>
+        <article class="evidence-card">
+          <span class="strength">Señal relevante</span>
+          <h3>Traumatismos repetidos</h3>
+          <p>
+            Los datos más sugerentes aparecen cuando se registran varios traumatismos, gravedad, atención
+            médica, pérdida de conciencia y distancia temporal respecto al inicio de síntomas.
+          </p>
+        </article>
+        <article class="evidence-card">
+          <span class="strength">Señal a medir</span>
+          <h3>Metabolismo e IMC premórbido</h3>
+          <p>
+            Algunos estudios apuntan a trayectorias metabólicas diferentes antes del diagnóstico. No basta
+            una cifra aislada: interesa reconstruir peso, IMC y cambios por décadas.
+          </p>
+        </article>
+      </div>
+
+      <div class="split-layout">
+        <figure class="image-panel">
+          <img src="assets/exposoma_senales_evidencia.png" alt="Diapositiva con señales fuertes, ambiguas y débiles del exposoma en ELA" />
+          <figcaption>Clasificación práctica: señales fuertes, señales ambiguas y mitos o señales débiles.</figcaption>
+        </figure>
+        <figure class="image-panel">
+          <img src="assets/exposoma_entorno_laboral.png" alt="Diapositiva sobre entorno laboral, metales pesados, agroquímicos y combustión" />
+          <figcaption>El entorno laboral exige preguntar por tareas reales, duración, intensidad y protección usada.</figcaption>
+        </figure>
+      </div>
+
+      <div class="research-table-wrap">
+        <table class="research-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Lectura práctica</th>
+              <th>Cómo medirlo</th>
+              <th>Cautela</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tabaco</strong></td>
+              <td>Asociación consistente en estudios poblacionales.</td>
+              <td>Nunca, exfumador, fumador; edad de inicio y fin; cigarrillos/día; paquetes-año.</td>
+              <td>Separar consumo actual de historia acumulada y de cambios por enfermedad incipiente.</td>
+            </tr>
+            <tr>
+              <td><strong>Exposición laboral</strong></td>
+              <td>La señal mejora cuando se estudian tareas y mezclas, no solo profesión declarada.</td>
+              <td>Historia laboral completa, sector, tareas, sustancias, frecuencia, años y equipos de protección.</td>
+              <td>Evitar conclusiones por cargo genérico: "agricultor" o "pintor" no explican la exposición real.</td>
+            </tr>
+            <tr>
+              <td><strong>Metales y partículas</strong></td>
+              <td>Plomo y otros metales aparecen repetidamente, con biomarcadores como apoyo futuro.</td>
+              <td>Trabajo, residencia, hobbies, combustión, soldadura, munición, agua, biomarcadores si es posible.</td>
+              <td>Un biomarcador tras el diagnóstico no siempre reconstruye exposición de décadas previas.</td>
+            </tr>
+            <tr>
+              <td><strong>Traumatismos</strong></td>
+              <td>La repetición y gravedad pueden asociarse a mayor riesgo en algunos estudios.</td>
+              <td>Número, edad, tipo, pérdida de conocimiento, atención médica, fracturas, deporte o trabajo relacionado.</td>
+              <td>El recuerdo puede ser desigual; conviene anclarlo a edades y eventos biográficos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="evidencia-mixta" class="research-section">
+      <h2>Factores con evidencia mixta</h2>
+      <p>
+        Algunos hábitos deben medirse porque pueden modular riesgo o confundir otros análisis, pero no
+        deben explicarse como causas demostradas de ELA esporádica.
+      </p>
+
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <span class="strength mixed">Mixta</span>
+          <h3>Actividad física intensa</h3>
+          <p>
+            La señal es heterogénea. En algunos trabajos aparece asociación; en otros no. Hay que separar
+            deporte recreativo, competición, actividad laboral, traumatismos y perfil metabólico.
+          </p>
+        </article>
+        <article class="evidence-card">
+          <span class="strength mixed">Mixta</span>
+          <h3>Alcohol y café</h3>
+          <p>
+            Existen señales inversas en algunos estudios, pero no una conclusión causal robusta. Deben
+            recogerse con precisión, no venderse como protección ni como causa clara.
+          </p>
+        </article>
+        <article class="evidence-card">
+          <span class="strength mixed">Mixta</span>
+          <h3>Dieta concreta y suplementos</h3>
+          <p>
+            No hay un alimento aislado que explique el riesgo. Tiene más sentido medir patrón dietético
+            global, adherencia mediterránea, peso e historia metabólica.
+          </p>
+        </article>
+        <article class="evidence-card">
+          <span class="strength mixed">Mixta</span>
+          <h3>Estrés, sueño y turnos</h3>
+          <p>
+            El estrés no emerge como factor fuerte comparable al tabaco o la ocupación, pero debe medirse
+            porque puede relacionarse con sueño, alcohol, tabaco y actividad física.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="mitos" class="research-section">
+      <h2>Falsas creencias que conviene desactivar</h2>
+      <div class="myth-grid">
+        <article class="myth-card">
+          <span class="strength myth">Mito</span>
+          <h3>"El deporte causa ELA"</h3>
+          <p>
+            No puede afirmarse así. La confusión suele venir de mezclar ejercicio, deporte profesional,
+            traumatismos, ocupaciones físicamente exigentes y selección de personas con perfiles biológicos distintos.
+          </p>
+        </article>
+        <article class="myth-card">
+          <span class="strength myth">Mito</span>
+          <h3>"El estrés psicológico desencadena ELA"</h3>
+          <p>
+            Los estudios no lo sostienen como causa fuerte. Sí merece ser medido por su relación con otros hábitos
+            y por su importancia en la experiencia vital de pacientes y familias.
+          </p>
+        </article>
+        <article class="myth-card">
+          <span class="strength myth">Mito</span>
+          <h3>"Café, alcohol o una dieta concreta protegen"</h3>
+          <p>
+            Puede haber señales parciales, pero no una recomendación preventiva sólida. La prudencia es medir patrones,
+            no convertir correlaciones débiles en consejos.
+          </p>
+        </article>
+        <article class="myth-card">
+          <span class="strength myth">Mito</span>
+          <h3>"Vivir cerca de agricultura prueba exposición individual"</h3>
+          <p>
+            Los estudios geográficos generan hipótesis, pero no sustituyen una historia residencial y laboral detallada.
+            El mapa no es la dosis de cada persona.
+          </p>
+        </article>
+      </div>
+
+      <div class="split-layout">
+        <figure class="image-panel">
+          <img src="assets/exposoma_mitos_deporte.png" alt="Diapositiva que matiza la relación entre deporte y ELA" />
+          <figcaption>El deporte requiere distinguir intensidad, finalidad, competición y traumatismos acumulados.</figcaption>
+        </figure>
+        <figure class="image-panel">
+          <img src="assets/exposoma_mitos_dieta_cafeina.png" alt="Diapositiva sobre dietas mágicas, café y alcohol" />
+          <figcaption>Las señales sobre café, alcohol y dieta no justifican mensajes preventivos simplistas.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="espana" class="research-section">
+      <h2>Qué falta en España</h2>
+      <p>
+        La evidencia española disponible es útil, pero todavía fragmentaria: estudios ecológicos o espaciales
+        sobre plaguicidas, plomo ambiental y distribución geográfica; un piloto clínico-sociodemográfico; y
+        biomarcadores de metales en muestras pequeñas. Falta un estudio nacional incidente, multicéntrico,
+        con controles poblacionales y cuestionario exposómico armonizado.
+      </p>
+
+      <div class="notice">
+        <p>
+          La lección práctica es directa: España no necesita solo más titulares sobre "posibles causas".
+          Necesita infraestructura epidemiológica: recoger bien exposiciones, residencia, trabajo, hábitos,
+          traumatismos, genética disponible y biomarcadores.
+        </p>
+      </div>
+    </section>
+
+    <section id="cuestionario" class="research-section">
+      <h2>Cómo debería medirse: cuatro capas</h2>
+      <p>
+        La propuesta más sólida no es preguntar solo por hábitos. Un cuestionario útil debe reconstruir
+        biografía, trabajo, ambiente y salud antes de los primeros síntomas, con anclajes temporales para
+        reducir sesgo de recuerdo.
+      </p>
+
+      <div class="method-grid primary">
+        <article class="method-card">
+          <h3>Sociodemografía y residencia</h3>
+          <p>Infancia, mudanzas, nivel educativo, zona rural o urbana, códigos postales y periodos vitales.</p>
+        </article>
+        <article class="method-card">
+          <h3>Ocupación y exposiciones</h3>
+          <p>Empleos de más de seis meses, tareas reales, sustancias, frecuencia, duración y protección.</p>
+        </article>
+        <article class="method-card">
+          <h3>Estilo de vida premórbido</h3>
+          <p>Tabaco, alcohol, café, dieta, actividad física, sueño y estrés antes del inicio de síntomas.</p>
+        </article>
+        <article class="method-card">
+          <h3>Antecedentes y traumatismos</h3>
+          <p>Golpes, fracturas, pérdida de conciencia, descargas eléctricas, servicio militar y hobbies.</p>
+        </article>
+      </div>
+
+      <div class="method-support" aria-label="Elementos derivados del cuestionario">
+        <article class="method-card secondary">
+          <h3>Métricas derivadas</h3>
+          <p>Paquetes-año, AUDIT-C, MEDAS-14, PSS-10, horas de actividad e IMC por década.</p>
+        </article>
+        <article class="method-card secondary">
+          <h3>Exposoma combinado</h3>
+          <p>La pregunta clave puede no ser un tóxico aislado, sino la mezcla y acumulación de exposiciones.</p>
+        </article>
+      </div>
+
+      <div class="split-layout">
+        <figure class="image-panel">
+          <img src="assets/exposoma_cuestionario_cuatro_capas.png" alt="Diapositiva con cuestionario exposómico de cuatro capas" />
+          <figcaption>Cuatro capas: sociodemografía, ocupación, estilo de vida y antecedentes médicos.</figcaption>
+        </figure>
+        <figure class="image-panel">
+          <img src="assets/exposoma_metricas_clave.png" alt="Diapositiva sobre métricas clave para un cuestionario exposómico" />
+          <figcaption>La medición precisa transforma recuerdos dispersos en variables comparables.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="fuentes" class="research-section">
+      <h2>Fuentes y límites</h2>
+      <p>
+        Esta página resume evidencia observacional y material de trabajo. No establece causas individuales
+        ni sustituye evaluación médica, genética, laboral o epidemiológica formal.
+      </p>
+      <ul class="sources-list">
+        <li>Euro-MOTOR y su trabajo metodológico.</li>
+        <li>Estudios neerlandeses de casos incidentes sobre tabaco, alcohol, IMC y fase presintomática.</li>
+        <li>European case-control sobre actividad física.</li>
+        <li>Estudios estadounidenses y suecos de exposición ocupacional.</li>
+        <li>Caso-control italiano sobre trauma.</li>
+        <li>Estudio italiano de alimentos.</li>
+        <li>Trabajo internacional sobre estrés.</li>
+        <li>Bloque español de Andalucía, Cataluña, Valencia y Santander.</li>
+        <li>Infraestructura del National ALS Registry.</li>
+        <li>Documento base: Exposoma_de_la_ELA.pdf.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small>
+      <a href="index.html">Inicio</a> •
+      <a href="libros.html">Libros</a> •
+      <a href="blog.html">Blog</a> •
+      <a href="prensa.html">Prensa</a> •
+      <a href="guia.html">Guía gratuita</a> •
+      <a href="ELA.html">ELA</a> •
+      <a href="ELA-research.html">Investigación</a> •
+      <a href="index.html#contacto">Contacto</a>
+    </small>
+  </footer>
+</body>
+</html>

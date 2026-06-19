@@ -1,0 +1,1106 @@
+FILE: Base de datos y cuestionario sobre hábitos de vida premórbidos en ELA esporádica.pdf
+PAGES: 20
+
+
+--- PAGE 1 ---
+Base de datos y cuestionario sobre hábitos de
+vida premórbidos en ELA esporádica
+Resumen ejecutivo
+La evidencia disponible sugiere que la ELA esporádica no depende de un único factor de riesgo
+modificable, sino de una arquitectura multifactorial donde se combinan susceptibilidad genética,
+envejecimiento y exposiciones ambientales y de estilo de vida a lo largo de décadas. En los estudios
+mejor diseñados, los hallazgos más consistentes se concentran en tabaquismo, algunas exposiciones
+ocupacionales y ambientales —sobre todo pesticidas, metales, sílice, partículas y ciertos disolventes—,
+traumatismos repetidos, y determinados patrones antropométricos o metabólicos previos al inicio. En
+cambio, la evidencia sobre alcohol, café, dieta concreta, estrés y actividad física intensa es heterogénea
+y, en varios dominios, contradictoria. 1
+En España, la investigación específicamente centrada en hábitos de vida premórbidos antes del inicio
+de síntomas en ELA esporádica es todavía escasa. Lo localizado se concentra en estudios ecológicos o
+espaciales sobre plaguicidas, plomo ambiental y distribución geográfica, además de un piloto clínico-
+sociodemográfico y un pequeño estudio de biomarcadores urinarios de metales. No he localizado, en la
+búsqueda realizada hasta el 17 de junio de 2026, un gran estudio español multicéntrico, incidente, con
+controles poblacionales y cuestionario exposómico harmonizado equiparable a Euro-MOTOR o a las
+iniciativas del National ALS Registry de EE. UU. 2
+Fuera de España, el estándar metodológico más útil para inspirar una base de datos española es el eje
+formado por los estudios poblacionales neerlandeses y el consorcio europeo Euro-MOTOR, junto con el
+National ALS Registry estadounidense. Ese conjunto demuestra tres cosas prácticas: que es posible
+reclutar miles de casos y controles con metodología estandarizada; que conviene trabajar con casos
+incidentes para reducir sesgo de supervivencia; y que la recogida sistemática de historia laboral,
+residencial, actividad física, tabaco, alcohol, dieta y exposiciones ambientales puede producir señales
+etiológicas útiles. 3
+La consecuencia práctica para España es clara: el cuestionario no debería limitarse a “hábitos de vida”
+en sentido estrecho. Para ser realmente útil, debe integrar cuatro capas: sociodemografía; ocupación y
+exposiciones; estilo de vida pre-sintomático; y antecedentes médicos/traumáticos, con anclajes
+temporales explícitos para minimizar sesgo de recuerdo. Esa es la lógica del instrumento propuesto al
+final de este informe. 4
+Advertencia metodológica y estrategia de búsqueda
+Este informe es una revisión de alcance analítica, no una revisión sistemática registrada en
+PROSPERO. La búsqueda se orientó a estudios humanos sobre ELA/ALS con variables premórbidas de
+estilo de vida, ocupación o ambiente, priorizando fuentes primarias y oficiales: PubMed,
+ClinicalTrials.gov, CORDIS/Comisión Europea, CDC/ATSDR, y páginas institucionales de hospitales,
+universidades y grupos de investigación. Se realizaron búsquedas en español e inglés con
+combinaciones de términos como ALS/ELA, sporadic, risk factors, lifestyle, physical activity, smoking,
+alcohol, coffee, diet, BMI, occupation, pesticides, metals, solvents, electromagnetic fields, trauma, stress,
+1
+
+
+--- PAGE 2 ---
+sleep, Spain, Catalonia, Andalusia, registry, case-control y cohort. La fecha de consulta fue 17 de junio de
+2026. 5
+Los criterios aplicados fueron los siguientes. Se incluyeron estudios observacionales en humanos con
+ELA definida clínica o registralmente, que evaluaran exposiciones previas al inicio de síntomas o sus
+proxys razonables; se priorizaron cohortes, casos y controles poblacionales, estudios anidados y
+registros con cuestionarios estructurados. Se excluyeron modelos animales, estudios puramente
+terapéuticos, y trabajos sin datos humanos. La ELA familiar se excluyó cuando la publicación separaba
+claramente casos esporádicos y familiares; cuando la publicación mezclaba ambas sin desagregación, el
+estudio se mantuvo solo si la muestra era predominantemente esporádica o si el hallazgo seguía siendo
+útil para el diseño del cuestionario, señalándolo expresamente como limitación. Esta cautela es
+importante porque incluso cohortes aparentemente “esporádicas” contienen un subgrupo con
+variantes como C9orf72. 6
+La principal limitación metodológica del campo no es la falta de hipótesis, sino la calidad desigual de la
+medición de exposiciones. El propio trabajo metodológico de Euro-MOTOR subraya problemas
+recurrentes: diferencias de captación entre países y registros, sesgo de recuerdo, definiciones
+imprecisas de exposición, heterogeneidad analítica y control insuficiente de confusión. Por eso, en este
+informe la valoración de “calidad/riesgo de sesgo” es una apreciación razonada por diseño y no una
+puntuación formal ROBINS-I o Newcastle–Ottawa aplicada estudio por estudio. 7
+Excluiranimalesy
+estudiossindatos
+humanos EstudiosenEspaña
+PubMedyfuentes
+primarias
+C A r L ib S a /E d L o A p , o p r re h m um ór a b n id o o s, ExcluirEL s A ep f a a r m a iliarsise Extracciónestructurada Estudiosinternacionales
+ClinicalTrials.gov,CDC,
+CORDIS,REec,AEMPS
+Retenermixtossiel Diseñodelcuestionario
+hallazgosiguesiendoútil
+ymarcarlimitación
+Estudios en España
+En España, lo encontrado se concentra en exposiciones ambientales de área, geografía y algunos
+pilotos clínicos. La mayor parte de la evidencia española no mide de forma individualizada sueño, dieta,
+café, alcohol, actividad física o estrés durante los años previos al inicio, de modo que hoy el vacío
+principal no es analítico sino de infraestructura epidemiológica. 8
+2
+
+
+--- PAGE 3 ---
+Fichas homogéneas de estudios españoles localizados
+Variables
+Resultados
+Estudio Identificadores Tipo / estado País / centros n / población premórbidas o Calidad y sesgo Fuente
+principales
+exposómicas
+11.355 Aumento de Baja para
+España; fallecimientos mortalidad por causalidad
+Trends in motor autores por MND en el individual:
+neuron disease: ligados a enfermedad Latitud provincial periodo; gradiente estudio
+PMID 27098242; DOI Ecológico
+association with Santander/ de y niveles norte-sur y ecológico, sin
+10.1007/ retrospectivo; 9
+latitude and air IDIVAL según motoneurona, ambientales de correlación exposición
+s10072-016-2581-2 completado
+lead levels in afiliaciones 2000–2013; plomo en aire positiva con personal ni
+Spain abiertas de no separa ELA plomo separación de
+los autores esporádica de atmosférico (CC esporádica/
+otras MND 0,457; p=0,01) familiar
+Spatial Cataluña;
+Moderada-
+Assessment of the cohorte
+baja: útil para
+Association poblacional Detectó un patrón
+Casos- n no visible en hipótesis, pero
+between Long- regional; Factores geográfico con
+controles el resumen con exposición
+Term Exposure to PMID 29852480; DOI autores M. ambientales de tres clústeres, dos
+anidado recuperado; geográfica 10
+Environmental 10.1159/000489664 Povedano, M. largo plazo y de ellos de mayor
+poblacional; población agregada y
+Factors and the Saez, J.-A. análisis espacial riesgo y cercanos
+completado regional posible
+Occurrence of ALS Martínez- a áreas agrícolas
+confusión
+in Catalonia, Matos, M. A.
+residual
+Spain Barceló
+519 casos
+Environmental Andalucía; OR con IC95% Baja para
+CMBD entre
+exposure to Casos- Hospital de 0,76–1,08; no inferencia
+2016–2018;
+pesticides and PMID 37659835; DOI controles Poniente, Exposición encontró individual por
+8.384.083
+Amyotrophic 10.1016/j.nrl. ecológico; IBIMA y ambiental por asociación exposición 11
+controles
+Lateral Sclerosis 2021.01.013 publicado / colaboradores área a pesticidas significativa entre ecológica y uso
+poblacionales;
+in the South of completado según ficha área expuesta y de bases
+no separación
+Spain institucional prevalencia de ELA administrativas
+genética
+3
+
+
+--- PAGE 4 ---
+Variables
+Resultados
+Estudio Identificadores Tipo / estado País / centros n / población premórbidas o Calidad y sesgo Fuente
+principales
+exposómicas
+Estudio útil como
+prueba de
+viabilidad Moderada-
+española; el baja: piloto,
+resumen visible tamaño
+Clinical and
+Piloto confirma inclusión pequeño,
+Sociodemographic España; Tabaquismo, HTA,
+transversal de variables probable sesgo
+Factors Related to Universidad 90 pacientes DM2, cáncer
+PMID 39407861; DOI con clínicas, de selección; útil
+Amyotrophic Católica de con ELA y 90 previo, ocupación 12
+10.3390/jcm13195800 controles; sociodemográficas para construir
+Lateral Sclerosis Valencia y controles y variables
+publicado / y ocupacionales, cuestionario, no
+in Spain: A Pilot colaboradores sociodemográficas
+completado pero no permite para
+Study
+extraer todas las conclusiones
+medidas de efecto etiológicas
+con seguridad firmes
+desde el material
+accesible
+Baja para
+causalidad
+Amyotrophic premórbida:
+Plomo urinario
+Lateral Sclerosis biomarcador
+España; Plomo, cobre, mayor en ELA
+Patients Show Caso-control postdiagnóstico,
+PMID 41153670; DOI IDIVAL / 14 ELA frente manganeso, (p<0,001), cobre
+Higher Urinary transversal; refleja
+10.3390/ Santander a 28 controles selenio, zinc en mayor (p=0,007) y 13
+Levels of Lead and publicado / exposición
+biomedicines13102385 según portal sanos orina; estabilidad aumento sutil de
+Copper: A Pilot completado reciente más
+institucional residencial manganeso
+Case-Control que exposición
+(p=0,043)
+Study histórica; útil
+para factibilidad
+biomarcadora
+Lectura crítica del bloque español
+El estudio andaluz sobre pesticidas es importante porque usa una base poblacional grande y ofrece un
+resultado negativo que modera interpretaciones simplistas sobre plaguicidas en España; su problema
+no es el tamaño, sino la naturaleza ecológica de la exposición. El estudio catalán también es relevante,
+pero como generador de hipótesis geoespaciales, no como demostración de causalidad individual. El
+piloto valenciano de 2024 es particularmente valioso para este proyecto porque demuestra que en
+España ya es factible recoger variables sociodemográficas, clínicas y ocupacionales en pacientes con
+ELA y controles; aun así, por tamaño y diseño, no sustituye un caso-control nacional. El piloto de
+metales urinarios de 2025 es útil como apoyo a una futura capa de biomarcadores, no como fotografía
+del exposoma histórico. 14
+Estudios internacionales
+La literatura internacional es mucho más amplia y metodológicamente variada. Los estudios más
+sólidos para diseñar una base de datos española son los casos y controles incidentes y poblacionales de
+Países Bajos, Italia/Euro-MOTOR, Japón y EE. UU., además de registros y cohortes prospectivas como
+4
+
+
+--- PAGE 5 ---
+EPIC y el National ALS Registry. En publicaciones observacionales antiguas, los campos “promotor”,
+“fecha exacta de inicio/fin” o “colaboradores” no siempre están declarados; cuando no aparecen de
+forma verificable, se consignan como ND. 15
+Estudios primarios publicados más directamente aplicables
+Variables Resultados
+Estudio Identificadores Tipo / estado País / centros n / población Calidad / sesgo Fuente
+principales principales
+Historia laboral
+Estudio clásico y
+de por vida; Moderada-alta para
+muy útil por su
+metales, su época; mejora
+Occupational EE. UU., granularidad
+Caso-control 174 casos disolventes y exposición frente a
+exposures and PMID 9199537; DOI 10.1093/ Washington; ocupacional;
+poblacional; incidentes y agroquímicos, autoinforme simple, 16
+amyotrophic oxfordjournals.aje.a009070 Univ. base
+completado 348 controles con evaluación pero persisten
+lateral sclerosis Washington metodológica
+ciega por recuerdo y tamaño
+del campo
+higienistas limitado
+laboral
+industriales
+Moderada;
+No encontró demuestra que el
+Risk of ALS and Caso-control EE. UU., n no extraíble Actividad física diferencias dominio “actividad
+history of PMID 9482362 poblacional; Washington con seguridad laboral y significativas física” es 17
+physical activity completado occidental del snippet recreativa relevantes en inherentemente
+actividad física inestable entre
+estudios
+Mayor ingesta
+de grasa se Moderada;
+Population-
+Caso-control EE. UU., n no visible en asoció con más detallado pero
+based case- Ingesta
+PMID 10645819 poblacional; Washington el resumen riesgo; OR fibra- expuesto a recuerdo 18
+control study of nutricional
+completado occidental recuperado ajustada 2,7 en dietético
+ALS. II. Diet
+cuartil superior retrospectivo
+vs inferior
+279 pacientes
+con Sugirió que los
+Premorbid enfermedad pacientes eran Moderada-baja por
+Constitución
+weight, body de más propensos heterogeneidad
+Caso-control; corporal y
+mass, and PMID 12221178 EE. UU. motoneurona a haber sido diagnóstica histórica 19
+completado deporte
+varsity athletics en el snippet; delgados y a y recuerdo
+competitivo
+in ALS mezcla referir atletismo retrospectivo
+diagnóstica universitario
+histórica
+5
+
+
+--- PAGE 6 ---
+Variables Resultados
+Estudio Identificadores Tipo / estado País / centros n / población Calidad / sesgo Fuente
+principales principales
+Ingesta alta de
+Intake of
+PUFA y vitamina Moderada;
+polyunsaturated 132 casos sin Dieta
+E asociada a importante por
+fatty acids and historia premórbida;
+PMID 16648143; PMCID Caso-control; Países Bajos, reducción del exclusión explícita
+vitamin E familiar y 220 PUFA, vitamina 20
+PMC2077791 completado Utrecht riesgo; OR 0,4 de historia familiar,
+reduces the risk controles E y otros
+para ambos aunque sigue
+of developing sanos nutrientes
+dominios siendo retrospectivo
+ALS
+principales
+Apunta a Moderada-baja;
+Actividad física
+asociación con interesante, pero
+Lifestyle factors vigorosa, estrés
+Japón, actividad con elevado riesgo
+and risk of ALS: Caso-control; 183 casos y autoinformado,
+PMID 19342254 prefectura de vigorosa, estrés de recuerdo y 21
+a case-control completado 366 controles patrón tipo A,
+Aichi autopercibido y construcción
+study in Japan tabaquismo,
+menor cultural de las
+educación
+educación exposiciones
+Riesgo mayor
+en fumadores
+Smoking, actuales (OR
+Alta entre los caso-
+Alcohol Caso-control 1,38; IC95%
+494 casos control por uso de
+Consumption, poblacional Tabaquismo y 1,02–1,88) y
+incidentes y incidentes y
+and the Risk of PMID 22791740 con Países Bajos alcohol antes de menor en 22
+1.599 comparación con
+ALS: A incidentes; síntomas consumo actual
+controles cohortes
+Population- completado de alcohol en el
+prevalentes/referral
+based Study grupo incidente
+(OR 0,52; IC95%
+0,40–0,75)
+OR 1,63 para
+uno o más Moderada; muy útil
+Traumatismos,
+Trauma and ALS: traumatismos; metodológicamente
+gravedad,
+a case-control Caso-control Italia, cuatro 377 casos y 2 OR 3,07 para por captación
+PMID 22537412; DOI 10.1111/j. timing; ajustó
+study from a de registros; registros grupos de 377 ≥3 poblacional y ajuste 23
+1468-1331.2012.03723.x por actividad
+population- completado poblacionales controles traumatismos; amplio; aún
+física, tabaco,
+based registry señales vulnerable a
+alcohol y café
+persistieron a recuerdo
+>5 y >10 años
+Menor
+proporción de
+Moderada-baja;
+Coffee and n no bebedores de
+hallazgo
+amyotrophic Caso-control recuperado café entre casos
+PMID 21946385; DOI 10.1093/ EURALS / Italia Café actual y interesante, pero no
+lateral sclerosis: multicéntrico; con seguridad que entre 24
+aje/kwr229 y red europea pasado confirmado de
+a possible completado en las fuentes controles; señal
+forma robusta por
+preventive role abiertas aquí compatible con
+cohortes posteriores
+asociación
+inversa
+6
+
+
+--- PAGE 7 ---
+Variables Resultados
+Estudio Identificadores Tipo / estado País / centros n / población Calidad / sesgo Fuente
+principales principales
+Asociación
+positiva con Moderada; uno de
+Lifetime actividad los estudios más
+Caso-control Actividad física a
+physical activity n no visible recreativa, no citados del dominio,
+PMID 23418211 poblacional; Países Bajos lo largo de la 25
+and the risk of aquí con actividad pero ya anticipa la
+completado vida
+ALS ocupacional; sin dificultad
+clara dosis- interpretativa
+respuesta
+Riesgo de
+muerte por ALS
+Alta para evitar
+ligeramente
+472.100 recuerdo y
+menor en
+Physical activity Cohorte participantes; Actividad física causalidad inversa
+físicamente
+and risk of ALS PMID 26968841 prospectiva; Europa, EPIC 219 total temprana, aunque 26
+activos; no
+in EPIC completado fallecimientos estandarizada usa mortalidad y no
+apoyó hipótesis
+por ALS incidencia clínica
+de mayor
+directa
+riesgo por
+actividad física
+Autoinforme de
+Environmental exposición
+Pesticidas, Moderada; buena
+and EE. UU., laboral o
+295 casos ALS disolventes, fenotipificación
+Occupational PMID 28122372; DOI Caso-control; Dartmouth- recreativa a
+confirmados y metales, agua, clínica, pero 27
+Exposures and 10.1159/000453359 completado Hitchcock y químicos se
+225 controles ocupación y exposición
+ALS in New colaboradores asoció con
+hobbies autoinformada
+England mayor riesgo
+de ALS
+Multicentre, OR 1,07 ocio y
+cross-cultural, Actividad física 1,06 Alta entre caso-
+population- Caso-control laboral y de ocupacional; control;
+Países Bajos, 1.557 casos y
+based, case- PMID 29685899; DOI 10.1136/ poblacional ocio; asociación cuestionario
+Irlanda e Italia; 2.922 28
+control study of jnnp-2017-317724 multicéntrico; tabaquismo, positiva lineal armonizado,
+Euro-MOTOR controles
+physical activity completado alcohol, con incidentes y diseño
+as risk factor for educación heterogeneidad poblacional
+ALS regional
+7
+
+
+--- PAGE 8 ---
+Variables Resultados
+Estudio Identificadores Tipo / estado País / centros n / población Calidad / sesgo Fuente
+principales principales
+Señal
+protectora para
+café y té (OR
+0,29), cereales
+integrales, fruta
+amarilla- Moderada;
+Amyotrophic Italia, tres Alimentos
+Caso-control; 212 casos y naranja y detallado y útil para
+lateral sclerosis PMID 29268633 regiones específicos y 29
+completado 212 controles verdura cruda; el cuestionario, pero
+and food intake administrativas nutrientes
+señal adversa retrospectivo
+para carnes
+rojas/
+procesadas,
+grasas animales
+y leche entera
+No encontró
+mayor carga de
+Acontecimientos Moderada-baja;
+Is psychological Caso-control eventos
+Dataset final: vitales, estrés gran utilidad
+stress a PMID 30240431; DOI 10.1371/ internacional Australia / estresantes
+850 laboral, temática, pero 30
+predisposing journal.pone.0204424 on-line; internacional premórbidos ni
+respondedores resiliencia, autoselección y
+factor for ALS? completado más estrés
+ansiedad medición on-line
+ocupacional en
+ALS
+Estudio
+n exacto no multicéntrico
+visible en el específicamente
+Association Moderada-alta
+snippet diseñado para
+between alcohol Caso-control Alcohol total y metodológicamente;
+Irlanda, Países abierto; deriva alcohol; la
+exposure and PMID 30076269; DOI 10.1136/ poblacional vino tinto, con interpretación
+Bajos e Italia; del repositorio literatura 31
+ALS risk in the jnnp-2018-318559 multicéntrico; múltiples prudente por
+Euro-MOTOR Euro-MOTOR derivada del
+Euro-MOTOR completado ajustes heterogeneidad y
+de >1.500 mismo no
+study confusión residual
+casos y ~3.000 respalda una
+controles conclusión
+simple ni fuerte
+Más pack-years
+y energía;
+menor alcohol
+de por vida; Muy alta para el
+Tabaquismo,
+trayectorias campo
+a longitudinal, Caso-control alcohol,
+Países Bajos, 143 C9+, 1.322 diferentes de observacional de
+population- PMID 33894192; DOI 10.1016/ poblacional actividad física,
+Prospective C9− y 1.322 IMC según C9; ALS por profundidad 32
+based, case- S1474-4422(21)00042-9 longitudinal; IMC y energía
+ALS Study controles análisis temporal y
+control study completado hasta 50 años
+bayesiano estratificación
+antes del inicio
+apoyó efecto genética
+causal de
+tabaquismo y
+alcohol en C9−
+8
+
+
+--- PAGE 9 ---
+Variables Resultados
+Estudio Identificadores Tipo / estado País / centros n / población Calidad / sesgo Fuente
+principales principales
+Mayor riesgo en
+empaquetado,
+New evidence lavandería/
+Moderada; útil para
+on the Caso-control n no visible en tintorería y
+Ocupación orientar ramas
+association of PMID 36188364 de registros; Finlandia el snippet algunos 33
+codificada ocupacionales
+occupation with completado abierto servicios;
+concretas
+ALS: Finland menor en
+trabajo técnico-
+administrativo
+Moderada-alta;
+Associations of PM, VOCs, OR 1,45 PM;
+exposición detallada
+self-reported metales, 1,22 VOCs; 1,48
+PMID 35593931; DOI 10.1007/ Caso-control; EE. UU., 381 ALS y 272 y hallazgos
+occupational combustión/ metales; 1,20 34
+s00420-022-01874-4 completado Michigan controles coherentes con
+exposures and diésel; duración combustión/
+hipótesis
+settings to ALS ajustada diésel
+ocupacional
+Señales
+positivas para
+Avocational Moderada;
+Hobbies, golf, baile
+exposure novedoso para
+jardinería, recreativo,
+associations PMID 38278093; DOI 10.1016/ Caso-control; EE. UU., 400 ALS y 287 hobbies, pero
+carpintería, jardinería, 35
+with ALS risk, j.jns.2024.122899 completado Michigan controles vulnerable a
+caza/tiro, carpintería y
+survival, and multiplicidad y
+ejercicio caza/tiro; sin
+phenotype recuerdo
+asociación con
+supervivencia
+Case-control OCP
+Muy relevante
+study of persistentes, Moderada-alta; una
+Caso-control por combinar
+environmental EE. UU., n no visible en encuesta de de las direcciones
+PMID 38591179; DOI con biología cuestionario y
+toxins and risk National ALS el snippet exposición metodológicas más 36
+10.1080/21678421.2024.2336108 + encuesta; biomarcadores
+of ALS involving Registry abierto laboral y no prometedoras para
+completado de tóxicos
+the National laboral, muestra futuros estudios
+ambientales
+ALS Registry sanguínea
+9
+
+
+--- PAGE 10 ---
+Registros y protocolos estructurados especialmente útiles
+Proyecto / País / Utilidad para
+Identificador Estado Promotor Inicio / fin Participantes Fuente
+registro centros este proyecto
+objetivo Es el mejor
+30.000; ejemplo
+dashboard operativo de
+National con 110.246 registro
+Inicio
+Amyotrophic encuestas nacional con
+En marcha / EE. UU.; 2010-10; fin
+Lateral NCT01772602 ATSDR/CDC completadas encuestas de 37
+recruiting CDC/ATSDR estimado
+Sclerosis y >1.700 factores de
+2040-12
+Registry participantes riesgo,
+premortem biorepositorio
+del y publicación
+biorepositorio derivada
+Diseño muy
+valioso porque
+EE. UU.;
+Exposure to estudio combina
+NIEHS/NIH y n no visible
+Neurotoxins as NCT00340301 / histórico; neurotóxicos,
+Completado colaboración NIEHS en el snippet 38
+Risk Factors for NCT00339976 cerrado / genes,
+con estudio abierto
+ALS completado proteínas y
+Duke ALS
+muestras
+biológicas
+Relevante
+porque se
+Investigation declara
+of the Israel; explícitamente
+Hadassah ND en el n no visible
+epidemiological Registro Hadassah como estudio
+NCT03366506 Medical snippet en el snippet 39
+factors observacional Medical epidemiológico
+Organization abierto abierto
+associated with Organization de ALS “con
+ALS in Israel vistas a
+colaboración
+internacional”
+Tabla comparativa y patrones comunes
+La tabla siguiente resume los estudios más útiles para orientar una base de datos española. No
+sustituye a las fichas anteriores; su objetivo es permitir una comparación rápida de diseño, tamaño,
+dominios y rendimiento analítico. 40
+Resultado
+Estudio País Año Diseño Participantes Variables clave Calidad Enlace
+principal
+11.355 Correlación
+Santurtún Latitud, plomo
+España 2016 Ecológico muertes ecológica con Baja 9
+et al. aire
+MND plomo
+10
+
+
+--- PAGE 11 ---
+Resultado
+Estudio País Año Diseño Participantes Variables clave Calidad Enlace
+principal
+Caso- Factores Clústeres
+Povedano Moderada-
+España 2018 control ND ambientales próximos a 41
+et al. baja
+anidado espaciales áreas agrícolas
+Bermudo Caso-
+Pesticidas por Sin asociación
+Fuenmayor España 2023 control 519 casos Baja 42
+área significativa
+et al. ecológico
+Clínico- Viabilidad de
+Proaño et Piloto con Moderada-
+España 2024 90+90 sociodemográfico, recogida 43
+al. controles baja
+ocupación española
+Caso- Señal para
+de Jong et Países
+2012 control 494+1.599 Tabaco, alcohol fumador actual; Alta 22
+al. Bajos
+poblacional alcohol inverso
+Visser et al. Caso- Asociación
+NL/IE/
+Euro- 2018 control 1.557+2.922 Actividad física positiva Alta 28
+IT
+MOTOR poblacional modesta
+Cambios
+Caso- Tabaco, alcohol, décadas antes
+Westeneng Países 143 + 1.322
+2021 control IMC, energía, del inicio; Muy alta 32
+et al. Bajos + 1.322
+longitudinal actividad estratificación
+por C9
+Químicos Riesgo mayor
+Andrew et Caso-
+EE. UU. 2017 295+225 laborales y de con químicos Moderada 44
+al. control
+hobby autoinformados
+OR elevados
+Batterman/
+Caso- PM, VOCs, para varias
+Goutman EE. UU. 2022 381+272 Moderada-alta 34
+control metales, diésel exposiciones
+et al.
+ocupacionales
+Señales para
+Goutman Caso- Hobbies y jardinería,
+EE. UU. 2024 400+287 Moderada 45
+et al. control ejercicio carpintería,
+caza/tiro, golf
+Señales
+Pupillo et Caso- Alimentos y protectoras y
+Italia 2018 212+212 Moderada 46
+al. control nutrientes adversas
+dietéticas
+Historia laboral,
+CDC residencial, Prueba de
+National en Registro >110.246 actividad física, factibilidad Alta para
+EE. UU. 47
+ALS marcha nacional encuestas tabaco, alcohol, poblacional a infraestructura
+Registry pesticidas, gran escala
+metales, trauma
+11
+
+
+--- PAGE 12 ---
+El patrón más claro del conjunto es que los estudios fuertes suelen coincidir en cómo preguntar más
+que en qué encuentran: casos incidentes, controles poblacionales, cuestionarios harmonizados,
+cronología explícita antes del inicio, y separación de dominios de exposición. Ese patrón es
+probablemente más exportable a España que cualquier hallazgo aislado sobre un factor concreto. 48
+Factores principales, vacíos y relevancia para España
+Qué factores tienen más respaldo
+El tabaquismo dispone de una base relativamente consistente. En EPIC se observó una asociación
+prospectiva con mortalidad por ALS, y en el estudio neerlandés con casos incidentes el fumador actual
+presentó OR 1,38; además, el análisis longitudinal posterior apoyó una probabilidad alta de efecto
+causal del tabaquismo en el subgrupo C9−. La magnitud no es enorme, pero el dominio merece estar
+en cualquier cuestionario español con suficiente detalle, incluyendo paquetes-año y cambios
+temporales. 49
+Las exposiciones ocupacionales y ambientales son el bloque más productivo después del tabaco. La
+literatura de Washington, Nueva Inglaterra, Suecia, Finlandia y Michigan converge hacia asociaciones
+con metales —especialmente plomo y otros metales—, pesticidas, productos de combustión/diésel,
+partículas, algunos VOCs, ciertos trabajos manuales o de producción, y posiblemente sílice. Las
+revisiones sistemáticas y metaanálisis de mejor calidad sintetizan esta dirección general y sitúan
+pesticidas, plomo/metales y trabajo físico excesivo entre los hallazgos más robustos del campo. 50
+La antropometría premórbida y el metabolismo también son relevantes. Estudios dietéticos y
+antropométricos en Países Bajos y cohortes prospectivas europeas muestran que el IMC y su
+trayectoria antes del inicio no son neutrales; además, varios trabajos sugieren que rasgos metabólicos y
+la ingesta energética forman parte de la cascada presintomática. Este dominio es especialmente
+importante porque se mide mejor que muchas exposiciones históricas y puede integrarse con peso
+habitual, peso a distintas edades y cambios no intencionados. 51
+Los traumatismos repetidos o graves siguen apareciendo como señal en el registro italiano y en
+metaanálisis recientes. La inferencia causal sigue siendo incompleta —por confusión con deportes,
+trabajo físico o recuerdo retrospectivo—, pero la repetición del hallazgo justifica incluir una sección
+específica sobre traumatismo craneal, cervical y corporal con fecha, necesidad de atención médica y
+pérdida de conocimiento. 52
+Qué factores tienen evidencia mixta o limitada
+La actividad física es el dominio más conflictivo. Algunos casos y controles muestran una asociación
+positiva con actividad recreativa o total a lo largo de la vida, mientras que la gran cohorte EPIC no
+encontró un aumento prospectivo comparable e incluso sugirió una tendencia inversa débil. La
+interpretación más prudente es que no basta con preguntar “hace deporte sí/no”; hay que distinguir
+intensidad, duración, finalidad, contexto competitivo y ocupacional, y quizá recoger deportes concretos
+y su cronología. 53
+El alcohol presenta resultados ambiguos. Algunos estudios caso-control encontraron asociaciones
+inversas, y el estudio longitudinal neerlandés detectó menor consumo de por vida en casos y apoyo
+bayesiano a un posible efecto causal en C9−; sin embargo, el conjunto de la literatura está muy
+expuesto a confusión por estilo de vida, constitución metabólica y cambios de conducta previos al
+12
+
+
+--- PAGE 13 ---
+diagnóstico. Por tanto, debe registrarse con detalle, pero no asumirse ni como factor protector ni como
+factor causal demostrado. 54
+Con el café ocurre algo parecido. Hay señales inversas en el estudio de café de Beghi y en el estudio
+italiano de alimentos de Pupillo, pero los análisis combinados de cohortes no han consolidado una
+relación causal fuerte. En términos prácticos, conviene medirlo porque es barato, estable y puede
+correlacionarse con otros patrones de vida, pero hoy la evidencia no permite darle un peso
+interpretativo alto. 55
+La dieta global es importante para describir el exposoma, pero la evidencia etiológica específica sigue
+fragmentada. Hay señales para PUFA y vitamina E, fruta y betacaroteno, y en sentido contrario para alta
+grasa o ciertos productos animales, pero la mayor parte procede de estudios retrospectivos. Por ello,
+para España es más prudente recoger un patrón dietético validado y algunos ítems concretos que
+intentar inferir causalidad nutricional fina con preguntas improvisadas. 56
+El estrés psicológico premórbido no ha mostrado una señal convincente en el trabajo internacional on-
+line de 2018. Eso no significa que no sea relevante para la experiencia del paciente, sino que con la
+evidencia etiológica actual no parece un factor fuerte comparable a tabaco u ocupación. Aun así,
+conviene medir estrés percibido y acontecimientos vitales porque es un confusor plausible de sueño,
+alcohol, tabaquismo y actividad física. 30
+Vacíos de conocimiento y relevancia práctica para España
+El principal vacío español es la ausencia de un estudio nacional incidente, multicéntrico y
+específicamente esporádico con controles poblacionales y un cuestionario harmonizado que incluya
+trabajo, sueño, dieta, actividad física, tabaco, alcohol, café, residencia, trauma y exposiciones laborales.
+También faltan estudios españoles sólidos sobre sueño premórbido, trabajo a turnos y café/cafeína con
+diseño etiológico. A nivel internacional, siguen faltando mejores medidas históricas de exposición,
+separación consistente entre esporádica aparente y genética oculta, y más diseños prospectivos con
+biomarcadores previos al inicio. 57
+Para España, esto tiene una implicación práctica inmediata: el objetivo más realista no es “probar una
+causa”, sino crear una plataforma de datos robusta que permita testar hipótesis futuras con control
+suficiente de confusión. El National ALS Registry estadounidense muestra que la recogida a gran escala
+es factible, y Euro-MOTOR demostró que una metodología harmonizada entre países mejora mucho la
+interpretabilidad. Un protocolo español bien diseñado tendría valor incluso aunque al principio fuera
+puramente observacional. 58
+Cuestionario propuesto para España
+El instrumento propuesto está pensado para ELA esporádica o “aparentemente esporádica”, con
+registro explícito de historia familiar y resultado genético conocido, si existiera. Su objetivo no es
+sustituir la historia clínica, sino construir una base de datos epidemiológica reproducible, comparable y
+explotable estadísticamente. Para las partes más sensibles a sesgo de recuerdo, conviene usar anclajes
+biográficos: edades de 18, 30, 40, 50 y 60 años; primer empleo estable; nacimiento de hijos; mudanzas;
+servicio militar; jubilación; y “cinco años antes del primer síntoma”. Ese enfoque está alineado con la
+práctica de los grandes cuestionarios de riesgo del National ALS Registry y con los estudios
+longitudinales neerlandeses y Euro-MOTOR. 59
+13
+
+
+--- PAGE 14 ---
+Para maximizar comparabilidad, recomiendo integrar o adaptar instrumentos breves ya utilizados en
+poblaciones españolas o mediterráneas: MEDAS-14 para patrón dietético mediterráneo; AUDIT-C para
+consumo de alcohol; PSS-10 para estrés percibido; y un módulo de actividad física basado en IPAQ-SF o,
+mejor aún, en una reconstrucción por periodos vitales con horas/semana e intensidad, porque en ELA
+la historia longitudinal es más informativa que la actividad “actual”. El 14-MEDAS tiene validación sólida
+en población adulta; el PSS dispone de versión española con buenas propiedades psicométricas; y el
+IPAQ-SF ha sido validado en población catalana/española. 60
+Texto breve de presentación sugerido
+Este cuestionario forma parte de un estudio observacional sobre
+hábitos de vida, ocupación y exposiciones previas al inicio de
+síntomas en personas con ELA. Su objetivo es comprender mejor qué
+factores podrían asociarse con el riesgo de enfermedad y generar una
+base de datos útil para investigación futura en España.
+Le pedimos que responda pensando siempre en el periodo anterior al
+primer síntoma atribuible a ELA. Cuando no recuerde un dato exacto,
+indique la opción aproximada. Si alguna pregunta no aplica o no la
+sabe, seleccione “No sabe / No recuerda”.
+Consentimiento resumido sugerido
+He leído la información del estudio, entiendo que mi participación es
+voluntaria, que los datos serán tratados de forma codificada y que
+puedo retirarme en cualquier momento. Acepto participar y autorizo el
+uso de mis respuestas con fines de investigación biomédica y
+epidemiológica conforme a la normativa vigente.
+Estructura detallada del cuestionario
+Tipo de respuesta Nota para minimizar
+Bloque Contenido propuesto
+recomendado sesgo de recuerdo
+Confirmación diagnóstica;
+fecha de diagnóstico; fecha
+del primer síntoma; tipo de
+Esta sección define el
+inicio (bulbar/espinal/ Fecha exacta o
+“tiempo cero”. Todas
+Sección 3 respiratorio/otro); edad al mes/año; opción
+las demás respuestas
+Elegibilidad y inicio; familiar de 1º o 2º múltiple; sí/no;
+deben referirse al
+cronología clínica grado con ELA/FTD u otra campo abierto
+periodo anterior a
+neurodegenerativa; prueba controlado
+esa fecha.
+genética realizada sí/no y
+resultado conocido/no
+conocido
+14
+
+
+--- PAGE 15 ---
+Tipo de respuesta Nota para minimizar
+Bloque Contenido propuesto
+recomendado sesgo de recuerdo
+Sexo al nacer; género; fecha
+de nacimiento; país y
+provincia de nacimiento; nivel
+Pedir residencia por
+educativo máximo; estado Opción múltiple;
+Sección 4 periodos: 0–14 años,
+civil; convivencia; número de número entero;
+Sociodemografía 15–24, 25–44, 45
+hermanos; zona de residencia campos cerrados
+años hasta inicio.
+predominante en infancia y
+adultez (urbana/periurbana/
+rural)
+Profesión principal; todas las
+ocupaciones ≥6 meses; años
+de inicio/fin; sector; tipo de
+Usar una fila por
+trabajo (oficina / manual Tabla por empleos;
+empleo y anclar cada
+Sección 5 ligero / manual pesado / listas
+empleo a edades y
+Ocupación e agrícola / industrial / desplegables;
+lugares. No mezclar
+historia laboral sanitario / transporte / horas/semana; sí/
+“cargo” con “tarea
+militar / otro); turnos; no
+real”.
+nocturnidad; horas/semana;
+trabajo sedentario vs
+físicamente exigente
+Contacto repetido con
+pesticidas, herbicidas,
+fertilizantes, disolventes,
+pinturas, barnices, Para cada
+Preguntar por tareas
+combustibles, humos de exposición: nunca /
+concretas (“mezclar
+combustión, diésel, ocasional /
+Sección 6 plaguicidas”, “soldar”,
+soldadura, polvo mineral/ mensual /
+Exposiciones “lijar”, “pintar con
+sílice, madera, metales semanal / diaria;
+ocupacionales y spray”) mejora
+pesados, campos años de
+EPI mucho sobre
+electromagnéticos intensos, exposición;
+preguntar solo por el
+descargas eléctricas, preguntas sí/no
+nombre del oficio.
+vibración, agua industrial; sobre EPI
+duración; frecuencia; uso de
+guantes, mascarilla, extractor,
+ropa de protección
+Actividad física en cuatro
+etapas de vida: 15–24, 25–39,
+40–54, ≥55 hasta inicio;
+Separar ocio, trabajo
+horas/semana; intensidad Rejilla por periodo
+Sección 7 y desplazamiento.
+suave/moderada/vigorosa; vital; horas/
+Actividad física, Añadir pregunta
+deporte competitivo; trabajo semana; minutos/
+deporte y “¿Entrenaba para
+físicamente exigente; fuerza/ día; sí/no para
+sedentarismo competir o mantener
+pesas; resistencia; deportes competición
+salud?”
+de contacto; sedentarismo
+laboral; tiempo sentado en
+día laborable y fin de semana
+15
+
+
+--- PAGE 16 ---
+Tipo de respuesta Nota para minimizar
+Bloque Contenido propuesto
+recomendado sesgo de recuerdo
+Horas habituales de sueño
+por noche en cada etapa;
+calidad subjetiva; siestas; Pedir “horas que
+Sección 8 Sueño, ronquidos/apnea Horas numéricas; solía dormir la
+turnos y sospechada; trabajo a turnos; escalas Likert 1–5; mayoría de los días”,
+cronobiología turno nocturno ≥3 noches/ sí/no no el máximo ni el
+mes; cronotipo (mañana/ mínimo.
+intermedio/tarde);
+despertares frecuentes
+Tabaco: nunca/exfumador/
+actual antes del inicio, edad
+de inicio/fin, cigarrillos/día, Para tabaco, calcular
+años, paquetes-año, puro/ automáticamente
+pipa/vapeo; alcohol con paquetes-año. Para
+Sección 9 Tabaco, AUDIT-C; números
+AUDIT-C adaptado al periodo alcohol, preguntar
+alcohol, café y enteros; opción
+previo al inicio, bebida por “consumo típico”
+cafeína múltiple
+principal y binges; café y y por episodios
+otras bebidas con cafeína: intensos por
+tazas/día, tipo (filtrado/ separado. 61
+espresso/descafeinado), té,
+refrescos energéticos
+MEDAS-14; frecuencia
+agregada de fruta, verdura,
+legumbres, frutos secos, El MEDAS da una
+pescado, carne roja/ métrica breve y
+Sección 10 Dieta, MEDAS-14;
+procesada, lácteos enteros, comparable; los
+peso y categorías de
+fritos y comida rápida; pesos por décadas
+composición frecuencia; peso/
+suplemento de vitamina E/ permiten reconstruir
+corporal talla numéricos
+omega-3; peso y talla a los 18, IMC y trayectoria
+30, 40, 50 años y 1 año antes corporal. 62
+del inicio; cambios de peso >5
+kg no intencionados
+PSS-10 referida a los 12 Separar “estrés
+meses previos al inicio; estrés PSS-10; Likert 0–4; percibido” de
+Sección 11 Estrés laboral global; duelo, despido, checklist de “eventos vitales” evita
+y acontecimientos divorcio, enfermedad grave acontecimientos mezclar intensidad
+vitales propia o de familiar, con mes/año subjetiva con
+problemas económicos; aproximados exposición objetiva.
+resiliencia percibida opcional 63
+16
+
+
+--- PAGE 17 ---
+Tipo de respuesta Nota para minimizar
+Bloque Contenido propuesto
+recomendado sesgo de recuerdo
+HTA, diabetes, dislipemia,
+enfermedad tiroidea,
+autoinmunidad, cáncer
+previo, estatinas y otros
+fármacos de largo uso,
+Registrar si el
+traumatismo craneal/cervical Sí/no; edad de
+Sección 12 informante es el
+con atención médica o inicio; número de
+Antecedentes, paciente o un proxy.
+pérdida de conocimiento, episodios; tabla de
+traumatismos y El estudio italiano de
+fracturas, descargas domicilios con
+entorno trauma mostró que
+eléctricas, servicio militar, códigos postales y
+residencial este ajuste importa.
+caza/tiro, jardinería, años
+64
+carpintería, proximidad
+residencial a campos
+tratados, industrias,
+carreteras intensas, mina/
+cantera, masa de agua
+Variables derivadas que deben calcularse automáticamente
+La base de datos debería generar automáticamente paquetes-año, gramos/semana de alcohol
+aproximados, puntuación AUDIT-C, puntuación MEDAS-14, puntuación PSS-10, horas/semana de
+actividad moderada y vigorosa por periodo vital, IMC por década y pendiente de cambio de IMC antes
+del inicio. Además, conviene crear variables binarias “exposición laboral probable” para pesticidas,
+metales, disolventes, sílice, polvo y diésel, y una variable de “combinación de exposiciones” porque la
+literatura reciente del exposoma sugiere que el riesgo puede depender más de mezclas que de agentes
+aislados. 65
+Recomendaciones para formalizarlo y bibliografía clave
+Si este cuestionario va a convertirse en un estudio formal en España, la opción metodológica más sólida
+sería un caso-control multicéntrico, incidente, poblacional o cuasi-poblacional, con inclusión de
+casos dentro de los primeros 12 meses desde el diagnóstico y controles emparejados por edad, sexo y
+área de residencia, idealmente captados desde atención primaria o registros poblacionales, no entre
+cónyuges o familiares. Ese fue precisamente uno de los puntos fuertes de las cohortes neerlandesas y
+de Euro-MOTOR. 66
+El protocolo debería contemplar una separación obligatoria entre ELA familiar conocida, ELA
+aparentemente esporádica, y ELA con genética desconocida. No recomendaría excluir de forma
+rígida a todo paciente sin estudio genético; sí recomendaría, en cambio, documentar historia familiar y
+genética disponible, y analizar por estratos. Euro-MOTOR mostró que una parte de la ELA
+aparentemente esporádica alberga variantes de riesgo relevantes, y el estudio longitudinal neerlandés
+demuestra que las trayectorias premórbidas cambian cuando se estratifica por C9orf72. 6
+También conviene incorporar un subestudio biológico desde el inicio —sangre, orina, pelo/uñas o suero
+según recursos—, porque los trabajos recientes del National ALS Registry y los pilotos españoles de
+metales muestran que la combinación de cuestionario y biomarcadores es probablemente el siguiente
+salto metodológico del campo. En España, incluso un biobanco modesto, bien vinculado a exposición
+ocupacional y residencial, tendría mucho valor. 67
+17
+
+
+--- PAGE 18 ---
+Desde el punto de vista analítico, el plan mínimo debería incluir modelos logísticos multivariables,
+análisis de sensibilidad excluyendo historia familiar o genética positiva conocida, ajuste por educación y
+tabaquismo, y modelos específicos por dominios antes de crear una puntuación global exposómica. En
+la capa ocupacional, sería especialmente útil vincular los empleos declarados a una job-exposure
+matrix; en la capa geográfica, geocodificar residencia histórica; y en la capa temporal, diferenciar
+exposiciones “de toda la vida” de exposiciones “en los 5–10 años previos al inicio”. Esa estructura es
+coherente con la experiencia de Euro-MOTOR, de Michigan y del National ALS Registry. 68
+Como bibliografía primaria mínima para arrancar el protocolo español, consideraría imprescindible
+comenzar por: Euro-MOTOR y su trabajo metodológico; los estudios neerlandeses de casos incidentes
+sobre tabaco, alcohol, IMC y fase presintomática; el European case-control sobre actividad física; los
+estudios estadounidenses y suecos de exposición ocupacional; el caso-control italiano de trauma; el
+estudio italiano de alimentos; el trabajo internacional sobre estrés; el bloque español de Andalucía,
+Cataluña, Valencia y Santander; y la infraestructura del National ALS Registry. Esa selección no agota la
+literatura, pero sí cubre casi todas las dimensiones que usted quiere medir. 69
+1 5 https://pubmed.ncbi.nlm.nih.gov/27377857/
+https://pubmed.ncbi.nlm.nih.gov/27377857/
+2 14 42 https://dialnet.unirioja.es/servlet/articulo?codigo=9092429
+https://dialnet.unirioja.es/servlet/articulo?codigo=9092429
+3 6 40 57 https://cordis.europa.eu/project/id/259867/reporting
+https://cordis.europa.eu/project/id/259867/reporting
+4 59 https://www.cdc.gov/als/media/pdfs/2024/05/ALS-Registry_Risk-Factor-Survey_Quick-Start-
+Guide.pdf
+https://www.cdc.gov/als/media/pdfs/2024/05/ALS-Registry_Risk-Factor-Survey_Quick-Start-Guide.pdf
+7 48 69 https://pubmed.ncbi.nlm.nih.gov/28594593/
+https://pubmed.ncbi.nlm.nih.gov/28594593/
+8 41 https://karger.com/ned/article-abstract/51/1-2/33/211197
+https://karger.com/ned/article-abstract/51/1-2/33/211197
+9 https://pubmed.ncbi.nlm.nih.gov/27098242/
+https://pubmed.ncbi.nlm.nih.gov/27098242/
+10 https://karger.com/ned/article/51/1-2/33/211197/Spatial-Assessment-of-the-Association-between-
+Long
+https://karger.com/ned/article/51/1-2/33/211197/Spatial-Assessment-of-the-Association-between-Long
+11 https://pubmed.ncbi.nlm.nih.gov/37659835/
+https://pubmed.ncbi.nlm.nih.gov/37659835/
+12 https://pubmed.ncbi.nlm.nih.gov/39407861/
+https://pubmed.ncbi.nlm.nih.gov/39407861/
+13 https://portalinvestigacion.idival.org/publicaciones/680427
+https://portalinvestigacion.idival.org/publicaciones/680427
+15 22 66 https://pubmed.ncbi.nlm.nih.gov/22791740/
+https://pubmed.ncbi.nlm.nih.gov/22791740/
+16 50 https://pubmed.ncbi.nlm.nih.gov/9199537/
+https://pubmed.ncbi.nlm.nih.gov/9199537/
+18
+
+
+--- PAGE 19 ---
+17 https://pubmed.ncbi.nlm.nih.gov/9482362/
+https://pubmed.ncbi.nlm.nih.gov/9482362/
+18 https://pubmed.ncbi.nlm.nih.gov/10645819/
+https://pubmed.ncbi.nlm.nih.gov/10645819/
+19 https://pubmed.ncbi.nlm.nih.gov/12221178/
+https://pubmed.ncbi.nlm.nih.gov/12221178/
+20 56 https://pubmed.ncbi.nlm.nih.gov/16648143/
+https://pubmed.ncbi.nlm.nih.gov/16648143/
+21 https://pubmed.ncbi.nlm.nih.gov/19342254/
+https://pubmed.ncbi.nlm.nih.gov/19342254/
+23 52 64 https://pubmed.ncbi.nlm.nih.gov/22537412/
+https://pubmed.ncbi.nlm.nih.gov/22537412/
+24 55 https://pubmed.ncbi.nlm.nih.gov/21946385/
+https://pubmed.ncbi.nlm.nih.gov/21946385/
+25 53 https://pubmed.ncbi.nlm.nih.gov/23418211/
+https://pubmed.ncbi.nlm.nih.gov/23418211/
+26 https://pubmed.ncbi.nlm.nih.gov/26968841/
+https://pubmed.ncbi.nlm.nih.gov/26968841/
+27 44 https://pubmed.ncbi.nlm.nih.gov/28122372/
+https://pubmed.ncbi.nlm.nih.gov/28122372/
+28 68 https://dspace.library.uu.nl/bitstream/handle/1874/376487/visser.pdf?isAllowed=y&sequence=1
+https://dspace.library.uu.nl/bitstream/handle/1874/376487/visser.pdf?isAllowed=y&sequence=1
+29 46 https://pubmed.ncbi.nlm.nih.gov/29268633/
+https://pubmed.ncbi.nlm.nih.gov/29268633/
+30 https://pubmed.ncbi.nlm.nih.gov/30240431/
+https://pubmed.ncbi.nlm.nih.gov/30240431/
+31 https://pubmed.ncbi.nlm.nih.gov/30076269/
+https://pubmed.ncbi.nlm.nih.gov/30076269/
+32 https://pubmed.ncbi.nlm.nih.gov/33894192/
+https://pubmed.ncbi.nlm.nih.gov/33894192/
+33 https://pubmed.ncbi.nlm.nih.gov/36188364/
+https://pubmed.ncbi.nlm.nih.gov/36188364/
+34 65 https://pubmed.ncbi.nlm.nih.gov/35593931/
+https://pubmed.ncbi.nlm.nih.gov/35593931/
+35 https://pubmed.ncbi.nlm.nih.gov/38278093/
+https://pubmed.ncbi.nlm.nih.gov/38278093/
+36 https://pubmed.ncbi.nlm.nih.gov/38591179/
+https://pubmed.ncbi.nlm.nih.gov/38591179/
+37 https://clinicaltrials.gov/study/NCT01772602
+https://clinicaltrials.gov/study/NCT01772602
+38 https://clinicaltrials.gov/study/NCT00340301
+https://clinicaltrials.gov/study/NCT00340301
+19
+
+
+--- PAGE 20 ---
+39 https://clinicaltrials.gov/study/NCT03366506
+https://clinicaltrials.gov/study/NCT03366506
+43 https://portalcientifico.ucv.es/cat/ipublic/item/10187303
+https://portalcientifico.ucv.es/cat/ipublic/item/10187303
+45 https://stacks.cdc.gov/view/cdc/155114
+https://stacks.cdc.gov/view/cdc/155114
+47 58 https://www.cdc.gov/als/dashboard/index.html
+https://www.cdc.gov/als/dashboard/index.html
+49 https://pubmed.ncbi.nlm.nih.gov/19399866/
+https://pubmed.ncbi.nlm.nih.gov/19399866/
+51 https://pubmed.ncbi.nlm.nih.gov/26280944/
+https://pubmed.ncbi.nlm.nih.gov/26280944/
+54 https://academic.oup.com/aje/article-pdf/176/3/233/231815/kws015.pdf
+https://academic.oup.com/aje/article-pdf/176/3/233/231815/kws015.pdf
+60 62 https://pubmed.ncbi.nlm.nih.gov/21508208/
+https://pubmed.ncbi.nlm.nih.gov/21508208/
+61 https://pubmed.ncbi.nlm.nih.gov/26990260/
+https://pubmed.ncbi.nlm.nih.gov/26990260/
+63 https://pubmed.ncbi.nlm.nih.gov/16673626/
+https://pubmed.ncbi.nlm.nih.gov/16673626/
+67 https://researchconnect.suny.edu/en/publications/case-control-study-of-environmental-toxins-and-
+risk-of-amyotrophi/
+https://researchconnect.suny.edu/en/publications/case-control-study-of-environmental-toxins-and-risk-of-amyotrophi/
+20

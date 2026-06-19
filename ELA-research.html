@@ -130,7 +130,8 @@
       border-left: 5px solid var(--accent-yellow);
       border-radius: 0.75rem;
       padding: 1.2rem 1.35rem;
-      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.35);`r`n      color: #ffffff;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.35);
+      color: #ffffff;
     }
 
     .notice strong {
@@ -315,6 +316,10 @@
       margin-bottom: 0;
     }
 
+    .program-wide {
+      grid-column: 1 / -1;
+    }
+
     .mechanism-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -325,6 +330,107 @@
     .mechanism-card h3 {
       color: var(--accent-yellow);
       font-size: 1.08rem;
+    }
+
+    .visual-panel {
+      margin: 1.35rem 0 0;
+      padding: 0.8rem;
+      background: linear-gradient(180deg, rgba(9, 11, 16, 0.96), rgba(20, 15, 18, 0.96));
+      border: 1px solid var(--research-border);
+      border-radius: 0.75rem;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32);
+    }
+
+    .visual-panel img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.45rem;
+      background: #ffffff;
+    }
+
+    .visual-panel figcaption {
+      margin-top: 0.65rem;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.35rem;
+    }
+
+    .visual-grid .visual-panel {
+      margin: 0;
+    }
+
+    .visual-grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .video-card {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 1.35rem;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      margin-top: 1.2rem;
+      max-width: 1140px;
+      padding: 1.28rem;
+      background: linear-gradient(180deg, rgba(34, 24, 27, 0.98), rgba(25, 18, 20, 0.98));
+      border: 1px solid var(--research-border);
+      border-radius: 0.75rem;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32);
+    }
+
+    .video-card:hover {
+      border-color: var(--accent-yellow);
+      text-decoration: none;
+    }
+
+    .video-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background: #111318;
+    }
+
+    .video-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-thumb::after {
+      content: "▶";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 2rem;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.72);
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+    .video-card strong {
+      display: block;
+      color: var(--accent-yellow);
+      font-size: 1.62rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .video-card p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.42rem;
+      line-height: 1.45;
     }
 
     .sources-list {
@@ -378,7 +484,10 @@
 
       .quick-grid,
       .program-grid,
-      .mechanism-grid {
+      .mechanism-grid,
+      .visual-grid,
+      .visual-grid.three,
+      .video-card {
         grid-template-columns: 1fr;
       }
 
@@ -430,6 +539,7 @@
       <li><a href="prensa.html">Prensa</a></li>
       <li><a href="guia.html">Guía gratuita</a></li>
       <li><a href="ELA.html">ELA</a></li>
+      <li><a href="ELA-esporadica.html">Exposoma</a></li>
       <li><a href="index.html#contacto" role="button">Contacto</a></li>
     </ul>
   </nav>
@@ -467,6 +577,7 @@
 
     <nav class="toc" aria-label="Índice de la página">
       <a href="#resumen">Resumen</a>
+      <a href="#guia-2026">Guía visual</a>
       <a href="#espana">Ensayos en España</a>
       <a href="#internacionales">Ensayos internacionales</a>
       <a href="#claves">Programas clave</a>
@@ -481,6 +592,11 @@
         La revisión localiza con alta confianza al menos 14 programas farmacológicos interventionales
         activos o administrativamente en curso, además de varios programas completados o suspendidos
         que siguen siendo importantes para interpretar el campo.
+      </p>
+      <p>
+        En España destacan AP-2 en Madrid, NADALS-001-ALS impulsado por Biogipuzkoa y la presencia
+        de España en PIONEER-ALS con VTx-002 y PHENOGENE-1A, aunque en estos dos últimos casos los
+        centros concretos no aparecen de forma abierta en las fuentes revisadas.
       </p>
 
       <div class="quick-grid">
@@ -502,11 +618,44 @@
         </article>
       </div>
 
+      <div class="visual-grid">
+        <figure class="visual-panel">
+          <img src="assets/als_roadmap_slide_03.png" alt="Diapositiva sobre las fases tempranas y maduras de un ensayo clínico en ELA">
+          <figcaption>Las fases I y II exploran seguridad, dosis y señales biológicas; la fase III intenta confirmar eficacia clínica en grupos amplios.</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src="assets/als_roadmap_slide_05.png" alt="Diapositiva que explica cómo funciona la terapia génica con ASO y RNAi">
+          <figcaption>Las terapias génicas no cambian el libro completo: actúan como una corrección precisa de instrucciones moleculares concretas.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="guia-2026" class="research-section">
+      <h2>Guía visual 2026</h2>
       <p>
-        En España destacan AP-2 en Madrid, NADALS-001-ALS impulsado por Biogipuzkoa y la presencia
-        de España en PIONEER-ALS con VTx-002 y PHENOGENE-1A, aunque en estos dos últimos casos los
-        centros concretos no aparecen de forma abierta en las fuentes revisadas.
+        Esta síntesis visual resume el cambio de enfoque: menos promesas genéricas y más programas
+        estratificados por mecanismo, fase y presencia real en España.
       </p>
+      <figure class="visual-panel">
+        <img src="assets/guia_investigacion_ela_2026.png" alt="Guía 2026 sobre nuevos caminos en la investigación de la ELA">
+        <figcaption>Mapa de estrategias biológicas, participación española y traducción de términos técnicos a lenguaje cotidiano.</figcaption>
+      </figure>
+    </section>
+
+    <section id="video" class="research-section">
+      <h2>Vídeo de referencia</h2>
+      <a class="video-card" href="https://youtu.be/7LpiuyhFlwY" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/7LpiuyhFlwY/hqdefault.jpg" alt="Miniatura del vídeo de referencia sobre investigación en ELA">
+        </div>
+        <div>
+          <strong>Ver el vídeo en YouTube</strong>
+          <p>
+            Acceso directo al material audiovisual asociado a esta página sobre investigación,
+            ensayos clínicos y nuevos caminos terapéuticos en ELA.
+          </p>
+        </div>
+      </a>
     </section>
 
     <section id="espana" class="research-section">
@@ -723,6 +872,11 @@
           </p>
         </article>
 
+        <figure class="visual-panel program-wide">
+          <img src="assets/als_roadmap_slide_07.png" alt="Diapositiva sobre los ensayos académicos AP-2 y NADALS-001-ALS en España">
+          <figcaption>AP-2 y NADALS-001-ALS son los dos ejemplos españoles con mayor anclaje académico y visibilidad operativa.</figcaption>
+        </figure>
+
         <article class="program-card">
           <h3>PREVAiLS / pridopidina <span class="tag">Fase III</span></h3>
           <p>
@@ -747,6 +901,11 @@
           </p>
         </article>
 
+        <figure class="visual-panel program-wide">
+          <img src="assets/als_roadmap_slide_09.png" alt="Diapositiva sobre PREVAiLS y FUSION como programas internacionales de fase 3">
+          <figcaption>PREVAiLS y FUSION representan el extremo confirmatorio: mayor escala, más exigencia metodológica y expectativas que conviene leer con cautela.</figcaption>
+        </figure>
+
         <article class="program-card">
           <h3>ASTRALS / VHB937 <span class="tag pending">Fase II</span></h3>
           <p>
@@ -770,10 +929,25 @@
           </p>
         </article>
       </div>
+
+      <div class="visual-grid">
+        <figure class="visual-panel">
+          <img src="assets/als_roadmap_slide_10.png" alt="Diapositiva sobre ASTRALS, ILB y la plataforma HEALEY como promesas internacionales de fase 2">
+          <figcaption>ASTRALS, ILB y HEALEY muestran la diversidad de diseños de fase II: inflamación, comparador activo y plataforma adaptativa.</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src="assets/als_roadmap_slide_11.png" alt="Diapositiva sobre tofersen en ELA no SOD1 y AMX0114">
+          <figcaption>Algunos programas desafían el marco establecido: tofersen fuera de SOD1 y AMX0114 amplían preguntas biológicas todavía muy tempranas.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section id="mecanismos" class="research-section">
       <h2>Mecanismos y lectura crítica</h2>
+      <figure class="visual-panel">
+        <img src="assets/als_roadmap_slide_04.png" alt="Diapositiva con cinco rutas actuales de investigación en ELA">
+        <figcaption>Las estrategias actuales se organizan alrededor de precisión genética, metabolismo, TDP-43, neuroinflamación y neuroprotección.</figcaption>
+      </figure>
       <div class="mechanism-grid">
         <article class="mechanism-card">
           <h3><a href="assets/bloque1.jpeg">Oligonucleótidos y RNA</a></h3>
@@ -829,6 +1003,10 @@
         como presencia de país en registros europeos para VTx-002 y PHENOGENE-1A, aunque sin centros
         hospitalarios concretos publicados de forma abierta.
       </p>
+      <figure class="visual-panel">
+        <img src="assets/als_roadmap_slide_08.png" alt="Diapositiva sobre PIONEER-ALS y PHENOALS-001 en redes europeas">
+        <figcaption>PIONEER-ALS y PHENOALS-001 sitúan a España dentro del mapa europeo, aunque los centros concretos no siempre aparecen publicados en abierto.</figcaption>
+      </figure>
       <p>
         También hay un papel empresarial español importante en pridopidina: Ferrer, desde Barcelona,
         forma parte del codesarrollo internacional de PREVAiLS. En las fuentes revisadas, sin embargo, no se
@@ -889,6 +1067,7 @@
       <a href="prensa.html">Prensa</a> •
       <a href="guia.html">Guía gratuita</a> •
       <a href="ELA.html">ELA</a> •
+      <a href="ELA-esporadica.html">Exposoma</a> •
       <a href="index.html#contacto">Contacto</a>
     </small>
 
