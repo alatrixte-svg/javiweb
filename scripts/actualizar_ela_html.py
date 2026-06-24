@@ -7,6 +7,7 @@ from pathlib import Path
 
 ELA_FILE = Path("ELA.html")
 CANDIDATE_FILE = Path("candidate-news.json")
+BACKUP_CANDIDATE_FILE = Path("candidate-news.backup.json")
 MAX_NEWS_IN_ELA = 30
 
 
@@ -167,6 +168,32 @@ def load_candidates():
     return data.get("news", [])
 
 
+def load_backup_candidates():
+    if not BACKUP_CANDIDATE_FILE.exists():
+        return []
+
+    data = json.loads(BACKUP_CANDIDATE_FILE.read_text(encoding="utf-8"))
+    return data.get("news", [])
+
+
+def get_discarded_candidate_links(candidates):
+    reviewed_links = {
+        normalize_url(item.get("link", ""))
+        for item in candidates
+        if normalize_url(item.get("link", ""))
+    }
+
+    discarded_links = set()
+
+    for item in load_backup_candidates():
+        link = normalize_url(item.get("link", ""))
+
+        if link and link not in reviewed_links:
+            discarded_links.add(link)
+
+    return discarded_links
+
+
 def clean_candidate_item(item):
     return sanitize_news_item(item)
 
@@ -271,6 +298,7 @@ def main():
             sys.exit(1)
 
     candidates = load_candidates()
+    discarded_candidate_links = get_discarded_candidate_links(candidates)
 
     if not candidates:
         print("candidate-news.json no contiene noticias.")
@@ -296,8 +324,13 @@ def main():
         sanitize_news_item(item)
         for item in extract_current_news(html)
     ]
+    current_news_after_discards = [
+        item
+        for item in current_news
+        if normalize_url(item.get("link", "")) not in discarded_candidate_links
+    ]
 
-    combined_news = selected_news + current_news
+    combined_news = selected_news + current_news_after_discards
 
     unique_news = []
     seen_links = set()
@@ -325,6 +358,7 @@ def main():
     removed_count = max(0, len(unique_news) - len(limited_news))
 
     print(f"Noticias actuales antes de actualizar: {len(current_news)}")
+    print(f"Noticias descartadas retiradas de ELA.html: {len(current_news) - len(current_news_after_discards)}")
     print(f"Noticias seleccionadas: {len(selected_news)}")
     print(f"Noticias guardadas finalmente en ELA.html: {len(limited_news)}")
     print(f"Noticias eliminadas por superar el límite de {MAX_NEWS_IN_ELA}: {removed_count}")

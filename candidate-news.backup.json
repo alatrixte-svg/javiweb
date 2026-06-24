@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-06-24T08:58:06.841660+00:00",
-  "total": 27,
+  "total": 30,
   "news": [
     {
       "title": "El Real Zaragoza muestra su apoyo a la lucha contra la ELA",
@@ -23,6 +23,26 @@
       "id": 2
     },
     {
+      "title": "Sánchez anuncia que el Gobierno duplicará la ayuda a la dependencia",
+      "source": "ABC",
+      "date": "2026-06-23",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM2lqUWhjNnVrWk95SHQ5UUNaZUg0QTF1eDhFNFByUE56X1FWMnJmX19oRHNyVWVPSncyU3lNQV8tQy13aEZpNktKMmJZS05ubTVENnZqVTlNWjlmUU9Sdm9qdWRmY2JsblFYTkVFZ0F5QklBbWRURVRMMndTM0xEVE91eV9abmxZdE8zR1R0MGlUVDlweTZkUXNZbjdJVlR3TWUzUV9R0gGrAUFVX3lxTE1qU1VBdFhpY3h0MExsSmhYU1JwWi1pbndBNGw3NjZjbzNuZEtMTlZfMWE5SE9iTC1NQU1RYjh1T3pBd3Q3YXJiOGdveUlIczhETDRhWENreTJyR3pOY2Z3ZVpCWC1lS2R6d296b1ktYl9xcm1ORTVPRWxKSTFqQnFTNWwtOWliZnlTUkFyMWdZRXk0cUZ0UXBXSHNVSjNWdGE4R0I3NHJkSG53dw?oc=5",
+      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: ABC. Publicada el 2026-06-23.",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 3
+    },
+    {
+      "title": "El Gobierno aprueba la mayor inyección económica en dependencia hasta superar los 7.200 millones en 2027",
+      "source": "EL PAÍS",
+      "date": "2026-06-23",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNSVlhbExlTTdQX3hhZ2l2UzdfZld5dUVJaUgxSGU2MXZiWExvRGdfZUZUVUt0eEJZMnpsWXFGMTZRZ0tTYkRMUndJWEp5MXg5amJDN2U0OGV1Qi1Vc2dJYUNHY1gzc1NMdHYta2VtaVlwMnJYY0lTWjF4SUdLSGNvZGxKdzBkeDgxRV8tM081bTVCbWZhOUliXzlPMzRLTVNJN3gtdUZqWXZGUjJJY1VWZTRMenRPSlBUbXlSeXJFQWJqV3pPYlRpa0NQMldUMFdUanV4MFNWR3V4REg5akdGSTF30gH2AUFVX3lxTFAxaHhYN08wa2NFMVQ1STgzc1NFQTFPUTdtS1VqbU1vWURsUVlXbUxkdGpsTDJVeEh4LWxXRG9hakRqdzZKYzZGZWZEYVdaWURGWGlmNVA4MUNZX3c5MXJwWm5McjBYbjFlLTVhUnVGZHNEVHN3T2VnVUU3NW9mOVFCamw3Rk4xZGZuLXlkeFg3UlhPb0kyR3hwN1d6Rk5QdW91Rk9pWGlPVXdSTmVMeW1NVEkwY3NyZ0FZUktmeWEtSGRCQy1IN0JCNTRMbndBdGE1WFNfUDk1UXdFVHdnRVZ1ZFVRa09NeGpMU05wMTktd3NPSUdUZw?oc=5",
+      "summary": "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: EL PAÍS. Publicada el 2026-06-23.",
+      "query": "ley ELA prestación dependencia",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 4
+    },
+    {
       "title": "Una terapia experimental frente a la ELA recibe respaldo regulatorio para iniciar ensayos clínicos",
       "source": "Interempresas.net",
       "date": "2026-06-23",
@@ -31,6 +51,16 @@
       "query": "ELA investigación tratamiento",
       "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
       "id": 5
+    },
+    {
+      "title": "¿Dieta y ejercicio podrían complementar el tratamiento del cáncer? La ciencia lo investiga",
+      "source": "Infobae",
+      "date": "2026-06-23",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPR3dqdjkteDF0dk1lcUVvV044UVJYU1QtenB4NU1CTGoyUGtoU21WcWRLLXlvNnFNMmpULW1xdUU3WG5CcXg5SHVPLWxaNlhhOGdJN1RCUU5hVGVsYlhiRW1yZkMtTHJBMXdmSldUQmlrSVNENXZyVnBRN0NYSDA2QWllMDBxejNNRDZpZ2RHc2Y0NGh6RUpiaDhFelV4WHlGY1ZoWDdIWUtHWVR3S0VlZHVnOTA2LWFnV1FlQ1dPeHFKVzZ6cTM5bGFEX3JKMnRTWU5FQ0ptRW_SAfMBQVVfeXFMT25YTFVzRDJjSVJxSURfYkxMWHIxNnpQcHBWZUdBRWJ5c21jZzdncmxjZW9RdTVJQVc4RlRPajBObDAwdmVQWXRDOE8wRjVKVVRwb1d6ZlVHYngzY1NBSkp5MUQ5VHFBN2JIWmQxbmdpZkRwRE5TSzMzczZaeU5PNVNLcEVvdmVtcVpnQXJYbkJEdEZKbzg5Y2Fjc0ZWdWNVSDdGRzNrbW5jN2M0X2IzdWZWdWhIZVZhS0VfRF9GOWdBWHpNWTRmdl9tVTF2LTI2Mm1tRlJRTWllZVNpekxUdXI3Ym9wOXpoNlpVR2t0UDhTNXpN?oc=5",
+      "summary": "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Infobae. Publicada el 2026-06-23.",
+      "query": "ELA investigación tratamiento",
+      "relevance_reason": "Noticia encontrada en búsquedas relacionadas con ELA, cuidados, investigación, ley ELA o prestaciones.",
+      "id": 6
     },
     {
       "title": "Kiko Rey, paciente de ELA: \"Mi familia y mis amigos me ayudan a vivir, yo tengo que poner la voluntad\"",
