@@ -9,6 +9,13 @@ ELA_FILE = Path("ELA.html")
 CANDIDATE_FILE = Path("candidate-news.json")
 BACKUP_CANDIDATE_FILE = Path("candidate-news.backup.json")
 MAX_NEWS_IN_ELA = 30
+SOCIAL_MESSAGE_URL = "https://javiergamezmartin.com/ELA.html"
+TITLE_STOPWORDS = {
+    "a", "al", "ante", "bajo", "con", "contra", "de", "del", "desde",
+    "durante", "e", "el", "en", "entre", "es", "esa", "ese", "esta",
+    "este", "la", "las", "lo", "los", "mas", "para", "por", "que",
+    "se", "sin", "sobre", "su", "sus", "un", "una", "unas", "unos", "y"
+}
 
 
 def js_string(value):
@@ -272,6 +279,158 @@ def sort_key(item):
     return item.get("date", "") or ""
 
 
+def title_tokens(title):
+    normalized = normalize_for_match(title)
+    return {
+        token
+        for token in normalized.split()
+        if len(token) > 2 and token not in TITLE_STOPWORDS
+    }
+
+
+def titles_are_related(left, right):
+    left_normalized = normalize_for_match(left)
+    right_normalized = normalize_for_match(right)
+
+    if not left_normalized or not right_normalized:
+        return False
+
+    if left_normalized == right_normalized:
+        return True
+
+    similarity = difflib.SequenceMatcher(
+        None,
+        left_normalized,
+        right_normalized
+    ).ratio()
+
+    if similarity >= 0.68:
+        return True
+
+    left_tokens = title_tokens(left)
+    right_tokens = title_tokens(right)
+
+    if not left_tokens or not right_tokens:
+        return False
+
+    common_tokens = left_tokens & right_tokens
+    token_ratio = len(common_tokens) / len(left_tokens | right_tokens)
+
+    return len(common_tokens) >= 3 and token_ratio >= 0.34
+
+
+def pick_social_message_titles(news):
+    news = prioritize_recent_news(news)
+    groups = []
+
+    for position, item in enumerate(news):
+        title = clean_text(item.get("title", ""))
+
+        if not title:
+            continue
+
+        matched_group = None
+
+        for group in groups:
+            if any(titles_are_related(title, member["title"]) for member in group["items"]):
+                matched_group = group
+                break
+
+        if matched_group:
+            matched_group["items"].append({"title": title, "position": position})
+        else:
+            groups.append({
+                "items": [{"title": title, "position": position}],
+                "first_position": position
+            })
+
+    repeated_groups = [
+        group for group in groups if len(group["items"]) > 1
+    ]
+
+    if repeated_groups:
+        repeated_groups.sort(
+            key=lambda group: (-len(group["items"]), group["first_position"])
+        )
+        chosen = [
+            group["items"][0]["title"]
+            for group in repeated_groups[:2]
+        ]
+
+        if len(chosen) < 2:
+            used_titles = set(chosen)
+
+            for item in news:
+                title = clean_text(item.get("title", ""))
+
+                if title and title not in used_titles:
+                    chosen.append(title)
+                    used_titles.add(title)
+
+                if len(chosen) == 2:
+                    break
+
+        return chosen[:2]
+
+    return [
+        clean_text(item.get("title", ""))
+        for item in news
+        if clean_text(item.get("title", ""))
+    ][:2]
+
+
+def prioritize_recent_news(news, minimum_items=2):
+    dated_news = [
+        item for item in news
+        if clean_text(item.get("date", ""))
+    ]
+
+    if not dated_news:
+        return news
+
+    dates = sorted(
+        {clean_text(item.get("date", "")) for item in dated_news},
+        reverse=True
+    )
+    recent_news = []
+
+    for date in dates:
+        recent_news.extend(
+            item for item in news
+            if clean_text(item.get("date", "")) == date
+        )
+
+        if len(recent_news) >= minimum_items:
+            return recent_news
+
+    return recent_news
+
+
+def build_social_message(news):
+    titles = pick_social_message_titles(news)
+    topic_text = " y ".join(f'"{title}"' for title in titles)
+
+    if not topic_text:
+        topic_text = "la actualidad relacionada con la ELA"
+
+    return (
+        "Buenos días,\n"
+        "\n"
+        "Os dejo la actualización diaria de las noticias relacionadas con la #ELA en España.\n"
+        f"Lo más novedoso se centra en {topic_text}.\n"
+        "\n"
+        f"{SOCIAL_MESSAGE_URL}"
+    )
+
+
+def print_social_message_box(message):
+    print("")
+    print("Cajetín de texto para compartir:")
+    print("```text")
+    print(message)
+    print("```")
+
+
 def main():
     if len(sys.argv) < 2:
         print("Uso: python scripts/actualizar_ela_html.py 1,3,5")
@@ -363,6 +522,7 @@ def main():
     print(f"Noticias guardadas finalmente en ELA.html: {len(limited_news)}")
     print(f"Noticias eliminadas por superar el límite de {MAX_NEWS_IN_ELA}: {removed_count}")
     print(f"Límite máximo configurado: {MAX_NEWS_IN_ELA}")
+    print_social_message_box(build_social_message(limited_news))
 
 
 if __name__ == "__main__":

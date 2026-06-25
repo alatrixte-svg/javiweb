@@ -104,6 +104,12 @@ Responder al usuario con:
 1,2,3,4,5
 ```
 
+El paso de actualización también devuelve un cajetín de texto para compartir
+la actualización diaria. El mensaje usa las noticias más recientes finalmente
+publicadas en `ELA.html`: toma los dos titulares que más se repitan en ese
+bloque reciente y, si no detecta repeticiones, usa los dos primeros titulares
+publicados más recientes.
+
 ## Archivos principales
 
 - `scripts/buscar_noticias_ela.py`
