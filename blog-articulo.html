@@ -12,6 +12,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js?v=20260625-volver-arriba" defer></script>
 </head>
 <body>
 
@@ -66,6 +67,7 @@
     <p style="margin-top:1rem;font-size:.8rem;color:var(--muted)">© Javier Gámez Martín</p>
   </footer>
 
+    <script src="blog-posts.js"></script>
     <script>
   const MESES_BLOG = {
     enero: 0,
@@ -127,12 +129,29 @@
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
 
+  function cargarPostsBlog() {
+    return fetch('blog-posts.json?v=' + Date.now())
+      .then(r => {
+        if (!r.ok) {
+          throw new Error('No se pudo cargar blog-posts.json');
+        }
+
+        return r.json();
+      })
+      .catch(error => {
+        if (Array.isArray(window.BLOG_POSTS)) {
+          return window.BLOG_POSTS;
+        }
+
+        throw error;
+      });
+  }
+
   if (!id) {
     document.getElementById('articulo-content').innerHTML =
       '<p>Artículo no encontrado. <a href="blog.html" style="color:var(--gold)">Volver al blog</a>.</p>';
   } else {
-    fetch('blog-posts.json?v=' + Date.now())
-      .then(r => r.json())
+    cargarPostsBlog()
       .then(posts => {
         const postsOrdenados = ordenarPosts(posts);
         const idx = postsOrdenados.findIndex(p => p.id === id);

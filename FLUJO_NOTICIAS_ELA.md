@@ -15,12 +15,18 @@ Buscar noticias nuevas sobre ELA, revisar editorialmente las candidatas, depurar
 1. Ejecutar la búsqueda local:
 
    ```powershell
-   python scripts/buscar_noticias_ela.py
+   .\scripts\flujo_noticias_ela.cmd buscar
    ```
 
 2. Guardar una copia exacta del candidate recién generado:
 
    - `candidate-news.backup.json`
+
+   También puede hacerse con:
+
+   ```powershell
+   .\scripts\flujo_noticias_ela.cmd backup
+   ```
 
 3. Revisar todas las noticias de `candidate-news.json` con criterio conservador:
 
@@ -39,7 +45,7 @@ Buscar noticias nuevas sobre ELA, revisar editorialmente las candidatas, depurar
 5. Actualizar `ELA.html` con:
 
    ```powershell
-   python scripts/actualizar_ela_html.py "1,2,3,..."
+   .\scripts\flujo_noticias_ela.cmd actualizar -Seleccion "1,2,3,..."
    ```
 
    La lista numérica debe incluir todas las noticias válidas del candidate depurado.
@@ -58,6 +64,30 @@ Buscar noticias nuevas sobre ELA, revisar editorialmente las candidatas, depurar
    - `ELA.html` contiene el array `newsData`.
    - Las noticias descartadas no aparecen en `ELA.html`.
    - Las noticias dudosas aceptadas tras verificación sí aparecen.
+
+   Comprobación estática reutilizable:
+
+   ```powershell
+   .\scripts\flujo_noticias_ela.cmd validar
+   ```
+
+   Para comprobar también los enlaces de noticias por red:
+
+   ```powershell
+   .\scripts\flujo_noticias_ela.cmd validar -ComprobarEnlacesNoticias
+   ```
+
+   Para previsualización visual en navegador, iniciar un servidor local:
+
+   ```powershell
+   .\scripts\flujo_noticias_ela.cmd servir
+   ```
+
+   Y abrir:
+
+   ```text
+   http://127.0.0.1:8765/ELA.html
+   ```
 
 ## Informe final esperado
 

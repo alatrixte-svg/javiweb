@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js?v=20260625-volver-arriba" defer></script>
 
   <style>
     :root {
@@ -42,12 +43,12 @@
       flex: 1 1 60%;
     }
 
-    .hero h2 {
+    .hero h1 {
       font-size: 2.5rem;
       margin: 0 0 1rem 0;
     }
 
-    .hero h2 span {
+    .hero h1 span {
       color: var(--accent-green);
     }
 
@@ -375,25 +376,27 @@
 </head>
 
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong><a href="index.html" style="text-decoration:none;color:inherit">Javier Gámez Martín</a></strong></li>
-    </ul>
-    <ul>
-      <li><a href="libros.html">Libros</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="prensa.html">Prensa</a></li>
-      <li><a href="guia.html">Guía gratuita</a></li>
-      <li><a href="ELA-research.html">Investigación</a></li>
-      <li><a href="ELA-esporadica.html">Exposoma</a></li>
-      <li><a href="index.html#contacto" role="button">Contacto</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong><a href="index.html" style="text-decoration:none;color:inherit">Javier Gámez Martín</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="libros.html">Libros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="prensa.html">Prensa</a></li>
+        <li><a href="guia.html">Guía gratuita</a></li>
+        <li><a href="ELA-research.html">Investigación</a></li>
+        <li><a href="ELA-esporadica.html">Exposoma</a></li>
+        <li><a href="index.html#contacto" role="button">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="container ela-page">
     <section class="hero">
       <div class="text">
-        <h2>Las cosas de doña <span>ELA</span></h2>
+        <h1>Las cosas de doña <span>ELA</span></h1>
         <p>
           Este espacio está dedicado exclusivamente a proporcionar información a pacientes y
           familiares afectados por la Esclerosis Lateral Amiotrófica (ELA), y a aquéllos que algún día puedan verse
@@ -456,21 +459,6 @@
             Les primeres ajudes de la Llei ELA ja arriben a Catalunya
           </a>
         </li>
-        <li>
-          <a
-            href="https://x.com/JaviGamez_ELA/status/2065022415701184679?s=20"
-            target="_blank">
-            Estreno del documental "El aleteo de las libélulas". 21/06/2026
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://conela.org/2026/05/14/manifiesto-dia-mundial-de-la-ela-2/"
-            target="_blank"
-            rel="noopener">
-            Manifiesto por el Día Mundial de la ELA
-          </a>
-        </li>
       </ul>
     </section>
 
@@ -484,6 +472,9 @@
         </li>
         <li>
           <a href="blog-articulo.html?id=post-querer-es-poder">Querer es poder</a>
+        </li>
+        <li>
+          <a href="blog-articulo.html?id=post-cinderela-y-el-baile-de-los-cuidados">CinderELA y el baile de los cuidados</a>
         </li>
       </ul>
     </section>
@@ -570,11 +561,18 @@
   <script>
     const newsData = [
       {
-        title: "El Real Zaragoza muestra su apoyo a la lucha contra la ELA",
-        source: "Real Zaragoza",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: Real Zaragoza. Publicada el 2026-06-23.",
-        link: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNLWhUZks0WEhPQkJlMjk5TDdJUUgyZ0FDbWctYTVwM3NDVXlZREZTcHo2QjBSd1pTQVAzdzl2T3dvM1ppZmV3ZzVpTXp6d0F5VXRZeG9VdTUzZGQ5dXBZY2JReWo5MGJPZkdGb3h2dzFNTl9hREdTLWxiSVZ5QTlFT1FlazBJUkdadFhGb2REdnQxVnlUZTdTVHlXQng?oc=5",
-        date: "2026-06-23"
+        title: "Sí, en las fases iniciales de ciertos ensayos clínicos, como en la del fármaco para la ELA que está desarrollando el CSIC, es habitual contar con participantes sanos",
+        source: "Maldita.es",
+        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Maldita.es. Publicada el 2026-06-24.",
+        link: "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZTBOZnB2UE9yTWdkaEg1NGlPNUlPeGhWd1JpLU5yYVJIdS1FcGk4ZF83UDFDUVgySHRWcDBGV0V0c3g0dTViNXN4RkZlTWE3TWVUSXZleGpQdnZxR05iQ0FuWlZTVDlNWFkycnd2Yjd5X2JaR2RHRmxTVi14ZF9Xai11aGdTNkJVTmFBNkJKd0xfU2RxMnc4Qmo0VVYxT2JLd0tHcGcxdmF5QTlFMjRSclNZLXhFLWktczQyRXh3OEdnNHI4?oc=5",
+        date: "2026-06-24"
+      },
+      {
+        title: "Madrid acoge el principal foro europeo contra la ELA",
+        source: "Telemadrid",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Telemadrid. Publicada el 2026-06-24.",
+        link: "https://news.google.com/rss/articles/CBMixwFBVV95cUxQTjdnTFUzU1RPUjd5SzgwQnE2RUs0Skd5cWZQemZIRndDd0ljNm8xNGVScmtBMmxvWUwyTVFsWHFfRnhDYVV5LU4tMng4cHQyOU1uVU9JdkFuQTVkY3hZdWNtQTQtZ0d4WG5aeFphYWxYMHdTdElxaU5kS1BsWTI1Y1pMVjJLX0JiRnRCcVJkM0tnUGo2ZmdIbW9aazlnMFEwZ2M2OXFCa05DeW54d2J6UkxJcDVmMU5kR1Fwcm82ZGpMdlRTRGU00gHMAUFVX3lxTE0xdW9IX1N5VmpCSGNTNXM2Z3BlRG5OeXBqcDM4UWFWc1ZhYzJWc0VHTVo3WHVFWWQxMEI4dVE1QlpwZ0VWX1NLaVlvLVl3MVV5Mi1QdnkyeFZSRjN5UUZYLXJLaGxWRkN0Y09JVkV5aXo2VWNfU01iOEh4WUJnZ0U4RHVtVlowOUtMbXRGRkZjaWt6OE8yWTA0dlVvLVZ6alZvQlRIRldqLUFfeWRScmNKVm50OU1QLVdYNmVjN1VheFk3N1Z1ZW4xQlZHdQ?oc=5",
+        date: "2026-06-24"
       },
       {
         title: "Correr es de valientes: Maratón Solidaria en Moriles para sacar la lengua a la ELA",
@@ -585,44 +583,16 @@
       },
       {
         title: "Una terapia experimental frente a la ELA recibe respaldo regulatorio para iniciar ensayos clínicos",
-        source: "Interempresas.net",
-        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Interempresas.net. Publicada el 2026-06-23.",
+        source: "Interempresas Media",
+        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Interempresas Media. Publicada el 2026-06-23.",
         link: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMVpsT1Mta0VLbHBqNGlnZTY4RVh4dkNNS01qdnZOeHY5TmljOTRTRTJScEExb21JV2puakRoQ2lBdmgyQ21jYkg1ZEtaRTN4TUc1TVplRm5reEgyODZtTEhYVkxZLTFoUW9sOU5lUGtyTjBpZGwwYkwwUXdfNzFKRXBHVkhCaEtQN3doNWd5MWVabk5obFUzb2FoV0JmUHhyaHZpYVFpalltMFlqc0NTbkpFRjhpdC1Rd09YNEtkak5QbVV2Qm9uVVVxZ3hhUHVf?oc=5",
         date: "2026-06-23"
       },
       {
-        title: "Kiko Rey, paciente de ELA: \"Mi familia y mis amigos me ayudan a vivir, yo tengo que poner la voluntad\"",
-        source: "Cadena SER",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Cadena SER. Publicada el 2026-06-22.",
-        link: "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNcGdJZXMwc2pRRVZFYkVpeEt0MW53RnIwZ1BnVGc2LVZhYW9Td1BHNm5XTkNFUEZfVXpUdktjWDlIOV9tVE82bDJ4STNzSjdseVh1M01wcUdqNW1nRXdJb2NRQnl5dXV0SFoxZmRPZTlXaTRZeVI5RTVuSXlkQXc2dVJ0bW5OMExwOEFPbmhuWnlPWGRvckhCUVZPenNCcFFjeDNRNF9CcUYxMzJ1MGF3SFo2cTh2NWpfWkZaSHJiSXZPWHNiNEZRM3Y2TVZaSGdfTFMySG9uOFVETmF4SElqaUtmS3bSAfgBQVVfeXFMTm4xNkdsU1R4Y0ZPOEhLQWRFRDJIdmNzNi1oN1dBZ2ZmbDdBcHhnLTh5V0JDNmhFZEpkZ1RvVG42eERuMGZ3cmlTb0hHdXNtenhFUFVwZWY3czk4RUpKRTBnOEFVOEcxT3l1TXREZjVPY3pRQ0d6QW52THVoRFM3YWFGbEVyZmMwMWFhaHJfOE16Z3ZUUjVuOUZTLUh6UHdUX3FGbm9IaHpzM0U1WWlHbEZyaWtkaVJ6QVJRYlJXNUFXNDBwWFJudWZqaFh1ZW5DWmo2d2VJUklVc1A3RzctbGFydFI5SEtSTzMxRVYyS3FUQURrby1OUE4?oc=5",
-        date: "2026-06-22"
-      },
-      {
-        title: "El III Congreso Internacional de ELA ‘Manolo Barrós' reclama en La Roda mayor investigación",
-        source: "Castilla-La Mancha Media",
-        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Castilla-La Mancha Media. Publicada el 2026-06-22.",
-        link: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZnBZbFRRcXRqaDVtcGpRd1ktSV81dzNvWHBBTzI4U0NGWTFsUklyUWdVNFg3S1VDcVNkZDdZSDM1SmVldUdQeWs5ZGxhTmZucEJyZXg4dWR2NlYwWVp5LUVqZkRTS2d1eWxHazRYOXFWZkd1SGRBSERqTUNZLVhIcERYM0VpQTFrY2pKbjlMcm4wbjJtQXliQzdnd0NfdEJ0amJid095cHY0SXVMUWQxTzBzbzFTZ2lXTEd2aUdvNmswTk45Q3Q0WWZOT3ZVVGV0Z0ZV0gHYAUFVX3lxTE5yR3NmVncyZ2E3bElfM3JCbmItcHV0eTFJT0tvelJxRjh3Mko1VGR4WFBpZ29FZEtwQzZvMjJBaGtKWXVaTl9Oa3NGbURYdVJEdHduWVdsTzNiTE1UNElQZC1QY0YxVkU1RXB5NEM5NHpuc1JsSGk0S3ZRRnFtMUFLWkhuZnNkSVNBTVd5dGI0V0c5bHcxRDdvd3RkZlFMUEVEYVk4enEyNkh6QWZnY19XcnYzS0pJVUFsV2p0bkdVQTl6UzF0RUVyd3FMa29IOXBleGJuc1hYdw?oc=5",
-        date: "2026-06-22"
-      },
-      {
-        title: "La Reina Sofía se da un baño de masas en Albacete durante el congreso internacional de ELA",
-        source: "OkDiario",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: OkDiario. Publicada el 2026-06-22.",
-        link: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcEk3WTJRd0d4NWZUQ1cwYnYzeHpyYk42R21xSEIySzRBNmR1Wm04N091SEVtaDFMbFZtZ2ZiMlpTMnI0bGJnVWNXdk1NeGgwVW1xd1Zqd2xlSjJGSmFnS0tzWlV5RHZvUmNCZUYtZGhIZE9id1gzVnVGSVQzRFF4SnFneGh6N2N0QnQzR0NFQnpOU3NOSTQybjNzalNuaGM2Ql9JQzBEbXphSHNGOHVRVHhZQUHSAboBQVVfeXFMTzlSSXRUUTBsYTVXaVk3RGNJa2daRXFwZUJQR1NlTGt0RXFJTFhiS2pBNGxWNHJjUEQ4SEpFbFZIcmNXX1VNcG5uZF9NLTc5eVJQblA3bHhUdmM0R0JHbG5rWGFSc1FPSXlQU3JlNFNJNnMya0J5aldnOWk0MnI3RUdJYkxLRFNqaUJoVVhybVMweVIxWHFxdndSQV9QekwxbFJMUUpVeVFGbFN3Q1JTb1ZxRnpCWXV1NzBn?oc=5",
-        date: "2026-06-22"
-      },
-      {
-        title: "Page aboga por blindar la investigación en el III Congreso Internacional de ELA",
-        source: "La Razón",
-        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: La Razón. Publicada el 2026-06-22.",
-        link: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQlNKMTZRRUpMZF9rRThDZ18tZE1EVi1LLVVwbThUXzhZTHlzekpVV3ZaN2JNekttNkxUOEpzLWFxdmlmOVZHSFM4bVhCS3BxcjdhX05FbTdHWi1SRGptaEZHal9RdFBMY3pUTHJzOXBRNWpjdFpQZlVkVXZqZmRPd0k5aU1vRldkSVhCelVmVDA0S25RaTdZTzAwRUoyNTk5bjg1cWhaLVIxZGpmRUpaX2ZQaDFEZGtxbEhqWHNWMlJrYzh6Z0FCVHMxbHI4ZS12bW9ncFdhaGYyUnPSAe8BQVVfeXFMTnVOcXpKZWt6V1dUS0otckFiTG82cFhfa3FycWlNcHRLSUxSd094NEpsVVN6NEtGSm1Iek5MQnNLLVM1SlN0N3lDcDZNdVZWQmJfNVd2TkVEQ0wzVkppUURwUm9ydGxhbG9LcG82eXgzMXA1bzhMWVBsalp5ZWRfZ2Ftbi11RmpzekpTbGtuVXg3MGFJa3hidURHVXluTmpCRkFpeFBVVEsyaERlXzBTT2NHSjJyR2lGaGZKdjRNdTlJVjk1WGdBQ2dzRG5GMFBjUGM5WWVFVnFhMXk0ODk4RUh4NUxWUnpiUTFGTVFIblU?oc=5",
-        date: "2026-06-22"
-      },
-      {
-        title: "Las familias apelan a «una responsabilidad compartida» en la lucha contra la ELA",
-        source: "NueveCuatroUno",
-        description: "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: NueveCuatroUno. Publicada el 2026-06-22.",
-        link: "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aUzd1cVAwUG9TSXBpYTQ0Y2xpU3kxZmZjMHBNUGxGOER6N29rTmJKOXBJU1NQUWg2SzBHUzUxYmpQUXlia2w0bC1LNzYyMlZ2RGxseGkyRGgwZDBhTEJxM2phdkRUVm9OTHliYThha2N1MktSeWR3WWtUMmpLMW8?oc=5",
+        title: "El Real Zaragoza muestra su apoyo a la lucha contra la ELA",
+        source: "Real Zaragoza | Web Oficial",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Real Zaragoza | Web Oficial. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMinAFBVV95cUxNLWhUZks0WEhPQkJlMjk5TDdJUUgyZ0FDbWctYTVwM3NDVXlZREZTcHo2QjBSd1pTQVAzdzl2T3dvM1ppZmV3ZzVpTXp6d0F5VXRZeG9VdTUzZGQ5dXBZY2JReWo5MGJPZkdGb3h2dzFNTl9hREdTLWxiSVZ5QTlFT1FlazBJUkdadFhGb2REdnQxVnlUZTdTVHlXQng?oc=5",
         date: "2026-06-22"
       },
       {
@@ -633,9 +603,44 @@
         date: "2026-06-22"
       },
       {
+        title: "El III Congreso Internacional de ELA ‘Manolo Barrós' reclama en La Roda mayor investigación",
+        source: "Castilla-La Mancha Media",
+        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Castilla-La Mancha Media. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZnBZbFRRcXRqaDVtcGpRd1ktSV81dzNvWHBBTzI4U0NGWTFsUklyUWdVNFg3S1VDcVNkZDdZSDM1SmVldUdQeWs5ZGxhTmZucEJyZXg4dWR2NlYwWVp5LUVqZkRTS2d1eWxHazRYOXFWZkd1SGRBSERqTUNZLVhIcERYM0VpQTFrY2pKbjlMcm4wbjJtQXliQzdnd0NfdEJ0amJid095cHY0SXVMUWQxTzBzbzFTZ2lXTEd2aUdvNmswTk45Q3Q0WWZOT3ZVVGV0Z0ZV0gHYAUFVX3lxTE5yR3NmVncyZ2E3bElfM3JCbmItcHV0eTFJT0tvelJxRjh3Mko1VGR4WFBpZ29FZEtwQzZvMjJBaGtKWXVaTl9Oa3NGbURYdVJEdHduWVdsTzNiTE1UNElQZC1QY0YxVkU1RXB5NEM5NHpuc1JsSGk0S3ZRRnFtMUFLWkhuZnNkSVNBTVd5dGI0V0c5bHcxRDdvd3RkZlFMUEVEYVk4enEyNkh6QWZnY19XcnYzS0pJVUFsV2p0bkdVQTl6UzF0RUVyd3FMa29IOXBleGJuc1hYdw?oc=5",
+        date: "2026-06-22"
+      },
+      {
+        title: "Page aboga por blindar la investigación en el III Congreso Internacional de ELA",
+        source: "La Razón",
+        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: La Razón. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQlNKMTZRRUpMZF9rRThDZ18tZE1EVi1LLVVwbThUXzhZTHlzekpVV3ZaN2JNekttNkxUOEpzLWFxdmlmOVZHSFM4bVhCS3BxcjdhX05FbTdHWi1SRGptaEZHal9RdFBMY3pUTHJzOXBRNWpjdFpQZlVkVXZqZmRPd0k5aU1vRldkSVhCelVmVDA0S25RaTdZTzAwRUoyNTk5bjg1cWhaLVIxZGpmRUpaX2ZQaDFEZGtxbEhqWHNWMlJrYzh6Z0FCVHMxbHI4ZS12bW9ncFdhaGYyUnPSAe8BQVVfeXFMTnVOcXpKZWt6V1dUS0otckFiTG82cFhfa3FycWlNcHRLSUxSd094NEpsVVN6NEtGSm1Iek5MQnNLLVM1SlN0N3lDcDZNdVZWQmJfNVd2TkVEQ0wzVkppUURwUm9ydGxhbG9LcG82eXgzMXA1bzhMWVBsalp5ZWRfZ2Ftbi11RmpzekpTbGtuVXg3MGFJa3hidURHVXluTmpCRkFpeFBVVEsyaERlXzBTT2NHSjJyR2lGaGZKdjRNdTlJVjk1WGdBQ2dzRG5GMFBjUGM5WWVFVnFhMXk0ODk4RUh4NUxWUnpiUTFGTVFIblU?oc=5",
+        date: "2026-06-22"
+      },
+      {
+        title: "La Reina Sofía se da un baño de masas en Albacete durante el congreso internacional de ELA",
+        source: "OkDiario",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: OkDiario. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcEk3WTJRd0d4NWZUQ1cwYnYzeHpyYk42R21xSEIySzRBNmR1Wm04N091SEVtaDFMbFZtZ2ZiMlpTMnI0bGJnVWNXdk1NeGgwVW1xd1Zqd2xlSjJGSmFnS0tzWlV5RHZvUmNCZUYtZGhIZE9id1gzVnVGSVQzRFF4SnFneGh6N2N0QnQzR0NFQnpOU3NOSTQybjNzalNuaGM2Ql9JQzBEbXphSHNGOHVRVHhZQUHSAboBQVVfeXFMTzlSSXRUUTBsYTVXaVk3RGNJa2daRXFwZUJQR1NlTGt0RXFJTFhiS2pBNGxWNHJjUEQ4SEpFbFZIcmNXX1VNcG5uZF9NLTc5eVJQblA3bHhUdmM0R0JHbG5rWGFSc1FPSXlQU3JlNFNJNnMya0J5aldnOWk0MnI3RUdJYkxLRFNqaUJoVVhybVMweVIxWHFxdndSQV9QekwxbFJMUUpVeVFGbFN3Q1JTb1ZxRnpCWXV1NzBn?oc=5",
+        date: "2026-06-22"
+      },
+      {
+        title: "La atención domiciliaria para pacientes con ELA llega, por fin, a 44 familias de Tenerife: \"Hasta hace muy poco no tenían a quién llamar\"",
+        source: "Eldía",
+        description: "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: Eldía. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMingFBVV95cUxPbndqMWNCU0NLX0hvZmU3X001QnhaalB6VGs5MURRNDhmTkUzU0ZLRjZoQUdYMWN1d1ZDRFEyQ21URFpMWFNzdVhFSTZubG9KaTdxMGJvMGEtTEhtTmE0bG5zZld4SjhSbkhWSUVwZTF3Y1RLcjU1YkxFV1ZobkhvWVRFaWdCRS1pc28yU2xvNFAyMnRiQkM0UVNXakpCQdIBowFBVV95cUxNTTJnRmlfQWRHRDJ3dUQ2ZDZGUHFXV0RvNjg4Vnd6X0syN1dOdnpYbFNlRjNob2k4ajBWRFgtZWpyb0Vrd2ZZd3MyOERSMTNQSUEzUEduc3lPNEF3U2lnTXNDZFFwZVd6X3l4a3k3QzNNNmM4OXBKNGhGcDV1SWlycWZPV2ZKTUtHTGljdlVvc04tWV9HSi1Nbmk5RUcxMW1fR1Iw?oc=5",
+        date: "2026-06-22"
+      },
+      {
+        title: "Madrid facilita gratuitamente sistemas de comunicación alternativos a pacientes con ELA y otras enfermedades neuromotoras graves",
+        source: "Gaceta Médica",
+        description: "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: Gaceta Médica. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTmloWjREV21mYXU1bzZpdHhTSDVTUXJuV0IwNEE5cDFBNm1zUDl1VGNhQXhHZGkxM0tqeERBcUM0QnQ4Q1hzbFFYdmNUZko0RS1xaEM5czZsRWpSYzk0RG9oMHhsYjlXdTBUWEtGQ2pKd0FnSGJzbXFvNjZXU1dneFZZZjM4LXphczB4TjM5aGJYQ2QzOXRyTWdWMUYxRVVLRTFoMFliT3dyMUg5c1JIVFB0N3hlVW9KQnFNdm9fbjA?oc=5",
+        date: "2026-06-22"
+      },
+      {
         title: "El PSOE de Antequera pide que las ayudas de la Ley ELA estén libres de copagos",
-        source: "Andalucía Centro",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Andalucía Centro. Publicada el 2026-06-22.",
+        source: "Cadena SER Andalucía Centro",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Cadena SER Andalucía Centro. Publicada el 2026-06-22.",
         link: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNM1gxTHh4b3BJUE5LS2ZmM3ZWUi1hY2M0WDNNak5rR28yN0dlOFZOREpWb0hHTWFIYS1CZ2NGb3JYZnZuMjExeHRqNl9maUljajBjcERYQ2xkUkl2TkZKYWE0ZGVsUkktNjBDN3VyTDFPSFkzSE5INFM0N0JhWWgzTGNSenBvMlV3S2prcU96ajU5ZHFhWExNYWxiWnpaWFBwZkZha0twanl1aFB5THRta3hLdU91RUd4X0duMzZ6TXJ1S1hfaDczTzhjTmJXMGtGWXNCU1M0RTY5Sm8?oc=5",
         date: "2026-06-22"
       },
@@ -661,6 +666,27 @@
         date: "2026-06-22"
       },
       {
+        title: "La Reina Sofía lleva la lucha contra la ELA a La Roda, cuyo alcalde padece la enfermedad, y los vecinos se vuelcan con ella",
+        source: "El Debate",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: El Debate. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPT2VlOWU1cUVlSmllc21CcmhuREpKSS1udnpWQ0hOcGhRZ2cyZUg2V1FZU0tLd1ZjWjlVT3dvQjAwSnBtLUE3UW9GOXVFVUYzWjB2cVlVYUlqY1J2Ukc4dTRHMmJ1b1VHbl9Kd2k4ZnNwX0ZFSkxRcXNLY0Y0eWJ2dU1CUms3YlJwRXgwZHdfUWg0cmR6b1BmTFo0MWo2TmVOaTJQVkljWFlSZFhOdUM2T1lUUFdaNEZqbnNtZDNUZ1BKWHFGS0ZZVGY4MThGdlNtNDdaZjRzb1FkS2tHdzc1U2IxY3ZLdEZUQ2fSAe8BQVVfeXFMUFZDVXppS2ptMm9NblhPeVFMQk5uRGJpRFNLWnZ2bTJmajRHeUZTRHVtdTlMSUN6SDFmNHFJTU5PWUdweUgtVVJBbHp0WllCOUxIQmpzTFhxUWpDZG5zOENSSWRUV2dFZWpkUTMtdzZUUkFVRFFNeDhTaG4xbnZIM0VNV01xWG5RUy1CRXZWbnNBRUszQUNZck90MUlhR1oyRGxlejJiTGlvcWVYY3hncUMxNXItZlg2dDNNNjRRc0g2WEZBRkFhTmxpUnhBT1lWbUJyenBhLXN2bmU3UklLNkJuTkZsQnlSZEVMTVdBNXc?oc=5",
+        date: "2026-06-22"
+      },
+      {
+        title: "Kiko Rey, paciente de ELA: \"Mi familia y mis amigos me ayudan a vivir, yo tengo que poner la voluntad\"",
+        source: "Cadena SER",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Cadena SER. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNcGdJZXMwc2pRRVZFYkVpeEt0MW53RnIwZ1BnVGc2LVZhYW9Td1BHNm5XTkNFUEZfVXpUdktjWDlIOV9tVE82bDJ4STNzSjdseVh1M01wcUdqNW1nRXdJb2NRQnl5dXV0SFoxZmRPZTlXaTRZeVI5RTVuSXlkQXc2dVJ0bW5OMExwOEFPbmhuWnlPWGRvckhCUVZPenNCcFFjeDNRNF9CcUYxMzJ1MGF3SFo2cTh2NWpfWkZaSHJiSXZPWHNiNEZRM3Y2TVZaSGdfTFMySG9uOFVETmF4SElqaUtmS3bSAfgBQVVfeXFMTm4xNkdsU1R4Y0ZPOEhLQWRFRDJIdmNzNi1oN1dBZ2ZmbDdBcHhnLTh5V0JDNmhFZEpkZ1RvVG42eERuMGZ3cmlTb0hHdXNtenhFUFVwZWY3czk4RUpKRTBnOEFVOEcxT3l1TXREZjVPY3pRQ0d6QW52THVoRFM3YWFGbEVyZmMwMWFhaHJfOE16Z3ZUUjVuOUZTLUh6UHdUX3FGbm9IaHpzM0U1WWlHbEZyaWtkaVJ6QVJRYlJXNUFXNDBwWFJudWZqaFh1ZW5DWmo2d2VJUklVc1A3RzctbGFydFI5SEtSTzMxRVYyS3FUQURrby1OUE4?oc=5",
+        date: "2026-06-22"
+      },
+      {
+        title: "Las familias apelan a «una responsabilidad compartida» en la lucha contra la ELA",
+        source: "NueveCuatroUno",
+        description: "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: NueveCuatroUno. Publicada el 2026-06-22.",
+        link: "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aUzd1cVAwUG9TSXBpYTQ0Y2xpU3kxZmZjMHBNUGxGOER6N29rTmJKOXBJU1NQUWg2SzBHUzUxYmpQUXlia2w0bC1LNzYyMlZ2RGxseGkyRGgwZDBhTEJxM2phdkRUVm9OTHliYThha2N1MktSeWR3WWtUMmpLMW8?oc=5",
+        date: "2026-06-22"
+      },
+      {
         title: "Un acto por los enfermos de ELA",
         source: "La Rioja",
         description: "Aborda actualidad relacionada con la ELA. Fuente: La Rioja. Publicada el 2026-06-22.",
@@ -673,34 +699,6 @@
         description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: La Web de la Salud. Publicada el 2026-06-22.",
         link: "https://news.google.com/rss/articles/CBMif0FVX3lxTE9wY3p4Szh0dUVYU0VjVzhmX2U0MVNRUE5jYTZpMURwbnBZQlpDbjNKSGNKaDNKSldsc1VzZEhFUjh2U0hxdmw0VWFaZk94elNJVDgtNHdZd0ZoOFJ4X1JiTng4endRVy15a3BBSkk0QjdGU01sdi1mSnJuUW9zWmM?oc=5",
         date: "2026-06-22"
-      },
-      {
-        title: "La Reina Sofía lleva la lucha contra la ELA a La Roda, cuyo alcalde padece la enfermedad, y los vecinos se vuelcan con ella",
-        source: "El Debate",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: El Debate. Publicada el 2026-06-22.",
-        link: "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPT2VlOWU1cUVlSmllc21CcmhuREpKSS1udnpWQ0hOcGhRZ2cyZUg2V1FZU0tLd1ZjWjlVT3dvQjAwSnBtLUE3UW9GOXVFVUYzWjB2cVlVYUlqY1J2Ukc4dTRHMmJ1b1VHbl9Kd2k4ZnNwX0ZFSkxRcXNLY0Y0eWJ2dU1CUms3YlJwRXgwZHdfUWg0cmR6b1BmTFo0MWo2TmVOaTJQVkljWFlSZFhOdUM2T1lUUFdaNEZqbnNtZDNUZ1BKWHFGS0ZZVGY4MThGdlNtNDdaZjRzb1FkS2tHdzc1U2IxY3ZLdEZUQ2fSAe8BQVVfeXFMUFZDVXppS2ptMm9NblhPeVFMQk5uRGJpRFNLWnZ2bTJmajRHeUZTRHVtdTlMSUN6SDFmNHFJTU5PWUdweUgtVVJBbHp0WllCOUxIQmpzTFhxUWpDZG5zOENSSWRUV2dFZWpkUTMtdzZUUkFVRFFNeDhTaG4xbnZIM0VNV01xWG5RUy1CRXZWbnNBRUszQUNZck90MUlhR1oyRGxlejJiTGlvcWVYY3hncUMxNXItZlg2dDNNNjRRc0g2WEZBRkFhTmxpUnhBT1lWbUJyenBhLXN2bmU3UklLNkJuTkZsQnlSZEVMTVdBNXc?oc=5",
-        date: "2026-06-22"
-      },
-      {
-        title: "Día Mundial de la ELA, una fecha para generar conciencia, difundir esperanza y promover la investigación",
-        source: "Tododisca",
-        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Tododisca. Publicada el 2026-06-21.",
-        link: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWDBubl9HZVhVN0pDaHFNMENyTW1fS0tvbV9SQk9sZEtSMUlINk1Pd1E0M2Y4bmUyQVJHcHMxTTRkVGR4U3l3bGx6NDEzVHlXalp6ZXF1N0twZl9MYWZwS2VscDBmUml4endQV0pMb2pZdGlPTDZxMnRQaVFiRnpjaHBGMm5QdTdZZHpqNWo2dEE3dXV6TnJ4aU5fMlQwSng2UTF1amJoT1ZsTFRqR2FPMTVrb095cmN10gG-AUFVX3lxTE01b09MSkxUNFZDbFVJWTUyMnJ6NHdiblNidjIzTUlaaFc3TzFEeF9kaGphemd1OUZ2V1dQOTRWZGdiRENyMUdjUk9iWVpmWmtBYTQ2ZTZZTlFaVHZOMm14dnVWT3A3STAwa3JHdTBYR0xWQllYTWxvelg3bWRkcHZOYk1QZmZGVmticy1oZTVyaEhnd0Fta25Pc3NrUWpYekpLWFNFaHNTOE9QakRNa05XTGQwaEpyX0JlaHdZUGc?oc=5",
-        date: "2026-06-21"
-      },
-      {
-        title: "La ciencia avanza frente a la ELA: investigadores logran predecir su evolución y restaurar el habla",
-        source: "Saber Vivir",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: Saber Vivir. Publicada el 2026-06-21.",
-        link: "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUVNzV3ZRb1czWnljSnhFZkZ3OVZFTV9TZFo4eTZZM2Z6dmFlcVFFWmN6aHZ3cUZjazFMZ2NoSGtNTklTb3A1a1FRSGpoVUNZV25LbVR3TXBGM3h0VUZLRzB4dzVhU0Z5U185ZFUzTUQyOHBERDBFeG9Fa25GNVptTnJ3OVlHRmdsM1RZVklVNzQycGJpd1MzYjRwLWY1LUEzYjc0dTdGNHIwSGhQU25GbThabWpIQ1RsMEE?oc=5",
-        date: "2026-06-21"
-      },
-      {
-        title: "La ejecución desigual de la Ley ELA: del liderazgo valenciano a los \"altos\" copagos de Castilla-La Mancha",
-        source: "RTVE.es",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: RTVE.es. Publicada el 2026-06-21.",
-        link: "https://news.google.com/rss/articles/CBMitgFBVV95cUxNa0hYa2hFNFJmWFI2QXFVV0JGcHcydk4yNG1LM1paYUJRbVlfM2ZqQmNPbzA1My1DbWtWeDhMZjJJNVF0Rk0xSS11MUNwMWxUZjQwU2gyX09DMVYtVEotNEVKSGp5NmswcDdlTFRrdFY5QmZDVXFRZ09YWms5TlIxRGdSY2VWNDVoX05CLXA2VS0yOXhCRk9HLTg2NXdqZlRJWDhHbTdqd3pPdndSRmlvZGlmME9EQQ?oc=5",
-        date: "2026-06-21"
       },
       {
         title: "Los casos de ELA aumentarán un 40% en Europa en los próximos 25 años",
@@ -731,6 +729,34 @@
         date: "2026-06-21"
       },
       {
+        title: "La Comunitat Valenciana, a la cabeza de España en prestaciones para las personas con ELA",
+        source: "ESdiario",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: ESdiario. Publicada el 2026-06-21.",
+        link: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNalFPYXpvV1VaalprRTR5bDViWVJxcTFFamFHN0txLUtWUVM3X3VYQjFjUUNBdUwwYk1rWGNoUmh0TS1ENDNtY19DT0t0dHRReFpzaHdWME9yWHJkek9pd3F3LTJOTmk1U1A4M0ZLbHRrTmhpdGxRa1pWTmZBOGcwV3NYSXpFazVUOUktZlBWVG1pN05TQ0JQdElWaTVzWEYzc1plc010cDPSAa4BQVVfeXFMTV9GTTFaNVV0NEFfTGhqOHc2NWpIQ2ZFX0pKbzRaVzRaSG9HVG9VTDNfRl9VTnY5eldPSkxqUzZXZjMwN0NjZ3JpdTVjLTFlN1dHd3B3aGpoWDctY2JURjRCNWY0c095Nmh4QnI4RVU3bER4Yml4S2lSaFI1NlpZRlp5S2pCeGJhSG1TNlZSUVpQNnlMWEd0M2ZiT3JCWmthUWRLV3lSeHhYaW1Od2x3?oc=5",
+        date: "2026-06-21"
+      },
+      {
+        title: "Día Mundial de la ELA, una fecha para generar conciencia, difundir esperanza y promover la investigación",
+        source: "Tododisca",
+        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: Tododisca. Publicada el 2026-06-21.",
+        link: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWDBubl9HZVhVN0pDaHFNMENyTW1fS0tvbV9SQk9sZEtSMUlINk1Pd1E0M2Y4bmUyQVJHcHMxTTRkVGR4U3l3bGx6NDEzVHlXalp6ZXF1N0twZl9MYWZwS2VscDBmUml4endQV0pMb2pZdGlPTDZxMnRQaVFiRnpjaHBGMm5QdTdZZHpqNWo2dEE3dXV6TnJ4aU5fMlQwSng2UTF1amJoT1ZsTFRqR2FPMTVrb095cmN10gG-AUFVX3lxTE01b09MSkxUNFZDbFVJWTUyMnJ6NHdiblNidjIzTUlaaFc3TzFEeF9kaGphemd1OUZ2V1dQOTRWZGdiRENyMUdjUk9iWVpmWmtBYTQ2ZTZZTlFaVHZOMm14dnVWT3A3STAwa3JHdTBYR0xWQllYTWxvelg3bWRkcHZOYk1QZmZGVmticy1oZTVyaEhnd0Fta25Pc3NrUWpYekpLWFNFaHNTOE9QakRNa05XTGQwaEpyX0JlaHdZUGc?oc=5",
+        date: "2026-06-21"
+      },
+      {
+        title: "La ciencia avanza frente a la ELA: investigadores logran predecir su evolución y restaurar el habla",
+        source: "Saber Vivir",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: Saber Vivir. Publicada el 2026-06-21.",
+        link: "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUVNzV3ZRb1czWnljSnhFZkZ3OVZFTV9TZFo4eTZZM2Z6dmFlcVFFWmN6aHZ3cUZjazFMZ2NoSGtNTklTb3A1a1FRSGpoVUNZV25LbVR3TXBGM3h0VUZLRzB4dzVhU0Z5U185ZFUzTUQyOHBERDBFeG9Fa25GNVptTnJ3OVlHRmdsM1RZVklVNzQycGJpd1MzYjRwLWY1LUEzYjc0dTdGNHIwSGhQU25GbThabWpIQ1RsMEE?oc=5",
+        date: "2026-06-21"
+      },
+      {
+        title: "La ejecución desigual de la Ley ELA: del liderazgo valenciano a los \"altos\" copagos de Castilla-La Mancha",
+        source: "RTVE.es",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: RTVE.es. Publicada el 2026-06-21.",
+        link: "https://news.google.com/rss/articles/CBMitgFBVV95cUxNa0hYa2hFNFJmWFI2QXFVV0JGcHcydk4yNG1LM1paYUJRbVlfM2ZqQmNPbzA1My1DbWtWeDhMZjJJNVF0Rk0xSS11MUNwMWxUZjQwU2gyX09DMVYtVEotNEVKSGp5NmswcDdlTFRrdFY5QmZDVXFRZ09YWms5TlIxRGdSY2VWNDVoX05CLXA2VS0yOXhCRk9HLTg2NXdqZlRJWDhHbTdqd3pPdndSRmlvZGlmME9EQQ?oc=5",
+        date: "2026-06-21"
+      },
+      {
         title: "El peaje del envejecimiento",
         source: "Diario de Burgos",
         description: "Aborda actualidad relacionada con la ELA. Fuente: Diario de Burgos. Publicada el 2026-06-21.",
@@ -743,41 +769,6 @@
         description: "Aborda actualidad relacionada con la ELA. Fuente: Casa Real. Publicada el 2026-06-21.",
         link: "https://news.google.com/rss/articles/CBMimgFBVV95cUxQU0xQTmU5eWZ3Q0tvM3RURDNYU1ZVNjNHOW1WbE5Fakd1LW1ZR3lNVklNWkFpa1JWazc5MFRFX1c5X2xxVjdqM2h1cThWWFdjS2lyWkJ3Y3B3M0V6N2xKenFlY1FOR1dSbF9Pd1RkMlplQ1ExcWRHZTFoZ1NzcjIzTGJmQzA5RERWV05CbzFYZFBpb0FYa3FJMFFR?oc=5",
         date: "2026-06-21"
-      },
-      {
-        title: "La lucha de Julio, enfermo de ELA: «Es tremendo que haya ayudas para querer morir y no para querer vivir»",
-        source: "ABC",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: ABC. Publicada el 2026-06-21.",
-        link: "https://news.google.com/rss/articles/CBMipgFBVV95cUxORF9EeDhPblJLQ2VsLTRYcS1QLXhMMm4wS3lObS1ndE1zWVFKMFZ6UFdmd1pSaG9idWxOUzJXam5hZ1k5TU5hazdSSjlLTUpFTC0zSV93bzNPZXdxZmxWOF9lYXUwcjJXMnJSc2dlWFZBNG94cVdEN25obndma21WeE5VOVA3LU5XOFdNdkxnZXNJRlJvSUhDZUduZ01zMGJjaklCMmJ30gGrAUFVX3lxTE1Sa0MzZnluelNSUld3TkQ5MEFSUzRuWkNMWnRfLURPYWllLWlfX19FV3AtVDRad1FYTHJjRG81alBUV050VnhEUXRzbWpyRWhVTklOWmNoWGJjY1ZrNzdzSk05YUZqZlBwZF9TMjkxaTNxNVhySHhYV3dGU3V5U2laTl9SSVpCU09zX2ZLbUFrTFdkeTFrcVBnUi1VT3cyTEZTYkg4MUdMTFZSYw?oc=5",
-        date: "2026-06-21"
-      },
-      {
-        title: "Los pacientes ELA piden que su ley se aplique de forma unificada en todo el país",
-        source: "La Razón",
-        description: "Aborda cuidados, calidad de vida y acompañamiento a pacientes. Fuente: La Razón. Publicada el 2026-06-21.",
-        link: "https://news.google.com/rss/articles/CBMiywFBVV95cUxONWZ3WTBrOWtYVklNZVlzeHFhUjBJZXo0LUVLb2YtR01QSjV2MnQ0dHNiY3B6WkNmRmZyWlRsQVJ0Vkc5MGlqZ1ZiTVNRbmtneWpvS1Q3UEJocGNxTVQ1UTlsM21nM0sxOHhRSGdLaEhMZnZmckRNLUgtTks5VkF3ZTQ3aUtRR1MxdlRZb0FpUGtoOWhnZkg0aWNKUHF1MzBwY3hwUTFPcGVMS1QxUG9PWEZzSG1PaGxBUWNseG1LcDl0QmpLWThuNjB0NNIB3wFBVV95cUxQRmc1M2FkdEVsWFpidmd0bmdBSE1yeEpUNHhNV3JEVGUzUXR1SlAyXzFuMUVacU1PdnZxSlFvWC0zNHJQcmNSMXVETVZzdTBGVG1EMUpkRlZxb0lkMlRlQWxyeGEydGdXSkc3S0N0c2dOVzJmek4zdE9ZRE9RTTg4ZVI4dURtZzZURlZVcnk5SUhIVUVSNGRFUThoME9ISmFpWUUxQ0ZPemVnTTVJVmlSNnBNaElrWGRvVzM5Q1U4bVJ6c0ZvbEZ2V2RyZHFTd3JxTXozYXRCa0V1LXMyd29R?oc=5",
-        date: "2026-06-21"
-      },
-      {
-        title: "Día Internacional ELA: ¿por qué se prevé un aumento del 40% de los casos en los próximos 25 años?",
-        source: "CuídatePlus",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: CuídatePlus. Publicada el 2026-06-20.",
-        link: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYl8wRjhKaDNyeHVPSlo2d3FJenJmX1ZnNE9mdkE2TVRSZG1ySTNSRmlmSFowQ3ZTZmYwc2tId3dLNjVKaklFbFMtN21tMVJ2QWROVnRWU3d3blJPeDdTcnBIRDd3OHRnX293UFBUSm11MWMzaEM0SU5rZkk2czlLcmZVazlIWFZod1UzU3gzRGJSYlhzVDZpLWdiU2twRW5NajhvRUVGNFFza2xvWEl4OGdiZUZIZ3l4SWdrMHZUUE9lQdIBxwFBVV95cUxQeHEyaEFuTlRpdXBMUXQ4ME9LYXZGT0xpX2dYMUFRd1VTeVUzWHJKRjFTUWZva2JjLUoyUnkzLXIzWUNweENBSHBOeGpOU0p4M2UtOFl4Rkt2ZGpWUEZSekJvVUpuYUNkS0dKaTJxdmFoejlmT2M1eTNXSUo3WlNlaDVsb0o0QVU4QU1XeEktSmtLZzBFU2ZHRlpFQVd2emo5WkZUcHZDTXVxeHljRWVNeVNrVjJzTl9ZSDlXTi1tVThzbUNROGxr?oc=5",
-        date: "2026-06-20"
-      },
-      {
-        title: "Los casos de ELA aumentarán más de un 40% en Europa en los próximos 25 años",
-        source: "Libertad Digital",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: Libertad Digital. Publicada el 2026-06-20.",
-        link: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNSFQySnptVmh5anFIOUc3dk94VEJMMUtUbmtpeDRtQ2hVSWt5Zk9EM3MwaUNnOXJDWGFkaDRCUFpoa0k1ek80cVZST0tXa2REcXFPYlhYR1pHTkg0MWJrLW15YVNjcHhWcWpoclRNNm5HX3V6VXNvWmZqRHFJcmdiS1p1RmExQzV3ejRzUzlaeVZUNHpNQzdSLVpscC1BMDd0Vk1fal9wbzdYTmNGQndxbE1CRGR1bV9Mcms1YmVtTl9WYVJNUFBBMmpvOXdzTGZNTFQ5LWtRV3FhRUowZC1XUTYxX2NkREZGdlUzNTlya0lqOEtV0gH_AUFVX3lxTFAzRHFzdjdoSEhKeFNpd29ZdUxBWmpteWJ6bDZnUDU4Wk1zYTRrNkFabFZoM3cxVVBOSUtYV04wVFVXb25rcTZkZmJyamdVMzJEWTZIbEZnTVFLakZtbFdkOWVzSEE0V2tIdHd1SG9QbXdRX01CamxsWmdWYmpiNGZYcWtIcFlHblA5UmxHZ3lEeGttRm5rbzFoS0lacHVJeU5CaWVLSjgyTzN6Z1hmblZjSlo5aTdyYk5tWjl4c3ByMjJMa2tabjhkR2lPcy1hMG5jV2V5dGNEVFFveENqbzJlaWc5c053emVpOFlDWHU0Z3BRX3NzeW15dTFBYjNKbw?oc=5",
-        date: "2026-06-20"
-      },
-      {
-        title: "Los pacientes de ELA denuncian trabas burocráticas que reducen las ayudas que reciben tras la nueva ley: \"Vamos a perder 4.000 euros\"",
-        source: "El Periódico",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: El Periódico. Publicada el 2026-06-19.",
-        link: "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR0JLazc3ZVl4bHJESkw2SF9fLXNjUW1JbDZYeWtVaW9MQklkdzhuMzdHN25CcU4wcXp2STZMZmpiYVJFR0hXTW5MM0oxZU9HMFp4ZjZRazBDeVFZZjktTzktUjJEdG9DRWxfUEhNZXhwM0tFRFNZenloRHNzS0VzUmlPbDU2bWhwQUU4OW1QVTJVQlhNRU9iTGI1YWtDRmlJcEk5LdIBpAFBVV95cUxQVURwMHlNc25iY2lTX3ZWSFd0aUFjZEc0bThyVDUxUVhwV25pbjJhdVo3NHUxVkYybjJhUy1KZzJIOVpJbnFEakMwYUdvQ0Z6cGs1ZFZ1U1kwZmhEUzlNNWxvaFVxNkNQTWtwXzRIYTNEdGxNcVl3dC0tbl80ZnprVjdpS2xwbFBtUGlpOVlvRnVqS0F6aUZTWmZHaEptMjFWX3FfRw?oc=5",
-        date: "2026-06-19"
       }
     ];
 

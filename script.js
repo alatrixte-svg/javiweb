@@ -174,6 +174,37 @@ function inicializarEmailJS() {
   });
 }
 
+function inicializarVolverArriba() {
+  if (document.getElementById('back-to-top')) return;
+
+  const link = document.createElement('a');
+  link.id = 'back-to-top';
+  link.className = 'back-to-top';
+  link.href = '#';
+  link.textContent = '↑';
+  link.setAttribute('aria-label', 'Volver al principio de la página');
+  link.setAttribute('title', 'Volver arriba');
+
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: reduceMotion ? 'auto' : 'smooth'
+    });
+  });
+
+  const actualizarVisibilidad = () => {
+    link.classList.toggle('is-visible', window.scrollY > 420);
+  };
+
+  actualizarVisibilidad();
+  window.addEventListener('scroll', actualizarVisibilidad, { passive: true });
+  document.body.appendChild(link);
+}
+
 
 // ÍNDICE DEL BLOG
 function cargarIndiceBlog() {
@@ -215,4 +246,5 @@ document.addEventListener('DOMContentLoaded', () => {
   cargarEntradasPortada();
   cargarIndiceBlog();
   inicializarEmailJS();
+  inicializarVolverArriba();
 });

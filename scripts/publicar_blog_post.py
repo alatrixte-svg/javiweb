@@ -5,6 +5,7 @@ import unicodedata
 from pathlib import Path
 
 BLOG_POSTS_FILE = Path("blog-posts.json")
+BLOG_POSTS_JS_FILE = Path("blog-posts.js")
 POSTS_DIR = Path("posts")
 
 
@@ -62,6 +63,20 @@ excerpt: "{escape_frontmatter(excerpt)}"
         markdown_body = str(body or "").strip()
 
     return frontmatter + markdown_body + "\n"
+
+
+def write_blog_posts_files(blog_posts):
+    json_content = json.dumps(blog_posts, ensure_ascii=False, indent=2)
+
+    BLOG_POSTS_FILE.write_text(
+        json_content,
+        encoding="utf-8"
+    )
+
+    BLOG_POSTS_JS_FILE.write_text(
+        f"window.BLOG_POSTS = {json_content};\n",
+        encoding="utf-8"
+    )
 
 
 def main():
@@ -134,10 +149,7 @@ def main():
 
     blog_posts.insert(0, new_blog_entry)
 
-    BLOG_POSTS_FILE.write_text(
-        json.dumps(blog_posts, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    write_blog_posts_files(blog_posts)
 
     markdown_content = build_markdown(
         article=article,
@@ -154,6 +166,7 @@ def main():
 
     print("Artículo publicado correctamente.")
     print(f"Entrada añadida a: {BLOG_POSTS_FILE}")
+    print(f"Fallback actualizado en: {BLOG_POSTS_JS_FILE}")
     print(f"Markdown creado en: {markdown_path}")
 
 
