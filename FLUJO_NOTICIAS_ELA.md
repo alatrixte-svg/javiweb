@@ -18,6 +18,11 @@ Buscar noticias nuevas sobre ELA, revisar editorialmente las candidatas, depurar
    .\scripts\flujo_noticias_ela.cmd buscar
    ```
 
+   La búsqueda combina Google News RSS, GDELT y RSS curados relacionados con
+   ELA/ALS. `candidate-news.json` incluye el campo `provider` para identificar
+   el origen de cada candidata. Si GDELT limita temporalmente las consultas,
+   el flujo continúa con las demás fuentes disponibles.
+
 2. Guardar una copia exacta del candidate recién generado:
 
    - `candidate-news.backup.json`
@@ -55,6 +60,8 @@ Buscar noticias nuevas sobre ELA, revisar editorialmente las candidatas, depurar
    - Añadir las nuevas noticias válidas.
    - Conservar noticias antiguas que ya estaban en `ELA.html`.
    - Eliminar de `ELA.html` cualquier noticia que estuviera en `candidate-news.backup.json` pero ya no esté en el `candidate-news.json` revisado.
+   - Mantener el bloque de noticias de España limitado a 15 entradas.
+   - Mantener bajo ese bloque una sección internacional con 6 noticias en inglés sobre ALS.
 
 7. Verificar al final:
 
@@ -76,6 +83,18 @@ Buscar noticias nuevas sobre ELA, revisar editorialmente las candidatas, depurar
    ```powershell
    .\scripts\flujo_noticias_ela.cmd validar -ComprobarEnlacesNoticias
    ```
+
+   Para comprobación visual automatizada de escritorio y móvil:
+
+   ```powershell
+   .\scripts\flujo_noticias_ela.cmd visual
+   ```
+
+   Esta comprobación levanta un servidor local temporal en un puerto libre,
+   verifica que `ELA.html` responde correctamente y, si encuentra Edge o Chrome,
+   genera capturas reales en `.visual-checks/`. Si el navegador instalado no
+   permite capturas headless, el comando lo informa con el error devuelto por
+   el navegador y conserva la verificación de servidor y estructura.
 
    Para previsualización visual en navegador, iniciar un servidor local:
 

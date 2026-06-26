@@ -1,5 +1,5 @@
 param(
-  [ValidateSet("buscar", "backup", "actualizar", "validar", "servir", "python")]
+  [ValidateSet("buscar", "backup", "actualizar", "validar", "visual", "servir", "python")]
   [string]$Accion = "validar",
 
   [string]$Seleccion = "",
@@ -73,6 +73,14 @@ switch ($Accion) {
     }
 
     & $Python @args
+  }
+
+  "visual" {
+    & $Python ".\scripts\verificar_visual_ela.py"
+
+    if ($LASTEXITCODE -ne 0) {
+      exit $LASTEXITCODE
+    }
   }
 
   "servir" {

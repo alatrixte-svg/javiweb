@@ -8,7 +8,7 @@ from pathlib import Path
 ELA_FILE = Path("ELA.html")
 CANDIDATE_FILE = Path("candidate-news.json")
 BACKUP_CANDIDATE_FILE = Path("candidate-news.backup.json")
-MAX_NEWS_IN_ELA = 30
+MAX_NEWS_IN_ELA = 15
 SOCIAL_MESSAGE_URL = "https://javiergamezmartin.com/ELA.html"
 TITLE_STOPWORDS = {
     "a", "al", "ante", "bajo", "con", "contra", "de", "del", "desde",
@@ -408,7 +408,7 @@ def prioritize_recent_news(news, minimum_items=2):
 
 def build_social_message(news):
     titles = pick_social_message_titles(news)
-    topic_text = " y ".join(f'"{title}"' for title in titles)
+    topic_text = " y ".join(f"<{title}>" for title in titles)
 
     if not topic_text:
         topic_text = "la actualidad relacionada con la ELA"
@@ -416,7 +416,7 @@ def build_social_message(news):
     return (
         "Buenos días,\n"
         "\n"
-        "Os dejo la actualización diaria de las noticias relacionadas con la #ELA en España.\n"
+        "Actualización diaria de las noticias sobre #ELA.\n"
         f"Lo más novedoso se centra en {topic_text}.\n"
         "\n"
         f"{SOCIAL_MESSAGE_URL}"

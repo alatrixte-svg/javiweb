@@ -1,4 +1,5 @@
 import json
+import os
 import re
 import html
 import difflib
@@ -10,7 +11,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-OUTPUT_FILE = Path("candidate-news.json")
+OUTPUT_FILE = Path(os.environ.get("ELA_NEWS_OUTPUT", "candidate-news.json"))
 
 QUERIES = [
     "ELA esclerosis lateral amiotrófica",
@@ -23,6 +24,30 @@ QUERIES = [
 
 MAX_ITEMS_PER_QUERY = 10
 MAX_TOTAL_RESULTS = 30
+
+GDELT_QUERIES = [
+    '("ELA" OR "esclerosis lateral amiotrofica" OR "esclerosis lateral amiotrófica") '
+    '(España OR español OR pacientes OR investigación OR tratamiento)',
+    '("ley ELA" OR "ayudas ELA" OR "copago ELA" OR "dependencia ELA")',
+]
+
+CURATED_RSS_FEEDS = [
+    {
+        "name": "ALS News Today",
+        "url": "https://alsnewstoday.com/feed/",
+        "query": "RSS curado ALS investigación tratamiento",
+    },
+]
+
+CURATED_RSS_KEYWORDS = [
+    "ela",
+    "als",
+    "amyotrophic lateral sclerosis",
+    "esclerosis lateral amiotrofica",
+    "esclerosis lateral amiotrófica",
+    "motor neurone disease",
+    "motor neuron disease",
+]
 
 
 def clean_text(value):
@@ -147,6 +172,19 @@ def build_google_news_rss_url(query):
     )
 
 
+def build_gdelt_doc_url(query):
+    params = {
+        "query": query,
+        "mode": "ArtList",
+        "format": "json",
+        "maxrecords": str(MAX_ITEMS_PER_QUERY),
+        "sort": "HybridRel",
+        "timespan": "7d",
+    }
+
+    return "https://api.gdeltproject.org/api/v2/doc/doc?" + urllib.parse.urlencode(params)
+
+
 def fetch_rss(url):
     request = urllib.request.Request(
         url,
@@ -159,6 +197,21 @@ def fetch_rss(url):
         data = response.read()
 
     return ET.fromstring(data)
+
+
+def fetch_json(url):
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 ELA News Bot"
+        }
+    )
+
+    with urllib.request.urlopen(request, timeout=20) as response:
+        data = response.read()
+        page_text = decode_html(data, response)
+
+    return json.loads(page_text)
 
 
 def decode_html(data, response):
@@ -237,6 +290,37 @@ def fetch_article_excerpt(url, title, source):
     return excerpt
 
 
+def item_matches_curated_keywords(title, summary=""):
+    text = normalize_for_match(f"{title} {summary}")
+
+    return any(
+        normalize_for_match(keyword) in text
+        for keyword in CURATED_RSS_KEYWORDS
+    )
+
+
+def build_news_item(title, source, date, link, summary, query, provider):
+    title = remove_source_suffix(title, source)
+    description = prepare_summary(title, summary, source, query, date)
+
+    if not title or not link:
+        return None
+
+    return {
+        "title": title,
+        "source": source,
+        "date": date,
+        "link": link,
+        "summary": description,
+        "query": query,
+        "provider": provider,
+        "relevance_reason": (
+            "Noticia encontrada en búsquedas relacionadas con ELA, "
+            "cuidados, investigación, ley ELA, prestaciones o ALS."
+        )
+    }
+
+
 def extract_items_from_feed(query, root):
     items = []
 
@@ -279,8 +363,89 @@ def extract_items_from_feed(query, root):
     return items
 
 
+def parse_gdelt_date(value):
+    if not value:
+        return ""
+
+    value = str(value)
+
+    if len(value) >= 8:
+        return f"{value[:4]}-{value[4:6]}-{value[6:8]}"
+
+    return ""
+
+
+def extract_items_from_gdelt(query, data):
+    items = []
+
+    for article in data.get("articles", [])[:MAX_ITEMS_PER_QUERY]:
+        title = clean_text(article.get("title", ""))
+        link = clean_text(article.get("url", ""))
+        source = clean_text(
+            article.get("sourceCommonName", "")
+            or article.get("domain", "")
+            or "GDELT"
+        )
+        date = parse_gdelt_date(article.get("seendate", ""))
+        article_excerpt = fetch_article_excerpt(link, title, source)
+        built_item = build_news_item(
+            title,
+            source,
+            date,
+            link,
+            article_excerpt,
+            query,
+            "gdelt"
+        )
+
+        if built_item:
+            items.append(built_item)
+
+    return items
+
+
+def extract_items_from_curated_feed(feed):
+    items = []
+    root = fetch_rss(feed["url"])
+    channel_title = clean_text(root.findtext(".//channel/title"))
+
+    for item in root.findall(".//item")[:MAX_ITEMS_PER_QUERY]:
+        link = clean_text(item.findtext("link"))
+        title = clean_text(item.findtext("title"))
+        rss_description = clean_text(item.findtext("description"))
+
+        if not item_matches_curated_keywords(title, rss_description):
+            continue
+
+        source = feed.get("name") or channel_title or "RSS curado"
+        date = parse_date(item.findtext("pubDate"))
+        article_excerpt = fetch_article_excerpt(link, title, source)
+        built_item = build_news_item(
+            title,
+            source,
+            date,
+            link,
+            article_excerpt or rss_description,
+            feed.get("query", source),
+            "curated_rss"
+        )
+
+        if built_item:
+            items.append(built_item)
+
+    return items
+
+
 def main():
     all_items = []
+    provider_counts = {}
+
+    def add_items(provider, items):
+        for item in items:
+            item.setdefault("provider", provider)
+
+        provider_counts[provider] = provider_counts.get(provider, 0) + len(items)
+        all_items.extend(items)
 
     for query in QUERIES:
         url = build_google_news_rss_url(query)
@@ -288,9 +453,26 @@ def main():
         try:
             root = fetch_rss(url)
             items = extract_items_from_feed(query, root)
-            all_items.extend(items)
+            add_items("google_news", items)
         except Exception as error:
             print(f"Error buscando noticias para '{query}': {error}")
+
+    for query in GDELT_QUERIES:
+        url = build_gdelt_doc_url(query)
+
+        try:
+            data = fetch_json(url)
+            items = extract_items_from_gdelt(query, data)
+            add_items("gdelt", items)
+        except Exception as error:
+            print(f"Error buscando noticias en GDELT para '{query}': {error}")
+
+    for feed in CURATED_RSS_FEEDS:
+        try:
+            items = extract_items_from_curated_feed(feed)
+            add_items("curated_rss", items)
+        except Exception as error:
+            print(f"Error leyendo RSS curado '{feed['name']}': {error}")
 
     seen = set()
     unique_items = []
@@ -313,6 +495,7 @@ def main():
 
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "providers": provider_counts,
         "total": len(selected_items),
         "news": selected_items
     }
@@ -323,6 +506,7 @@ def main():
     )
 
     print(f"Generado {OUTPUT_FILE} con {len(selected_items)} noticias candidatas.")
+    print("Fuentes consultadas:", json.dumps(provider_counts, ensure_ascii=False))
 
 
 if __name__ == "__main__":

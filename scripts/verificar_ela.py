@@ -92,7 +92,7 @@ def find_missing_internal_links(parser):
 
 def extract_news_links(html):
     return re.findall(
-        r'link:\s*"(?P<link>https://news\.google\.com/rss/articles/[^"]+)"',
+        r'link:\s*"(?P<link>https?://[^"]+)"',
         html,
     )
 
