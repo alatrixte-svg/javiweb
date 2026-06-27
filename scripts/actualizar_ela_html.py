@@ -17,6 +17,12 @@ TITLE_STOPWORDS = {
     "se", "sin", "sobre", "su", "sus", "un", "una", "unas", "unos", "y"
 }
 
+SOCIAL_FALLBACK_PRIORITY_TOKENS = {
+    "biomarcadores", "clinicos", "consultas", "evolucion", "geneticas",
+    "investigacion", "pacientes", "progresion", "pruebas", "tratamiento",
+    "unidades"
+}
+
 
 def js_string(value):
     return json.dumps(value or "", ensure_ascii=False)
@@ -316,7 +322,15 @@ def titles_are_related(left, right):
     common_tokens = left_tokens & right_tokens
     token_ratio = len(common_tokens) / len(left_tokens | right_tokens)
 
+    if len(common_tokens) >= 4:
+        return True
+
     return len(common_tokens) >= 3 and token_ratio >= 0.34
+
+
+def social_fallback_score(title):
+    tokens = title_tokens(title)
+    return len(tokens & SOCIAL_FALLBACK_PRIORITY_TOKENS)
 
 
 def pick_social_message_titles(news):
@@ -359,13 +373,30 @@ def pick_social_message_titles(news):
 
         if len(chosen) < 2:
             used_titles = set(chosen)
+            remaining_items = []
 
-            for item in news:
+            for position, item in enumerate(news):
                 title = clean_text(item.get("title", ""))
 
-                if title and title not in used_titles:
-                    chosen.append(title)
-                    used_titles.add(title)
+                if not title or title in used_titles:
+                    continue
+
+                if any(titles_are_related(title, used_title) for used_title in used_titles):
+                    continue
+
+                remaining_items.append({
+                    "title": title,
+                    "position": position,
+                    "score": social_fallback_score(title)
+                })
+
+            remaining_items.sort(
+                key=lambda item: (-item["score"], item["position"])
+            )
+
+            for item in remaining_items:
+                chosen.append(item["title"])
+                used_titles.add(item["title"])
 
                 if len(chosen) == 2:
                     break
