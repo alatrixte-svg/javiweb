@@ -1275,11 +1275,27 @@ footer small,
 }
 
 .diagnostico-hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
   gap: 2rem;
   align-items: center;
   padding: 2rem 0 2.5rem;
+}
+
+.diagnostico-hero > :not(.diagnostico-hero-sphere) {
+  position: relative;
+  z-index: 1;
+}
+
+.diagnostico-hero-sphere {
+  position: absolute;
+  top: -1cm;
+  right: 1cm;
+  z-index: 0;
+  width: clamp(5rem, 11vw, 8.5rem);
+  height: auto;
+  pointer-events: none;
 }
 
 .diagnostico-hero h1 {
@@ -1734,6 +1750,10 @@ footer small,
 
   .diagnostico-hero {
     padding-top: 1rem;
+  }
+
+  .diagnostico-hero-sphere {
+    width: 4.6rem;
   }
 
   .diagnostico-actions,
