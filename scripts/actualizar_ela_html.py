@@ -17,13 +17,6 @@ TITLE_STOPWORDS = {
     "se", "sin", "sobre", "su", "sus", "un", "una", "unas", "unos", "y"
 }
 
-SOCIAL_FALLBACK_PRIORITY_TOKENS = {
-    "biomarcadores", "clinicos", "consultas", "evolucion", "geneticas",
-    "investigacion", "pacientes", "progresion", "pruebas", "tratamiento",
-    "unidades"
-}
-
-
 def js_string(value):
     return json.dumps(value or "", ensure_ascii=False)
 
@@ -59,7 +52,6 @@ def remove_source_suffix(value, source):
         f" – {source}",
         f" — {source}",
         f" | {source}",
-        f" {source}",
     ]
 
     for suffix in suffixes:
@@ -328,11 +320,6 @@ def titles_are_related(left, right):
     return len(common_tokens) >= 3 and token_ratio >= 0.34
 
 
-def social_fallback_score(title):
-    tokens = title_tokens(title)
-    return len(tokens & SOCIAL_FALLBACK_PRIORITY_TOKENS)
-
-
 def pick_social_message_titles(news):
     news = prioritize_recent_news(news)
     groups = []
@@ -386,12 +373,11 @@ def pick_social_message_titles(news):
 
                 remaining_items.append({
                     "title": title,
-                    "position": position,
-                    "score": social_fallback_score(title)
+                    "position": position
                 })
 
             remaining_items.sort(
-                key=lambda item: (-item["score"], item["position"])
+                key=lambda item: item["position"]
             )
 
             for item in remaining_items:
