@@ -321,7 +321,6 @@ def titles_are_related(left, right):
 
 
 def pick_social_message_titles(news):
-    news = prioritize_recent_news(news)
     groups = []
 
     for position, item in enumerate(news):
