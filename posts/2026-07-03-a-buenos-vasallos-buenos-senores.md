@@ -25,7 +25,7 @@ Mientras tanto, el soniquete de “La ley nos obliga” y el golazo por toda la 
 
 Ni el esfuerzo, ni nuestro mensaje, ni la necesidad…, nada importó. Se antepuso un discurso institucional siempre parapetado tras un texto legal y una buena dosis de autobombo. Un discurso que, no por previsible, sesgado y conocido resulta menos hiriente para los afectados.
 
-En fin, aunque el miércoles se silenciaron nuestras voces aún más de lo que ya lo están por culpa de doña ELA, os dejo las preguntas y respuestas: https://youtu.be/Mv4LS6EQX_g
+En fin, aunque el miércoles se silenciaron nuestras voces aún más de lo que ya lo están por culpa de doña ELA, os dejo las preguntas y respuestas: https://youtu.be/SzvM4eHxwDQ
 
 Como aliciente, la voz que se escucha es la mía. Para mí ha sido un placer reencontrarme con esa vieja conocida a quien tanto echo de menos.
 
