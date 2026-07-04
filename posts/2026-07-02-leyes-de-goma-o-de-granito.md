@@ -1,0 +1,70 @@
+---
+id: "post-leyes-de-goma-o-de-granito"
+title: "Leyes de goma o de granito"
+date: "2026-07-02"
+fecha: "2 de julio de 2026"
+tag: "ELA"
+excerpt: "Va sobre la facilidad política de malear las leyes a su interés o considerarlas pétreas e infranqueables cuando no hay rédito a la vista."
+---
+
+En mi insomnio por mis dolores he pensado en la entrevista a la Sra @SubiranadlCruz y he recordado algo que también vivieron el Sr @salvadorilla y la Sra @monicambravo.
+
+Y es que hay leyes que, según a quién se apliquen, son de granito o de chicle.
+
+En 2012, el Gobierno de Mariano Rajoy decidió que miles de personas, la mayoría extranjeras en situación irregular, podían arreglárselas con una asistencia sanitaria de supervivencia: urgencias si la cosa se ponía fea, embarazo si llegaba el caso y atención completa si eran menores. Para lo demás, ya estaban el agua del Carmen, la fe, el ibuprofeno comprado de estraperlo y esa admirable capacidad del cuerpo humano para aguantar hasta que revienta.
+
+La norma era estatal y publicada en el BOE con toda la parafernalia que convierte una decisión política, buena o mala en un mandamiento bajado del Sinaí por funcionarios con toga y birrete.
+
+Y, sin embargo, ocurrió algo prodigioso.
+
+Las comunidades autónomas gobernadas por quienes entonces estaban en la oposición descubrieron de pronto que las leyes no siempre son una muralla insalvable. Que un decreto estatal puede tener resquicios. Que entre una norma y una persona vulnerable cabe, al parecer, una instrucción interna, una tarjeta sanitaria provisional, una fórmula administrativa, un programa de salud pública, una interpretación razonable o, en caso de apuro, un poco de voluntad política.
+
+¡Qué tiempos aquéllos!
+
+En Cataluña, con CiU al frente del Govern y sin que desde el PSC se iniciara una cruzada a favor de la obediencia sanitaria automática, el CatSalut dictó instrucciones para que muchas personas excluidas por el modelo estatal siguieran teniendo alguna vía de acceso a la asistencia.
+
+No se trataba de dinamitar el Estado de derecho ni de asaltar el BOE con horcas y antorchas. Se trataba, sencillamente, de no dejar a la gente enfermar hasta que la única puerta abierta fuera la de urgencias o, en último término, la del tanatorio.
+
+Entonces la ley se interpretaba. Se modulaba. Se bordeaba con la elegancia de quien sabe que gobernar consiste, entre otras cosas, en impedir que una disposición administrativa se convierta en una sentencia de abandono o en un peaje demasiado exigente.
+
+La solidaridad autonómica, con los feudos socialistas a la cabeza —cómo ha cambiado el cuento— se puso el casco, sacó el mapa y la brújula y buscó caminos. Unas comunidades aprobaron normas; otras dictaron instrucciones; otras habilitaron procedimientos específicos. Había una especie de insumisión activa, de resistencia con sellos oficiales, de ingeniería jurídica aplicada a una idea bastante elemental: si una norma deja desprotegida a una persona vulnerable, el deber de un gobierno decente es buscar cómo protegerla, no sentarse encima del expediente y pedirle que no se mueva.
+
+Parece que las asesorías jurídicas gubernamentales también sirven, cuando se las orienta adecuadamente, para buscar senderos y pasadizos válidos para rodear obstáculos y no solo para proteger los sillones de sus mandatarios.
+
+Pero llega el presente. Llega la Ley ELA. Llegan las personas con dependencia extrema. Llegan los cuidados de veinticuatro horas, los respiradores, las transferencias, la alimentación, la higiene, la vigilancia constante y esa pequeña extravagancia que cometemos algunos de “querer seguir viviendo”.
+
+Y entonces aparecen el artículo 31 de la Ley de Dependencia y la exclusión de la prestación económica de cuidados en el entorno familiar como específica del grado III+.
+
+No como normas discutibles. No como preceptos que exigen ponderación. No como disposiciones que admiten interpretación, contexto, proporcionalidad o humanidad.
+
+No. Ambos mandatos aparecen ahora vestidos de emperador romano, a l grupa de un caballo blanco sobre cuyo lomo cae el paludamentum púrpura de aquél y acompañados por una banda de tubas y cornos que toca la Marcha Imperial cada vez que, casi implorando, alguien pregunta si existe otra forma de aplicar las deducciones o de flexibilizar las contrataciones.
+
+—La ley nos obliga, dicen.
+
+La frase tiene una música curiosa. Es la misma que uno oye cuando una administración quiere hacer algo que perjudica a alguien y no tiene demasiadas ganas de pensar. “La ley nos obliga”. Una especie de ambientador institucional para disimular el olor a resignación, a cálculo contable, a falta de coraje, de voluntad o de ambas cosas y, también, el tufo pútrido a: “Por vosotros no vale la pena emprender una cruzada, sois tan pocos…”
+
+Porque resulta que, cuando se trataba de que una persona sin papeles pudiera seguir viendo a su médico de cabecera, la ley estatal tenía fisuras, túneles secretos y hasta puertas de servicio. Pero cuando se trata de evitar que una persona con ELA tenga que elegir entre pagar el salvoconducto a los cuidados que necesita para seguir respirando o conservar una economía familiar mínimamente habitable, entonces el artículo 31 se convierte en la muralla de Invernalia custodiada por dragones.
+
+La diferencia es llamativa. En 2012, los gobiernos que se oponían a la reforma sanitaria no se limitaron a decir: “Qué barbaridad, pero la norma es la norma y la asesoría jurídica nos ha dicho que lo mejor es cumplirla”. Vamos, lo que coloquialmente se viene conociendo como "guardarse el culo".
+
+No. Buscaron soluciones. Con mayor o menor tino, con más o menos seguridad jurídica, pero las buscaron y las pusieron en práctica.
+
+Y, para tranquilidad de Sus Señorías, nadie acabó en la cárcel. Ni siquiera ninguno de ellos fue inhabilitado por ello. Duerman tranquilas si es eso lo que las inquieta.
+
+Hoy, en cambio, cuando una persona con ELA plantea que la deducción automática de un complemento o que el no poder conservar a su cuidador no titulado pueden convertir una prestación en un peaje confiscatorio o una renuncia demasiado costosa en cuidados, la respuesta parece salida de una máquina de acuñar excusas:
+
+—Lo sentimos mucho. —Entendemos su situación. —Continuaremos trabajando para que nadie se quede atrás. —Y, por cierto, la ley nos obliga.
+
+Qué conveniente que la ley sea inflexible cuando toca proteger a un minúsculo colectivo desfavorecido y tan maleable cuando toca defender un relato político rentable.
+
+Porque esa es la pregunta incómoda: ¿dónde ha ido a parar aquella valentía?
+
+¿Dónde está aquella energía para buscar resquicios, dictar instrucciones, interpretar con amplitud y colocar a las personas por delante de la literalidad más cómoda?
+
+Quizá se perdió por el camino. Tal vez nunca existió y solo era una forma bastante eficaz de lanzar la caña en un buen caladero de futuros electores.
+
+O quizá sigue ahí, guardada en algún cajón, esperando a que alguien recuerde que gobernar no consiste en leer una norma con gesto funerario y encogerse de hombros, sino en decidir qué se hace cuando su aplicación automática amenaza con dejar a alguien sin cuidados, sin esperanza, sin aire.
+
+En 2012, muchos gobiernos autonómicos entendieron que había ocasiones en las que obedecer sin pensar era una forma refinada de abandono. Ahora, algunos no recuerdan la lección o, si lo hacen, han decidido que unas personas merecen resistencia numantina y otras, en cambio, solo paños calientes, palabras de terciopelo que esconden indiferencia cobarde, una norma granítica y, tal vez, sumisión a una orden del palacio Ferraz.
+
+Porque, Señorías, pueden pintarlo del color que mejor combine con la infamia, pero esto no es una cuestión jurídica. Es una cuestión de prioridades, de voluntad y de humanidad.
