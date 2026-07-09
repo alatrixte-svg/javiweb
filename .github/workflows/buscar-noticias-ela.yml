@@ -23,16 +23,18 @@ jobs:
           python-version: "3.11"
 
       - name: Buscar noticias
-        run: python scripts/buscar_noticias_ela.py
+        run: |
+          python scripts/buscar_noticias_ela.py
+          cp candidate-news.json candidate-news.backup.json
 
       - name: Configurar Git
         run: |
           git config user.name "alatrixte-svg"
           git config user.email "github-actions@github.com"
 
-      - name: Guardar candidate-news.json
+      - name: Guardar noticias candidatas
         run: |
-          git add candidate-news.json
+          git add candidate-news.json candidate-news.backup.json
 
           if git diff --cached --quiet; then
             echo "No hay cambios que guardar"
