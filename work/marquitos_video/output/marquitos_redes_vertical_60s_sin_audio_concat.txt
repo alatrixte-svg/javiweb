@@ -1,0 +1,15 @@
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_01.jpg'
+duration 9.654
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_02.jpg'
+duration 8.688
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_03.jpg'
+duration 9.654
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_04.jpg'
+duration 8.206
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_05.jpg'
+duration 8.688
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_06.jpg'
+duration 8.688
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_07.jpg'
+duration 9.654
+file 'C:/Users/Qrent_395/Documents/Codex/javiweb/work/marquitos_video/output/marquitos_redes_vertical_60s_sin_audio_slides/slide_07.jpg'
