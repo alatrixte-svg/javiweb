@@ -24,6 +24,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Buscar noticias candidatas
+        run: |
+          python scripts/buscar_noticias_ela.py
+          cp candidate-news.json candidate-news.backup.json
+
       - name: Actualizar ELA.html
         run: python scripts/actualizar_ela_html.py "${{ github.event.inputs.selected_indexes }}"
 

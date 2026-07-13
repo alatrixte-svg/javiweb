@@ -7,7 +7,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   buscar-noticias:
@@ -27,18 +27,11 @@ jobs:
           python scripts/buscar_noticias_ela.py
           cp candidate-news.json candidate-news.backup.json
 
-      - name: Configurar Git
-        run: |
-          git config user.name "alatrixte-svg"
-          git config user.email "github-actions@github.com"
-
-      - name: Guardar noticias candidatas
-        run: |
-          git add candidate-news.json candidate-news.backup.json
-
-          if git diff --cached --quiet; then
-            echo "No hay cambios que guardar"
-          else
-            git commit -m "Actualiza noticias candidatas sobre ELA"
-            git push https://x-access-token:${{ secrets.ACTIONS_PUSH_TOKEN }}@github.com/alatrixte-svg/javiweb.git HEAD:main
-          fi
+      - name: Guardar noticias candidatas como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: noticias-candidatas-ela
+          path: |
+            candidate-news.json
+            candidate-news.backup.json
+          retention-days: 7
