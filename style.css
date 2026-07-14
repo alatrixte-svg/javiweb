@@ -1723,6 +1723,25 @@ footer small,
   color: var(--muted);
 }
 
+.caregiver-resources-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.caregiver-resources-grid .caregiver-card {
+  width: min(100%, 260px);
+  aspect-ratio: 604 / 368;
+  flex: 0 1 260px;
+}
+
+.caregiver-resources-grid .caregiver-card img {
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+}
+
 @media (max-width: 980px) {
   .diagnostico-hero,
   .priority-grid,
@@ -1779,6 +1798,10 @@ footer small,
 
   .sources-section ul {
     columns: 1;
+  }
+
+  .caregiver-resources-grid .caregiver-card {
+    flex-basis: 100%;
   }
 }
 
