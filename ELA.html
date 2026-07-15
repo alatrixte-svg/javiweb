@@ -345,6 +345,16 @@
       text-decoration: none;
     }
 
+    .ela-header-shortcut {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.75rem 1rem 1rem;
+    }
+
+    .ela-header-shortcut a[role="button"] {
+      margin: 0;
+    }
+
     /* Separación lateral del bloque inicial de ELA */
     .ela-page .hero {
       padding-left: 2rem;
@@ -360,6 +370,10 @@
       .ela-research-feature {
         align-items: flex-start;
         gap: 1rem;
+      }
+
+      .ela-header-shortcut {
+        justify-content: center;
       }
 
       .ela-research-icon {
@@ -392,6 +406,11 @@
         <li><a href="index.html#contacto" role="button">Contacto</a></li>
       </ul>
     </nav>
+    <div class="container-fluid ela-header-shortcut">
+      <a href="#recursos" role="button" aria-label="Ir a Protocolos y tutoriales para enfermos y cuidadores ELA">
+        Protocolos y tutoriales
+      </a>
+    </div>
   </header>
 
   <main class="container ela-page">
@@ -607,6 +626,20 @@
   <script>
     const newsData = [
       {
+        title: "Los guipuzcoanos con ELA se ahorrarán tres meses de trámites para recibir ayudas",
+        source: "El Diario Vasco",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: El Diario Vasco. Publicada el 2026-07-15.",
+        link: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRE5ZQlNxWlA3cnBtRUdPemFOdjBJX2s0YzVJSWZ4TEtoUFVzV0RtNlFsRFB2X2RxRTNrM2V0amstT1NaUFp4ZUxGY1pYVVJEYndFR2RQSVl1RFlldExlbjE5b1pKYTRETjJjb1NmRGZqVkRLYk80VWhaTFpVN3pWOGhWWlhOSmgzVmtudTlGWjliNW91Qlg0Sm9zY2hDLXBXMTZqeE1QSHZ5a21HNm9ZYUtXd1JTSzVMRG1FNdIBwgFBVV95cUxONXVUSVBjVEhUbHhuOU5KY0x0emVGWGpBemQzU0tBRHFxS0M1czNpckk4bmhGa1BmcTFRMVNudkFHUE1qbUpERy1FaWJYYllBZlRhUllIUHVTY2U3V1gwS1VLTDM4VkZOUS04RVo4YkRWclF1YnlVWElXMzlIbERwMHBiVzdCeWNNSkhsU01kOFZWTFp3ejgwc3Vnb1hETVpVQkE0am13WDByVmh1ZTllNFE0dExNNkdOaUhQMzJlZjI5Zw?oc=5",
+        date: "2026-07-15"
+      },
+      {
+        title: "Claves | Más cuidados en casa, tres meses para resolver la ayuda y un trámite de urgencia: así es la reforma en dependencia y discapacidad",
+        source: "EL PAÍS",
+        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: EL PAÍS. Publicada el 2026-07-15.",
+        link: "https://news.google.com/rss/articles/CBMiigJBVV95cUxNVlJQTnBubU5tMjlHOUQ1amtJZ3d5SU83UFpNVmRmTC1pTGpfQ2lZS200LW5zd3gybEpVYU8zWkNscFcyU2s4NVlYVjEyc25rbURuOWUtYU9ndG41REpIMHFSdlFSUzJZamxmSHlzMHp3aGxNUWpYa1dtYjhLRkZ6azZoV19pOVZ4bDVpaElZU2JoTUFkc0ZSZHlWd3VoZGk4V0RaQmFfeS1QLWF5Y0ZCSmtKTjVhazVFT3hydTQycGRoYXFic2xSeGt5V3pha2JPaTE1RkpZTERfYVEzSzBUemo4Y1Q1SnBPbm9WaWN3ME5jM29PYlZpUW5lRUNVYjlfTG9kTm1vRl9Fd9IBngJBVV95cUxNei1vdXgwZnhCa1ZRclowdzdPOEV1dGhUdnVzV0k5WnJJVlk5ckpmU0R2WWJpR3J6cHFKUjBoRXlFVUlqUmpHdmZMSWppQnk4ZU9NMzRZbEJWTDB5eEpENWMtaGY0d3V5cjlOR2xINXlVeTZlQW83N3AzbjRWUl9ITHZZNWJpN3lzMGdTYmNqYkRuRnJ0bmlzdEVBSmRVZGlWTU1CMnZEUlhzS3dTTkNySGs3Nk1BYmszcTdwRkZ6T3BsMkloSUxZUjNPY2JvNWFqc3JDbl9uTTViNXlDV1M5TXpqa0g1NC1hbVpCNUh4ZzRkT1RUMW1ORFJSamZlU0c2VVNhODJQYldwUmt0STNZZ2JzWWNZOVIzZmIyTGZB?oc=5",
+        date: "2026-07-15"
+      },
+      {
         title: "Un fármaco experimental apunta a una nueva estrategia terapéutica frente a la ELA",
         source: "ConSalud.es",
         description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: ConSalud.es. Publicada el 2026-07-14.",
@@ -642,6 +675,13 @@
         date: "2026-07-12"
       },
       {
+        title: "El canto a la vida de Tatiana, que con 33 años padece ELA: «No quiero vivir esperando el final, quiero acumular recuerdos»",
+        source: "La Voz de Galicia",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: La Voz de Galicia. Publicada el 2026-07-12.",
+        link: "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOdGh6Wld6ZkNJOEFHS0hnVmZVYS1veXVvanNpN1JRQzUyYTdsRklFSkxMejktNEg5OW9rNjhVOWZSRzVsbFZjeXVxaExBLVZnd0VNeGpIM01HeUF0OHl0NldiaXNJaTQ1SXRhbjBKRkNTRXJCZ3Q0U0hrOGtFdVV6V3Q3dXIxYXJrSjgwdXRVQnR3SERZbjhocjUwSVNCa3Q5ZVBQd2ItSkVCUmIzSHR3QjExS0t3ZEg3YzRxWUN2a2hfY29GdzhoYU9HVm43YURxTEZJYXNsLXdVVmJUX3o1c3lCVjNXdzMyRnRZQVlBZ2VUT2J1RkxtS3Rn0gGWAkFVX3lxTE5wcmhZVWtfVlpfbm5CNG8wQ0lVYkpCSjVtYkxwVmdBelF2Znp5VzQwdjBEYzM0Ykp6WlVKeTM1VEE3RE9malNzRnVacHhNeFU4NVZQZzZINkt1ZFRLdVBYblZwMFBWV1ptSjhGLUVQd3dZdkdzMUROSUtnQkljUFBfYUdacGNYWlVVNGk0UjY4RXRKaTYycVBuangyMGxLQk5xUExFTEh5VVFaVVFZU3lIWGxsa3Q4NjdpeVh0OTlSNlBZTVNycmdQQ2FkdXAwUDBvR29TNktnaXpKaFI1dzRsT2VHZWpNZXlxR1QzajBXdHRFM05oMVU0QUE3aUc4akZSUG5EdkhuRE1jbzQxcE5UajVtZ25B?oc=5",
+        date: "2026-07-12"
+      },
+      {
         title: "Juan Avellaneda llora la muerte de su padre por ELA y recibe el cariño de Sonsoles Ónega o Emma García: \"Me quedo con sus últimas palabras\"",
         source: "HOLA",
         description: "Aborda actualidad relacionada con la ELA. Fuente: HOLA. Publicada el 2026-07-11.",
@@ -663,6 +703,13 @@
         date: "2026-07-10"
       },
       {
+        title: "“La fisioterapia es la herramienta terapéutica más importante para ralentizar el curso de la ELA”",
+        source: "OkDiario",
+        description: "Aborda actualidad relacionada con la ELA. Fuente: OkDiario. Publicada el 2026-07-09.",
+        link: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPU2dRMzVzSDNpcFV4U3N2c3lIamNLTDQ1ckJqSzZuNkxUSjVjM3JIeDZFV0RKN2FzbjlaSF9Sdm50dURsb2dXX0o2SjZfTEJyaFJSLU9MMEw0QlpYUTBTM1pNaV9fN3BCc3FNWFB5TXg0NGFNSVJqVEloQUx2dVYyX2ZzZUlfUGp2ODM4emFONzVPYjFwb3dvTV9DaEsxUnA0d1RaSGRLWS1JNEpW0gGyAUFVX3lxTE8yN1MzaXZYRDNxd0RmcnJrVEhHWXN1UW1BaVhIbFpJTE1KUW90U1NDZGhoaEVnMmxOQnNwZVQ1R294ZXd3NnhnYnhCeHdmYWVMR2tFSTZnTEtLUjRvY0g2ZUxBazNWT0l6NmxOTVRfb0NWelJYRnBIampQTXBuUU45OVZGUjZSb2Y4TnA2TDRXMXhFSlVDbDFsMFdWaUJ6VjFacVdfcWg3cUdvdFZfNFJQRFE?oc=5",
+        date: "2026-07-09"
+      },
+      {
         title: "El Congreso aprueba en comisión la reforma de las leyes de discapacidad y dependencia, sin el apoyo de PP y Vox",
         source: "Europa Press",
         description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Europa Press. Publicada el 2026-07-09.",
@@ -677,39 +724,11 @@
         date: "2026-07-09"
       },
       {
-        title: "“La fisioterapia es la herramienta terapéutica más importante para ralentizar el curso de la ELA”",
-        source: "OkDiario",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: OkDiario. Publicada el 2026-07-09.",
-        link: "https://news.google.com/rss/articles/CBMirAFBVV95cUxPU2dRMzVzSDNpcFV4U3N2c3lIamNLTDQ1ckJqSzZuNkxUSjVjM3JIeDZFV0RKN2FzbjlaSF9Sdm50dURsb2dXX0o2SjZfTEJyaFJSLU9MMEw0QlpYUTBTM1pNaV9fN3BCc3FNWFB5TXg0NGFNSVJqVEloQUx2dVYyX2ZzZUlfUGp2ODM4emFONzVPYjFwb3dvTV9DaEsxUnA0d1RaSGRLWS1JNEpW0gGyAUFVX3lxTE8yN1MzaXZYRDNxd0RmcnJrVEhHWXN1UW1BaVhIbFpJTE1KUW90U1NDZGhoaEVnMmxOQnNwZVQ1R294ZXd3NnhnYnhCeHdmYWVMR2tFSTZnTEtLUjRvY0g2ZUxBazNWT0l6NmxOTVRfb0NWelJYRnBIampQTXBuUU45OVZGUjZSb2Y4TnA2TDRXMXhFSlVDbDFsMFdWaUJ6VjFacVdfcWg3cUdvdFZfNFJQRFE?oc=5",
-        date: "2026-07-09"
-      },
-      {
         title: "Muere el padre del diseñador Juan Avellaneda tras su lucha contra la ELA",
         source: "HOLA",
         description: "Aborda actualidad relacionada con la ELA. Fuente: HOLA. Publicada el 2026-07-09.",
         link: "https://news.google.com/rss/articles/CBMihgFBVV95cUxPSFNWRTFTblZsWDRoX0tjSDFOY1MwSWVXWGNSMEtDWTJqWVVQWXZWZk1qQUpCcTFRTHFncmxkb19Ia19hS3dDX3hVOVNuektlZVJmY3JhcWxVeWNXdEVKMW10TENyazlQRmYwYXRGd1VHWUt2MEhleXhMRlNaSDFaUTVtWHNZdw?oc=5",
         date: "2026-07-09"
-      },
-      {
-        title: "Caudete recibe a los participantes del Camino de Superación y Solidaridad en favor de la ELA",
-        source: "Caudete Digital",
-        description: "Aborda iniciativas sociales, sensibilización y visibilidad pública de la ELA. Fuente: Caudete Digital. Publicada el 2026-07-08.",
-        link: "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTnlqa3QwRnljZjVXbHptanpnVnFPbk9KNzZkSG5UVUw5YnNnRXcxWUkydmQ4VUs3REFUMVh6akc2ckFnN25OZmlMUWJqeWx2eGZDcXJMVTktRzdoX3V2eGFnMWRQdGlsY0FkakZXMjFUaThScFcweG0tZVFtSTVWZ1ZuQVo5RmdOZmdkM2FHZDBnRFZGeGRHRWo5MElPWXVqT1FHWDB2ZGhlcUNHQTdCcHcxR1BVdTA5M1lPTA?oc=5",
-        date: "2026-07-08"
-      },
-      {
-        title: "Qué sabemos sobre si el Gobierno de Aragón va a traspasar a los enfermos de ELA el dinero destinado a subvenciones a sindicatos y organizaciones que ayudan a personas migrantes",
-        source: "Maldita.es",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Maldita.es. Publicada el 2026-07-08.",
-        link: "https://news.google.com/rss/articles/CBMigwJBVV95cUxNN0J3UXhLUzluc091T1U0aVZyOUZaOERGS0lnMG84MmE4ZXR1UzhSQzQyVU5GbjFFb3psYy1GYzQtWFpvTUdDb2EzWG5ZSGtmT2dpQms2Vk8tQzlqUzRyOGhuWEIzRWlGam50eWFkZWZFT0RZX2tlSVhuVkEtX2tpS2xNRHRSS0piVkNxR2lNQzlFc0ZuODVfSnc3cVdJX2NOdjAyV09DTmY5cm9rMXVHZFF5cnJaRGdJQm03TVl1Zzd3ZFJra3oxUDNabmxrUVIxZWFiRTBweGVtVzAwQVBjQ3Brd3YwSzI5aU5helNyY3plalNLSXY0bWNidGx1VG5SZXdR?oc=5",
-        date: "2026-07-08"
-      },
-      {
-        title: "El canto a la vida de Tatiana, con 33 años y ELA: «No quiero vivir esperando el final, quiero acumular recuerdos»",
-        source: "La Voz de Galicia",
-        description: "Aborda actualidad relacionada con la ELA. Fuente: La Voz de Galicia. Publicada el 2026-07-08.",
-        link: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNdkJ4ZE5MekFvR2RlNW9LMEN3eEVKYzByMjdLcGZiUEFhRFdjTVZkUlJQN2NFT0FIaWRLNUZJc29aSHF3eG5hVVM4ZHpLaDhUd1doMnFEaTBLVEpPcXFVQzFER2tNR01JV2ZGXzdWVVF3V3A2aWJPc1Y4NEpqWll4RThHaUJKVzhyZmtBU0k3OFFiNmljMzZHYTVDSjBYTnpKRUNIaTEteWtFc3U4Z1h3eVFxSzItZUNwYzZSU0Y4bGhQX2NSZXVQeko4U2xJbzNiRVRjcjk0MmlzTlBMM2gxeXdTWWZ2WkJHVEJ2QldHaEtkZw?oc=5",
-        date: "2026-07-08"
       }
     ];
 

@@ -10,8 +10,11 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 OUTPUT_FILE = Path(os.environ.get("ELA_NEWS_OUTPUT", "candidate-news.json"))
+LOCAL_TIMEZONE = ZoneInfo("Europe/Madrid")
+WEEKLY_SOURCES_ENV = "ELA_NEWS_FORCE_WEEKLY_SOURCES"
 
 QUERIES = [
     "ELA esclerosis lateral amiotrófica",
@@ -48,6 +51,31 @@ CURATED_RSS_KEYWORDS = [
     "motor neurone disease",
     "motor neuron disease",
 ]
+
+WEDNESDAY_HTML_SOURCES = [
+    {
+        "name": "ELA Andalucia",
+        "url": "https://www.elaandalucia.es/noticias/",
+        "query": "ELA Andalucia noticias",
+        "provider": "ela_andalucia",
+    },
+]
+
+SPANISH_MONTHS = {
+    "enero": 1,
+    "febrero": 2,
+    "marzo": 3,
+    "abril": 4,
+    "mayo": 5,
+    "junio": 6,
+    "julio": 7,
+    "agosto": 8,
+    "septiembre": 9,
+    "setiembre": 9,
+    "octubre": 10,
+    "noviembre": 11,
+    "diciembre": 12,
+}
 
 
 def clean_text(value):
@@ -159,6 +187,62 @@ def parse_date(value):
         return dt.date().isoformat()
     except Exception:
         return ""
+
+
+def parse_page_date(value):
+    text = normalize_for_match(value)
+
+    match = re.search(r"\b(\d{4})-(\d{2})-(\d{2})\b", text)
+    if match:
+        return match.group(0)
+
+    match = re.search(r"\b(\d{1,2})[/-](\d{1,2})[/-](\d{4})\b", text)
+    if match:
+        day, month, year = (int(part) for part in match.groups())
+
+        try:
+            return datetime(year, month, day).date().isoformat()
+        except ValueError:
+            return ""
+
+    match = re.search(
+        r"\b(\d{1,2})\s+de\s+([a-z]+)\s+de\s+(\d{4})\b",
+        text
+    )
+    if match:
+        day = int(match.group(1))
+        month = SPANISH_MONTHS.get(match.group(2))
+        year = int(match.group(3))
+
+        if month:
+            try:
+                return datetime(year, month, day).date().isoformat()
+            except ValueError:
+                return ""
+
+    return ""
+
+
+def should_include_wednesday_sources():
+    forced_value = os.environ.get(WEEKLY_SOURCES_ENV)
+
+    if forced_value is not None:
+        return normalize_for_match(forced_value) in {"1", "true", "yes", "si"}
+
+    return datetime.now(LOCAL_TIMEZONE).weekday() == 2
+
+
+def fetch_page_html(url, timeout=20, read_limit=500000):
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 ELA News Bot"
+        }
+    )
+
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        data = response.read(read_limit)
+        return decode_html(data, response)
 
 
 def build_google_news_rss_url(query):
@@ -288,6 +372,116 @@ def fetch_article_excerpt(url, title, source):
         return ""
 
     return excerpt
+
+
+def is_probable_news_anchor(base_url, link, title):
+    normalized_title = normalize_for_match(title)
+
+    if len(normalized_title) < 18:
+        return False
+
+    ignored_titles = [
+        "leer mas",
+        "ver mas",
+        "inicio",
+        "contacto",
+        "politica de privacidad",
+        "politica de cookies",
+        "politica de calidad",
+        "aviso legal",
+        "canal de denuncias",
+        "cookies",
+        "buscar",
+        "donar",
+        "hazte socio",
+        "facebook",
+        "twitter",
+        "instagram",
+        "youtube",
+    ]
+
+    if normalized_title in ignored_titles:
+        return False
+
+    parsed_base = urllib.parse.urlparse(base_url)
+    parsed_link = urllib.parse.urlparse(link)
+
+    if parsed_link.scheme and parsed_link.scheme not in {"http", "https"}:
+        return False
+
+    if parsed_link.netloc and parsed_link.netloc != parsed_base.netloc:
+        return False
+
+    normalized_base_path = parsed_base.path.rstrip("/")
+    normalized_link_path = parsed_link.path.rstrip("/")
+
+    if not normalized_link_path or normalized_link_path == normalized_base_path:
+        return False
+
+    if "noticia" in normalize_for_match(normalized_link_path):
+        return True
+
+    return True
+
+
+def extract_items_from_html_news_source(source_config):
+    source_name = source_config["name"]
+    source_url = source_config["url"]
+    source_query = source_config["query"]
+    source_provider = source_config["provider"]
+    page_html = fetch_page_html(source_url)
+    items = []
+    seen_links = set()
+    anchor_pattern = re.compile(
+        r"<a\b[^>]*href\s*=\s*(['\"])(.*?)\1[^>]*>(.*?)</a>",
+        flags=re.IGNORECASE | re.DOTALL
+    )
+    anchors = list(anchor_pattern.finditer(page_html))
+    link_counts = {}
+
+    for match in anchors:
+        link = urllib.parse.urljoin(source_url, clean_text(match.group(2)))
+        title = clean_text(match.group(3))
+
+        if len(normalize_for_match(title)) >= 18:
+            link_counts[link] = link_counts.get(link, 0) + 1
+
+    for match in anchors:
+        raw_link = clean_text(match.group(2))
+        title = clean_text(match.group(3))
+        link = urllib.parse.urljoin(source_url, raw_link)
+
+        if (
+            link in seen_links
+            or link_counts.get(link, 0) > 1
+            or not is_probable_news_anchor(source_url, link, title)
+        ):
+            continue
+
+        seen_links.add(link)
+        context_start = max(0, match.start() - 600)
+        context_end = min(len(page_html), match.end() + 600)
+        context = page_html[context_start:context_end]
+        date = parse_page_date(context)
+        article_excerpt = fetch_article_excerpt(link, title, source_name)
+
+        built_item = build_news_item(
+            title,
+            source_name,
+            date or datetime.now(LOCAL_TIMEZONE).date().isoformat(),
+            link,
+            article_excerpt,
+            source_query,
+            source_provider
+        )
+
+        if built_item:
+            items.append(built_item)
+
+        if len(items) >= MAX_ITEMS_PER_QUERY:
+            break
+
+    return items
 
 
 def item_matches_curated_keywords(title, summary=""):
@@ -446,6 +640,14 @@ def main():
 
         provider_counts[provider] = provider_counts.get(provider, 0) + len(items)
         all_items.extend(items)
+
+    if should_include_wednesday_sources():
+        for source_config in WEDNESDAY_HTML_SOURCES:
+            try:
+                items = extract_items_from_html_news_source(source_config)
+                add_items(source_config["provider"], items)
+            except Exception as error:
+                print(f"Error leyendo fuente semanal '{source_config['name']}': {error}")
 
     for query in QUERIES:
         url = build_google_news_rss_url(query)

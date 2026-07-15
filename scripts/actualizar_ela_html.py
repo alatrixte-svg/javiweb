@@ -423,7 +423,8 @@ def prioritize_recent_news(news, minimum_items=2):
 
 
 def build_social_message(news):
-    titles = pick_social_message_titles(news)
+    recent_news = prioritize_recent_news(news)
+    titles = pick_social_message_titles(recent_news)
     topic_text = " y ".join(f"<{title}>" for title in titles)
 
     if not topic_text:
