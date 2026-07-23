@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <link rel="stylesheet" href="style.css" />
   <script>
-    if (window.location.pathname === "/ELA.html/recursos") {
-      window.location.replace("/ELA.html#recursos");
-    }
+    (function () {
+      var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+      if (path === "/ela.html/recursos") {
+        window.location.replace(window.location.origin + "/ELA.html#recursos");
+      }
+    })();
   </script>
 </head>
 <body>
