@@ -9,7 +9,14 @@ ELA_FILE = Path("ELA.html")
 CANDIDATE_FILE = Path("candidate-news.json")
 BACKUP_CANDIDATE_FILE = Path("candidate-news.backup.json")
 MAX_NEWS_IN_ELA = 15
+MAX_INTERNATIONAL_NEWS_IN_ELA = 6
 SOCIAL_MESSAGE_URL = "https://javiergamezmartin.com/ELA.html"
+SOCIAL_MESSAGE_TITLE_COUNT = 4
+EXCLUDED_NEWS_TITLE_FRAGMENTS = (
+    "juanjo miranda",
+    "cazadores de almeria",
+    "ataxia de friedreich",
+)
 TITLE_STOPWORDS = {
     "a", "al", "ante", "bajo", "con", "contra", "de", "del", "desde",
     "durante", "e", "el", "en", "entre", "es", "esa", "ese", "esta",
@@ -202,6 +209,11 @@ def get_discarded_candidate_links(candidates):
 def clean_candidate_item(item):
     return sanitize_news_item(item)
 
+
+def is_excluded_news(item):
+    title = normalize_for_match(item.get("title", ""))
+    return any(fragment in title for fragment in EXCLUDED_NEWS_TITLE_FRAGMENTS)
+
 def extract_current_news(html):
     match = re.search(
         r"const\s+newsData\s*=\s*\[(.*?)\];",
@@ -271,6 +283,43 @@ def replace_news_array(html, news):
     )
 
     return updated_html
+
+
+def extract_current_international_news(html):
+    match = re.search(r"const\s+internationalNewsData\s*=\s*\[(.*?)\];", html, flags=re.DOTALL)
+    if not match:
+        return []
+
+    object_pattern = re.compile(
+        r"\{\s*title:\s*(?P<title>\"(?:\\.|[^\"\\])*\")\s*,\s*"
+        r"source:\s*(?P<source>\"(?:\\.|[^\"\\])*\")\s*,\s*"
+        r"description:\s*(?P<description>\"(?:\\.|[^\"\\])*\")\s*,\s*"
+        r"link:\s*(?P<link>\"(?:\\.|[^\"\\])*\")\s*,\s*"
+        r"date:\s*(?P<date>\"(?:\\.|[^\"\\])*\")\s*\}",
+        flags=re.DOTALL
+    )
+    current_news = []
+    for object_match in object_pattern.finditer(match.group(1)):
+        try:
+            current_news.append({
+                key: json.loads(object_match.group(key))
+                for key in ("title", "source", "description", "link", "date")
+            })
+        except json.JSONDecodeError:
+            continue
+    return current_news
+
+
+def replace_international_news_array(html, news):
+    news_objects = ",\n".join(build_news_object(item) for item in news)
+    new_array = f"const internationalNewsData = [\n{news_objects}\n    ];"
+    return re.sub(
+        r"const\s+internationalNewsData\s*=\s*\[.*?\];",
+        new_array,
+        html,
+        count=1,
+        flags=re.DOTALL
+    )
 
 
 def sort_key(item):
@@ -354,10 +403,10 @@ def pick_social_message_titles(news):
         )
         chosen = [
             group["items"][0]["title"]
-            for group in repeated_groups[:2]
+            for group in repeated_groups[:SOCIAL_MESSAGE_TITLE_COUNT]
         ]
 
-        if len(chosen) < 2:
+        if len(chosen) < SOCIAL_MESSAGE_TITLE_COUNT:
             used_titles = set(chosen)
             remaining_items = []
 
@@ -383,19 +432,19 @@ def pick_social_message_titles(news):
                 chosen.append(item["title"])
                 used_titles.add(item["title"])
 
-                if len(chosen) == 2:
+                if len(chosen) == SOCIAL_MESSAGE_TITLE_COUNT:
                     break
 
-        return chosen[:2]
+        return chosen[:SOCIAL_MESSAGE_TITLE_COUNT]
 
     return [
         clean_text(item.get("title", ""))
         for item in news
         if clean_text(item.get("title", ""))
-    ][:2]
+    ][:SOCIAL_MESSAGE_TITLE_COUNT]
 
 
-def prioritize_recent_news(news, minimum_items=2):
+def prioritize_recent_news(news, minimum_items=SOCIAL_MESSAGE_TITLE_COUNT):
     dated_news = [
         item for item in news
         if clean_text(item.get("date", ""))
@@ -442,10 +491,11 @@ def build_social_message(news):
 
 def print_social_message_box(message):
     print("")
-    print("Cajetín de texto para compartir:")
-    print("```text")
+    print("+" + "=" * 70 + "+")
+    print("| CAJETÍN DE TEXTO PARA COMPARTIR" + " " * 38 + "|")
+    print("+" + "=" * 70 + "+")
     print(message)
-    print("```")
+    print("+" + "=" * 70 + "+")
 
 
 def main():
@@ -504,6 +554,7 @@ def main():
         item
         for item in current_news
         if normalize_url(item.get("link", "")) not in discarded_candidate_links
+        and not is_excluded_news(item)
     ]
 
     combined_news = selected_news + current_news_after_discards
@@ -529,6 +580,34 @@ def main():
 
     updated_html = replace_news_array(html, limited_news)
 
+    current_international_news = extract_current_international_news(html)
+    international_candidates = [
+        clean_candidate_item(item)
+        for item in candidates
+        if item.get("section") == "international"
+    ]
+    international_candidates.sort(key=sort_key, reverse=True)
+
+    international_news = []
+    seen_international_links = set()
+    seen_international_titles = []
+    for item in international_candidates + current_international_news:
+        link = normalize_url(item.get("link", ""))
+        title = clean_text(item.get("title", ""))
+        if (
+            not link
+            or link in seen_international_links
+            or any(titles_are_related(title, previous) for previous in seen_international_titles)
+        ):
+            continue
+        seen_international_links.add(link)
+        seen_international_titles.append(title)
+        international_news.append(item)
+        if len(international_news) == MAX_INTERNATIONAL_NEWS_IN_ELA:
+            break
+
+    updated_html = replace_international_news_array(updated_html, international_news)
+
     ELA_FILE.write_text(updated_html, encoding="utf-8")
 
     removed_count = max(0, len(unique_news) - len(limited_news))
@@ -537,6 +616,7 @@ def main():
     print(f"Noticias descartadas retiradas de ELA.html: {len(current_news) - len(current_news_after_discards)}")
     print(f"Noticias seleccionadas: {len(selected_news)}")
     print(f"Noticias guardadas finalmente en ELA.html: {len(limited_news)}")
+    print(f"Noticias internacionales guardadas finalmente en ELA.html: {len(international_news)}")
     print(f"Noticias eliminadas por superar el límite de {MAX_NEWS_IN_ELA}: {removed_count}")
     print(f"Límite máximo configurado: {MAX_NEWS_IN_ELA}")
     print_social_message_box(build_social_message(limited_news))

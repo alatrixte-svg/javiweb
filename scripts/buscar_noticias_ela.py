@@ -26,7 +26,13 @@ QUERIES = [
 ]
 
 MAX_ITEMS_PER_QUERY = 10
-MAX_TOTAL_RESULTS = 30
+MAX_TOTAL_RESULTS = 60
+
+INTERNATIONAL_QUERIES = [
+    "ALS amyotrophic lateral sclerosis treatment research",
+    "ALS clinical trial therapy diagnosis",
+    "motor neuron disease ALS patients care",
+]
 
 GDELT_QUERIES = [
     '("ELA" OR "esclerosis lateral amiotrofica" OR "esclerosis lateral amiotrófica") '
@@ -245,14 +251,15 @@ def fetch_page_html(url, timeout=20, read_limit=500000):
         return decode_html(data, response)
 
 
-def build_google_news_rss_url(query):
+def build_google_news_rss_url(query, international=False):
     encoded_query = urllib.parse.quote(query)
+    language, country, edition = ("en", "US", "US:en") if international else ("es", "ES", "ES:es")
     return (
         "https://news.google.com/rss/search?"
         f"q={encoded_query}"
-        "&hl=es"
-        "&gl=ES"
-        "&ceid=ES:es"
+        f"&hl={language}"
+        f"&gl={country}"
+        f"&ceid={edition}"
     )
 
 
@@ -515,7 +522,7 @@ def build_news_item(title, source, date, link, summary, query, provider):
     }
 
 
-def extract_items_from_feed(query, root):
+def extract_items_from_feed(query, root, section="spain"):
     items = []
 
     for item in root.findall(".//item")[:MAX_ITEMS_PER_QUERY]:
@@ -541,6 +548,10 @@ def extract_items_from_feed(query, root):
         if not title or not link:
             continue
 
+        item_section = section
+        if normalize_for_match(source) == "als news today":
+            item_section = "international"
+
         items.append({
             "title": title,
             "source": source,
@@ -551,7 +562,8 @@ def extract_items_from_feed(query, root):
             "relevance_reason": (
                 "Noticia encontrada en búsquedas relacionadas con ELA, "
                 "cuidados, investigación, ley ELA o prestaciones."
-            )
+            ),
+            "section": item_section
         })
 
     return items
@@ -654,10 +666,20 @@ def main():
 
         try:
             root = fetch_rss(url)
-            items = extract_items_from_feed(query, root)
+            items = extract_items_from_feed(query, root, "spain")
             add_items("google_news", items)
         except Exception as error:
             print(f"Error buscando noticias para '{query}': {error}")
+
+    for query in INTERNATIONAL_QUERIES:
+        url = build_google_news_rss_url(query, international=True)
+
+        try:
+            root = fetch_rss(url)
+            items = extract_items_from_feed(query, root, "international")
+            add_items("google_news_international", items)
+        except Exception as error:
+            print(f"Error buscando noticias internacionales para '{query}': {error}")
 
     for query in GDELT_QUERIES:
         url = build_gdelt_doc_url(query)
