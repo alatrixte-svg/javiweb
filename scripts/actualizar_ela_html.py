@@ -435,6 +435,15 @@ def pick_social_message_titles(news):
                 if len(chosen) == SOCIAL_MESSAGE_TITLE_COUNT:
                     break
 
+            if len(chosen) < SOCIAL_MESSAGE_TITLE_COUNT:
+                for item in news:
+                    title = clean_text(item.get("title", ""))
+                    if title and title not in used_titles:
+                        chosen.append(title)
+                        used_titles.add(title)
+                    if len(chosen) == SOCIAL_MESSAGE_TITLE_COUNT:
+                        break
+
         return chosen[:SOCIAL_MESSAGE_TITLE_COUNT]
 
     return [
