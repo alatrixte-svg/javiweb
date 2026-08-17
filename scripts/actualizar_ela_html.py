@@ -600,12 +600,14 @@ def main():
     international_news = []
     seen_international_links = set()
     seen_international_titles = []
+    national_titles = [clean_text(item.get("title", "")) for item in limited_news]
     for item in international_candidates + current_international_news:
         link = normalize_url(item.get("link", ""))
         title = clean_text(item.get("title", ""))
         if (
             not link
             or link in seen_international_links
+            or any(titles_are_related(title, national_title) for national_title in national_titles)
             or any(titles_are_related(title, previous) for previous in seen_international_titles)
         ):
             continue
