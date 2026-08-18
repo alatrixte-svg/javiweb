@@ -642,13 +642,6 @@
         date: "2026-08-17"
       },
       {
-        title: "La Xunta mantiene abierto el plazo para solicitar las ayudas autonómicas para personas con ELA",
-        source: "HERMES TV VIGO",
-        description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: HERMES TV VIGO. Publicada el 2026-08-17.",
-        link: "https://news.google.com/rss/articles/CBMiugFBVV95cUxOOGRWNlN6TUhva0ZDWWJDQ0ZFYjZWMHY4d3NLUF9GODZHaDdqTTNDR1VuYkh6cVdtZVVnRUc4WWRCSnFMOGZvT09HZkFVZ3NkWUxhMHJkV3VKZDZLTDRPQ3ZtTm1OdXNvR3ZKdmRleGdub3VpQ0dNZGNfNFpteDJRVmpjVlc3WXZPV2hYbVRUeWZsVElWS3RxZmx5SW52YjJ5MDBqZXpZS0tWRjhhLTVoYWtuZWtJT2NXbmc?oc=5",
-        date: "2026-08-17"
-      },
-      {
         title: "El tratamiento previo puede dejar de ser obligatorio para lograr una incapacidad permanente: las dos excepciones que trajo la ley ELA",
         source: "Tododisca",
         description: "Aborda ley ELA, prestaciones, dependencia y derechos de las personas afectadas. Fuente: Tododisca. Publicada el 2026-08-17.",
@@ -717,13 +710,6 @@
         description: "People whose jobs expose them to pesticides may be more likely to develop ALS than workers who aren't exposed, a review study found.",
         link: "https://alsnewstoday.com/news/workplace-exposure-pesticides-boosts-risk-als-study-finds/",
         date: "2026-08-10"
-      },
-      {
-        title: "Una sola inyección para frenar la pérdida de visión: el nuevo tratamiento contra la degeneración macular",
-        source: "El Correo Gallego",
-        description: "Aborda investigación, ensayos clínicos y posibles tratamientos. Fuente: El Correo Gallego. Publicada el 2026-08-09.",
-        link: "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNng0MWJibnlxaGlWUDQzWkFaakZXbmRmVmRUTm12VTZvOVp2V2lQN0xUOTRfWTdhUk42alBiVDVBMXlBWDlYUEhNcEtxWWxySlZPTm1IQm1NYzJoYTZCMXhCZVRXbEsyQkx1ZnE3bTl0RW5CVkkxa2lkZU9CcVZVMFBwWTZ2ZG1KdHRhdzAxN2VzbW9kZGRhUE0tbDRRZk95TGE5aE5URFjSAa4BQVVfeXFMT2ZjcXZNN1JwRktERkdDN2tvaXUzQ1UzN05iRktvdEdRMnhiSFFqMzFfRkZTZl95b3UwbHlkOFFPU0ltT2ZaN0poYl9qQnNQakVJNzZRVktmbk42OXhtVmZYcmphdm0yS016WEhZZ2RfSE9JQ0NRMmNzNkkwWjJNZFV5cGFMc0RnX1JzWGhCS0xtM2lTeFdNdWdrbFNUbmE1NWdVWTQ0NTctMWM2Z1Nn?oc=5",
-        date: "2026-08-09"
       },
       {
         title: "Hablan los primeros asturianos que perciben, por fin, ayuda por la ELA: \"Nos ha cambiado la vida\"",
@@ -817,12 +803,19 @@
     }
 
     function renderNews() {
+      const seenNationalTitles = new Set();
       const nationalNews = newsData.filter(item =>
         !item.title.includes('A respite from caregiving') &&
         !item.title.includes('NfL changes may help predict') &&
         !item.title.includes('Workplace exposure to pesticides') &&
+        !item.title.toLowerCase().includes('macular') &&
         !item.title.includes('degeneraciÃ³n macular')
-      );
+      ).filter(item => {
+        const titleKey = item.title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        if (seenNationalTitles.has(titleKey)) return false;
+        seenNationalTitles.add(titleKey);
+        return true;
+      });
       renderNewsList('news-list', nationalNews, 15, 'es-ES', 'Leer m&aacute;s...', false);
       renderNewsList('international-news-list', internationalNewsData, 6, 'en-GB', 'Read more...');
     }

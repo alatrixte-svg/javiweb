@@ -16,6 +16,10 @@ EXCLUDED_NEWS_TITLE_FRAGMENTS = (
     "juanjo miranda",
     "cazadores de almeria",
     "ataxia de friedreich",
+    "macular",
+    "a respite from caregiving",
+    "nfl changes may help predict",
+    "workplace exposure to pesticides",
 )
 TITLE_STOPWORDS = {
     "a", "al", "ante", "bajo", "con", "contra", "de", "del", "desde",
