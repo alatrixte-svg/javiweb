@@ -20,6 +20,7 @@ EXCLUDED_NEWS_TITLE_FRAGMENTS = (
     "a respite from caregiving",
     "nfl changes may help predict",
     "workplace exposure to pesticides",
+    "als news today",
 )
 TITLE_STOPWORDS = {
     "a", "al", "ante", "bajo", "con", "contra", "de", "del", "desde",
@@ -215,8 +216,10 @@ def clean_candidate_item(item):
 
 
 def is_excluded_news(item):
-    title = normalize_for_match(item.get("title", ""))
-    return any(fragment in title for fragment in EXCLUDED_NEWS_TITLE_FRAGMENTS)
+    text = normalize_for_match(
+        f"{item.get('title', '')} {item.get('source', '')}"
+    )
+    return any(fragment in text for fragment in EXCLUDED_NEWS_TITLE_FRAGMENTS)
 
 def extract_current_news(html):
     match = re.search(
@@ -552,7 +555,13 @@ def main():
             print(f"El índice {index} no existe en candidate-news.json.")
             sys.exit(1)
 
-        selected_news.append(clean_candidate_item(candidates[real_index]))
+        candidate = candidates[real_index]
+        if (
+            candidate.get("section") == "international"
+            or normalize_for_match(candidate.get("source", "")) == "als news today"
+        ):
+            continue
+        selected_news.append(clean_candidate_item(candidate))
 
     if not ELA_FILE.exists():
         raise FileNotFoundError("No se encontró ELA.html en la raíz del repositorio.")
