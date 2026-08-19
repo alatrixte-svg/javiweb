@@ -11,7 +11,7 @@ BACKUP_CANDIDATE_FILE = Path("candidate-news.backup.json")
 MAX_NEWS_IN_ELA = 15
 MAX_INTERNATIONAL_NEWS_IN_ELA = 6
 SOCIAL_MESSAGE_URL = "https://javiergamezmartin.com/ELA.html"
-SOCIAL_MESSAGE_TITLE_COUNT = 4
+SOCIAL_MESSAGE_TITLE_COUNT = 2
 EXCLUDED_NEWS_TITLE_FRAGMENTS = (
     "juanjo miranda",
     "cazadores de almeria",
