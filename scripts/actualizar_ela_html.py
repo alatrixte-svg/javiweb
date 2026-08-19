@@ -606,7 +606,10 @@ def main():
     international_candidates = [
         clean_candidate_item(item)
         for item in candidates
-        if item.get("section") == "international"
+        if (
+            item.get("section") == "international"
+            or normalize_for_match(item.get("source", "")) == "als news today"
+        )
     ]
     international_candidates.sort(key=sort_key, reverse=True)
 
