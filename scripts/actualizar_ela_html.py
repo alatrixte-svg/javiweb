@@ -583,17 +583,23 @@ def main():
 
     unique_news = []
     seen_links = set()
+    seen_titles = []
 
     for item in combined_news:
         link = normalize_url(item.get("link", ""))
+        title = clean_text(item.get("title", ""))
 
         if not link:
             continue
 
-        if link in seen_links:
+        if (
+            link in seen_links
+            or any(titles_are_related(title, previous) for previous in seen_titles)
+        ):
             continue
 
         seen_links.add(link)
+        seen_titles.append(title)
         unique_news.append(item)
 
     unique_news.sort(key=sort_key, reverse=True)
