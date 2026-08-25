@@ -12,6 +12,10 @@ MAX_NEWS_IN_ELA = 15
 MAX_INTERNATIONAL_NEWS_IN_ELA = 6
 SOCIAL_MESSAGE_URL = "https://javiergamezmartin.com/ELA.html"
 SOCIAL_MESSAGE_TITLE_COUNT = 2
+PINNED_NEWS_LINKS = {
+    "https://cadenaser.com/nacional/2026/08/20/sandra-bullock-habla-por-primera-vez-de-la-muerte-de-su-pareja-victima-de-ela-empece-a-llorarle-cuatro-anos-antes-de-que-muriera-cadena-ser/",
+    "https://www.als.org/stories-news/als-organizations-urge-congress-reauthorize-landmark-act-als",
+}
 EXCLUDED_NEWS_TITLE_FRAGMENTS = (
     "juanjo miranda",
     "cazadores de almeria",
@@ -205,7 +209,7 @@ def get_discarded_candidate_links(candidates):
     for item in load_backup_candidates():
         link = normalize_url(item.get("link", ""))
 
-        if link and link not in reviewed_links:
+        if link and link not in reviewed_links and link not in PINNED_NEWS_LINKS:
             discarded_links.add(link)
 
     return discarded_links
