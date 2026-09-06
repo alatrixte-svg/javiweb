@@ -1,0 +1,40 @@
+---
+id: "post-se-vota-el-lunes-el-texto-ya-si-eso"
+title: "Se vota el lunes. El texto, ya si eso"
+date: "2026-09-05"
+fecha: "5 de septiembre de 2026"
+tag: "ELA"
+excerpt: "A tres días del Pleno del Senado, la reforma de la Dependencia y la Discapacidad se votará sin que la ciudadanía conozca el texto definitivo."
+---
+
+A tres días del Pleno del Senado, la reforma de la Dependencia y la Discapacidad avanza con una curiosa innovación democrática: se conoce la fecha de la votación, pero no el texto exacto que se va a votar.
+
+Sabemos que existe un Informe de Ponencia.
+
+Sabemos que existe un Dictamen de Comisión.
+
+Sabemos que hay 8 votos particulares…
+
+Lo único que parece faltar es ese pequeño detalle sin importancia llamado, de forma más reciente transparencia, y desde los orígenes de la democracia: publicidad.
+
+No estamos hablando de un capricho decorativo para algunos hogares. Estamos hablando de dependencia, discapacidad, copagos, compatibilidad de prestaciones, cuidados en el entorno familiar y dinero necesario para que cientos de miles de personas y sus familias puedan seguir viviendo con un mínimo de dignidad.
+
+Pero, por alguna razón, quienes van a sufrir o disfrutar las consecuencias parecen ocupar el último asiento del autobús informativo.
+
+¿Se está incumpliendo el Reglamento? No necesariamente.
+
+El Reglamento parece bastante preocupado porque los senadores conozcan los documentos. Qué detalle.
+
+El problema es que una democracia tiene además esa incómoda costumbre de incorporar a la ecuación a los ciudadanos. Aunque no esté a su alcance el cambiar nada, aunque solo puedan aspirar a ser meros espectadores de lo que pueda o no pueda venir.
+
+Aun sin otra expectativa, sería razonable que, antes de que 266 personas voten una reforma que condicionará la vida de cientos de miles, esas cientos de miles pudieran saber qué demonios van a votar las 266.
+
+Publicar los documentos después será muy útil para historiadores, archiveros y aficionados a la arqueología parlamentaria, pero para las personas afectadas, bastante menos.
+
+Porque la transparencia que llega cuando ya se ha votado tiene otro nombre. Se llama hemeroteca.
+
+Así que quizá no sería demasiado pedir que el Senado hiciese algo "revolucionario" antes del Pleno, como enseñar a la ciudadanía el texto que pretende votar.
+
+No parece una exigencia radical.
+
+Algunos, incluso lo llamarían democracia básica.
