@@ -1,0 +1,56 @@
+---
+id: "post-siempre-hay-que-pasar-lista-de-todos-nuestros-angeles"
+title: "Siempre hay que pasar lista de todos nuestros ángeles"
+date: "2026-08-08"
+fecha: "8 de agosto de 2026"
+tag: "Familia"
+excerpt: "En medio del caos,  Chadia, se vuelca por completo para sacarme del bache a base de instinto y cuidados, sin poder ver que nuestra  Nur también se estaba consumiendo en silencio por la pura angustia."
+---
+
+Pasadas estas casi tres semanitas de crisis, creo que toca ofrecer una pequeña explicación de lo acontecido. Y, para restarle dramatismo al relato, lo haré con mi voz de siempre.
+
+Nunca me gustó demasiado. Sin embargo, ahora, después de tantos años de destierro forzado, inunda mis oídos con una musicalidad que jamás supe encontrarle. Tanto es así que hoy me parece digna de recibir el aprecio y el reconocimiento que, quizá injustamente, siempre le negué.
+
+Esta vez, el primer grito de alerta llegó desde las cercanas almenas del cansancio. Poco después lo hizo el agotamiento, en un cuerpo ya de por sí demasiado débil y castigado.
+
+La causa inicial fue el insomnio. No una vigilia consciente y llevadera, no. Un desvelo continuo que me despertaba en medio de un ahogo que me petrificaba. Que me aterrorizaba mientras trataba de encontrar una bocanada de aire que me arrancase de aquella horrible sensación.
+
+Junto a ello llegaron aún menos apetito, más mareos y una debilidad creciente, acompañada de una sequedad de boca inusual; un incipiente picorcillo de garganta que pronto se convertiría en dolor, y una baba muy desagradable. Todo ello, en un vía crucis marcado por la obstrucción de las vías aéreas y una necesidad de aire cada vez más acuciante para seguir viviendo.
+
+Una infección de garganta; una candidiasis orofaríngea —o una buena ración de hongos en las zonas oral y faríngea, dicho en plata—; una hipoventilación considerable; algunos episodios de deshidratación y ese arte tan nuestro de automedicarnos sin pudor con dos tercios de esto y un cuarto y mitad de aquello que aquella vez nos fue tan bien, sin reparar en que, en esta ocasión, había más artistas en cartel. Todo ello conformó la puerta de entrada que doña ELA escogió esta vez para torturarme.
+
+A lo físico, que no era desdeñable, se añadieron las presencias extracorpóreas que rodeaban mi cama. Solo yo las veía. Solo yo las escuchaba.
+
+Primero llegaron algunas de apariencia extraterrenal. Después, otras más severas, que venían a pasarme cuentas. También aparecieron mis familiares, por lejos que estuvieran sus verdaderas residencias: Granada, Francia… Hasta que una mañana, ya al límite de mi resistencia anímica, desperté ante la visión de mis propias exequias y de mi cariñito, rota, llorando junto al cabezal de mi cama.
+
+Porque yo lo he pasado mal, pero lo suyo ha sido un sinvivir.
+
+Una lucha contra el crono y con demasiados frentes abiertos.
+
+Suya fue la decisión de retirar del tratamiento cuanto pudiera influir en las alucinaciones. Suya también fue la determinación de pasarme agua como si no hubiese un mañana para limpiar el organismo. Y suya fue, asimismo, la pregunta persistente:
+
+—¿Estamos solos?
+
+Al cabo de un par de días le respondí que sí, más para calmar la angustia que acumulaba que porque fuese cierto. De hecho, obvié que a su espalda estaba su hermana, en aquel preciso instante, y a mi izquierda, mis padres. Por supuesto, ignoré en la mañana siguiente cualquier referencia a aquella dantesca escena funeraria que presidía toda la estancia.
+
+Hoy, en cambio, puedo afirmar que hace días que ya no comparto habitación con nadie.
+
+Durante los momentos de mayor sufrimiento para mi cariñito, Nur, nuestra fiel peludita, también sentía nuestro dolor. Sobre todo el de Chadia —su madre, sin duda alguna—, y hacía cuanto estaba a su alcance para liberarla de sus males.
+
+Se convirtió en su sombra. Cada vez permanecía más pegada a ella, a mi cariñito, como si quisiera arrancarle el desconsuelo a quien más quiere, a quien más ama, interponiendo su pequeño cuerpo entre su dolor y aquello que lo provocaba.
+
+Si la primera comía poco, ella comía menos. Si Chadia se desvelaba, Nur la acompañaba sin una sola protesta. Nada. Solo su mirada cándida, una necesidad constante de permanecer junto a su madre y una expresión cada vez más triste y apagada.
+
+Dios quiso que todas las vigilias médicas y todos los cuidados que hasta entonces se habían concentrado en mí se girasen, durante un breve fragmento de tiempo, hacia Nur.
+
+Fue suficiente.
+
+En todo ese tiempo no había pedido nada. No se había quejado de nada. Y, sin embargo, de no haber sido por aquel destello, por aquel momento íntimo con su madre, habría entregado su vida en pocas horas. Los síntomas de sus males habían quedado camuflados bajo la apariencia de la pena y eclipsados por la emergencia de otra urgencia médica dentro del hogar.
+
+Arrastraba una infección en la matriz de tales dimensiones según la ecografía, que ese mismo  domingo por la noche tuvieron que operarla de urgencia y sin garantías de éxito.
+
+Hoy, seis días después, vuelve a ser nuestro ángel feliz. El que ilumina con su cariño cada rincón de esta casa, que por fin vuelve a respirar en todos los sentidos.
+
+Desde ella doy gracias por la recuperación de los dos y reconozco, todavía con un punto de dolor, que jamás me habría perdonado perderla en aquellas circunstancias.
+
+Por eso siempre hay que pasar lista de todos nuestros ángeles. Incluso —o quizá, sobre todo— cuando uno de ellos permanece en silencio, aguardando su turno para ser salvado.
